@@ -104,3 +104,67 @@
     }
   }
 }
+
+@media  screen and (max-width: 1280px) {
+   .login-page{
+     flex-direction: column;
+   }
+   .left-info-continer{
+     height: auto;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     padding: 4rem 3rem;
+     .information{
+       width: 80%;
+     }
+     h1{
+      font-size: var(--h1-font-size);
+    }
+     
+   }
+   .right-login-container{
+     height: auto;
+     width: 100%;
+     padding: 6rem 8rem;
+   }
+}
+
+@media  screen and (max-width: 900px) {
+  .left-info-continer{
+    padding: 4rem 2rem;
+  }
+  .right-login-container{
+    padding: 6rem;
+  } 
+}
+
+@media screen and (max-width: 710px) {
+  .left-info-continer{
+    width: 100%;
+    .information{
+      padding: 0;
+    }
+  } 
+}
+
+@media screen and (max-width: 652px){
+  .left-info-continer{
+    padding: 4rem 0;
+  }
+  .right-login-container{
+    padding: 6rem 4rem;
+    .input-container label{
+      font-size: var(--normal-font-size);
+    }
+    .input-container input{
+      font-size: var(--normal-font-size);
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .right-login-container{
+    padding: 6rem 2rem;
+  }
+}

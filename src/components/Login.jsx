@@ -20,7 +20,7 @@ const Login = () => {
             <input
               type="text"
               name="fullName"
-              required="true"
+              required={true}
               autoComplete="off"
             />
             <label htmlFor="form-input-fullName">What's your name?</label>
@@ -29,7 +29,7 @@ const Login = () => {
             <input
               type="text"
               name="phoneNumber"
-              required="true"
+              required={true}
               autoComplete="off"
             />
             <label htmlFor="form-input-phoneNumber">Phone number.</label>
@@ -38,7 +38,7 @@ const Login = () => {
             <input
               type="email"
               name="email"
-              required="true"
+              required={true}
               autoComplete="off"
             />
             <label htmlFor="form-input-fullName">What is your email?</label>
