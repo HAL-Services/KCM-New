@@ -1,0 +1,106 @@
+.login-page{
+  display: flex;
+}
+
+.left-info-continer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 43%;
+  padding: 8rem 3rem;
+  .information{
+    padding: 0 2rem;
+    text-justify: center;
+  }
+  h1{
+    font-size: var(--big-font-size);
+    font-weight: var(--font-bold);
+    margin-bottom: var(--mb-2-5);
+  }
+  p{
+    color: var(--secondary-color);
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    word-spacing: 1px;
+    line-height: 1.5em;
+  }
+  ::selection{
+    background-color: var(--first-color-lighter);
+    color: var(--first-color-alt);
+  }
+}
+
+.right-login-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  height: 100vh; 
+  width: 60%;
+  padding: 4rem 10rem;
+  form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    .input-container{
+      position: relative;
+      border-bottom: 1px solid #fff;
+      text-align: center;
+      color: var(--default-color);
+      margin-bottom: var(--mb-2-5);
+    }
+  }
+  
+  .input-container input{
+    width: 100%;
+    background-color: var(--secondary-color);
+    outline: none;
+    border:none;
+    height: 50px;
+    padding: 0 5px;
+    font-size: var(--h1-font-size);
+    color: var(--default-color);
+  }
+  .input-container label{
+    position: absolute;
+    top: 40%;
+    left: 14px;
+    font-size: var(--normal-font-size);
+    pointer-events: none;
+    color: var(--default-color);
+    transform: translateY(-50%);
+    transition: .5s;
+    transform: scale(1.2);
+  }
+  .input-container input:focus ~ label,
+  .input-container input:valid ~ label{
+    top: -10px;
+    transform: scale(1);
+    left: 0;
+    color: var(--first-color);
+  }
+  .btn-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    button{
+      width: 100%;
+      border: 2px solid var(--first-color);
+      padding: .8em 3.5em;
+      font-size: var(--h3-font-size);
+      background-color: var(--secondary-color);
+      color: var(--first-color);
+      border-radius: 2em;
+      transition: .5s;
+      margin-top: var(--mb-1);
+      &:hover{
+        color: var(--default-color);
+        background-color: var(--first-color);
+        cursor: pointer;
+      }
+    }
+  }
+}
