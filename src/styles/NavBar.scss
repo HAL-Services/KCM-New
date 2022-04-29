@@ -1,7 +1,7 @@
 .navbar{
   background-color: var(--default-color);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   padding: 1.25rem 2rem;
@@ -11,6 +11,10 @@
     background-color: var(--first-color-lighter);
     color: var(--first-color);
   }
+}
+
+.burger-menu{
+  display: none;
 }
 
 .logo{
@@ -29,6 +33,7 @@
       position: relative;
       font-size: var(--small-font-size);
       font-weight: var(--font-medium);
+      margin-bottom:var(--mb-0-25);
       span{
         position: absolute;
         height: 1px;
@@ -61,6 +66,41 @@
       cursor: pointer;
       background-color: var(--first-color);
       color: var(--default-color);
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .burger-menu{
+    display: block;
+    z-index: 2;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+   .titles{
+     display: none;
+   }
+}
+
+@media screen and (max-width: 376px){
+  .navbar{
+    padding: 1rem 1rem;
+  }
+  .burger-menu{
+    svg{
+      height: 15px;
+      width: 18px;
+      margin: 0 .5rem;
+    }
+  }
+  .logo{
+    font-size: 1.8rem;
+  }
+  .login-btn{
+    button{
+      font-size: var(--normal-font-size);
+      padding: .5rem  1rem;
     }
   }
 }
