@@ -42,6 +42,19 @@
     padding:5px;
    }
 }
+@media only screen and (min-width: 1300px) {
+  .swiper{
+    height:500px;
+  }
+  .swiper-slide img{
+   height:70%;
+  }
+  .carouselTextContainer{
+    padding:20px;
+    margin-top:20px;
+    font-size: 40px !important;
+  }
+}
 .carouselContainer{
   display: flex;
   justify-content: center;
