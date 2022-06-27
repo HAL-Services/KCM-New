@@ -26,7 +26,6 @@ export default function Carousel(props) {
         breakpoints={{
           769: {
             slidesPerView: 3,
-            slidesPerGroup: 3,
           },
         }}
         scrollbar={true}

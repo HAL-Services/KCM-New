@@ -1,15 +1,15 @@
 .swiper {
   width: 100%;
-  height: 450px;
-  padding:20px;
+  height: 350px;
+  padding:30px;
+  margin-right: 2px;
+  margin-left:2px;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
-  /* margin-bottom: 10px; */
-  /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -27,7 +27,7 @@
 .swiper-slide img {
   display: block;
   width: 100%;
-  height:80%;
+  height:70%;
   object-fit:cover;
 }
 
@@ -41,6 +41,19 @@
    .carouselTextContainer{
     padding:5px;
    }
+}
+@media only screen and (min-width: 1300px) {
+  .swiper{
+    height:500px;
+  }
+  .swiper-slide img{
+   height:70%;
+  }
+  .carouselTextContainer{
+    padding:20px;
+    margin-top:20px;
+    font-size: 40px !important;
+  }
 }
 .carouselContainer{
   display: flex;
