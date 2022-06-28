@@ -1,0 +1,25 @@
+.HomePageSection {
+  color: white;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 900px;
+  z-index: 10000;
+  margin-top: 150px;
+}
+.HomePageText {
+  margin-left: 2em;
+  font-family: Poppins;
+  font-size: 2em;
+  padding: 10px;
+}
+.HomePageText1 {
+  font-family: Poppins;
+  font-size: 2em;
+  padding: 10px;
+  background-color: black;
+}
+@media only screen and (min-width: 1300px) {
+  .HomePageSection {
+    height: 1200px;
+  }
+}

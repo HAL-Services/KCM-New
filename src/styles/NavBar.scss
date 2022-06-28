@@ -1,51 +1,51 @@
-.navbar{
-  background-color: var(--default-color);
+.navbar {
+  background-color: whitesmoke;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   padding: 1.25rem 2rem;
   width: 100%;
-
-  ::selection{
+  z-index: 10000;
+  ::selection {
     background-color: var(--first-color-lighter);
     color: var(--first-color);
   }
 }
 
-.burger-menu{
+.burger-menu {
   display: none;
 }
 
-.logo{
+.logo {
   font-size: var(--h1-font-size);
   font-weight: var(--font-semi-bold);
 }
 
-.titles{
-  nav{
-    ul{
+.titles {
+  nav {
+    ul {
       list-style-type: none;
       display: flex;
     }
-    li{
+    li {
       margin-right: 3rem;
       position: relative;
       font-size: var(--small-font-size);
       font-weight: var(--font-medium);
-      margin-bottom:var(--mb-0-25);
-      span{
+      margin-bottom: var(--mb-0-25);
+      span {
         position: absolute;
         height: 1px;
         width: 0;
         bottom: 0;
         left: 0;
         background-color: var(--secondary-color);
-        transition: .3s;
+        transition: 0.3s;
       }
-      &:hover{
+      &:hover {
         cursor: pointer;
-        span{
+        span {
           width: 100%;
         }
       }
@@ -53,8 +53,8 @@
   }
 }
 
-.login-btn{
-  button{
+.login-btn {
+  button {
     padding: 0.5rem 1.5rem;
     font-size: var(--h2-font-size);
     background-color: var(--default-color);
@@ -62,7 +62,7 @@
     color: var(--first-color);
     border-radius: 2rem;
     transition: 0.4s;
-    &:hover{
+    &:hover {
       cursor: pointer;
       background-color: var(--first-color);
       color: var(--default-color);
@@ -71,36 +71,36 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .burger-menu{
+  .burger-menu {
     display: block;
     z-index: 2;
-    &:hover{
+    &:hover {
       cursor: pointer;
     }
   }
-   .titles{
-     display: none;
-   }
+  .titles {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 376px){
-  .navbar{
+@media screen and (max-width: 376px) {
+  .navbar {
     padding: 1rem 1rem;
   }
-  .burger-menu{
-    svg{
+  .burger-menu {
+    svg {
       height: 15px;
       width: 18px;
-      margin: 0 .5rem;
+      margin: 0 0.5rem;
     }
   }
-  .logo{
+  .logo {
     font-size: 1.8rem;
   }
-  .login-btn{
-    button{
+  .login-btn {
+    button {
       font-size: var(--normal-font-size);
-      padding: .5rem  1rem;
+      padding: 0.5rem 1rem;
     }
   }
 }
