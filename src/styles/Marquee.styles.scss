@@ -1,0 +1,17 @@
+.MarqueeImage{
+    height:100px;
+}
+.MarqueeDiv{
+    padding: 10px;
+    margin-right: 100px;
+}
+@media screen and (max-width: 500px){
+    .MarqueeImage{
+        height:80px;
+        width:100px;
+    }
+    .MarqueeDiv{
+        padding:20px;
+        margin-right:30px;
+    }
+}

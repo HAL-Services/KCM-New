@@ -1,15 +1,18 @@
-// import Carousel from "../components/Carousel";
-// import ExpertiseImagedata from "../OfflineAPI/ExpertiseImagesData";
-// import NavBar from "../components/NavBar";
-import Footer from "../components/Footer.jsx";
+import Carousel from "../components/Carousel";
+import GarageCarousel from "../components/GarageCarousel";
+import ExpertiseImagedata from "../OfflineAPI/ExpertiseImagesData";
+
+import "../styles/HomePage.styles.css";
 export default function HomePage() {
   return (
     <div>
-      {/*      <h1 style={{ padding: "20px" }}>Our Expertise</h1>
-      <Carousel data={ExpertiseImagedata} />
-*/}
-      {/* <NavBar /> */}
-      <Footer />
+      <section>
+        <h1 style={{ padding: "20px" }}>Our Expertise</h1>
+        <Carousel data={ExpertiseImagedata} />
+      </section>
+      <h1 style={{ padding: "20px" }}>Latest From Our Garage</h1>
+      <GarageCarousel />
+      <section></section>
     </div>
   );
 }
