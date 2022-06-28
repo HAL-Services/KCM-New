@@ -35,6 +35,11 @@
 }
 
 body{
-    font-family: Roboto, sans-serif;
-}
 
+    font-family: Roboto, sans-serif;
+    
+}
+body::-webkit-scrollbar {
+    width: 2px;               /* width of the entire scrollbar */
+  }
+ 
