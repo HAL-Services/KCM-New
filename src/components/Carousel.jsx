@@ -13,7 +13,7 @@ import { Keyboard, Scrollbar, Navigation, Pagination } from "swiper";
 
 export default function Carousel(props) {
   return (
-    <>
+    <div className="CarouselContainer">
       <Swiper
         slidesPerView={1}
         centeredSlides={false}
@@ -45,6 +45,6 @@ export default function Carousel(props) {
           );
         })}
       </Swiper>
-    </>
+    </div>
   );
 }
