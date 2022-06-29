@@ -20,9 +20,6 @@ export default function Carousel(props) {
         slidesPerGroupSkip={1}
         spaceBetween={70}
         grabCursor={true}
-        keyboard={{
-          enabled: true,
-        }}
         breakpoints={{
           769: {
             slidesPerView: 3,
@@ -37,9 +34,9 @@ export default function Carousel(props) {
           return (
             <SwiperSlide key={imageData.id} className="carouselContainer">
               <img src={imageData.url} />
-              <div className="carouselTextContainer">
-                <h5 style={{ height: "100%" }}>{imageData.title}</h5>
-                <div className="carouselUnderline"></div>
+              <div className="carouselUnderline">
+                {imageData.title}
+                <div className="underline"></div>
               </div>
             </SwiperSlide>
           );

@@ -4,8 +4,7 @@ export default function LandingPage() {
   return (
     <>
       <div className="contactUs">
-        <span>Email Us -- </span>
-        KCM@gmail.com
+        Email Us - HalServices@gmail.com 
       </div>
       <div
         className="LandingPageContainer"
@@ -18,7 +17,9 @@ export default function LandingPage() {
           <h4>Working with brands from all over the world</h4>
           <button>Quick Book</button>
           <div className="LandingText">A Car Service Station in Gurugram</div>
-          <div className="LandingText1">One Stop Shop for all that your Car needs</div>
+          <div className="LandingText1">
+            One Stop Shop for all that your Car needs
+          </div>
         </div>
       </div>
     </>

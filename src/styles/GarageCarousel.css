@@ -1,6 +1,7 @@
+
 .mySwiperGarage {
   width: 100%;
-  height: 450px;
+  height: 400px;
   background-color: black;
   color: white;
 }
@@ -28,7 +29,7 @@
 .swiper-slide .GarageImage {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 90%;
   object-fit: cover;
 }
 
@@ -51,11 +52,12 @@
     width: 90%;
   }
 }
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1600px) {
   .mySwiperGarage {
     height: 550px;
   }
-  .GaragecarouselContainer img {
-    height: 100%;
+  .GaragecarouselContainer .GarageImage {
+    height:90%;
+    width:80%;
   }
 }
