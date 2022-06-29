@@ -5,6 +5,7 @@ import HomePage from "./Pages/HomePage";
 import MarqueeElement from "./components/Marquee";
 import GarageCarousel from "./components/GarageCarousel";
 import LandingPage from "./Pages/LandingPage";
+import Footer from './components/Footer'
 function App() {
   return (
     <div className="App">
@@ -12,6 +13,7 @@ function App() {
       <LandingPage />
       <MarqueeElement/>
       <HomePage/>
+      <Footer/>
     </div>
   );
 }

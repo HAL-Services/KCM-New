@@ -9,7 +9,7 @@ export default function HomePage() {
       <section style={{
         marginTop:"100px"
       }}>
-        <h1 className="HomePageText">Our Expertise</h1>
+        <div className="HomePageText">Our Expertise</div>
         <Carousel data={ExpertiseImagedata} />
       </section>
       <section
@@ -18,7 +18,7 @@ export default function HomePage() {
         }}
         className="HomePageSection"
       >
-        <h1 className="HomePageText1">Latest From Our Garage</h1>
+        <div className="HomePageText1">Latest From Our Garage</div>
         <GarageCarousel />
       </section>
     </div>

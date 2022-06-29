@@ -10,13 +10,15 @@
   margin-left: 2em;
   font-family: Poppins;
   font-size: 2em;
-  padding: 10px;
+  padding: 5px;
+  font-weight: bold;
 }
 .HomePageText1 {
   font-family: Poppins;
   font-size: 2em;
-  padding: 10px;
   background-color: black;
+  padding: 24px;
+  font-weight: bold;
 }
 @media only screen and (min-width: 1300px) {
   .HomePageSection {

@@ -1,86 +1,76 @@
-.CarouselContainer{
-  margin-left:3rem;
+.CarouselContainer {
+  margin-left: 3.5rem;
 }
 .swiper {
   width: 100%;
   height: 350px;
-  padding:30px;
-  /* margin-right: 2px;
-  margin-left:2px; */
+  padding: 30px;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-} 
+}
 
 .swiper-slide img {
   display: block;
   width: 100%;
-  height:70%;
-  object-fit:cover;
+  height: 70%;
+  object-fit: cover;
 }
 
 @media only screen and (max-width: 769px) {
-   .swiper{
-    padding:0px;
-   }
-   .swiper-slide img{
-    height:80%;
-   }
-   .carouselTextContainer{
-    padding:5px;
-   }
+  .swiper {
+    padding: 0px;
+  }
+  .swiper-slide img {
+    height: 80%;
+  }
 }
 @media only screen and (min-width: 1300px) {
-  .swiper{
-    height:500px;
+  .swiper {
+    height: 400px;
+    padding: 20px;
   }
-  .swiper-slide img{
-   height:70%;
-  }
-  .carouselTextContainer{
-    padding:20px;
-    margin-top:20px;
-    font-size: 40px !important;
+  .swiper-slide img {
+    width: 80%;
+    height: 80%;
   }
 }
-.carouselContainer{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.carouselContainer:hover img {
+  transform: translateY(-5px);
+  transition: all 0.7s ease-in-out;
 }
-.carouselContainer:hover img{
-  transform:translateY(-5px);
-  transition:all 0.75s ease-in-out;
-}
-.carouselUnderline{
-  width: 0px;
-  height:2px;
-  background: black;
-  transition-property: width;
-  transition-duration:1s;
-}
-.carouselContainer:hover .carouselUnderline{
-  width:100px;
-}
-.carouselTextContainer{
-  width:100%;
-  padding:10px;
-  font-size:larger;
-  overflow-y:hidden;
+.carouselUnderline {
+  position: relative;
+  user-select: none;
+  padding: 10px;
+  font-size: larger;
+  font-family: Poppins;
   text-align: left;
+}
+.carouselTextContainer {
+  padding: 10px;
+  font-size: larger;
+  text-align: left;
+  font-family: Poppins;
+  letter-spacing: 1.2px;
+}
+.carouselContainer:hover .underline {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1.2px;
+  transform: scaleX(0);
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 2.5s ease-out;
+}
+.carouselContainer:hover:after .underline {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
