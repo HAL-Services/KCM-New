@@ -7,7 +7,7 @@ export default function MarqueeElement() {
       <Marquee gradient={false}>
         {MarqueeData.map((imgData) => (
           <div key={imgData.id} className="MarqueeDiv">
-            <img className="MarqueeImage" src={imgData.url} />
+            <img className="MarqueeImage" src={imgData.url} alt="alternate" />
           </div>
         ))}
       </Marquee>

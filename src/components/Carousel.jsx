@@ -1,4 +1,3 @@
-import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -7,7 +6,7 @@ import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "../styles/Carousel.styles.css";
+import "../styles/Carousel.styles.scss";
 // import required modules
 import { Keyboard, Scrollbar, Navigation, Pagination } from "swiper";
 
@@ -36,7 +35,7 @@ export default function Carousel(props) {
         {props.data.map((imageData) => {
           return (
             <SwiperSlide key={imageData.id} className="carouselContainer">
-              <img src={imageData.url} />
+              <img src={imageData.url} alt={imageData.id} />
               <div className="carouselTextContainer">
                 <h5 style={{ height: "100%" }}>{imageData.title}</h5>
                 <div className="carouselUnderline"></div>

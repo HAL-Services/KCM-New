@@ -4,14 +4,28 @@ import NavBar from "./components/NavBar";
 import HomePage from "./Pages/HomePage";
 import MarqueeElement from "./components/Marquee";
 import GarageCarousel from "./components/GarageCarousel";
+import Card from "./components/Card";
+import CardData from "./OfflineAPI/CardRealatedData";
 import LandingPage from "./Pages/LandingPage";
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      {/* <NavBar />
       <LandingPage />
       <MarqueeElement/>
-      <HomePage/>
+      <HomePage/> */}
+      <div className="wrapper">
+        {CardData.map((ele) => {
+          return (
+            <Card
+              title={ele.title}
+              body={ele.content}
+              key={ele.id}
+              number={ele.id}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
