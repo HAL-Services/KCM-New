@@ -2,7 +2,7 @@
   background-repeat: no-repeat;
   background-size: 50% 70%;
   background-position: right;
-  height: 90vh;
+  height: 600px;
   width: 100vw;
 }
 .LandingPageWrapper {
@@ -80,16 +80,20 @@
 
 @media only screen and (max-width: 769px) {
 }
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1300px) {
+  .LandingPageContainer{
+    height:900px;
+    background-size: 45% 60%;
+  }
   .LandingPageWrapper {
     height: 100%;
-    padding: 120px;
+    padding: 100px;
   }
   .LandingPageWrapper h1 {
-    font-size: 4.5em;
+    font-size:3em;
   }
   .LandingPageWrapper h4 {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
   .LandingPageWrapper button {
     width: 170px;
@@ -97,10 +101,13 @@
   }
   .LandingText {
     margin-top: 70px;
-    font-size: 2.4em;
+    font-size: 2em;
   }
   .LandingText1 {
-    font-size: 2.4em;
+    font-size: 2em;
+  }
+  .LandingPageWrapper{
+    margin-left:2em;
   }
   .contactUs {
     margin-top:30rem;

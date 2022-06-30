@@ -6,21 +6,15 @@ import "../styles/HomePage.styles.css";
 export default function HomePage() {
   return (
     <div className="HomePageContainer">
-      <section style={{
-        marginTop:"100px"
-      }}>
+      <section>
         <div className="HomePageText">Our Expertise</div>
         <Carousel data={ExpertiseImagedata} />
       </section>
-      <section
-        style={{
-          backgroundImage: `url(${WaveImage})`,
-        }}
-        className="HomePageSection"
-      >
+      <section className="HomePageSection">
         <div className="HomePageText1">Latest From Our Garage</div>
         <GarageCarousel />
       </section>
+      <img src={WaveImage}></img>
     </div>
   );
 }

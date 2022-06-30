@@ -1,10 +1,12 @@
+.HomePageContainer {
+  margin-top: 100px;
+}
 .HomePageSection {
-  color: white;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  height: 900px;
-  z-index: 10000;
   margin-top: 150px;
+  background-color: black;
+  height:650px!important;
+  margin-bottom: -100px;
+  color:white;
 }
 .HomePageText {
   margin-left: 2em;
@@ -16,10 +18,10 @@
 .HomePageText1 {
   font-family: Poppins;
   font-size: 2em;
-  background-color: black;
   padding: 24px;
   font-weight: bold;
 }
+
 @media only screen and (min-width: 1300px) {
   .HomePageSection {
     height: 1200px;
