@@ -1,4 +1,4 @@
-import LandingImage from "../Assets/Images/LandingImage.png";
+import LandingImage from "../Assets/Images/LandingImageNew.png";
 import "../styles/LandingPage.styles.css";
 // Importing animation
 import { motion } from "framer-motion";
