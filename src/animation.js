@@ -57,5 +57,5 @@ export const landingAnim = {
 
 export const titleAnim = {
   hidden: { y: 100 },
-  show: { y: 0, transition: { duration: 1.5, ease: "easeOut" } },
+  show: { y: 0, transition: { duration: 1, ease: "easeOut" } },
 };
