@@ -7,6 +7,8 @@ import GarageCarousel from "./components/GarageCarousel";
 import LandingPage from "./Pages/LandingPage";
 import Footer from "./components/Footer";
 import ContactUs from "./components/ContactUs";
+import Card from "./components/Card";
+import CardData from "./OfflineAPI/CardRelatedData";
 function App() {
   return (
     <div className="App">
@@ -15,6 +17,18 @@ function App() {
       <MarqueeElement />
       <HomePage />
       <ContactUs />
+      <div className="wrapper">
+        {CardData.map((ele) => {
+          return (
+            <Card
+              title={ele.title}
+              body={ele.content}
+              key={ele.id}
+              number={ele.id}
+            />
+          );
+        })}
+      </div>
       <Footer />
     </div>
   );
