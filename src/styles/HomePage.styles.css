@@ -5,7 +5,8 @@
   margin-top: 150px;
   background-color: black;
   height:650px!important;
-  margin-bottom: -100px;
+
+  /* margin-bottom: -100px; */
   color:white;
 }
 .HomePageText {

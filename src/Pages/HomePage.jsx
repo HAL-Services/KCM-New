@@ -14,7 +14,7 @@ export default function HomePage() {
         <div className="HomePageText1">Latest From Our Garage</div>
         <GarageCarousel />
       </section>
-      <img src={WaveImage}></img>
+      <img src={WaveImage} style={{ top: "0px" }}></img>
     </div>
   );
 }
