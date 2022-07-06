@@ -41,21 +41,23 @@ export const hamburgerBotAnim = {
 
 export const landingAnim = {
   hidden: {
-    y: 100,
     opacity: 0,
   },
   show: {
     opacity: 1,
-    y: 0,
     transition: {
-      duration: 0.75,
-      // when: "beforeChildren",
-      // staggerChildren: 0.25,
+      delay: 0.25,
+      duration: 0.5,
+      when: "beforeChildren",
+      staggerChildren: 0.05,
     },
   },
 };
 
 export const titleAnim = {
   hidden: { y: 100 },
-  show: { y: 0, transition: { duration: 1, ease: "easeOut" } },
+  show: {
+    y: 0,
+    transition: { type: "spring" },
+  },
 };

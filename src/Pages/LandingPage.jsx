@@ -1,9 +1,12 @@
 import LandingImage from "../Assets/Images/LandingImageNew.png";
 import "../styles/LandingPage.styles.css";
 // Importing animation
-import { motion } from "framer-motion";
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { landingAnim, titleAnim } from "../animation";
 export default function LandingPage() {
+  const { scrollY } = useViewportScroll();
+  const yValue = useTransform(scrollY, [0, 200], [0, 50]);
+
   return (
     <>
       <div className="contactUs">Email Us - HalServices@gmail.com</div>
