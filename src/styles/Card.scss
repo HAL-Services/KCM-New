@@ -1,0 +1,27 @@
+.card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--first-color-second);
+  padding: 1rem;
+  letter-spacing: 1px;
+  &_title {
+    padding: 2rem 1rem;
+    color: var(--first-color);
+    font-size: var(--h2-font-size);
+  }
+  &_desc {
+    padding: 0 1rem;
+  }
+  &_index {
+    padding: 1rem;
+    font-size: var(--big-font-size);
+  }
+  transition: 200ms all ease-out;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+}
