@@ -16,19 +16,22 @@ function App() {
       <LandingPage />
       <MarqueeElement />
       <HomePage />
-      <ContactUs />
-      <div className="wrapper">
-        {CardData.map((ele) => {
-          return (
-            <Card
-              title={ele.title}
-              body={ele.content}
-              key={ele.id}
-              number={ele.id}
-            />
-          );
-        })}
+      <div className="how_we_work">
+        <div className="how_we_work_title">How we Work</div>
+        <div className="wrapper">
+          {CardData.map((ele) => {
+            return (
+              <Card
+                title={ele.title}
+                body={ele.content}
+                key={ele.id}
+                number={ele.id}
+              />
+            );
+          })}
+        </div>
       </div>
+      <ContactUs />
       <Footer />
     </div>
   );

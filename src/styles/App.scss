@@ -42,6 +42,19 @@ body::-webkit-scrollbar {
   width: 0px; /* width of the entire scrollbar */
 }
 
+.how_we_work{
+  padding: 5rem;
+  &_title{
+      font-size: var(--big-font-size);
+      color: var(--first-color-lighter);
+      padding: 2rem;
+      @media screen and (max-width: 500px) {
+      padding:0 0 1rem 0; 
+      font-size: var(--h1-font-size);
+      }
+  }
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 18rem));
