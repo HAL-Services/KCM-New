@@ -67,7 +67,7 @@ export const contactAnim1 = {
   show: {
     x: 0,
     opacity: 1,
-    transition: { type: "spring", bounce: 0.1, duration: 1 },
+    transition: { type: "spring", bounce: 0.1, duration: 1, delay: 1 },
   },
 };
 
@@ -76,6 +76,6 @@ export const contactAnim2 = {
   show: {
     x: 0,
     opacity: 1,
-    transition: { type: "spring", bounce: 0.1, duration: 1 },
+    transition: { type: "spring", bounce: 0.1, duration: 1, delay: 1 },
   },
 };
