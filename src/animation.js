@@ -61,3 +61,21 @@ export const titleAnim = {
     transition: { type: "spring" },
   },
 };
+
+export const contactAnim1 = {
+  hidden: { x: 200, opacity: 0 },
+  show: {
+    x: 0,
+    opacity: 1,
+    transition: { type: "spring", bounce: 0.1, duration: 1, delay: 1 },
+  },
+};
+
+export const contactAnim2 = {
+  hidden: { x: -200, opacity: 0 },
+  show: {
+    x: 0,
+    opacity: 1,
+    transition: { type: "spring", bounce: 0.1, duration: 1, delay: 1 },
+  },
+};
