@@ -9,13 +9,17 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../styles/GarageCarousel.css";
 // import required modules
-import { Keyboard, Scrollbar, Navigation, Pagination } from "swiper";
+import {Keyboard, Scrollbar, Navigation, Pagination, Autoplay} from "swiper";
 import ExpertiseImagedata from "../OfflineAPI/ExpertiseImagesData";
 export default function GarageCarousel() {
   return (
     <>
       <Swiper
         slidesPerView={1}
+        autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+        }}
         centeredSlides={false}
         slidesPerGroupSkip={1}
         spaceBetween={70}
@@ -29,7 +33,7 @@ export default function GarageCarousel() {
           },
         }}
         navigation={true}
-        modules={[Keyboard, Scrollbar, Navigation, Pagination]}
+        modules={[Keyboard, Scrollbar, Navigation, Pagination, Autoplay]}
         className="mySwiperGarage"
       >
         {ExpertiseImagedata.map((imageData) => {
