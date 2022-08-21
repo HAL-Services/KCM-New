@@ -1,22 +1,20 @@
-.HomePageContainer {
+.Section2PageContainer {
   margin-top: 100px;
 }
-.HomePageSection {
+.Section2PageSection {
   margin-top: 150px;
   background-color: black;
-  height:650px!important;
-
-  /* margin-bottom: -100px; */
-  color:white;
+  height: 650px !important;
+  color: white;
 }
-.HomePageText {
+.Section2PageText {
   margin-left: 2em;
   font-family: Poppins;
   font-size: 2em;
   padding: 5px;
   font-weight: bold;
 }
-.HomePageText1 {
+.Section2PageText1 {
   font-family: Poppins;
   font-size: 2em;
   padding: 24px;
@@ -24,7 +22,7 @@
 }
 
 @media only screen and (min-width: 1300px) {
-  .HomePageSection {
+  .Section2PageSection {
     height: 1200px;
   }
 }

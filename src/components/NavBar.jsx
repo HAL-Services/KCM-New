@@ -121,7 +121,9 @@ const NavBar = () => {
         </nav>
       </div>
       <div className="login-btn">
-        <button type="submit">Login</button>
+        <Link to="/login">
+          <button type="submit">Login</button>
+        </Link>
       </div>
     </header>
   );
