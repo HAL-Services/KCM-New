@@ -1,51 +1,51 @@
-.login-page{
+.login-page {
   display: flex;
 }
 
-.left-info-continer{
+.left-info-continer {
   display: flex;
   justify-content: center;
   flex-direction: column;
   height: 100vh;
   width: 43%;
   padding: 8rem 3rem;
-  .information{
+  .information {
     padding: 0 2rem;
     text-justify: center;
   }
-  h1{
+  h1 {
     font-size: var(--big-font-size);
     font-weight: var(--font-bold);
     margin-bottom: var(--mb-2-5);
   }
-  p{
+  p {
     color: var(--secondary-color);
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     word-spacing: 1px;
     line-height: 1.5em;
   }
-  ::selection{
+  ::selection {
     background-color: var(--first-color-lighter);
     color: var(--first-color-alt);
   }
 }
 
-.right-login-container{
+.right-login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--secondary-color);
-  height: 100vh; 
+  height: 100vh;
   width: 60%;
   padding: 4rem 10rem;
-  form{
+  form {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    .input-container{
+    .input-container {
       position: relative;
       border-bottom: 1px solid #fff;
       text-align: center;
@@ -53,18 +53,18 @@
       margin-bottom: var(--mb-2-5);
     }
   }
-  
-  .input-container input{
+
+  .input-container input {
     width: 100%;
     background-color: var(--secondary-color);
     outline: none;
-    border:none;
+    border: none;
     height: 50px;
     padding: 0 5px;
     font-size: var(--h2-font-size);
     color: var(--default-color);
   }
-  .input-container label{
+  .input-container label {
     position: absolute;
     top: 40%;
     left: 14px;
@@ -72,31 +72,31 @@
     pointer-events: none;
     color: var(--default-color);
     transform: translateY(-50%);
-    transition: .5s;
+    transition: 0.5s;
     transform: scale(1.2);
   }
   .input-container input:focus ~ label,
-  .input-container input:valid ~ label{
+  .input-container input:valid ~ label {
     top: -10px;
     transform: scale(1);
     left: 0;
     color: var(--first-color);
   }
-  .btn-container{
+  .btn-container {
     display: flex;
     justify-content: center;
     align-content: center;
-    button{
+    button {
       width: 100%;
       border: 2px solid var(--first-color);
-      padding: .8em 3.5em;
+      padding: 0.8em 3.5em;
       font-size: var(--h3-font-size);
       background-color: var(--secondary-color);
       color: var(--first-color);
       border-radius: 2em;
-      transition: .5s;
+      transition: 0.5s;
       margin-top: var(--mb-1);
-      &:hover{
+      &:hover {
         color: var(--default-color);
         background-color: var(--first-color);
         cursor: pointer;
@@ -105,66 +105,65 @@
   }
 }
 
-@media  screen and (max-width: 1280px) {
-   .login-page{
-     flex-direction: column;
-   }
-   .left-info-continer{
-     height: auto;
-     width: 100%;
-     display: flex;
-     align-items: center;
-     padding: 4rem 3rem;
-     .information{
-       width: 80%;
-     }
-     h1{
+@media screen and (max-width: 730px) {
+  .login-page {
+    flex-direction: column;
+  }
+  .left-info-continer {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 4rem 3rem;
+    .information {
+      width: 80%;
+    }
+    h1 {
       font-size: var(--h1-font-size);
     }
-     
-   }
-   .right-login-container{
-     height: auto;
-     width: 100%;
-     padding: 6rem 8rem;
-   }
+  }
+  .right-login-container {
+    height: auto;
+    width: 100%;
+    padding: 6rem 8rem;
+  }
 }
 
-@media  screen and (max-width: 900px) {
-  .left-info-continer{
+@media screen and (max-width: 900px) {
+  .left-info-continer {
     padding: 4rem 2rem;
   }
-  .right-login-container{
+  .right-login-container {
     padding: 6rem;
-  } 
+  }
 }
 
 @media screen and (max-width: 710px) {
-  .left-info-continer{
+  .left-info-continer {
     width: 100%;
-    .information{
+    .information {
       padding: 0;
     }
-  } 
+  }
 }
 
-@media screen and (max-width: 652px){
-  .left-info-continer{
+@media screen and (max-width: 652px) {
+  .left-info-continer {
     padding: 4rem 0;
   }
-  .right-login-container{
+  .right-login-container {
     padding: 6rem 4rem;
-    .input-container label{
+    .input-container label {
       font-size: var(--normal-font-size);
     }
-    .input-container input{
+    .input-container input {
       font-size: var(--normal-font-size);
     }
   }
 }
 
 @media screen and (max-width: 500px) {
-  .right-login-container{
+  .right-login-container {
     padding: 6rem 2rem;
   }
 }
