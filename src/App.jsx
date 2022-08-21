@@ -9,6 +9,8 @@ import Footer from "./components/Footer";
 import ContactUs from "./components/ContactUs";
 import Card from "./components/Card";
 import CardData from "./OfflineAPI/CardRelatedData";
+import AboutUs from "./Pages/AboutUs";
+
 function App() {
   return (
     <div className="App">
@@ -32,6 +34,7 @@ function App() {
         </div>
       </div>
       <ContactUs />
+      {/* <AboutUs /> */}
       <Footer />
     </div>
   );
