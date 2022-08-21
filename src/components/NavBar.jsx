@@ -7,6 +7,7 @@ import {
   hamburgerBotAnim,
 } from "../animation";
 
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
 
@@ -70,13 +71,51 @@ const NavBar = () => {
               Services<span></span>
             </li>
             <li>
-              About<span></span>
+              <a
+                href="/"
+                onClick={(e) => {
+                  let contact = document.getElementById("contact_section");
+                  e.preventDefault();
+                  contact && contact.scrollIntoView();
+                }}
+              >
+                About
+              </a>
+              <span></span>
             </li>
             <li>
-              Testimonial<span></span>
+              <a
+                href="/"
+                onClick={(e) => {
+                  let testimonial = document.getElementById("testimonial");
+                  e.preventDefault();
+                  testimonial &&
+                    testimonial.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                }}
+              >
+                Testimonial
+              </a>
+              <span></span>
             </li>
             <li>
-              Contact Us<span></span>
+              <a
+                href="/"
+                onClick={(e) => {
+                  let contact = document.getElementById("contact_section");
+                  e.preventDefault();
+                  contact &&
+                    contact.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                }}
+              >
+                Contact Us
+              </a>
+              <span></span>
             </li>
           </ul>
         </nav>

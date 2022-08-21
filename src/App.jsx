@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import ContactUs from "./components/ContactUs";
 import Card from "./components/Card";
 import CardData from "./OfflineAPI/CardRelatedData";
+import Testimonial from "./Pages/TestimonialPage";
 function App() {
   return (
     <div className="App">
@@ -31,6 +32,7 @@ function App() {
           })}
         </div>
       </div>
+      <Testimonial />
       <ContactUs />
       <Footer />
     </div>

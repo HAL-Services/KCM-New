@@ -10,7 +10,7 @@ import { FiPhone, FiMail, FiMapPin, FiSend } from "react-icons/fi";
 
 const ContactUs = () => {
   return (
-    <div className="contact_section">
+    <div className="contact_section" id="contact_section">
       <h2 className="contact_main_title">Contact Us</h2>
       <span className="contact_main_subtitle">Get in Touch</span>
       <div className="contact_container grid">
@@ -19,7 +19,7 @@ const ContactUs = () => {
           variants={contactAnim2}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: false, amount: 0.5 }}
         >
           <div className="contact_info">
             <motion.span
@@ -76,7 +76,7 @@ const ContactUs = () => {
           variants={contactAnim1}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: false, amount: 0.5 }}
         >
           <div className="contact__inputs grid">
             <motion.div
