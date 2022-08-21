@@ -46,9 +46,9 @@ export const landingAnim = {
   show: {
     opacity: 1,
     transition: {
-      delay: 0.25,
-      duration: 0.5,
-      when: "beforeChildren",
+      delay: 0.2,
+      duration: 0.25,
+      when: "withChildren",
       staggerChildren: 0.05,
     },
   },
@@ -67,7 +67,7 @@ export const contactAnim1 = {
   show: {
     x: 0,
     opacity: 1,
-    transition: { type: "spring", bounce: 0.1, duration: 1, delay: 1 },
+    transition: { type: "spring", bounce: 0.1, duration: 0.3, delay: 0 },
   },
 };
 
@@ -76,6 +76,6 @@ export const contactAnim2 = {
   show: {
     x: 0,
     opacity: 1,
-    transition: { type: "spring", bounce: 0.1, duration: 1, delay: 1 },
+    transition: { type: "spring", bounce: 0.1, duration: 0.3, delay: 0 },
   },
 };
