@@ -6,6 +6,7 @@ import Section3 from "../Pages/Section3";
 import Testimonial from "../Pages/TestimonialPage";
 import ContactUs from "../components/ContactUs";
 import Footer from "../components/Footer";
+import AboutUs from "./AboutUs";
 export default function FullPage() {
   return (
     <div>
@@ -15,6 +16,7 @@ export default function FullPage() {
       <Section2 />
       <Section3 />
       <Testimonial />
+      <AboutUs />
       <ContactUs />
       <Footer />
     </div>
