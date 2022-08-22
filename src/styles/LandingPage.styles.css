@@ -1,8 +1,8 @@
 .LandingPageContainer {
   background-repeat: no-repeat;
-  background-size: 50% 70%;
+  background-size: 60% 70%;
   background-position: right;
-  height: 600px;
+  height: 100vh;
   width: 100vw;
 }
 .LandingPageWrapper {
