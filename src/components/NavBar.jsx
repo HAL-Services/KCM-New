@@ -12,7 +12,7 @@ const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <header className="navbar">
+    <header className="navbar" id="navbar">
       <motion.div className="burger-menu">
         <motion.svg
           viewBox="0 0 4 4"

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/scrollbar";
@@ -39,7 +39,7 @@ export default function GarageCarousel() {
         {ExpertiseImagedata.map((imageData) => {
           return (
             <SwiperSlide key={imageData.id} className="GaragecarouselContainer">
-              <img className="GarageImage" src={imageData.url} />
+              <LazyLoadImage className="GarageImage" src={imageData.url} />
             </SwiperSlide>
           );
         })}

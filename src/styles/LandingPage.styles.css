@@ -31,14 +31,9 @@
   border: 1px solid var(--first-color);
   color: var(--first-color);
   border-radius: 2rem;
-  /* transition: 0.4s; */
   width: 200px;
 }
-/* .LandingPageWrapper button:hover {
-  cursor: pointer;
-  background-color: var(--first-color);
-  color: var(--default-color);
-} */
+
 .contactUs{
   color: black;
   cursor: pointer;
@@ -75,12 +70,20 @@
   padding:1em;
   cursor: pointer;
   margin-left:-9rem;
-  font-weight:bolder;
 }
 .landing_hide{
   overflow: hidden;
 }
+.fingerUp{
+  height:90px;
+  width:80px;
+  position: fixed;
+  z-index: 100;
+  top:31rem;
+  overflow-x: hidden;
+  left:75rem;
 
+}
 @media only screen and (max-width: 769px) {
 }
 @media only screen and (min-width: 1600px) {
@@ -115,7 +118,6 @@
   .contactUs {
     margin-top:30rem;
     font-size:1.4rem;
-    font-weight:bolder;
     margin-left:-13rem;
   }
 }

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/scrollbar";
@@ -33,7 +33,7 @@ export default function Carousel(props) {
         {props.data.map((imageData) => {
           return (
             <SwiperSlide key={imageData.id} className="carouselContainer">
-              <img src={imageData.url} />
+              <LazyLoadImage src={imageData.url} />
               <div className="carouselUnderline">
                 {imageData.title}
                 <div className="underline"></div>

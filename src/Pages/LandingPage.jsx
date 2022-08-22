@@ -3,13 +3,30 @@ import "../styles/LandingPage.styles.css";
 // Importing animation
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { landingAnim, titleAnim } from "../animation";
+import FingerUp from "../Assets/Images/FingerUp.gif";
 export default function LandingPage() {
   const { scrollY } = useViewportScroll();
   const yValue = useTransform(scrollY, [0, 200], [0, 50]);
 
   return (
     <>
-      <div className="contactUs">Email Us - HalServices@gmail.com</div>
+      <div className="contactUs">Email- kcmautomobiles@gmail.com</div>
+
+      <a
+        href="/"
+        onClick={(e) => {
+          let contact = document.getElementById("navbar");
+          e.preventDefault();
+          contact &&
+            contact.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+        }}
+      >
+        <img className="fingerUp" src={FingerUp} />
+      </a>
+
       <motion.div
         variants={landingAnim}
         initial="hidden"
