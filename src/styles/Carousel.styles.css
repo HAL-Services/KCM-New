@@ -1,5 +1,3 @@
-.CarouselContainer {
-}
 .swiper {
   width: 100%;
   height: 350px;
@@ -20,35 +18,55 @@
   object-fit: cover;
 }
 
-.swiper-button-next{
+.swiper-button-next {
   background-color: var(--default-color);
   padding: 1.8rem;
   border-radius: 50%;
   color: var(--first-color);
   font-size: 1.5rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-.swiper-button-next::after{
+.swiper-button-next::after {
   font-size: 1.5rem;
 }
-.swiper-button-prev{
+.swiper-button-prev {
   background-color: var(--default-color);
   padding: 1.8rem;
   border-radius: 50%;
   color: var(--first-color);
   font-size: 1.5rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-.swiper-button-prev::after{
+.swiper-button-prev::after {
   font-size: 1.5rem;
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 900px) {
+  .carouselContainer {
+    justify-content: center;
+    text-align: center;
+    padding: 0px;
+  }
   .swiper {
     padding: 0px;
   }
   .swiper-slide img {
     height: 80%;
+    width: 80%;
+    margin: auto;
+    padding: 0px;
+  }
+  .swiper-button-next {
+    visibility: hidden;
+  }
+  .swiper-button-prev {
+    visibility: hidden;
+  }
+  .carouselUnderline {
+    margin-top: 0px !important;
+    text-align: center !important;
   }
 }
 @media only screen and (min-width: 1300px) {

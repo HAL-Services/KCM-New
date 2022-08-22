@@ -41,13 +41,17 @@
   transition: transform 3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 }
 
-@media only screen and (max-width: 769px) {
-  .mySwiperGarage {
-    padding: 0px;
+@media only screen and (max-width: 90px) {
+  .mySwiperGarage{
+    justify-content: center;
+    text-align: center;
+    padding:0px;
   }
   .GaragecarouselContainer img {
     height: 90%;
     width: 90%;
+    margin:auto;
+    padding:0px;
   }
 }
 @media only screen and (min-width: 1600px) {
