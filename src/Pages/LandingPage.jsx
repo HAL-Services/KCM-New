@@ -3,8 +3,7 @@ import "../styles/LandingPage.styles.css";
 // Importing animation
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { landingAnim, titleAnim } from "../animation";
-import FingerUp from "../Assets/Images/FingerUp.gif";
-import MobileBackground from "../Assets/Images/MobileDesign.png";
+import MobileBackground from "../Assets/Images/mobileDesign.gif";
 import { FaArrowCircleUp } from "react-icons/fa";
 export default function LandingPage() {
   const { scrollY } = useViewportScroll();
@@ -13,7 +12,9 @@ export default function LandingPage() {
   return (
     <>
       <div className="contactUs">Email- kcmautomobiles@gmail.com</div>
-
+      <div className="mobileViewImage" style={{ display: "none" }}>
+        <img src={MobileBackground} />
+      </div>
       <a
         href="/"
         onClick={(e) => {
@@ -73,12 +74,6 @@ export default function LandingPage() {
           </span>
         </div>
       </motion.div>
-      <div
-        className="mobileViewImage"
-        style={{ display: "none", visibility: "hidden" }}
-      >
-        <img src={MobileBackground} />
-      </div>
     </>
   );
 }

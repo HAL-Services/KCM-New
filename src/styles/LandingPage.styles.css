@@ -106,7 +106,7 @@
     text-align: center;
   }
   .landing_hide h1 {
-    margin-top: 4rem;
+    margin-top: 0rem;
   }
   .landing_hide h4 {
     text-align: center;
@@ -116,10 +116,15 @@
   }
   .mobileViewImage {
     display: block !important;
+    width: 100vw;
+    text-align: center;
+    height: 100%;
+    margin-top: 1rem;
   }
+
   .mobileViewImage img {
-    height: 200px;
-    width: 300px;
+    height: 400px;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 1600px) {
