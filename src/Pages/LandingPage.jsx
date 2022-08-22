@@ -4,6 +4,8 @@ import "../styles/LandingPage.styles.css";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { landingAnim, titleAnim } from "../animation";
 import FingerUp from "../Assets/Images/FingerUp.gif";
+import MobileBackground from "../Assets/Images/MobileDesign.png";
+import { FaArrowCircleUp } from "react-icons/fa";
 export default function LandingPage() {
   const { scrollY } = useViewportScroll();
   const yValue = useTransform(scrollY, [0, 200], [0, 50]);
@@ -24,7 +26,7 @@ export default function LandingPage() {
             });
         }}
       >
-        <img className="fingerUp" src={FingerUp} />
+        <FaArrowCircleUp className="fingerUp" />
       </a>
 
       <motion.div
@@ -32,6 +34,7 @@ export default function LandingPage() {
         initial="hidden"
         animate="show"
         className="LandingPageContainer"
+        id="LandingPageContainer"
         style={{
           backgroundImage: `url(${LandingImage})`,
         }}
@@ -70,6 +73,12 @@ export default function LandingPage() {
           </span>
         </div>
       </motion.div>
+      <div
+        className="mobileViewImage"
+        style={{ display: "none", visibility: "hidden" }}
+      >
+        <img src={MobileBackground} />
+      </div>
     </>
   );
 }

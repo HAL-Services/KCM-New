@@ -15,7 +15,7 @@
 .LandingPageWrapper h1 {
   margin-top: 10rem;
   font-size: 3em;
-  letter-spacing:3px; 
+  letter-spacing: 3px;
 }
 .LandingPageWrapper h4 {
   margin-top: 7px;
@@ -34,10 +34,10 @@
   width: 200px;
 }
 
-.contactUs{
+.contactUs {
   color: black;
   cursor: pointer;
-  letter-spacing:1.2px;
+  letter-spacing: 1.2px;
   line-height: 2px;
   font-family: Poppins;
 }
@@ -67,26 +67,64 @@
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   margin-top: 20em;
-  padding:1em;
+  padding: 1em;
   cursor: pointer;
-  margin-left:-9rem;
+  margin-left: -9rem;
 }
-.landing_hide{
+.landing_hide {
   overflow: hidden;
 }
-.fingerUp{
-  height:90px;
-  width:80px;
+.fingerUp {
+  height: 60px;
+  width: 70px;
   position: fixed;
-  right: 0px; bottom: 0px;
+  right: 0px;
+  bottom: 0px;
   padding: 5px;
   z-index: 2;
+  color: var(--first-color);
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 900px) {
+  div#LandingPageContainer {
+    background-image: none !important;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 0px;
+  }
+  .contactUs {
+    visibility: hidden;
+  }
+  .fingerUp {
+    visibility: hidden;
+  }
+  .LandingPageWrapper {
+    height: 100%;
+    width: 100%;
+    margin-left: 0px;
+  }
+  .landing_hide {
+    text-align: center;
+  }
+  .landing_hide h1 {
+    margin-top: 4rem;
+  }
+  .landing_hide h4 {
+    text-align: center;
+  }
+  .landing_hide button {
+    margin-bottom: 1px;
+  }
+  .mobileViewImage {
+    display: block !important;
+  }
+  .mobileViewImage img {
+    height: 200px;
+    width: 300px;
+  }
 }
 @media only screen and (min-width: 1600px) {
-  .LandingPageContainer{
-    height:900px;
+  .LandingPageContainer {
+    height: 900px;
     background-size: 45% 60%;
   }
   .LandingPageWrapper {
@@ -94,7 +132,7 @@
     padding: 100px;
   }
   .LandingPageWrapper h1 {
-    font-size:3em;
+    font-size: 3em;
   }
   .LandingPageWrapper h4 {
     font-size: 1.4em;
@@ -110,12 +148,12 @@
   .LandingText1 {
     font-size: 2em;
   }
-  .LandingPageWrapper{
-    margin-left:2em;
+  .LandingPageWrapper {
+    margin-left: 2em;
   }
   .contactUs {
-    margin-top:30rem;
-    font-size:1.4rem;
-    margin-left:-13rem;
+    margin-top: 30rem;
+    font-size: 1.4rem;
+    margin-left: -13rem;
   }
 }
