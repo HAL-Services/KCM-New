@@ -4,7 +4,7 @@
 .Section2PageSection {
   margin-top: 150px;
   background-color: black;
-  height: 650px !important;
+  height: 500px;
   color: white;
 }
 .Section2PageText {
@@ -18,11 +18,11 @@
   font-family: Poppins;
   font-size: 2em;
   padding: 24px;
-  font-weight: bold;
+  margin-left:20px;
 }
 
 @media only screen and (min-width: 1300px) {
   .Section2PageSection {
-    height: 1200px;
+    height: 600px;
   }
 }

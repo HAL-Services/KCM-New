@@ -78,11 +78,9 @@
   height:90px;
   width:80px;
   position: fixed;
-  z-index: 100;
-  top:31rem;
-  overflow-x: hidden;
-  left:75rem;
-
+  right: 0px; bottom: 0px;
+  padding: 5px;
+  z-index: 2;
 }
 @media only screen and (max-width: 769px) {
 }
