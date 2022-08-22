@@ -15,7 +15,7 @@ export default function FullPage() {
       <Section2 />
       <Section3 />
       <Testimonial />
-      {/* <ContactUs /> */}
+      <ContactUs />
       <Footer />
     </div>
   );

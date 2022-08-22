@@ -134,17 +134,18 @@
   }
   .testimonialContainer span {
     margin-right: 0px !important;
+    height: auto;
   }
-  .testimonialHeading{
-    padding:0px!important;
-    font-size:2.3em;
-    height: 100px!important;
+  .testimonialHeading {
+    padding: 0px !important;
+    font-size: 2.3em;
+    height: 100px !important;
     margin-bottom: 0px;
   }
-  .testimonialSwiper{
-    margin-top:-22rem;
+  .testimonialSwiper {
+    margin-top: -22rem;
   }
-  .testimonialSlider{
-    background-color:whitesmoke;
+  .testimonialSlider {
+    background-color: whitesmoke;
   }
 }

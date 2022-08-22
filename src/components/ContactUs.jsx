@@ -19,7 +19,7 @@ const ContactUs = () => {
           variants={contactAnim2}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <div className="contact_info">
             <motion.span
@@ -76,7 +76,7 @@ const ContactUs = () => {
           variants={contactAnim1}
           initial="hidden"
           whileInView={"show"}
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <div className="contact__inputs grid">
             <motion.div
