@@ -21,7 +21,7 @@ export default function Carousel(props) {
         spaceBetween={70}
         grabCursor={true}
         autoplay={{
-          delay: 2500,
+          delay: 3500,
           disableOnInteraction: false,
         }}
         breakpoints={{
