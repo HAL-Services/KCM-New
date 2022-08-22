@@ -14,7 +14,7 @@ export default function Section2() {
         <div className="Section2PageText1">Latest From Our Garage</div>
         <GarageCarousel />
       </section>
-      <img src={WaveImage} style={{ marginTop: "-1rem" ,zIndex:"-1"}}></img>
+      <img className="waveImage" src={WaveImage} style={{ marginTop: "-1rem" ,zIndex:"-1"}}></img>
     </div>
   );
 }
