@@ -88,8 +88,9 @@
   div#LandingPageContainer {
     background-image: none !important;
     width: 100vw;
-    height: 100vh;
     margin-top: 0px;
+    height:auto;
+    margin-bottom: 2rem;
   }
   .contactUs {
     visibility: hidden;

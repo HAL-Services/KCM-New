@@ -14,7 +14,7 @@ export default function FullPage() {
       <MarqueeElement />
       <Section2 />
       <Section3 />
-      {/* <Testimonial /> */}
+      <Testimonial />
       {/* <ContactUs /> */}
       <Footer />
     </div>
