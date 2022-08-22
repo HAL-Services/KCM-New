@@ -7,10 +7,11 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  /*margin-left: 3.5rem;*/
+  z-index: -1;
 }
 .testimonialHeading {
-  display: inline-block;
+  display:flex;
+  justify-content: center;
   position: relative;
   padding: 20px;
   font-size: 3.4em;
@@ -26,8 +27,6 @@
 
 .testimonialSwiper {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
   height: 100%;
   padding: 0px;
 }

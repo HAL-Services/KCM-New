@@ -10,17 +10,23 @@ import "swiper/css/pagination";
 import "../styles/Testimonial.styles.css";
 
 // import required modules
-import MaleImage from "../Assets/Images/Testimonial.png";
+import MaleImage from "../Assets/Images/male-avatarlClients.gif";
+import MaleImage2 from "../Assets/Images/male-avatar2Clients.gif";
+import speakGif from "../Assets/Images/speakGif.gif";
+
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 export default function Testimonial() {
   return (
     <div className="testimonialContainer" id="testimonial">
       <div className="testimonialHeading">
-        <b>Happy</b> Clients
+        <span style={{marginRight:"5px"}}>
+          <img style={{height:"80px"}}src={speakGif} />
+        </span>
+        <b>Happy</b>-Clients
       </div>
       <Swiper
         slidesPerView={1}
-        spaceBetween={30}
+        spaceBetween={20}
         centeredSlides={false}
         autoplay={{
           delay: 2500,
@@ -63,7 +69,7 @@ export default function Testimonial() {
             <div className="clientContainer">
               <div className="profile">
                 <div className="clientImgBox">
-                  <img src={MaleImage} />
+                  <img src={MaleImage2} />
                 </div>
                 <h2>Raman U</h2>
               </div>
@@ -107,7 +113,7 @@ export default function Testimonial() {
             <div className="clientContainer">
               <div className="profile">
                 <div className="clientImgBox">
-                  <img src={MaleImage} />
+                  <img src={MaleImage2} />
                 </div>
                 <h2>Mayur P</h2>
               </div>
