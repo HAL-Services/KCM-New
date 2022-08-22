@@ -1,0 +1,130 @@
+* {
+  font-family: "poppins", sans-serif;
+}
+.testimonialContainer {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /*margin-left: 3.5rem;*/
+}
+.testimonialHeading {
+  display: inline-block;
+  position: relative;
+  padding: 20px;
+  font-size: 3.4em;
+  width: 100%;
+  text-align: center;
+  font-weight: 800;
+  color: rgb(57, 10, 197);
+}
+
+.testimonialHeading b {
+  color: black;
+}
+
+.testimonialSwiper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 0px;
+}
+.testimonialSlider {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  width: 100%;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 100%;
+}
+
+.clientWrapper {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  margin-bottom: 2em;
+  margin-top: 3em;
+}
+.clientContainer {
+  position: relative;
+  width: 300px;
+  margin: 40px 10px;
+  padding: 30px 20px;
+  border-radius: 3px;
+  transition: 0.3s ease;
+  height: 250px;
+}
+.profile {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20%;
+  width: 100%;
+  display: block;
+}
+.clientImgBox {
+  position: relative;
+  height: 100px;
+  margin: auto;
+  border: 2px solid grey;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 50%;
+}
+.clientImgBox img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transform: 0.3s ease;
+  object-fit: contain;
+}
+.clientImgBox h2 {
+  padding: 5px 0;
+  text-transform: capitalize;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+.clientContainer p {
+  margin-top: 50px;
+  padding: 0 8px;
+  font-size: 15px;
+  opacity: 0.8;
+  text-align: center;
+}
+.clientLeft {
+  font-size: 30px;
+  display: block;
+  text-align: left;
+  color: rgb(57, 10, 197);
+}
+.clientRight {
+  font-size: 30px;
+  display: block;
+  text-align: right;
+  color: rgb(57, 10, 197);
+}
+
+.clientImgBox:hover img {
+  filter: saturate(140%);
+  transform: scale(0.95);
+}

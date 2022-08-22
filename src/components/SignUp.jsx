@@ -1,7 +1,7 @@
 import "../styles/Login.scss";
 import { Link } from "react-router-dom";
-import SignUpSvg from "../Assets/Images/signUpSvg.svg";
-const Login = () => {
+import SignUpGif from "../Assets/Images/signUpGif.gif";
+const SignUp = () => {
   return (
     <div className="login-page">
       <div className="left-info-continer">
@@ -12,14 +12,22 @@ const Login = () => {
               height: "100%",
               width: "100%",
             }}
-            src={SignUpSvg}
+            src={SignUpGif}
           />
         </div>
       </div>
       <div className="right-login-container">
         <form action="" method="post">
           <div className="setps-container"></div>
-       
+          <div className="input-container">
+            <input
+              type="text"
+              name="fullName"
+              required={true}
+              autoComplete="off"
+            />
+            <label htmlFor="form-input-fullName">Full Name</label>
+          </div>
           <div className="input-container">
             <input
               type="text"
@@ -27,7 +35,7 @@ const Login = () => {
               required={true}
               autoComplete="off"
             />
-            <label htmlFor="form-input-phoneNumber">Phone number.</label>
+            <label htmlFor="form-input-phoneNumber">Phone number</label>
           </div>
           <div className="input-container">
             <input
@@ -36,15 +44,19 @@ const Login = () => {
               required={true}
               autoComplete="off"
             />
-            <label htmlFor="form-input-fullName">Enter Your OTP</label>
+            <label htmlFor="form-input-fullName">What is your email?</label>
           </div>
-          <Link to="/signUp">
+          <span style={{ marginBottom: "20px", color: "grey" }}>
+            Creating an account means you're okay with our Terms of Service and
+            our Privacy Policy
+          </span>
+          <Link to="/login">
             <span style={{ marginTop: "40px", color: "white" }}>
-              Don't have an account? SignUp
+              Already have an account? Login
             </span>
           </Link>
           <div className="btn-container">
-            <button type="submit">Login</button>
+            <button type="submit">Register</button>
           </div>
         </form>
       </div>
@@ -52,4 +64,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
