@@ -48,7 +48,7 @@ export const landingAnim = {
     transition: {
       delay: 0.2,
       duration: 0.25,
-      when: "withChildren",
+      when: "beforeChildren",
       staggerChildren: 0.05,
     },
   },

@@ -1,0 +1,71 @@
+.about{
+  &_section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 5rem 2rem;
+  }
+
+  &_title{
+    font-size: var(--h1-font-size);
+    color:var(--first-color);
+    text-align: center;
+    margin-bottom: var(--mb-3);
+  }
+  &_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &_right_section{
+    width: 20%;
+  }
+  &_left_section{
+    width: 60% ;
+  }
+  &_image{
+    width: 100%;
+    height: 40vh;
+    object-fit: contain;
+  }
+  &_wrapper{
+    display: flex;
+    flex-direction: row;
+  }
+  &_cardwrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 18rem));
+    gap: 10rem;
+    justify-content: center;
+    margin-bottom: var(--mb-3);
+  }
+}
+.aboutUsCards{
+  &_container{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+    padding: 1rem;
+    letter-spacing: 1px;
+  }
+  &_header{
+    border: 1px solid var(--first-color-second);
+    padding: 2rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin-bottom: var(--mb-0-5);
+  }
+  &_title{
+    font-size: var(--h2-font-size);
+  }
+  &_subtitle{
+    font-size: var(--small-font-size);
+  }
+  &_body{
+    border: 1px solid var(--first-color-second);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 2rem 1rem;
+  }
+}
