@@ -74,9 +74,13 @@ const NavBar = () => {
               <a
                 href="/"
                 onClick={(e) => {
-                  let contact = document.getElementById("contact_section");
+                  let contact = document.getElementById("about");
                   e.preventDefault();
-                  contact && contact.scrollIntoView();
+                  contact &&
+                    contact.scrollIntoView({
+                      behavior: "smooth",
+                      block: "end",
+                    });
                 }}
               >
                 About

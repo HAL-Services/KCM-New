@@ -22,7 +22,7 @@ const AboutUs = () => {
 
   return (
     <>
-      <div className="about_section">
+      <div className="about_section" id="about">
         <motion.h1
           className="about_title"
           initial={{ y: 100, opacity: 0 }}
@@ -68,7 +68,7 @@ const AboutUs = () => {
           viewport={{ once: false, amount: 0.1 }}
           transition={{ duration: 0.5, ease: "linear" }}
         >
-          Meet Our Team 😎
+          Meet Our Founders
         </motion.h1>
         <motion.div className="about_cardwrapper">
           {dataName.map((e) => {
