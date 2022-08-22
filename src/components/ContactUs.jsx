@@ -16,10 +16,7 @@ const ContactUs = () => {
       <div className="contact_container grid">
         <motion.div
           className="contact_leftside"
-          variants={contactAnim2}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.5 }}
+
         >
           <div className="contact_info">
             <motion.span
@@ -73,10 +70,6 @@ const ContactUs = () => {
         <motion.form
           action=""
           className="contact_rightside grid"
-          variants={contactAnim1}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.5 }}
         >
           <div className="contact__inputs grid">
             <motion.div

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/scrollbar";
@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../styles/Carousel.styles.css";
 // import required modules
-import { Keyboard, Scrollbar, Navigation, Pagination } from "swiper";
+import { Keyboard, Scrollbar, Navigation, Pagination,Autoplay } from "swiper";
 
 export default function Carousel(props) {
   return (
@@ -20,6 +20,10 @@ export default function Carousel(props) {
         slidesPerGroupSkip={1}
         spaceBetween={70}
         grabCursor={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         breakpoints={{
           769: {
             slidesPerView: 3,
@@ -27,7 +31,7 @@ export default function Carousel(props) {
         }}
         scrollbar={true}
         navigation={true}
-        modules={[Keyboard, Scrollbar, Navigation, Pagination]}
+        modules={[Keyboard, Scrollbar, Navigation, Pagination,Autoplay]}
         className="mySwiper"
       >
         {props.data.map((imageData) => {

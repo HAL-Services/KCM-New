@@ -1,4 +1,4 @@
-import LandingImage from "../Assets/Images/backdrop.png";
+import LandingImage from "../Assets/Images/mobileDesign.gif";
 import "../styles/LandingPage.styles.css";
 // Importing animation
 import { motion, useViewportScroll, useTransform } from "framer-motion";

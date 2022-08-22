@@ -1,38 +1,38 @@
-.contact{
-  &_section{
+.contact {
+  &_section {
     // height: 100vh;
     width: 100%;
     margin: 5rem 0 2rem;
   }
-  &_container{
+  &_container {
     display: grid;
     max-width: 800px;
     margin-right: auto;
     margin-left: auto;
     row-gap: 3rem;
     @media screen and (min-width: 568px) {
-      grid-template-columns: repeat(2, 1fr); 
+      grid-template-columns: repeat(2, 1fr);
     }
     @media screen and (max-width: 800px) {
-      margin-left: var(--mb-1-5); 
+      margin-left: var(--mb-1-5);
       margin-right: var(--mb-1-5);
     }
   }
-  &_info{
+  &_info {
     display: flex;
     margin-bottom: var(--mb-3);
     color: var(--default-color);
   }
-  &_main_title{
+  &_main_title {
     font-size: var(--big-font-size);
     text-align: center;
   }
-  &_main_subtitle{
+  &_main_subtitle {
     display: block;
     text-align: center;
     margin-bottom: var(--mb-3);
   }
-  &_icon{
+  &_icon {
     font-size: var(--h2-font-size);
     background-color: rgba(255, 255, 255, 0.159);
     padding: 1rem;
@@ -42,36 +42,38 @@
     border-radius: 50%;
     margin-right: var(--mb-1);
   }
-  &_title{
+  &_title {
     font-size: var(--h2-font-size);
     font-weight: var(--font-bold);
   }
-  &_subtitle{
+  &_subtitle {
     color: var(--first-color-lighter);
-    a{
+    a {
       text-decoration: none;
       color: var(--first-color-lighter);
       transition: 200ms ease-out;
-      &:hover{
+      &:hover {
         color: var(--first-color-alt);
       }
     }
   }
-  &_leftside{
+  &_leftside {
     background-color: var(--first-color);
     padding: 2rem;
     border-radius: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.267) 0px 10px 20px, rgba(0, 0, 0, 0.366) 0px 6px 6px;
+    box-shadow: rgba(0, 0, 0, 0.267) 0px 10px 20px,
+      rgba(0, 0, 0, 0.366) 0px 6px 6px;
   }
-  &_rightside{
+  &_rightside {
     padding: 2rem;
     border-radius: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
     @media screen and (min-width: 1024px) {
-      width: 460px; 
+      width: 460px;
     }
   }
-  &__input{
+  &__input {
     width: 100%;
     background-color: var(--input-color);
     color: var(--text-color);
@@ -81,40 +83,41 @@
     outline: none;
     padding: 0.25rem 0.5rem 0.5rem 0;
   }
-  &__inputs{
+  &__inputs {
     @media screen and (min-width: 1024px) {
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  &__label{
+  &__label {
     font-size: var(--smaller-font-size);
   }
-  &__content{
+  &__content {
     border-radius: 0.5rem;
-    box-shadow: var(--first-color-alt) 0px 1px 2px 0px, var(--first-color-lighter) 0px 1px 3px 1px;
+    box-shadow: var(--first-color-alt) 0px 1px 2px 0px,
+      var(--first-color-lighter) 0px 1px 3px 1px;
     padding: 0.75rem 1rem 0.25rem;
   }
-  &_btn_flex{
+  &_btn_flex {
     display: inline-flex;
     align-items: center;
-    border:1px solid var(--first-color);
+    border: 1px solid var(--first-color);
     color: var(--first-color);
     text-decoration: none;
     padding: 1rem;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     font-size: var(--h2-font-size);
-    transition: .4s;
-    &:hover{
-      color: var(--default-color); 
+    transition: 0.4s;
+    &:hover {
+      color: var(--default-color);
       background-color: var(--first-color);
     }
   }
-  &_btn_icon{
+  &_btn_icon {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: var(--h2-font-size);
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
   }
 }
 .grid {
