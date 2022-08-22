@@ -10,7 +10,7 @@
   z-index: -1;
 }
 .testimonialHeading {
-  display:flex;
+  display: flex;
   justify-content: center;
   position: relative;
   padding: 20px;
@@ -126,4 +126,25 @@
 .clientImgBox:hover img {
   filter: saturate(140%);
   transform: scale(0.95);
+}
+
+@media only screen and (max-width: 900px) {
+  .testimonialHeading img {
+    height: 70px !important;
+  }
+  .testimonialContainer span {
+    margin-right: 0px !important;
+  }
+  .testimonialHeading{
+    padding:0px!important;
+    font-size:2.3em;
+    height: 100px!important;
+    margin-bottom: 0px;
+  }
+  .testimonialSwiper{
+    margin-top:-22rem;
+  }
+  .testimonialSlider{
+    background-color:whitesmoke;
+  }
 }
