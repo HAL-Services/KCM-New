@@ -1,13 +1,17 @@
 import React from "react";
+import NavBar from "../components/NavBar";
 
 // importing Styles
 import "../styles/AboutUs.scss";
 
 const AboutUs = () => {
   return (
-    <div className="about_section">
-      <h2>About Us</h2>
-    </div>
+    <>
+      <NavBar />
+      <div className="about_section">
+        <h2>About Us</h2>
+      </div>
+    </>
   );
 };
 

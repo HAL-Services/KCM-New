@@ -71,16 +71,18 @@ const NavBar = () => {
               Services<span></span>
             </li>
             <li>
-              <a
-                href="/"
-                onClick={(e) => {
-                  let contact = document.getElementById("contact_section");
-                  e.preventDefault();
-                  contact && contact.scrollIntoView();
-                }}
-              >
-                About
-              </a>
+              <Link to="/about">
+                <a
+                  href="/"
+                  // onClick={(e) => {
+                  //   let contact = document.getElementById("contact_section");
+                  //   e.preventDefault();
+                  //   contact && contact.scrollIntoView();
+                  // }}
+                >
+                  About
+                </a>
+              </Link>
               <span></span>
             </li>
             <li>

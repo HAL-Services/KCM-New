@@ -13,13 +13,14 @@ const Login = () => {
               width: "100%",
             }}
             src={SignUpSvg}
+            alt="login_img"
           />
         </div>
       </div>
       <div className="right-login-container">
         <form action="" method="post">
           <div className="setps-container"></div>
-       
+
           <div className="input-container">
             <input
               type="text"
