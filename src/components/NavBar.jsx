@@ -17,7 +17,7 @@ const NavBar = () => {
     <header className="navbar" id="navbar">
       <motion.div className="burger-menu">
         <motion.svg
-          viewBox="0 0 4 4"
+          viewBox="0 0 3.5 3.5"
           width="25"
           height="20"
           overflow="visible"
@@ -26,11 +26,11 @@ const NavBar = () => {
         >
           <motion.line
             x1="0"
-            x2="4"
+            x2="5"
             y1="0"
             y2="0"
             stroke="#000"
-            strokeWidth="3"
+            strokeWidth="4"
             vectorEffect="non-scaling-stroke"
             strokeLinecap="round"
             variants={hamburgerTopAnim}
@@ -39,11 +39,11 @@ const NavBar = () => {
           />
           <motion.line
             x1="0"
-            x2="4"
+            x2="5"
             y1="2"
             y2="2"
             stroke="#000"
-            strokeWidth="3"
+            strokeWidth="4"
             vectorEffect="non-scaling-stroke"
             strokeLinecap="round"
             variants={hamburgerMidAnim}
@@ -52,11 +52,11 @@ const NavBar = () => {
           />
           <motion.line
             x1="0"
-            x2="4"
+            x2="5"
             y1="4"
             y2="4"
             stroke="#000"
-            strokeWidth="3"
+            strokeWidth="4"
             vectorEffect="non-scaling-stroke"
             strokeLinecap="round"
             variants={hamburgerBotAnim}
