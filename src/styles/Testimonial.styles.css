@@ -2,14 +2,13 @@
   font-family: "poppins", sans-serif;
 }
 .testimonialContainer {
-  position: relative;
-  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  height: 100%;
+  padding: 10px;
   z-index: -1;
   background-color: whitesmoke;
-
 }
 .testimonialHeading {
   display: flex;
@@ -133,20 +132,16 @@
 
 @media only screen and (max-width: 900px) {
   .testimonialHeading img {
-    height: 70px !important;
+    height: 50px !important;
   }
   .testimonialContainer span {
-    margin-right: 0px !important;
+    margin-right: 0px;
     height: auto;
   }
   .testimonialHeading {
     padding: 0px !important;
     font-size: 2.3em;
-    height: 100px !important;
     margin-bottom: 0px;
-  }
-  .testimonialSwiper {
-    margin-top: -22rem;
   }
   .testimonialSlider {
     background-color: whitesmoke;
