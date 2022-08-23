@@ -77,7 +77,7 @@ const AboutUs = () => {
                 initial={{ y: 150, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{
-                  delay: 0.5 * e.id,
+                  delay: 0.1 * e.id,
                   ease: "linear",
                   type: "spring",
                 }}
