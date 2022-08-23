@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/scrollbar";

@@ -79,3 +79,22 @@ export const contactAnim2 = {
     transition: { type: "spring", bounce: 0.1, duration: 0.3, delay: 0 },
   },
 };
+
+export const navbarSideAnim = {
+  hidden: {
+    opacity: 0,
+    x: "-50%",
+    display: "none",
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    display: "grid",
+    transition: { duration: 0.5, ease: "easeInOut" },
+  },
+  exit: {
+    opacity: 0,
+    x: "-50%",
+    transition: { duration: 0.5, ease: "easeInOut" },
+  },
+};
