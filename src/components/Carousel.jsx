@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../styles/Carousel.styles.css";
 // import required modules
-import { Keyboard, Scrollbar, Navigation, Pagination,Autoplay } from "swiper";
+import { Keyboard, Scrollbar, Navigation, Pagination, Autoplay } from "swiper";
 
 export default function Carousel(props) {
   return (
@@ -31,13 +31,13 @@ export default function Carousel(props) {
         }}
         scrollbar={true}
         navigation={true}
-        modules={[Keyboard, Scrollbar, Navigation, Pagination,Autoplay]}
+        modules={[Keyboard, Scrollbar, Navigation, Pagination, Autoplay]}
         className="mySwiper"
       >
         {props.data.map((imageData) => {
           return (
             <SwiperSlide key={imageData.id} className="carouselContainer">
-              <LazyLoadImage src={imageData.url} />
+              <img src={imageData.url} />
               <div className="carouselUnderline">
                 {imageData.title}
                 <div className="underline"></div>

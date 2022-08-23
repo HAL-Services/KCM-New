@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/scrollbar";
@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../styles/GarageCarousel.css";
 // import required modules
-import {Keyboard, Scrollbar, Navigation, Pagination, Autoplay} from "swiper";
+import { Keyboard, Scrollbar, Navigation, Pagination, Autoplay } from "swiper";
 import ExpertiseImagedata from "../OfflineAPI/ExpertiseImagesData";
 export default function GarageCarousel() {
   return (
@@ -17,8 +17,8 @@ export default function GarageCarousel() {
       <Swiper
         slidesPerView={1}
         autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
+          delay: 2500,
+          disableOnInteraction: false,
         }}
         centeredSlides={false}
         slidesPerGroupSkip={1}
@@ -39,7 +39,7 @@ export default function GarageCarousel() {
         {ExpertiseImagedata.map((imageData) => {
           return (
             <SwiperSlide key={imageData.id} className="GaragecarouselContainer">
-              <LazyLoadImage className="GarageImage" src={imageData.url} />
+              <img className="GarageImage" src={imageData.url} />
             </SwiperSlide>
           );
         })}

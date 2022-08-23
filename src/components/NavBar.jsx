@@ -7,7 +7,7 @@ import {
   hamburgerBotAnim,
 } from "../animation";
 
-import { BrowserRouter as Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
 
@@ -126,7 +126,7 @@ const NavBar = () => {
       </div>
       <div className="login-btn">
         <Link to="/login">
-          <button type="submit">Login</button>
+          <button>Login</button>
         </Link>
       </div>
     </header>
