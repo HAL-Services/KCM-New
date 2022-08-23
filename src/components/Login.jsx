@@ -40,8 +40,12 @@ const Login = () => {
             <label htmlFor="form-input-fullName">Enter Your OTP</label>
           </div>
           <Link to="/signUp">
-            <span style={{ marginTop: "40px", color: "white" }}>
-              Don't have an account? SignUp
+            <span
+              className="loginWrapper"
+              style={{ marginTop: "40px", color: "white" }}
+            >
+              Don't have an account? 
+              <span>Sign-Up</span>
             </span>
           </Link>
           <div className="btn-container">

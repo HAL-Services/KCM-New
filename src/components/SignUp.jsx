@@ -51,8 +51,12 @@ const SignUp = () => {
             our Privacy Policy
           </span>
           <Link to="/login">
-            <span style={{ marginTop: "40px", color: "white" }}>
-              Already have an account? Login
+            <span
+              className="loginWrapper"
+              style={{ marginTop: "40px", color: "white" }}
+            >
+              Already have an account?
+              <span>Login</span>
             </span>
           </Link>
           <div className="btn-container">
