@@ -1,15 +1,34 @@
 import "../styles/NavBar.scss";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
 import {
   hamburgerTopAnim,
   hamburgerMidAnim,
   hamburgerBotAnim,
+  navbarSideAnim,
 } from "../animation";
 
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
+  const navigationTitles = [
+    {
+      id: 1,
+      title: "Services",
+    },
+    {
+      id: 2,
+      title: "About",
+    },
+    {
+      id: 3,
+      title: "Testimonial",
+    },
+    {
+      id: 4,
+      title: "Contact Us",
+    },
+  ];
 
   return (
     <header className="navbar" id="navbar">
@@ -63,6 +82,36 @@ const NavBar = () => {
           />
         </motion.svg>
       </motion.div>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="navbar_sidemenu"
+            variants={navbarSideAnim}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+          >
+            {navigationTitles.map((e) => {
+              return (
+                <AnimatePresence exitBeforeEnter>
+                  <motion.span
+                    className="navbar_titles"
+                    key={e.id}
+                    initial={{ x: -30, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    exit={{ x: -30, opacity: 0, transition: { duration: 0.2 } }}
+                    transition={{ delay: e.id * 0.25, duration: 0.3 }}
+                    whileTap={{ scale: 1.1 }}
+                  >
+                    {e.title}
+                  </motion.span>
+                </AnimatePresence>
+              );
+            })}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div className="logo">KCM.</div>
       <div className="titles">
         <nav>
