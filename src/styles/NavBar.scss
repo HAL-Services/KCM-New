@@ -20,14 +20,18 @@
     top: 0;
     text-align: center;
     display: grid;
-    grid-template-rows: repeat(4, minmax(7rem,4rem));
+    grid-template-rows: repeat(4, minmax(6rem,4rem));
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-evenly;
     align-items: center;
     z-index: 5;
-    padding: 3rem 0;
+    padding: 6rem 0;
   }
   &_titles{
     font-size: var(--h2-font-size);
-    color: var(--first-color);
+    font-weight: var(--font-medium);
+    color: var(--default-color);
   }
 }
 
