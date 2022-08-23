@@ -90,11 +90,33 @@ export const navbarSideAnim = {
     opacity: 1,
     x: 0,
     display: "grid",
-    transition: { duration: 0.5, ease: "easeInOut" },
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut",
+      staggerChildren: 0.1,
+      delayChildren: 0.3,
+    },
   },
   exit: {
     opacity: 0,
     x: "-50%",
     transition: { duration: 0.5, ease: "easeInOut" },
+  },
+};
+
+export const navbarSideTitleAnim = {
+  hidden: {
+    x: -100,
+    opacity: 0,
+  },
+  show: {
+    x: 0,
+    opacity: 1,
+    transition: { type: "spring" },
+  },
+  exit: {
+    x: -100,
+    opacity: 0,
+    transition: { ease: "easeOut", type: "spring" },
   },
 };

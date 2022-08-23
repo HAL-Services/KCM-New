@@ -6,35 +6,18 @@ import {
   hamburgerMidAnim,
   hamburgerBotAnim,
   navbarSideAnim,
+  navbarSideTitleAnim,
 } from "../animation";
 
 import { Link } from "react-router-dom";
 const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
-  const navigationTitles = [
-    {
-      id: 1,
-      title: "Services",
-    },
-    {
-      id: 2,
-      title: "About",
-    },
-    {
-      id: 3,
-      title: "Testimonial",
-    },
-    {
-      id: 4,
-      title: "Contact Us",
-    },
-  ];
 
   return (
     <header className="navbar" id="navbar">
       <motion.div className="burger-menu">
         <motion.svg
-          viewBox="0 0 4 4"
+          viewBox="0 0 3.5 3.5"
           width="25"
           height="20"
           overflow="visible"
@@ -43,11 +26,11 @@ const NavBar = () => {
         >
           <motion.line
             x1="0"
-            x2="4"
+            x2="5"
             y1="0"
             y2="0"
             stroke="#000"
-            strokeWidth="3"
+            strokeWidth="4"
             vectorEffect="non-scaling-stroke"
             strokeLinecap="round"
             variants={hamburgerTopAnim}
@@ -56,11 +39,11 @@ const NavBar = () => {
           />
           <motion.line
             x1="0"
-            x2="4"
+            x2="5"
             y1="2"
             y2="2"
             stroke="#000"
-            strokeWidth="3"
+            strokeWidth="4"
             vectorEffect="non-scaling-stroke"
             strokeLinecap="round"
             variants={hamburgerMidAnim}
@@ -69,11 +52,11 @@ const NavBar = () => {
           />
           <motion.line
             x1="0"
-            x2="4"
+            x2="5"
             y1="4"
             y2="4"
             stroke="#000"
-            strokeWidth="3"
+            strokeWidth="4"
             vectorEffect="non-scaling-stroke"
             strokeLinecap="round"
             variants={hamburgerBotAnim}
@@ -90,24 +73,75 @@ const NavBar = () => {
             initial="hidden"
             animate="show"
             exit="exit"
+            onClick={() => setOpen(!isOpen)}
           >
-            {navigationTitles.map((e) => {
-              return (
-                <AnimatePresence exitBeforeEnter>
-                  <motion.span
-                    className="navbar_titles"
-                    key={e.id}
-                    initial={{ x: -30, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    exit={{ x: -30, opacity: 0, transition: { duration: 0.2 } }}
-                    transition={{ delay: e.id * 0.25, duration: 0.3 }}
-                    whileTap={{ scale: 1.1 }}
-                  >
-                    {e.title}
-                  </motion.span>
-                </AnimatePresence>
-              );
-            })}
+            <motion.span
+              variants={navbarSideTitleAnim}
+              onClick={() => setOpen(!isOpen)}
+              className="navbar_titles"
+            >
+              Services
+            </motion.span>
+            <motion.span
+              variants={navbarSideTitleAnim}
+              onClick={() => setOpen(!isOpen)}
+            >
+              <a
+                href="/"
+                className="navbar_titles"
+                onClick={(e) => {
+                  let contact = document.getElementById("about");
+                  e.preventDefault();
+                  contact &&
+                    contact.scrollIntoView({
+                      behavior: "smooth",
+                      block: "end",
+                    });
+                }}
+              >
+                About
+              </a>
+            </motion.span>
+            <motion.span
+              variants={navbarSideTitleAnim}
+              onClick={() => setOpen(!isOpen)}
+            >
+              <a
+                href="/"
+                className="navbar_titles"
+                onClick={(e) => {
+                  let testimonial = document.getElementById("testimonial");
+                  e.preventDefault();
+                  testimonial &&
+                    testimonial.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                }}
+              >
+                Testimonial
+              </a>
+            </motion.span>
+            <motion.span
+              variants={navbarSideTitleAnim}
+              onClick={() => setOpen(!isOpen)}
+            >
+              <a
+                href="/"
+                className="navbar_titles"
+                onClick={(e) => {
+                  let contact = document.getElementById("contact_section");
+                  e.preventDefault();
+                  contact &&
+                    contact.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    });
+                }}
+              >
+                Contact Us
+              </a>
+            </motion.span>
           </motion.div>
         )}
       </AnimatePresence>
