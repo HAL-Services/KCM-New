@@ -80,7 +80,7 @@ const NavBar = () => {
               onClick={() => setOpen(!isOpen)}
               className="navbar_titles"
             >
-              Services
+              <Link to="/service">Services</Link>
             </motion.span>
             <motion.span
               variants={navbarSideTitleAnim}
@@ -151,7 +151,9 @@ const NavBar = () => {
         <nav>
           <ul>
             <li>
-              Services<span></span>
+              <Link to="/service">
+                Services<span></span>
+              </Link>
             </li>
             <li>
               <a

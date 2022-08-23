@@ -1,9 +1,15 @@
 import { NavLink } from "react-router-dom";
-import { FaBars, FaHome, FaPowerOff, FaCarAlt } from "react-icons/fa";
-import { MdMessage } from "react-icons/md";
+import {
+  FaBars,
+  FaHome,
+  FaPowerOff,
+  FaCarAlt,
+  FaFastBackward,
+} from "react-icons/fa";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SidebarMenu from "./SideBarMenu";
+import { Link } from "react-router-dom";
 import "../styles/SideBar.styles.css";
 const routes = [
   {
@@ -19,6 +25,11 @@ const routes = [
     path: "/logout",
     name: "Logout",
     icon: <FaPowerOff />,
+  },
+  {
+    path: "/home",
+    name: "Return Back",
+    icon: <FaFastBackward />,
   },
 ];
 
@@ -82,9 +93,9 @@ const SideBar = ({ children }) => {
                   initial="hidden"
                   animate="show"
                   exit="hidden"
-                  className="logo"
+                  className="sidebar-logo"
                 >
-                  KCM
+                  <Link to="/">KCM</Link>
                 </motion.h1>
               )}
             </AnimatePresence>
