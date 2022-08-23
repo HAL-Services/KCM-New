@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import AboutUs from "./Pages/AboutUs";
+import ServicePage from "./Pages/ServicePage";
 function App() {
   return (
     <div className="App">
@@ -11,6 +12,7 @@ function App() {
         <Route exact path="/" component={FullPage} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/service" component={ServicePage} />
       </Switch>
     </div>
   );
