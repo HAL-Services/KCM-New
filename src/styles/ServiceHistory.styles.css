@@ -1,0 +1,9 @@
+.ServiceHistoryContainer{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ServiceHistory-h1{
+     color:var(--first-color);
+}

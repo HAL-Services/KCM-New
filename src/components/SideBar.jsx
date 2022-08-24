@@ -13,11 +13,12 @@ import { Link } from "react-router-dom";
 import "../styles/SideBar.styles.css";
 const routes = [
   {
+    path: "/service",
     name: "Book Service",
     icon: <FaHome />,
   },
   {
-    path: "/service/record",
+    path: "/record",
     name: "Service History",
     icon: <FaCarAlt />,
   },
