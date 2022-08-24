@@ -4,7 +4,7 @@ import {
   FaHome,
   FaPowerOff,
   FaCarAlt,
-  FaFastBackward,
+  FaHistory,
 } from "react-icons/fa";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -15,23 +15,22 @@ const routes = [
   {
     path: "/service",
     name: "Book Service",
-    icon: <FaHome />,
-    path: "",
+    icon: <FaCarAlt />,
   },
   {
     path: "/record",
     name: "Service History",
-    icon: <FaCarAlt />,
+    icon: <FaHistory />,
+  },
+  {
+    path: "/home",
+    name: "Home",
+    icon: <FaHome />,
   },
   {
     path: "/logout",
     name: "Logout",
     icon: <FaPowerOff />,
-  },
-  {
-    path: "/home",
-    name: "Return Back",
-    icon: <FaFastBackward />,
   },
 ];
 
@@ -97,7 +96,7 @@ const SideBar = ({ children }) => {
                   exit="hidden"
                   className="sidebar-logo"
                 >
-                  <Link to="/">KCM</Link>
+                  <Link to="/home">KCM</Link>
                 </motion.h1>
               )}
             </AnimatePresence>
@@ -144,8 +143,6 @@ const SideBar = ({ children }) => {
             })}
           </section>
         </motion.div>
-
-        {/* <main>{children}</main> */}
       </div>
     </>
   );
