@@ -25,9 +25,8 @@ main {
   justify-content: space-between;
   padding: 15px 10px;
 }
-.sidebar-logo {
-  font-size: 2rem;
-  text-align: center;
+.logo {
+  font-size: 18px;
   line-height: 0;
 }
 .bars {
