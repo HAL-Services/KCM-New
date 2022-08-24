@@ -15,21 +15,39 @@ export default function LandingPage() {
       <div className="mobileViewImage" style={{ display: "none" }}>
         <img src={MobileBackground} />
       </div>
-      <a
-        href="/"
-        onClick={(e) => {
-          let contact = document.getElementById("navbar");
-          e.preventDefault();
-          contact &&
-            contact.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
+      <motion.span
+        animate={{ y: -5 }}
+        transition={{
+          repeat: Infinity,
+          duration: 1.5,
+          ease: "linear",
+          repeatType: "reverse",
+        }}
+        style={{
+          height: "50px",
+          width: "50px",
+          position: "fixed",
+          margin: ".5rem",
+          bottom: "0",
+          right: "0",
+          zIndex: "2",
         }}
       >
-        <FaArrowCircleUp className="fingerUp" />
-      </a>
-
+        <motion.a
+          href="/"
+          onClick={(e) => {
+            let contact = document.getElementById("navbar");
+            e.preventDefault();
+            contact &&
+              contact.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+          }}
+        >
+          <FaArrowCircleUp className="fingerUp" />
+        </motion.a>
+      </motion.span>
       <motion.div
         variants={landingAnim}
         initial="hidden"

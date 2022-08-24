@@ -1,6 +1,4 @@
-.main-container {
-  display: flex;
-}
+
 main {
   padding: 10px;
 }
@@ -16,7 +14,9 @@ main {
   background: var(--first-color);
   color: white;
   height: 100vh;
-  overflow-y: auto;
+ overflow: hidden;
+  position: fixed;
+  left: 0;
 }
 
 .top_section {

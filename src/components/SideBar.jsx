@@ -15,6 +15,7 @@ const routes = [
   {
     name: "Book Service",
     icon: <FaHome />,
+    path: "",
   },
   {
     path: "/service/record",
@@ -116,7 +117,6 @@ const SideBar = ({ children }) => {
                   />
                 );
               }
-
               return (
                 <NavLink
                   to={route.path}
@@ -144,7 +144,7 @@ const SideBar = ({ children }) => {
           </section>
         </motion.div>
 
-        <main>{children}</main>
+        {/* <main>{children}</main> */}
       </div>
     </>
   );

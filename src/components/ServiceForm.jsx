@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "../styles/ServiceForm.styles.scss";
-import { Link } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 const ServiceForm = () => {
@@ -26,7 +25,7 @@ const ServiceForm = () => {
               required={true}
               autoComplete="off"
             />
-            <label tmlFor="form-input-carNumber">Car Number</label>
+            <label htmlFor="form-input-carNumber">Car Number</label>
           </div>
           <div className="input-container">
             <input
@@ -35,7 +34,7 @@ const ServiceForm = () => {
               required={true}
               autoComplete="off"
             />
-            <label tmlFor="form-input-carNumber">Car Model</label>
+            <label htmlFor="form-input-carNumber">Car Model</label>
           </div>
           <div className="DatePickers">
             <span className="datePicker-title">Select Date</span>

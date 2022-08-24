@@ -6,7 +6,7 @@ export default function ServicePage() {
     <div className="service-container">
       <SideBar className="sideBar" />
       <div className="sideBarFormContainer">
-      <ServiceForm className="sideBarForm"/>
+        <ServiceForm className="sideBarForm" />
       </div>
     </div>
   );
