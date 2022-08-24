@@ -8,6 +8,7 @@ export default function ServiceHistory() {
       name: "Lewis Hamilton",
       team: "Mercedes",
       dob: "07/01/1985",
+
     },
     {
       number: 77,
