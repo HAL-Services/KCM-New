@@ -1,15 +1,19 @@
-import FullPage from "./Pages/FullPage";
-import "./styles/App.scss";
 import { Route, Switch } from "react-router-dom";
+
+// importing componenets
+import FullPage from "./Pages/FullPage";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import ServicePage from "./Pages/ServicePage";
-import ServiceHistory from "./Pages/ServiceHistory";
-function App() {
+
+// important styles
+import "./styles/App.scss";
+
+export default function App() {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/" component={FullPage} />
+        <Route exact path="/home" component={FullPage} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/service" component={ServicePage} />
@@ -18,5 +22,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

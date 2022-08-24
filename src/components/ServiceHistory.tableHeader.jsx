@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const ServiceHistoryTableHeader = ({ title }) => {
   return (
-    <header className="service-table-header">
+    <header style={{ textAlign: "center" }} className="service-table-header">
       <h1>{title}</h1>
     </header>
   );
