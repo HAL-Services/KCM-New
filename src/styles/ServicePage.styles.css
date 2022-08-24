@@ -1,10 +1,9 @@
 .service-container{
-    display: flex;
-    width:100vw;
+    height: 100vh;
+    width:100%;
 }
 .sideBarFormContainer{
     background-color: green;
-    width: 80%;
     display: flex;
     justify-content: center;
 }
