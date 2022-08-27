@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import img from "../Assets/Images/Testimonial.png";
 
 // importing styles
 import "../styles/AboutUs.scss";
@@ -7,7 +8,15 @@ import "../styles/AboutUs.scss";
 const AboutUsCards = ({ title, subtitle }) => {
   return (
     <motion.div className="aboutUsCards_container">
-      <div className="aboutUsCards_header">
+      <div
+        className="aboutUsCards_header"
+        style={{
+          backgroundImage: `url(${img})`,
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          backgroundPositionX: "105%",
+        }}
+      >
         <h1 className="aboutUsCards_title">{title}</h1>
         <p className="aboutUsCards_subtitle">{subtitle}</p>
       </div>
