@@ -25,23 +25,23 @@
       min-height: 50vh;
       min-width: 70%;
     }
-    @media screen and(max-width: 750px) {
+    @media screen and (max-width: 750px) {
       min-width: 80%;
     }
-    @media screen and(max-width: 600px) {
+    @media screen and (max-width: 600px) {
       min-width: 100%; 
     }
-    @media screen and(max-width: 500px) {
+    @media screen and (max-width: 500px) {
       min-height: 40vh;
     }
-    @media screen and(max-width:375px) {
+    @media screen and (max-width:375px) {
      min-height: 70vh; 
     }
   }
   &_timings{
     white-space: pre-line;
     text-align: left;
-    @media screen and(max-width:1000px){
+    @media screen and (max-width:1000px){
       padding: 0rem 10rem; 
     }
     @media screen and (max-width:800px) {
