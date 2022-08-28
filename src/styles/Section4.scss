@@ -1,51 +1,36 @@
-.section4{
-  &_container{
-    width:100%;
+.section4 {
+  &_container {
+    width: 100vw;
     display: flex;
-    justify-content: space-between;
-    padding: 5rem ;
-    @media  screen and (max-width: 1000px) {
-      flex-direction: column; 
-      align-items: center;
-    }
-    @media screen and (max-width:400px) {
-      padding: 5rem 2rem;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (max-width: 1000px) {
+      height: auto;
     }
   }
-  &_googlemap{
+  &_googlemap {
     height: auto;
-    width: 60%;
-    @media screen and (max-width: 1250px){
-      width: 70%;
-    }
-    @media  screen and (max-width: 1150px) {
-      width: 65%;
-    }
-    @media screen and (max-width:1000px) {
-      min-height: 50vh;
-      min-width: 70%;
-    }
-    @media screen and (max-width: 750px) {
-      min-width: 80%;
-    }
-    @media screen and (max-width: 600px) {
-      min-width: 100%; 
-    }
-    @media screen and (max-width: 500px) {
-      min-height: 40vh;
-    }
-    @media screen and (max-width:375px) {
-     min-height: 70vh; 
-    }
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
-  &_timings{
+  &_timings {
     white-space: pre-line;
     text-align: left;
-    @media screen and (max-width:1000px){
-      padding: 0rem 10rem; 
-    }
-    @media screen and (max-width:800px) {
-      padding:0rem;
-    }
   }
+}
+
+.googlemap_img {
+  height: 100%;
+  width: 70%;
+  @media screen and (max-width: 1000) {
+    width: 100%;
+  }
+}
+.section4_title {
+  margin-top: 30px;
+  color: var(--first-color);
+  margin-bottom: 10px;
+  text-align: center;
 }
