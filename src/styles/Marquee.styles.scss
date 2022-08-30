@@ -1,13 +1,10 @@
 .MarqueeImage {
   height: 60px;
   z-index: -100;
-  background-color: whitesmoke;
-
 }
 .MarqueeDiv {
   padding: 20px;
   margin-right: 100px;
-  background-color: whitesmoke;
   cursor: pointer;
 }
 @media screen and (max-width: 900px) {
