@@ -8,6 +8,7 @@ import ContactUs from "../components/ContactUs";
 import Footer from "../components/Footer";
 import AboutUs from "./AboutUs";
 import Section4 from "./Section4";
+import ServiceSection from "./ServiceSection";
 export default function FullPage() {
   return (
     <div>
@@ -15,6 +16,7 @@ export default function FullPage() {
       <LandingPage />
       <MarqueeElement />
       <Section2 />
+      <ServiceSection />
       <Section3 />
       <Testimonial />
       <AboutUs />

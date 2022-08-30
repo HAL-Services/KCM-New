@@ -23,12 +23,17 @@
     grid-template-rows: repeat(4, minmax(6rem, 4rem));
     align-items: center;
     z-index: 5;
+    overflow: hidden;
     padding: 6rem 0rem;
+    span{
+      
+      background-color: var(--first-color-lighter);
+      padding: 1rem 0;
+    }
   }
   &_titles {
     font-size: var(--h2-font-size);
     font-weight: var(--font-medium);
-    color: var(--default-color);
   }
 }
 

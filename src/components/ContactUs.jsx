@@ -2,7 +2,6 @@ import React from "react";
 
 // Import animation
 import { motion } from "framer-motion";
-import { contactAnim1, contactAnim2 } from "../animation";
 
 // Importing Styles
 import "../styles/ContactUs.scss";
@@ -14,10 +13,7 @@ const ContactUs = () => {
       <h2 className="contact_main_title">Contact Us</h2>
       <span className="contact_main_subtitle">Get in Touch</span>
       <div className="contact_container grid">
-        <motion.div
-          className="contact_leftside"
-
-        >
+        <motion.div className="contact_leftside">
           <div className="contact_info">
             <motion.span
               className="contact_icon"
@@ -67,10 +63,7 @@ const ContactUs = () => {
             </div>
           </div>
         </motion.div>
-        <motion.form
-          action=""
-          className="contact_rightside grid"
-        >
+        <motion.form action="" className="contact_rightside grid">
           <div className="contact__inputs grid">
             <motion.div
               whileTap={{ scale: 1.1 }}
