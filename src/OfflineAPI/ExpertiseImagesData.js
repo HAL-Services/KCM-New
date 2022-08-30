@@ -14,34 +14,34 @@ const ExpertiseImagedata = [
   },
   {
     id: "2",
-    title: "Engine Repair",
-    url: EngineRepair,
-  },
-  {
-    id: "4",
-    title: "Battery Change",
-    url: carBattery,
-  },
-  {
-    id: "5",
-    title: "Car Paint",
-    url: CarPaint,
-  },
-  
-  {
-    id: "6",
-    title: "Wheel Alignment",
-    url: WheelAlign,
-  },
-  {
-    id: "7",
     title: "Car Inspection",
     url: carInspection,
   },
   {
     id: "3",
+    title: "Battery Change",
+    url: carBattery,
+  },
+  {
+    id: "4",
+    title: "Car Paint",
+    url: CarPaint,
+  },
+
+  {
+    id: "5",
+    title: "Wheel Alignment",
+    url: WheelAlign,
+  },
+  {
+    id: "6",
     title: "Oil Change",
     url: OilChange,
+  },
+  {
+    id: "7",
+    title: "Engine Repair",
+    url: EngineRepair,
   },
 ];
 export default ExpertiseImagedata;
