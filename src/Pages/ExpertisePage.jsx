@@ -8,11 +8,11 @@ export default function ExpertisePage() {
         initial={{ y: 150, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{
-          delay: 0.12 * img.id,
+          delay: 0.1 * img.id,
           ease: "linear",
           type: "spring",
         }}
-        viewport={{ once: false, amount: 0.1 }}
+        viewport={{ once: true, amount: 0.1 }}
         key={img.id}
         className="expertise-img-container"
       >
