@@ -1,6 +1,9 @@
 .service{
   &__section{
     padding: 5rem 10rem;
+    @media screen and (max-width:1000px){
+      padding: 5rem 3rem;
+    }
   }
   &__cardWrapper{
     display: grid;
@@ -12,6 +15,8 @@
     margin: 2rem 0;
     color: var(--first-color);
     font-size: var(--big-font-size);
-    overflow: hidden;
+    @media screen and (max-width:1000px){
+      font-size: var(--h1-font-size);
+    }
   }
 }
