@@ -16,10 +16,10 @@ export default function LandingPage() {
         <img src={MobileBackground} />
       </div>
       <motion.span
-        animate={{ y: -5 }}
+        animate={{ y: -10 }}
         transition={{
           repeat: Infinity,
-          duration: 1.5,
+          duration: 0.5,
           ease: "linear",
           repeatType: "reverse",
         }}
