@@ -5,11 +5,9 @@ import "../styles/ServiceCard.scss";
 
 const ServiceCard = (props) => {
   return (
-    <div className="servicecard" style={{ border: ` 3px dashed ${props.sty}` }}>
+    <div className="servicecard" style={{ background: `${props.sty}` }}>
       <div className="servicecard_body">
-        <h3 className="servicecard_title" style={{ color: `${props.sty}` }}>
-          <u>{props.title}</u>
-        </h3>
+        <h3 className="servicecard_title">{props.title}</h3>
         <ul className="servicecard_desc">
           {props.body.map((e, index) => {
             return (
@@ -21,7 +19,7 @@ const ServiceCard = (props) => {
                   type: "spring",
                   duration: 1,
                 }}
-                viewport={{ once: false, amount: 1 }}
+                viewport={{ once: true, amount: 1 }}
               >
                 {e}
               </motion.li>
@@ -29,6 +27,7 @@ const ServiceCard = (props) => {
           })}
         </ul>
       </div>
+      <button className="servicecard_btn">Check</button>
     </div>
   );
 };

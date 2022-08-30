@@ -5,19 +5,19 @@ export default function ExpertisePage() {
   const images = ExpertiseImagedata.map((img) => {
     return (
       <motion.div
-        initial={{ y: 150, opacity: 0 }}
+        initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{
           delay: 0.12 * img.id,
           ease: "linear",
           type: "spring",
         }}
-        viewport={{ once: false, amount: 0.1 }}
+        viewport={{ once: true, amount: 0.1 }}
         key={img.id}
         className="expertise-img-container"
       >
         <h2>{img.title}</h2>
-        <img src={img.url} />
+        <img src={img.url} alt="garage-images" />
       </motion.div>
     );
   });

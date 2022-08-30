@@ -11,7 +11,7 @@ export default function Section2() {
           className="about_title"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5, ease: "linear" }}
         >
           Our Expertise
@@ -26,6 +26,7 @@ export default function Section2() {
         className="waveImage"
         src={WaveImage}
         style={{ marginTop: "-1rem", zIndex: "-1" }}
+        alt="wave"
       ></img>
     </div>
   );
