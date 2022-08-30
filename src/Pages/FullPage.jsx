@@ -8,7 +8,7 @@ import ContactUs from "../components/ContactUs";
 import Footer from "../components/Footer";
 import AboutUs from "./AboutUs";
 import Section4 from "./Section4";
-import ServiceSection from "./ServiceSection";
+import ServiceSection from "./Section2.1";
 export default function FullPage() {
   return (
     <div>

@@ -4,12 +4,12 @@
   }
   &__cardWrapper{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     gap: 4rem;
     justify-content: center;
   }
   &__title{
-    margin: 2rem 0;
+    margin: 1rem 0;
     color: var(--first-color);
     font-size: var(--big-font-size);
     overflow: hidden;

@@ -29,9 +29,6 @@ const ServiceCard = (props) => {
           })}
         </ul>
       </div>
-      <motion.button className="servicecard_index">
-        <a href="/">Check</a>
-      </motion.button>
     </div>
   );
 };
