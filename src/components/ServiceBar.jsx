@@ -18,7 +18,7 @@ const pages = [
   ["service", "Book Service"],
   ["record", "Service Record"],
 ];
-const settings = ["Profile", "Logout"];
+const settings = ["settings", "Logout"];
 
 export default function ServiceBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -40,7 +40,11 @@ export default function ServiceBar() {
   };
 
   return (
-    <AppBar className="service-bar-container" position="fixed">
+    <AppBar
+      style={{ backgroundColor: "#6b32ed" }}
+      className="service-bar-container"
+      position="fixed"
+    >
       <Container style={{ backgroundColor: "#6b32ed" }} maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -160,7 +164,7 @@ export default function ServiceBar() {
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Link to={`/${setting}`}>
-                    <Typography textAlign="center">{setting}</Typography>
+                    <Button textAlign="center">{setting}</Button>
                   </Link>
                 </MenuItem>
               ))}

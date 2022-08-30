@@ -1,9 +1,7 @@
-import Carousel from "../components/Carousel";
 import GarageCarousel from "../components/GarageCarousel";
-import ExpertiseImagedata from "../OfflineAPI/ExpertiseImagesData";
 import WaveImage from "../Assets/Images/wave.svg";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
-import { landingAnim, titleAnim } from "../animation";
+import { motion } from "framer-motion";
+import ExpertisePage from "../Pages/ExpertisePage";
 import "../styles/Section2.styles.css";
 export default function Section2() {
   return (
@@ -18,7 +16,7 @@ export default function Section2() {
         >
           Our Expertise
         </motion.h1>
-        <Carousel data={ExpertiseImagedata} />
+        <ExpertisePage />
       </section>
       <section className="Section2PageSection">
         <div className="Section2PageText1">Latest From Our Garage</div>
