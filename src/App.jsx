@@ -18,7 +18,7 @@ export default function App() {
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/service" component={ServicePage} />
         <Route exact path="/record" component={ServicePage} />
-        <Route exact path="/profile" component={ProfilePage} />
+        <Route exact path="/settings" component={ProfilePage} />
       </Switch>
     </div>
   );

@@ -5,7 +5,6 @@ export default function ServiceRegistration() {
     <div className="service-registration-container">
       <span className="service-registration-title">BOOK YOUR SERVICE</span>
       <ServiceForm />
-      
     </div>
   );
 }

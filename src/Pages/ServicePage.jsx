@@ -2,7 +2,10 @@ import { Switch, Route } from "react-router-dom";
 import "../styles/ServicePage.styles.scss";
 import DataTable from "../components/DataTable.jsx";
 import ServiceBar from "../components/ServiceBar";
+
 import ServiceRegistration from "./ServiceRegistrationPage";
+import ProfilePage from "./ProfilePage";
+
 export default function ServicePage() {
   return (
     <>
