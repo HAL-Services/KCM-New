@@ -22,8 +22,9 @@
 }
 
 .googlemap_img {
+  object-fit: contain;
   height: 100%;
-  width: 70%;
+  width: 50%;
   @media screen and (max-width: 1000) {
     width: 100%;
   }

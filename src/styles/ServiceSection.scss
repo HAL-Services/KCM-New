@@ -1,0 +1,17 @@
+.service{
+  &__section{
+    padding: 5rem 10rem;
+  }
+  &__cardWrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 4rem;
+    justify-content: center;
+  }
+  &__title{
+    margin: 2rem 0;
+    color: var(--first-color);
+    font-size: var(--big-font-size);
+    overflow: hidden;
+  }
+}

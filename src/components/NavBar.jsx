@@ -79,14 +79,12 @@ const NavBar = () => {
               variants={navbarSideTitleAnim}
               onClick={() => setOpen(!isOpen)}
               className="navbar_titles"
-              style={{ background: "#554994" }}
             >
               <Link to="/service">Services</Link>
             </motion.span>
             <motion.span
               variants={navbarSideTitleAnim}
               onClick={() => setOpen(!isOpen)}
-              style={{ background: "#F675A8" }}
             >
               <a
                 href="/"
@@ -107,7 +105,6 @@ const NavBar = () => {
             <motion.span
               variants={navbarSideTitleAnim}
               onClick={() => setOpen(!isOpen)}
-              style={{ background: "#D1512D" }}
             >
               <a
                 href="/"
@@ -128,7 +125,6 @@ const NavBar = () => {
             <motion.span
               variants={navbarSideTitleAnim}
               onClick={() => setOpen(!isOpen)}
-              style={{ background: "#FFB200" }}
             >
               <a
                 href="/"
