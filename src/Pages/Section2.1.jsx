@@ -15,7 +15,7 @@ const ServiceSection = () => {
           type: "spring",
           duration: 1.3,
         }}
-        viewport={{ once: false, amount: 0.8 }}
+        viewport={{ once: true, amount: 0.8 }}
       >
         Services we offer
       </motion.h1>

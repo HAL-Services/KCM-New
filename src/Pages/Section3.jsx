@@ -1,7 +1,6 @@
 import Card from "../components/Card";
 import CardData from "../OfflineAPI/CardRelatedData";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
-import { landingAnim, titleAnim } from "../animation";
+import { motion } from "framer-motion";
 import "../styles/Section3.styles.scss";
 export default function Section3() {
   return (
@@ -11,7 +10,7 @@ export default function Section3() {
           className="about_title"
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: false, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5, ease: "linear" }}
         >
           How we Work
@@ -27,7 +26,7 @@ export default function Section3() {
                   ease: "linear",
                   type: "spring",
                 }}
-                viewport={{ once: false, amount: 0.1 }}
+                viewport={{ once: true, amount: 0.1 }}
                 key={ele.id}
               >
                 <Card
