@@ -17,23 +17,13 @@ const ServiceSection = () => {
         }}
         viewport={{ once: true, amount: 0.8 }}
       >
-        Services we offer
+        Our Service Package
       </motion.h1>
       <div className="service__cardWrapper">
         <ServiceCard
           title="Silver"
           body={["Car wash", "Engine Check", "Batteries"]}
-          sty="#d7d7d7"
-        />
-        <ServiceCard
-          title="Gold"
-          body={[
-            "Car wash",
-            "Engine Check",
-            "Suspension & Fitments",
-            "Winshields & Lights",
-          ]}
-          sty="#FFD700"
+          sty="linear-gradient(to right, #bdc3c7, #2c3e50)"
         />
         <ServiceCard
           title="Platinum"
@@ -44,7 +34,17 @@ const ServiceSection = () => {
             "Suspension & Fitments",
             "Tyres & Wheel Care",
           ]}
-          sty="#b4b4b4"
+          sty="linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0)"
+        />
+        <ServiceCard
+          title="Gold"
+          body={[
+            "Car wash",
+            "Engine Check",
+            "Suspension & Fitments",
+            "Winshields & Lights",
+          ]}
+          sty="linear-gradient(to right, #EDDE5D, #F09819)"
         />
       </div>
     </div>

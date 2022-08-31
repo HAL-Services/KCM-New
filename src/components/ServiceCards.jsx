@@ -27,7 +27,6 @@ const ServiceCard = (props) => {
           })}
         </ul>
       </div>
-      <button className="servicecard_btn">Check</button>
     </div>
   );
 };

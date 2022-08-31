@@ -9,18 +9,18 @@ import "swiper/css/pagination";
 
 import "../styles/Testimonial.styles.css";
 
+import TestimonialData from "../OfflineAPI/TestimonialData.js";
 // import required modules
-import MaleImage from "../Assets/Images/male-avatarlClients.gif";
-import MaleImage2 from "../Assets/Images/male-avatar2Clients.gif";
 import speakGif from "../Assets/Images/speakGif.gif";
 
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 export default function Testimonial() {
   return (
     <div className="testimonialContainer" id="testimonial">
       <div className="testimonialHeading">
-        <span style={{marginRight:"5px"}}>
-          <img style={{height:"80px"}}src={speakGif} />
+        <span style={{ marginRight: "5px" }}>
+          <img style={{ height: "80px" }} src={speakGif} />
         </span>
         <b>Happy</b>-Clients
       </div>
@@ -43,93 +43,38 @@ export default function Testimonial() {
         modules={[Autoplay, Pagination]}
         className="testimonialSwiper"
       >
-        <SwiperSlide className="testimonialSlider">
-          <div className="clientWrapper">
-            <div className="clientContainer">
-              <div className="profile">
-                <div className="clientImgBox">
-                  <img src={MaleImage} />
+        {TestimonialData.map((data) => {
+          return (
+            <SwiperSlide key={data.id} className="testimonialSlider">
+              <div className="clientWrapper">
+                <div className="clientContainer">
+                  <div className="profile">
+                    <div className="clientImgBox">
+                      <img src={data.image} />
+                    </div>
+                    <h2>{data.username}</h2>
+                  </div>
+                  <p>
+                    <span className="clientLeft">
+                      <FaQuoteLeft />
+                    </span>
+                    {data.review}
+                    <span className="clientRight">
+                      <FaQuoteRight />
+                    </span>
+                  </p>
                 </div>
-                <h2>Rohit Kumar</h2>
               </div>
-              <p>
-                <span className="clientLeft">
-                  <FaQuoteLeft />
-                </span>
-                Best service experience in the city. Quick and clean.
-                <span className="clientRight">
-                  <FaQuoteRight />
-                </span>
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="testimonialSlider">
-          <div className="clientWrapper">
-            <div className="clientContainer">
-              <div className="profile">
-                <div className="clientImgBox">
-                  <img src={MaleImage2} />
-                </div>
-                <h2>Raman U</h2>
-              </div>
-              <p>
-                <span className="clientLeft">
-                  <FaQuoteLeft />
-                </span>
-                Good place to visit for luxury car repairs. Very reasonably
-                priced
-                <span className="clientRight">
-                  <FaQuoteRight />
-                </span>
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="testimonialSlider">
-          <div className="clientWrapper">
-            <div className="clientContainer">
-              <div className="profile">
-                <div className="clientImgBox">
-                  <img src={MaleImage} />
-                </div>
-                <h2>Manju M</h2>
-              </div>
-              <p>
-                <span className="clientLeft">
-                  <FaQuoteLeft />
-                </span>
-                Great work with affordable prices. Commitment fulfilled .
-                Genuine advice for car repairs
-                <span className="clientRight">
-                  <FaQuoteRight />
-                </span>
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="testimonialSlider">
-          <div className="clientWrapper">
-            <div className="clientContainer">
-              <div className="profile">
-                <div className="clientImgBox">
-                  <img src={MaleImage2} />
-                </div>
-                <h2>Mayur P</h2>
-              </div>
-              <p>
-                <span className="clientLeft">
-                  <FaQuoteLeft />
-                </span>
-                Good shop and great people
-                <span className="clientRight">
-                  <FaQuoteRight />
-                </span>
-              </p>
-            </div>
-          </div>
-        </SwiperSlide>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
+      <div className="writeReview">
+        Liked our work. Leave us a feedback.
+        <Link className="review-link" to="/write">
+          Write Review
+        </Link>
+      </div>
     </div>
   );
 }

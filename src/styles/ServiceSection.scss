@@ -1,21 +1,22 @@
-.service{
-  &__section{
-    padding: 5rem 10rem;
-    @media screen and (max-width:1000px){
-      padding: 5rem 3rem;
+.service {
+  &__section {
+    padding: 5rem 7rem;
+    @media screen and (max-width: 1000px) {
+      padding: 3rem 3rem;
     }
   }
-  &__cardWrapper{
+  &__cardWrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     gap: 4rem;
     justify-content: center;
   }
-  &__title{
+  &__title {
     margin: 1rem 0;
+    margin-bottom: 30px;
     color: var(--first-color);
-    font-size: var(--big-font-size);
-    @media screen and (max-width:1000px){
+    text-align: center;
+    @media screen and (max-width: 1000px) {
       font-size: var(--h1-font-size);
     }
   }
