@@ -30,14 +30,16 @@
     }
   }
   &_right_section {
-    width: 20%;
+    width: 40%;
     @media screen and (max-width: 1000px) {
       width: 100%;
+      height: 100%;
       padding: 10px;
     }
   }
   &_left_section {
-    width: 60%;
+    width: 50%;
+    line-height: 2rem;
     @media screen and (max-width: 1000px) {
       width: 100%;
       padding: 20px;
@@ -45,8 +47,9 @@
   }
   &_image {
     width: 100%;
-    height: 40vh;
-    object-fit: contain;
+    height: 300px;
+    margin: auto;
+    object-fit: cover;
     @media screen and (max-width: 1000px) {
       object-fit: cover;
     }

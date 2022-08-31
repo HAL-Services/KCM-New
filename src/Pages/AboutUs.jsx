@@ -10,13 +10,13 @@ const AboutUs = () => {
   const dataName = [
     {
       id: 1,
-      title: "Luvjeet Singh",
-      subtitle: "Web developer",
+      title: "Kishore Chandra",
+      subtitle: "Founder",
     },
     {
       id: 2,
-      title: "Aviral Bhudhani",
-      subtitle: "Google",
+      title: "Harish Chandra",
+      subtitle: "Team Lead",
     },
   ];
 
@@ -40,14 +40,15 @@ const AboutUs = () => {
             transition={{ duration: 1, ease: "linear" }}
             viewport={{ once: false, amount: 0.1 }}
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum autem
-            et repellat rerum vero facere neque animi illo odit. Voluptatibus id
-            sit soluta ratione distinctio eum, hic adipisci at beatae! Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Facilis officiis
-            nesciunt impedit corporis molestiae eum ipsum aliquam dolores porro
-            perspiciatis? Possimus, accusantium, neque porro dolor provident
-            amet voluptatum quos voluptates ex maiores vitae voluptate aut at
-            ipsum cum vel quidem.
+            KCM is an luxury automobile workshop which is committed to serving
+            the needs of customer. KCM was started in 2016 with a vision to
+            provide the best in class service. Our aim is to make the customer
+            happy by providing them with unpralled service and assistant. We
+            have a team of best workman you will find anywhere in the city. Our
+            team members are masters of their craft having experience of working
+            in the industry for more than 10 years and have previously worked
+            with many leading brands.We have a family of more than 1000 happy
+            customers who appreciate our work and believe in our vision.
           </motion.div>
           <motion.div
             className="about_right_section"
