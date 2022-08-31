@@ -41,11 +41,14 @@ export default function ServiceBar() {
 
   return (
     <AppBar
-      style={{ backgroundColor: "#6b32ed" }}
+      style={{ backgroundColor: "white", color: "black" }}
       className="service-bar-container"
       position="fixed"
     >
-      <Container style={{ backgroundColor: "#6b32ed" }} maxWidth="xl">
+      <Container
+        style={{ backgroundColor: "white", color: "black" }}
+        maxWidth="xl"
+      >
         <Toolbar disableGutters>
           <Typography
             variant="h6"
@@ -60,12 +63,16 @@ export default function ServiceBar() {
               color: "inherit",
               textDecoration: "none",
               fontSize: "2rem",
+              color: "black",
             }}
           >
             KCM
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            style={{ color: "black" }}
+            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -93,11 +100,27 @@ export default function ServiceBar() {
               sx={{
                 display: { xs: "block", md: "none" },
               }}
+              style={{
+                color: "black",
+              }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Link to={`/${page[0]}`}>
-                    <Typography textAlign="center">{page[1]}</Typography>
+                <MenuItem
+                  style={{
+                    color: "black",
+                  }}
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                >
+                  <Link
+                    style={{
+                      color: "black",
+                    }}
+                    to={`/${page[0]}`}
+                  >
+                    <Typography style={{ color: "black" }} textAlign="center">
+                      {page[1]}
+                    </Typography>
                   </Link>
                 </MenuItem>
               ))}
@@ -105,6 +128,9 @@ export default function ServiceBar() {
           </Box>
 
           <Typography
+            style={{
+              color: "black",
+            }}
             variant="h5"
             noWrap
             component="a"
@@ -122,7 +148,7 @@ export default function ServiceBar() {
             KCM
           </Typography>
           <Box
-            style={{ justifyContent: "center" }}
+            style={{ justifyContent: "center", color: "black" }}
             sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
           >
             {pages.map((page) => (
@@ -131,7 +157,7 @@ export default function ServiceBar() {
                   key={page[0]}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
-                  style={{ marginRight: "60px" }}
+                  style={{ marginRight: "60px", color: "black" }}
                 >
                   {page[1]}
                 </Button>
@@ -164,7 +190,14 @@ export default function ServiceBar() {
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Link to={`/${setting}`}>
-                    <Button textAlign="center">{setting}</Button>
+                    <Button
+                      style={{
+                        color: "black",
+                      }}
+                      textAlign="center"
+                    >
+                      {setting}
+                    </Button>
                   </Link>
                 </MenuItem>
               ))}
