@@ -1,27 +1,27 @@
 const CardData = [
   {
     id: 1,
-    title: "Agile Approach",
+    title: "Login and Book",
     content:
-      "Once we’ve heard more about your goals and timeline, we’ll start assembling your team",
+      "From the top left corner you can login or create your account. Once you have logged in with just one simple click you can book your service by entering the necessary details.",
   },
   {
     id: 2,
     title: "Proper engagement",
     content:
-      "We’ll send you pre-screened, high-quality candidates for consideration, ensuring a perfect fit for your company",
+      "After booking our executive will contact you for confirmation. Your car will be door picked within an hour of the request made.",
   },
   {
     id: 3,
     title: "Detailed report",
     content:
-      "Your new development team will work tirelessly to deliver on your product vision",
+      "You will be provided with a detailed service report which you can access hassel free online from you account.",
   },
   {
     id: 4,
     title: "Dedicated help",
     content:
-      "Following release, we’ll easily scale your team to match your product’s success",
+      "Following the service, we are open to any complaint or issues faced and resolve them at the top most priority.",
   },
 ];
 export default CardData;
