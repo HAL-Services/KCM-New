@@ -6,6 +6,7 @@ import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import ServicePage from "./Pages/ServicePage";
 import ProfilePage from "./Pages/ProfilePage";
+import WriteReview from "./Pages/WriteReview";
 // important styles
 import "./styles/App.scss";
 
@@ -19,6 +20,7 @@ export default function App() {
         <Route exact path="/service" component={ServicePage} />
         <Route exact path="/record" component={ServicePage} />
         <Route exact path="/settings" component={ProfilePage} />
+        <Route exact path="/write" component={WriteReview} />
       </Switch>
     </div>
   );

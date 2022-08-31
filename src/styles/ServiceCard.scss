@@ -6,17 +6,29 @@
   align-items: center;
   padding: 1rem;
   letter-spacing: 1px;
+  font-weight: bold;
   border-radius: 1rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: 400ms all ease-out;
+  &:hover {
+    cursor: pointer;
+    border: 1px solid var(--first-color);
+    transform: scale(1.05);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-color: var(--first-color);
+  }
   &_title {
     font-size: var(--h1-font-size);
     text-align: center;
     color: var(--default-color);
-    text-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    text-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
     margin: 1rem 0 1rem 0;
   }
   &_desc {
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 0rem 0rem 3rem 1rem;
     ul,
     li {
       text-align: left !important;
@@ -35,27 +47,6 @@
       &:hover {
         color: var(--default-color);
       }
-    }
-    &:hover {
-      cursor: pointer;
-      border: 1px solid var(--first-color);
-      background-color: var(--first-color);
-    }
-  }
-  &_btn{
-    outline: none;
-    padding: .5rem 4rem;
-    border: none;
-    font-size: var(--h2-font-size);
-    background-color: var(--first-color-second);
-    color: var(--default-color);
-    transition: 200ms all ease-in;
-    border-radius: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    &:hover{
-      cursor: pointer;
-      color: var(--first-color-alt);
-      background-color: var(--default-color);
     }
   }
 }
