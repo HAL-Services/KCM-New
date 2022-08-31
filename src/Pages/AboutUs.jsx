@@ -40,7 +40,7 @@ const AboutUs = () => {
             transition={{ duration: 1, ease: "linear" }}
             viewport={{ once: false, amount: 0.1 }}
           >
-            KCM is an luxury automobile workshop which is committed to serving
+            KCM is a luxury automobile workshop which is committed to serving
             the needs of customer. KCM was started in 2016 with a vision to
             provide the best in class service. Our aim is to make the customer
             happy by providing them with unpralled service and assistant. We
