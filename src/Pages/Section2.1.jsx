@@ -22,8 +22,8 @@ const ServiceSection = () => {
       <div className="service__cardWrapper">
         <ServiceCard
           title="Silver"
+          sty="#c0c0c0"
           body={["Car wash", "Engine Check", "Batteries"]}
-          sty="linear-gradient(to right, #bdc3c7, #2c3e50)"
         />
         <ServiceCard
           title="Platinum"
@@ -34,7 +34,7 @@ const ServiceSection = () => {
             "Suspension & Fitments",
             "Tyres & Wheel Care",
           ]}
-          sty="linear-gradient(to right, #7AA1D2, #DBD4B4, #CC95C0)"
+          sty="#e5e4e2"
         />
         <ServiceCard
           title="Gold"
@@ -44,7 +44,7 @@ const ServiceSection = () => {
             "Suspension & Fitments",
             "Winshields & Lights",
           ]}
-          sty="linear-gradient(to right, #EDDE5D, #F09819)"
+          sty="#FFD700"
         />
       </div>
     </div>
