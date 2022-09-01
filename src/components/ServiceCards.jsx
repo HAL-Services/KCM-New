@@ -5,7 +5,13 @@ import "../styles/ServiceCard.scss";
 
 const ServiceCard = (props) => {
   return (
-    <div className="servicecard" style={{ background: `${props.sty}` }}>
+    <div className="servicecard">
+      <div
+        className="servicecard_tophead"
+        style={{ backgroundColor: `${props.sty}` }}
+      >
+        {console.log(props.sty)}
+      </div>
       <div className="servicecard_body">
         <h3 className="servicecard_title">{props.title}</h3>
         <ul className="servicecard_desc">
@@ -20,6 +26,7 @@ const ServiceCard = (props) => {
                   duration: 1,
                 }}
                 viewport={{ once: true, amount: 1 }}
+                key={index}
               >
                 {e}
               </motion.li>
