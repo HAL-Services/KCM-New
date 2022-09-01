@@ -1,7 +1,27 @@
-import "../styles/ServiceForm.styles.scss";
+import { useContext, useEffect, useState } from "react";
 import DateTime from "./DateTime";
+import "../styles/ServiceForm.styles.scss";
 import "react-datepicker/dist/react-datepicker.css";
+import { Context } from "../context/Context";
+import axios from "axios";
 const ServiceForm = () => {
+  const [currentUser, setCurrentUser] = useState(null);
+  const { user } = useContext(Context);
+  useEffect(() => {
+    const config = {
+      headers: {
+        Authorization: `Bearer ${user}`,
+      },
+    };
+    const fetchUserDetails = async () => {
+      const { data } = await axios.get(
+        "http://localhost:5000/details/",
+        config
+      );
+      setCurrentUser(data);
+    };
+    fetchUserDetails();
+  }, [user]);
   return (
     <div className="Service-container">
       <form action="" method="post">
@@ -11,8 +31,19 @@ const ServiceForm = () => {
             name="fullName"
             required={true}
             autoComplete="off"
+            defaultValue={currentUser ? currentUser.username : ""}
           />
           <label htmlFor="form-input-fullName">Full Name</label>
+        </div>
+        <div className="input-container">
+          <input
+            type="text"
+            name="mobile"
+            required={true}
+            autoComplete="off"
+            defaultValue={currentUser ? currentUser.mobile : ""}
+          />
+          <label htmlFor="form-input-fullName">Mobile Number</label>
         </div>
         <div className="input-container">
           <input

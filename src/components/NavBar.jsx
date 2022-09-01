@@ -1,6 +1,6 @@
 import "../styles/NavBar.scss";
 import { motion, AnimatePresence } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   hamburgerTopAnim,
   hamburgerMidAnim,
@@ -10,12 +10,27 @@ import {
 } from "../animation";
 
 import { Link } from "react-router-dom";
+import { Context } from "../context/Context";
+import axios from "axios";
 const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
-  const [currentUser,setCurrentUser]=useState(null)
-  useEffect(()=>{
-    
-  },[currentUser])
+  const [currentUser, setCurrentUser] = useState(null);
+  const { user, dispatch } = useContext(Context);
+  useEffect(() => {
+    const config = {
+      headers: {
+        Authorization: `Bearer ${user}`,
+      },
+    };
+    const fetchUserDetails = async () => {
+      const { data } = await axios.get(
+        "http://localhost:5000/details/",
+        config
+      );
+      setCurrentUser(data);
+    };
+    fetchUserDetails();
+  }, [user]);
   return (
     <header className="navbar" id="navbar">
       <motion.div className="burger-menu">
@@ -213,9 +228,15 @@ const NavBar = () => {
         </nav>
       </div>
       <div className="login-btn">
-        <Link to="/login">
-          <button>Login</button>
-        </Link>
+        {currentUser ? (
+          <span style={{ color: "black", fontSize: "1rem" }}>
+            Welcome, {currentUser.username.toUpperCase()}
+          </span>
+        ) : (
+          <Link to="/login">
+            <button>LOGIN</button>
+          </Link>
+        )}
       </div>
     </header>
   );
