@@ -1,9 +1,27 @@
-import { createContext, useEffect, useReduer } from "react";
-import Reducer from "./Reducer";
-const INITIAL_STATE = {};
+import { createContext, useEffect, useReducer } from "react";
+import AuthReducer from "./Reducer";
+// initial state
+const INITIAL_STATE = {
+  user: null,
+  isFetching: false,
+  error: false,
+};
+// creating context
 export const Context = createContext(INITIAL_STATE);
 
+// context provider
 export const ContextProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(Reducer, INITIAL_STATE);
-  return <Context.Provider value={{}}>{children}</Context.Provider>;
+  const [state, dispatch] = useReducer(AuthReducer, INITIAL_STATE);
+  return (
+    <Context.Provider
+      value={{
+        user: state.user,
+        isFetching: state.isFetching,
+        error: state.error,
+        dispatch,
+      }}
+    >
+      {children}
+    </Context.Provider>
+  );
 };

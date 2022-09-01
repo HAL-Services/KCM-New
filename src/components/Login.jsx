@@ -1,7 +1,35 @@
+import { useState, useContext, useRef } from "react";
+import Loader from "../components/Loader.jsx";
 import "../styles/Login.scss";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import SignUpSvg from "../Assets/Images/signUpSvg.svg";
+import Alert from "@mui/material/Alert";
+
+import { Context } from "../context/Context";
+import axios from "axios";
+
 const Login = () => {
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const [err, setErr] = useState(false);
+  const { isFetching, error, dispatch } = useContext(Context);
+  const navigate = useHistory();
+  const handleClick = async (e) => {
+    e.preventDefault();
+    dispatch({ type: "LOGIN_START" });
+    try {
+      const res = await axios.post("http://localhost:5000/login", {
+        email: emailRef.current.value,
+        password: passwordRef.current.value,
+      });
+      dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+      navigate("/");
+    } catch (err) {
+      setErr(true);
+      dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
+    }
+  };
   return (
     <div className="login-page">
       <div className="left-info-continer">
@@ -17,41 +45,52 @@ const Login = () => {
           />
         </div>
       </div>
-      <div className="right-login-container">
-        <form action="" method="post">
+      <div
+        className="right-login-container"
+        style={{ display: "flex", flexDirection: "column" }}
+      >
+        <form style={{ marginBottom: "30px" }} onSubmit={handleClick}>
           <div className="setps-container"></div>
 
-          <div className="input-container">
-            <input
-              type="text"
-              name="phoneNumber"
-              required={true}
-              autoComplete="off"
-            />
-            <label htmlFor="form-input-phoneNumber">Phone number.</label>
-          </div>
           <div className="input-container">
             <input
               type="email"
               name="email"
               required={true}
               autoComplete="off"
+              ref={emailRef}
             />
-            <label htmlFor="form-input-fullName">Enter Your OTP</label>
+            <label htmlFor="form-input-phoneNumber">Email</label>
+          </div>
+          <div className="input-container">
+            <input
+              type="passowrd"
+              name="password"
+              required={true}
+              autoComplete="off"
+              ref={passwordRef}
+            />
+            <label htmlFor="form-input-fullName">Password</label>
           </div>
           <Link to="/signUp">
             <span
               className="loginWrapper"
               style={{ marginTop: "40px", color: "white" }}
             >
-              Don't have an account? 
+              Don't have an account?
               <span>Sign-Up</span>
             </span>
           </Link>
           <div className="btn-container">
-            <button type="submit">Login</button>
+            <button type="submit">LOGIN</button>
+            {isFetching && <Loader />}
           </div>
         </form>
+        {err && (
+          <Alert severity="error" style={{ width: "100%" }}>
+            Password or Email does not match
+          </Alert>
+        )}
       </div>
     </div>
   );

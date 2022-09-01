@@ -1,6 +1,6 @@
 import "../styles/NavBar.scss";
 import { motion, AnimatePresence } from "framer-motion";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   hamburgerTopAnim,
   hamburgerMidAnim,
@@ -12,7 +12,10 @@ import {
 import { Link } from "react-router-dom";
 const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
-
+  const [currentUser,setCurrentUser]=useState(null)
+  useEffect(()=>{
+    
+  },[currentUser])
   return (
     <header className="navbar" id="navbar">
       <motion.div className="burger-menu">

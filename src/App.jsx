@@ -1,4 +1,4 @@
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 // importing componenets
 import FullPage from "./Pages/FullPage";
@@ -9,17 +9,29 @@ import ProfilePage from "./Pages/ProfilePage";
 import WriteReview from "./Pages/WriteReview";
 // important styles
 import "./styles/App.scss";
-
+import { useContext } from "react";
+import { Context } from "../src/context/Context";
 export default function App() {
+  const { user } = useContext(Context);
   return (
     <div className="App">
       <Switch>
         <Route exact path="/" component={FullPage} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/signup" component={SignUp} />
-        <Route exact path="/service" component={ServicePage} />
-        <Route exact path="/record" component={ServicePage} />
-        <Route exact path="/settings" component={ProfilePage} />
+        <Route exact path="/login">
+          {user ? <Redirect to="/" /> : <Login />}
+        </Route>
+        <Route exact path="/signup">
+          {user ? <Redirect to="/" /> : <SignUp />}
+        </Route>
+        <Route exact path="/service">
+          {user ? <ServicePage /> : <Redirect to="/login" />}
+        </Route>
+        <Route exact path="/record">
+          {user ? <ServicePage /> : <Redirect to="/login" />}
+        </Route>
+        <Route exact path="/settings">
+          {user ? <ProfilePage /> : <Redirect to="/login" />}
+        </Route>
         <Route exact path="/write" component={WriteReview} />
       </Switch>
     </div>
