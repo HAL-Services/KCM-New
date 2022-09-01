@@ -20,9 +20,7 @@ const ContactUs = () => {
         "v8rfW3JruoYuZK6VC"
       )
       .then(
-        (result) => {
-          console.log(result.text);
-        },
+        (result) => {},
         (error) => {
           console.log(error.text);
         }
