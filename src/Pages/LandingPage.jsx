@@ -5,6 +5,7 @@ import { motion, useViewportScroll, useTransform } from "framer-motion";
 import { landingAnim, titleAnim } from "../animation";
 import MobileBackground from "../Assets/Images/mobileDesign.gif";
 import { FaArrowCircleUp } from "react-icons/fa";
+import QuickBookModal from "../components/QuickBookModal";
 export default function LandingPage() {
   const { scrollY } = useViewportScroll();
   const yValue = useTransform(scrollY, [0, 200], [0, 50]);
@@ -68,17 +69,7 @@ export default function LandingPage() {
             </motion.h4>
           </span>
           <span className="landing_hide">
-            <motion.button
-              variants={titleAnim}
-              whileHover={{
-                backgroundColor: "hsl(243, 80%, 68%)",
-                color: "var(--default-color)",
-                transition: "0.4s",
-                cursor: "pointer",
-              }}
-            >
-              Quick Book
-            </motion.button>
+            <QuickBookModal />
           </span>
           <span className="landing_hide">
             <motion.div className="LandingText" variants={titleAnim}>
