@@ -17,7 +17,7 @@
     padding: 20px;
     .input-container {
       position: relative;
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid white;
       text-align: center;
       color: var(--default-color);
       margin-bottom: var(--mb-2-5);
@@ -32,7 +32,7 @@
     height: 50px;
     padding: 0 5px;
     font-size: var(--h2-font-size);
-    color: var(--secondary-color);
+    color: var(--primary-color);
   }
   .input-container label {
     position: absolute;
@@ -40,7 +40,7 @@
     left: 14px;
     font-size: var(--normal-font-size);
     pointer-events: none;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     transform: translateY(-50%);
     transition: 0.5s;
     transform: scale(1.2);
