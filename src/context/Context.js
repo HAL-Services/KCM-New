@@ -1,8 +1,8 @@
-import { createContext, useEffect, useReducer } from "react";
+import { createContext, useReducer } from "react";
 import AuthReducer from "./Reducer";
 // initial state
 const INITIAL_STATE = {
-  user: null,
+  user: JSON.parse(localStorage.getItem("authToken")) || null,
   isFetching: false,
   error: false,
 };

@@ -13,7 +13,7 @@ const Login = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
   const [err, setErr] = useState(false);
-  const { isFetching, error, dispatch } = useContext(Context);
+  const { isFetching, dispatch } = useContext(Context);
   const navigate = useHistory();
   const handleClick = async (e) => {
     e.preventDefault();
@@ -23,7 +23,8 @@ const Login = () => {
         email: emailRef.current.value,
         password: passwordRef.current.value,
       });
-      dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+      localStorage.setItem("authToken", JSON.stringify(res.data.token));
+      dispatch({ type: "LOGIN_SUCCESS", payload: res.data.token });
       navigate("/");
     } catch (err) {
       setErr(true);

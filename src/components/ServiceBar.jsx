@@ -11,19 +11,19 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-
+import axios from "axios";
 import { Link } from "react-router-dom";
-
+import { Context } from "../context/Context";
+import { useHistory } from "react-router-dom";
 const pages = [
   ["service", "Book Service"],
   ["record", "Service Record"],
 ];
-const settings = ["settings", "Logout"];
-
 export default function ServiceBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
+  const { user, dispatch } = React.useContext(Context);
+  const history = useHistory();
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -39,6 +39,11 @@ export default function ServiceBar() {
     setAnchorElUser(null);
   };
 
+  const handleClick = () => {
+    dispatch({ type: "LOGOUT" });
+    localStorage.removeItem("authToken");
+    history.push("/");
+  };
   return (
     <AppBar
       style={{ backgroundColor: "white", color: "black" }}
@@ -60,7 +65,6 @@ export default function ServiceBar() {
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
-              color: "inherit",
               textDecoration: "none",
               fontSize: "2rem",
               color: "black",
@@ -187,20 +191,29 @@ export default function ServiceBar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Link to={`/${setting}`}>
-                    <Button
-                      style={{
-                        color: "black",
-                      }}
-                      textAlign="center"
-                    >
-                      {setting}
-                    </Button>
-                  </Link>
-                </MenuItem>
-              ))}
+              <MenuItem key="settings" onClick={handleCloseUserMenu}>
+                <Link to={`/settings`}>
+                  <Button
+                    style={{
+                      color: "black",
+                    }}
+                    textAlign="center"
+                  >
+                    Profile
+                  </Button>
+                </Link>
+              </MenuItem>
+              <MenuItem key="logout" onClick={handleCloseUserMenu}>
+                <Button
+                  style={{
+                    color: "black",
+                  }}
+                  textAlign="center"
+                  onClick={handleClick}
+                >
+                  Logout
+                </Button>
+              </MenuItem>
             </Menu>
           </Box>
         </Toolbar>
