@@ -1,4 +1,5 @@
 import React from "react";
+import emailjs from "emailjs-com";
 
 // Import animation
 import { motion } from "framer-motion";
@@ -8,6 +9,26 @@ import "../styles/ContactUs.scss";
 import { FiPhone, FiMail, FiMapPin, FiSend } from "react-icons/fi";
 
 const ContactUs = () => {
+  function sendEmail(e) {
+    e.preventDefault();
+    console.log(e.target);
+    emailjs
+      .sendForm(
+        "service_5xhuphl",
+        "template_i9eml54",
+        e.target,
+        "v8rfW3JruoYuZK6VC"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  }
   return (
     <div className="contact_section" id="contact_section">
       <h2 className="contact_main_title">Contact Us</h2>
@@ -63,7 +84,12 @@ const ContactUs = () => {
             </div>
           </div>
         </motion.div>
-        <motion.form action="" className="contact_rightside grid">
+        {/* form start here  */}
+        <motion.form
+          action=""
+          className="contact_rightside grid"
+          onSubmit={sendEmail}
+        >
           <div className="contact__inputs grid">
             <motion.div
               whileTap={{ scale: 1.1 }}
@@ -71,7 +97,7 @@ const ContactUs = () => {
               className="contact__content"
             >
               <label className="contact__label">Name</label>
-              <input type="text" className="contact__input" />
+              <input type="text" className="contact__input" name="name" />
             </motion.div>
             <motion.div
               whileTap={{ scale: 1.1 }}
@@ -79,7 +105,7 @@ const ContactUs = () => {
               className="contact__content"
             >
               <label className="contact__label">Email</label>
-              <input type="email" className="contact__input" />
+              <input type="email" className="contact__input" name="email" />
             </motion.div>
           </div>
           <motion.div
@@ -87,8 +113,8 @@ const ContactUs = () => {
             transition={{ type: "spring" }}
             className="contact__content"
           >
-            <label className="contact__label">Project</label>
-            <input type="text" className="contact__input" />
+            <label className="contact__label">Query</label>
+            <input type="text" className="contact__input" name="subject" />
           </motion.div>
           <motion.div
             whileTap={{ scale: 1.1 }}
@@ -96,15 +122,19 @@ const ContactUs = () => {
             className="contact__content"
           >
             <label className="contact__label">Message</label>
-            <textarea cols="0" rows="7" className="contact__input"></textarea>
+            <textarea
+              cols="0"
+              rows="7"
+              className="contact__input"
+              name="message"
+            ></textarea>
           </motion.div>
           <div>
-            <a href="mailto:halsrvcs@gmail.com" className="contact_btn_flex">
-              Send Message
-              <span className="contact_btn_icon">
-                <FiSend />
-              </span>
-            </a>
+            <input
+              type="submit"
+              value="Send Message"
+              className="contact_btn_flex"
+            />
           </div>
         </motion.form>
       </div>
