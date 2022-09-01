@@ -1,7 +1,37 @@
-import "../styles/Login.scss";
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router";
 import SignUpGif from "../Assets/Images/signUpGif.gif";
+import axios from "axios";
+import Loader from "../components/Loader";
+import "../styles/Login.scss";
+
 const SignUp = () => {
+  const emailRef = useRef();
+  const usernameRef = useRef();
+  const passwordRef = useRef();
+  const mobileRef = useRef();
+  const [fetching, setFetching] = useState(false);
+  const history = useHistory();
+  const handleClick = async (e) => {
+    e.preventDefault();
+    const user = {
+      username: usernameRef.current.value,
+      email: emailRef.current.value,
+      password: passwordRef.current.value,
+      mobile: mobileRef.current.value,
+    };
+    try {
+      setFetching(true);
+      await axios.post("http://localhost:5000/signup/", user);
+      history.push("/login");
+      setFetching(false);
+    } catch (err) {
+      console.log(err.response.data);
+      alert("User already exists");
+      setFetching(false);
+    }
+  };
   return (
     <div className="login-page">
       <div className="left-info-continer">
@@ -17,7 +47,7 @@ const SignUp = () => {
         </div>
       </div>
       <div className="right-login-container">
-        <form action="" method="post">
+        <form onSubmit={handleClick}>
           <div className="setps-container"></div>
           <div className="input-container">
             <input
@@ -25,6 +55,7 @@ const SignUp = () => {
               name="fullName"
               required={true}
               autoComplete="off"
+              ref={usernameRef}
             />
             <label htmlFor="form-input-fullName">Full Name</label>
           </div>
@@ -34,6 +65,7 @@ const SignUp = () => {
               name="phoneNumber"
               required={true}
               autoComplete="off"
+              ref={mobileRef}
             />
             <label htmlFor="form-input-phoneNumber">Phone number</label>
           </div>
@@ -43,8 +75,20 @@ const SignUp = () => {
               name="email"
               required={true}
               autoComplete="off"
+              ref={emailRef}
             />
             <label htmlFor="form-input-fullName">What is your email?</label>
+          </div>
+          <div className="input-container">
+            <input
+              type="password"
+              name="password"
+              required={true}
+              autoComplete="off"
+              minLength={8}
+              ref={passwordRef}
+            />
+            <label htmlFor="form-input-fullName">Password</label>
           </div>
           <span style={{ marginBottom: "20px", color: "grey" }}>
             Creating an account means you're okay with our Terms of Service and
@@ -61,6 +105,7 @@ const SignUp = () => {
           </Link>
           <div className="btn-container">
             <button type="submit">Register</button>
+            {fetching && <Loader />}
           </div>
         </form>
       </div>
