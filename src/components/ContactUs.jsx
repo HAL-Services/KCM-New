@@ -3,12 +3,13 @@ import emailjs from "emailjs-com";
 
 // Import animation
 import { motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
 // Importing Styles
 import "../styles/ContactUs.scss";
 import { FiPhone, FiMail, FiMapPin, FiSend } from "react-icons/fi";
-
+import { useHistory } from "react-router-dom";
 const ContactUs = () => {
+  const history = useHistory();
   function sendEmail(e) {
     e.preventDefault();
     console.log(e.target);
@@ -26,6 +27,7 @@ const ContactUs = () => {
         }
       );
     e.target.reset();
+    history.push("/shortly1");
   }
   return (
     <div className="contact_section" id="contact_section">
