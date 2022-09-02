@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import contactImage from "../Assets/Images/contact.jpg";
+import contactImage from "../Assets/Images/email.jpg";
 import "../styles/ContactShortly.styles.scss";
 import { useHistory } from "react-router-dom";
 export default function ContactUsSuccess() {
@@ -13,9 +13,9 @@ export default function ContactUsSuccess() {
   return (
     <div className="contact-shortly-container">
       <div className="contact-shortly-left">
-        <h1>Your  </h1>
+        <h1>Your Message was Delievered </h1>
         <p>
-          Please sit back and relax. Our executive will contact you shortly.
+          Thank you for taking time to write to us.
         </p>
         <h4>Have a great day.</h4>
       </div>
