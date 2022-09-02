@@ -73,11 +73,11 @@ export default function Testimonial() {
                     padding: "10px",
                   }}
                 >
-                  {[...Array(data.stars)].map(() => (
-                    <FaStar style={{ color: "gold" }} />
+                  {[...Array(data.stars)].map((e, index) => (
+                    <FaStar style={{ color: "gold" }} key={index} />
                   ))}
-                  {[...Array(5 - data.stars)].map(() => (
-                    <FaStar style={{ color: "grey" }} />
+                  {[...Array(5 - data.stars)].map((e, index) => (
+                    <FaStar style={{ color: "grey" }} key={index} />
                   ))}
                 </div>
               </div>
