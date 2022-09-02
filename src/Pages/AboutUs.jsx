@@ -1,5 +1,6 @@
 import React from "react";
-import carImage from "../Assets/ExpertiseCardImages/carInspection.jpg";
+import carImage from "../Assets/Expertise/carInspection.jpg";
+import image from "../Assets/Images/1.jpg";
 import AboutUsCards from "../components/AboutUsCards";
 import { motion } from "framer-motion";
 
@@ -57,7 +58,7 @@ const AboutUs = () => {
             transition={{ duration: 1, ease: "linear" }}
             viewport={{ once: false, amount: 0.1 }}
           >
-            <img src={carImage} alt="alternate" className="about_image" />
+            <img src={image} alt="alternate" className="about_image" />
           </motion.div>
         </div>
       </div>
