@@ -1,12 +1,18 @@
-import CarWash from "../Assets/ExpertiseCardImages/CarWash.jpg";
-import BatteryChange from "../Assets/ExpertiseCardImages/BateryChange.jpg";
-import EngineRepair from "../Assets/ExpertiseCardImages/EngineRepair.jpg";
-import OilChange from "../Assets/ExpertiseCardImages/OilChange.jpg";
-import WheelAlign from "../Assets/ExpertiseCardImages/WheelAlign.jpg";
-import carInspection from "../Assets/ExpertiseCardImages/carInspection.jpg";
-import CarPaint from "../Assets/ExpertiseCardImages/CarPaint.jpg";
-import carBattery from "../Assets/ExpertiseCardImages/carBattery.jpg";
+import CarWash from "../Assets/Expertise/carwash.jpg";
+import EngineRepair from "../Assets/Expertise/engineRepair.jpg";
+// import OilChange from "../Assets/ExpertiseCardImages/OilChange.jpg";
+import WheelAlign from "../Assets/Expertise/wheelAlign.jpg";
+import carInspection from "../Assets/Expertise/carInspection.jpg";
+import CarPaint from "../Assets/Expertise/painting.jpg";
+import carBattery from "../Assets/Expertise/battery.jpg";
+import periodicService from "../Assets/Expertise/preiodicService.jpg";
+import acRepair from "../Assets/Expertise/ac.jpg";
 const ExpertiseImagedata = [
+  {
+    id: "0",
+    title: "Engine Repair",
+    url: EngineRepair,
+  },
   {
     id: "1",
     title: "Car Wash",
@@ -33,15 +39,20 @@ const ExpertiseImagedata = [
     title: "Wheel Alignment",
     url: WheelAlign,
   },
+  // {
+  //   id: "6",
+  //   title: "Oil Change",
+  //   url: OilChange,
+  // },
   {
     id: "6",
-    title: "Oil Change",
-    url: OilChange,
+    title: "Peroidic Service",
+    url: periodicService,
   },
   {
-    id: "7",
-    title: "Engine Repair",
-    url: EngineRepair,
+    id: "9",
+    title: "Ac Service",
+    url: acRepair,
   },
 ];
 export default ExpertiseImagedata;
