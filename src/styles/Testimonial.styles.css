@@ -106,20 +106,20 @@
   text-align: center;
 }
 .clientContainer p {
-  margin-top: 50px;
+  margin-top: 75px;
   padding: 0 8px;
   font-size: 15px;
   opacity: 0.8;
   text-align: center;
 }
 .clientLeft {
-  font-size: 30px;
+  font-size: 20px;
   display: block;
   text-align: left;
   color: rgb(57, 10, 197);
 }
 .clientRight {
-  font-size: 30px;
+  font-size: 20px;
   display: block;
   text-align: right;
   color: rgb(57, 10, 197);
