@@ -13,7 +13,7 @@ import TestimonialData from "../OfflineAPI/TestimonialData.js";
 // import required modules
 import speakGif from "../Assets/Images/speakGif.gif";
 
-import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import { FaQuoteLeft, FaQuoteRight, FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 export default function Testimonial() {
   return (
@@ -63,6 +63,22 @@ export default function Testimonial() {
                       <FaQuoteRight />
                     </span>
                   </p>
+                </div>
+                <div
+                  style={{
+                    marginBottom: "20px",
+                    display: "flex",
+                    width: "100%",
+                    justifyContent: "center",
+                    padding: "10px",
+                  }}
+                >
+                  {[...Array(data.stars)].map(() => (
+                    <FaStar style={{ color: "gold" }} />
+                  ))}
+                  {[...Array(5 - data.stars)].map(() => (
+                    <FaStar style={{ color: "grey" }} />
+                  ))}
                 </div>
               </div>
             </SwiperSlide>
