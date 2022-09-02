@@ -9,9 +9,7 @@ const ServiceCard = (props) => {
       <div
         className="servicecard_tophead"
         style={{ backgroundColor: `${props.sty}` }}
-      >
-        {console.log(props.sty)}
-      </div>
+      ></div>
       <div className="servicecard_body">
         <h3 className="servicecard_title">{props.title}</h3>
         <ul className="servicecard_desc">
@@ -25,7 +23,7 @@ const ServiceCard = (props) => {
                   type: "spring",
                   duration: 1,
                 }}
-                viewport={{ once: true, amount: 1 }}
+                viewport={{ once: true, amount: 0.1 }}
                 key={index}
               >
                 {e}
