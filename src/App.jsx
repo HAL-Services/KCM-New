@@ -12,6 +12,7 @@ import "./styles/App.scss";
 import { useContext } from "react";
 import { Context } from "../src/context/Context";
 import ContactShortly from "./Pages/ContactShortly";
+import ContactUsSuccess from "./Pages/ContactUsSuccess";
 export default function App() {
   const { user } = useContext(Context);
   return (
@@ -35,6 +36,7 @@ export default function App() {
         </Route>
         <Route exact path="/write" component={WriteReview} />
         <Route exact path="/shortly" component={ContactShortly} />
+        <Route exact path="/shortly1" component={ContactUsSuccess} />
       </Switch>
     </div>
   );
