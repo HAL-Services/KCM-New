@@ -2,6 +2,20 @@
   display: flex;
 }
 
+.login-header{
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  font-size: var(--h1-font-size);
+  &:hover{
+    cursor: pointer;
+  }
+  @media screen and (max-width:1000px) {
+    top: 5px;
+    left: 15px;
+  }
+}
+
 .left-info-continer {
   display: flex;
   justify-content: center;
@@ -105,6 +119,18 @@
         cursor: not-allowed;
       }
     }
+  }
+}
+
+.checkbox-container{
+  color: var(--default-color);
+  margin-bottom: var(--mb-1-5);
+    display: flex;
+    align-items: center;
+  input{
+    margin-right: 0.8rem;
+    height: 18px;
+    width: 18px;
   }
 }
 

@@ -13,6 +13,7 @@ const Login = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
   const [err, setErr] = useState(false);
+  const [showPass, setShowPass] = useState(false);
   const { isFetching, dispatch } = useContext(Context);
   const navigate = useHistory();
   const handleClick = async (e) => {
@@ -33,6 +34,9 @@ const Login = () => {
   };
   return (
     <div className="login-page">
+      <Link to="/">
+        <h1 className="login-header">KCM.</h1>
+      </Link>
       <div className="left-info-continer">
         <div className="information">
           <img
@@ -65,7 +69,7 @@ const Login = () => {
           </div>
           <div className="input-container">
             <input
-              type="passowrd"
+              type={showPass ? "text" : "password"}
               name="password"
               required={true}
               autoComplete="off"
@@ -73,6 +77,13 @@ const Login = () => {
             />
             <label htmlFor="form-input-fullName">Password</label>
           </div>
+          <div className="checkbox-container">
+            <input type="checkbox" onClick={() => setShowPass(!showPass)} />
+            <label htmlFor="showPassword" className="login-checkbox">
+              Show Password
+            </label>
+          </div>
+
           <Link to="/signUp">
             <span
               className="loginWrapper"

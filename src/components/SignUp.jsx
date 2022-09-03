@@ -11,6 +11,7 @@ const SignUp = () => {
   const usernameRef = useRef();
   const passwordRef = useRef();
   const mobileRef = useRef();
+  const [showPass, setShowPass] = useState(false);
   const [fetching, setFetching] = useState(false);
   const history = useHistory();
   const handleClick = async (e) => {
@@ -34,6 +35,9 @@ const SignUp = () => {
   };
   return (
     <div className="login-page">
+      <Link to="/">
+        <h1 className="login-header">KCM.</h1>
+      </Link>
       <div className="left-info-continer">
         <div className="information">
           <img
@@ -43,6 +47,7 @@ const SignUp = () => {
               width: "100%",
             }}
             src={SignUpGif}
+            alt="gif"
           />
         </div>
       </div>
@@ -66,6 +71,7 @@ const SignUp = () => {
               required={true}
               autoComplete="off"
               ref={mobileRef}
+              minLength={10}
             />
             <label htmlFor="form-input-phoneNumber">Phone number</label>
           </div>
@@ -81,7 +87,7 @@ const SignUp = () => {
           </div>
           <div className="input-container">
             <input
-              type="password"
+              type={showPass ? "text" : "password"}
               name="password"
               required={true}
               autoComplete="off"
@@ -89,6 +95,12 @@ const SignUp = () => {
               ref={passwordRef}
             />
             <label htmlFor="form-input-fullName">Password</label>
+          </div>
+          <div className="checkbox-container">
+            <input type="checkbox" onClick={() => setShowPass(!showPass)} />
+            <label htmlFor="showPassword" className="login-checkbox">
+              Show Password
+            </label>
           </div>
           <span style={{ marginBottom: "20px", color: "grey" }}>
             Creating an account means you're okay with our Terms of Service and
