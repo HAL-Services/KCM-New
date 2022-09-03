@@ -14,7 +14,7 @@ const ProfileForm = () => {
           />
           <label htmlFor=" form-input-fullName">Full Name</label>
         </div>
-        <div className=" input-container">
+        <div className="input-container">
           <input
             type="text"
             name="carNumberr"
@@ -23,7 +23,7 @@ const ProfileForm = () => {
           />
           <label htmlFor=" form-input-phoneNumber">Phone Number</label>
         </div>
-        <div className=" input-container">
+        <div className="input-container">
           <input
             type={passwordShown ? "text" : "password"}
             name="carNumberr"

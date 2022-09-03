@@ -2,12 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  padding: 1rem 20rem;
-  @media screen and (max-width: 1000px) {
+  width: 80%;
+  height: 100%;
+  @media screen and (max-width: 1100px) {
     width: 100%;
     height: 100%;
-    padding: 2rem 1rem;
   }
   form {
     display: flex;
@@ -19,7 +18,13 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    padding: 20px;
+    height: 100%;
+    padding: 2rem 2rem;
+    @media screen and (max-width: 1100px) {
+      width: 100%;
+      padding: 1rem 1rem;
+      box-shadow: none;
+    }
     .input-container {
       position: relative;
       border-bottom: 1px solid black;
@@ -92,26 +97,6 @@
   src: local("Lato Light Italic"), local("Lato-LightItalic"),
     url(https://fonts.gstatic.com/s/ubuntucondensed/v8/u-4k0rCzjgs5J7oXnJcM_0kACGMtT-Dfqw.woff2)
       format("woff2");
-}
-
-.loginWrapper {
-  text-align: center;
-}
-.loginWrapper span {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-family: "Josefin Sans", sans-serif;
-  background: linear-gradient(to right, #095fab 10%, #25abe8 50%, #57d75b 60%);
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
-  color: #fff;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 1.5s linear infinite;
-  display: inline-block;
 }
 
 @keyframes textclip {

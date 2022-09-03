@@ -38,7 +38,7 @@ export default function GarageCarousel() {
         {ExpertiseImagedata.map((imageData) => {
           return (
             <SwiperSlide key={imageData.id} className="GaragecarouselContainer">
-              <img className="GarageImage" src={imageData.url} />
+              {/* <img className="GarageImage" src={imageData.url} /> */}
             </SwiperSlide>
           );
         })}
