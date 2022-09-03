@@ -1,49 +1,7 @@
 import "../styles/DataTable.styles.scss";
 import { DataGrid } from "@mui/x-data-grid";
 import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
-const columns = [
-  { field: "id", headerName: "S.No" },
-  {
-    field: "name",
-    headerName: "Name",
-    width: 150,
-  },
-  {
-    field: "carNo",
-    headerName: "Car Number",
-    width: 150,
-  },
-  {
-    field: "time",
-    headerName: "Date",
-    width: 150,
-  },
-  {
-    field: "bill",
-    headerName: "Bill",
-    sortable: false,
-    width: 150,
-  },
-  { field: "status", headerName: "Status", sortable: true, width: 150 },
-];
-
-const rows = [
-  { id: 1, name: "Aviral", carNo: "Snow", time: "12-2-2", bill: "Jon" },
-  { id: 2, name: "Aviral", carNo: "Lannister", time: "12-2-2", bill: "Cersei" },
-  { id: 3, name: "Aviral", carNo: "Lannister", time: "12-2-2", bill: "Jaime" },
-  { id: 4, name: "Aviral", carNo: "Stark", time: "12-2-2", bill: "Arya" },
-  {
-    id: 5,
-    name: "Aviral",
-    carNo: "Targaryen",
-    time: "12-2-2",
-    bill: "Daenerys",
-  },
-  { id: 6, name: "Aviral", carNo: "Melisandre", time: "12-2-2", bill: "aa" },
-  { id: 7, name: "Aviral", carNo: "Clifford", time: "12-2-2", bill: "Ferrara" },
-  { id: 8, name: "Aviral", carNo: "Frances", time: "12-2-2", bill: "Rossini" },
-  { id: 9, name: "Aviral", carNo: "Roxie", time: "12-2-2", bill: "Harvey" },
-];
+import { userRows, userColumns } from "../OfflineAPI/DataTable";
 
 export default function DataTable() {
   return (
@@ -59,8 +17,8 @@ export default function DataTable() {
     >
       <DataGrid
         className="data-grid"
-        rows={rows}
-        columns={columns}
+        rows={userRows}
+        columns={userColumns}
         pageSize={5}
         rowsPerPageOptions={[5]}
         autoHeight={true}
