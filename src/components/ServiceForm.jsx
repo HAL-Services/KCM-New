@@ -4,9 +4,11 @@ import "../styles/ServiceForm.styles.scss";
 import "react-datepicker/dist/react-datepicker.css";
 import { Context } from "../context/Context";
 import axios from "axios";
+import { useRef } from "react";
 const ServiceForm = () => {
   const [currentUser, setCurrentUser] = useState(null);
   const { user } = useContext(Context);
+  const dateRef = useRef();
   useEffect(() => {
     const config = {
       headers: {
@@ -22,9 +24,13 @@ const ServiceForm = () => {
     };
     fetchUserDetails();
   }, [user]);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(dateRef);
+  };
   return (
     <div className="Service-container">
-      <form action="" method="post">
+      <form onSubmit={handleSubmit}>
         <div className="input-container">
           <input
             type="text"
@@ -81,7 +87,7 @@ const ServiceForm = () => {
         >
           Choose Time and Date
         </span>
-        <DateTime />
+        <DateTime ref={dateRef} />
         <div className="service-btn-container">
           <button type="submit">Confirm Booking</button>
         </div>
