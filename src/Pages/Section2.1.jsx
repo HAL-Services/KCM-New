@@ -24,6 +24,7 @@ const ServiceSection = () => {
           title="Silver"
           sty="#c0c0c0"
           body={["Car wash", "Engine Check", "Batteries"]}
+          id="1"
         />
         <ServiceCard
           title="Platinum"
@@ -34,6 +35,7 @@ const ServiceSection = () => {
             "Suspension & Fitments",
             "Tyres & Wheel Care",
           ]}
+          id="2"
           sty="#e5e4e2"
         />
         <ServiceCard
@@ -45,6 +47,7 @@ const ServiceSection = () => {
             "Winshields & Lights",
           ]}
           sty="#FFD700"
+          id="3"
         />
       </div>
     </div>

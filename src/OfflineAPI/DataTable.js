@@ -71,6 +71,6 @@ export const userRows = [
     username: "Luvjeet",
     date: "asega",
     time: "danejfa",
-    booking: "active",
+    booking: "pending",
   },
 ];
