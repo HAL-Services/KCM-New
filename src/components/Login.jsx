@@ -3,7 +3,7 @@ import Loader from "../components/Loader.jsx";
 import "../styles/Login.scss";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-import SignUpSvg from "../Assets/Images/signUpSvg.svg";
+import SignUpSvg from "../Assets/Images/login.jpg";
 import Alert from "@mui/material/Alert";
 
 import { Context } from "../context/Context";
