@@ -19,7 +19,7 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    padding: 20px;
+    padding: 2rem 5rem;
     .input-container {
       position: relative;
       border-bottom: 1px solid black;
@@ -36,13 +36,14 @@
     border: none;
     height: 50px;
     padding: 0 5px;
-    font-size: var(--h2-font-size);
+    font-size: var(--normal-font-size);
     color: var(--secondary-color);
   }
   .input-container label {
+    font-size: var(--font-semi-bold);
     position: absolute;
     top: 40%;
-    left: 14px;
+    left: 15px;
     font-size: var(--normal-font-size);
     pointer-events: none;
     color: var(--secondary-color);
@@ -52,7 +53,7 @@
   }
   .input-container input:focus ~ label,
   .input-container input:valid ~ label {
-    top: -10px;
+    top: -12px;
     transform: scale(1);
     left: 0;
     color: var(--first-color);
@@ -70,6 +71,12 @@
       border-radius: 2em;
       transition: 0.5s;
       margin-top: var(--mb-1);
+      @media screen and (max-width: 1300px) {
+        width: 50%; 
+      }
+      @media screen and (max-width:1120px) {
+        width: 77%; 
+      }
       @media screen and (max-width: 1000px) {
         width: 100%;
         padding: 0.8em 3.5em;

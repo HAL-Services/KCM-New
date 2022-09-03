@@ -108,12 +108,12 @@ export default function ServiceBar() {
                 color: "black",
               }}
             >
-              {pages.map((page) => (
+              {pages.map((page, index) => (
                 <MenuItem
                   style={{
                     color: "black",
                   }}
-                  key={page}
+                  key={index}
                   onClick={handleCloseNavMenu}
                 >
                   <Link
@@ -122,7 +122,7 @@ export default function ServiceBar() {
                     }}
                     to={`/${page[0]}`}
                   >
-                    <Typography style={{ color: "black" }} textAlign="center">
+                    <Typography style={{ color: "black", textAlign: "center" }}>
                       {page[1]}
                     </Typography>
                   </Link>
@@ -155,10 +155,10 @@ export default function ServiceBar() {
             style={{ justifyContent: "center", color: "black" }}
             sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
           >
-            {pages.map((page) => (
+            {pages.map((page, index) => (
               <Link to={`/${page[0]}`}>
                 <Button
-                  key={page[0]}
+                  key={index}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
                   style={{ marginRight: "60px", color: "black" }}
@@ -196,8 +196,8 @@ export default function ServiceBar() {
                   <Button
                     style={{
                       color: "black",
+                      textAlign: "center",
                     }}
-                    textAlign="center"
                   >
                     Profile
                   </Button>
@@ -207,8 +207,8 @@ export default function ServiceBar() {
                 <Button
                   style={{
                     color: "black",
+                    textAlign: "center",
                   }}
-                  textAlign="center"
                   onClick={handleClick}
                 >
                   Logout
