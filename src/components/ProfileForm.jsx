@@ -1,36 +1,70 @@
 import { useState } from "react";
 import "../styles/ProfileForm.styles.scss";
+import axios from "axios";
+import { useContext } from "react";
+import { Context } from "../context/Context";
+import { useRef } from "react";
+import { useHistory } from "react-router-dom";
 const ProfileForm = () => {
+  const { user, dispatch } = useContext(Context);
+  const username = useRef();
+  const mobile = useRef();
+  const password = useRef();
+  const history = useHistory();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const config = {
+      headers: {
+        Authorization: `Bearer ${user}`,
+      },
+    };
+    const data = {
+      username: username.current.value,
+      mobile: mobile.current.value,
+      password: password.current.value,
+    };
+    try {
+      await axios.post("http://localhost:5000/update", data, config);
+      dispatch({ type: "LOGOUT" });
+      localStorage.removeItem("authToken");
+      history.push("/login");
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
   const [passwordShown, setPasswordShown] = useState(false);
   return (
     <div className="profile-container">
-      <form action="" method="post">
+      <form onSubmit={handleSubmit}>
         <div className="input-container">
           <input
             type="text"
             name="fullName"
             required={true}
             autoComplete="off"
+            ref={username}
           />
-          <label htmlFor=" form-input-fullName">Full Name</label>
+          <label htmlFor=" form-input-fullName">New Username</label>
         </div>
         <div className="input-container">
           <input
             type="text"
-            name="carNumberr"
+            name="mobile"
             required={true}
             autoComplete="off"
+            ref={mobile}
           />
-          <label htmlFor=" form-input-phoneNumber">Phone Number</label>
+          <label htmlFor=" form-input-phoneNumber">New Mobile Number</label>
         </div>
         <div className="input-container">
           <input
             type={passwordShown ? "text" : "password"}
-            name="carNumberr"
+            name="password"
             required={true}
             autoComplete="off"
+            ref={password}
           />
-          <label htmlFor="form-input-password">Password</label>
+          <label htmlFor="form-input-password">New Password</label>
         </div>
 
         <label htmlFor="form-input-showPassword" className="profile__showPass">
