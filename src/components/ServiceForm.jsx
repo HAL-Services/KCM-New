@@ -1,14 +1,19 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, useRef } from "react";
 import DateTime from "./DateTime";
 import "../styles/ServiceForm.styles.scss";
 import "react-datepicker/dist/react-datepicker.css";
 import { Context } from "../context/Context";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
-import { useRef } from "react";
 const ServiceForm = () => {
   const [currentUser, setCurrentUser] = useState(null);
+  const [date, setDate] = useState(null);
+  const [time, setTime] = useState(null);
+  const carNumber = useRef();
+  const carModel = useRef();
+  const address = useRef();
+  const history = useHistory();
   const { user } = useContext(Context);
-  const dateRef = useRef();
   useEffect(() => {
     const config = {
       headers: {
@@ -26,7 +31,31 @@ const ServiceForm = () => {
   }, [user]);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(dateRef);
+    const data = {
+      date,
+      time,
+      username: currentUser.username,
+      carNumber: carNumber.current.value,
+      carModel: carModel.current.value,
+      mobile: currentUser.mobile,
+      address: address.current.value,
+      email: currentUser.email,
+    };
+    const config = {
+      headers: {
+        Authorization: `Bearer ${user}`,
+      },
+    };
+    try {
+      await axios.post("http://localhost:5000/service/create/", data, config);
+      history.push("/shortly");
+    } catch (error) {}
+  };
+  const updateDate = (value) => {
+    setDate(value);
+  };
+  const updateTime = (value) => {
+    setTime(value);
   };
   return (
     <div className="Service-container">
@@ -57,15 +86,17 @@ const ServiceForm = () => {
             name="carNumberr"
             required={true}
             autoComplete="off"
+            ref={carNumber}
           />
           <label htmlFor="form-input-carNumber">Car Number</label>
         </div>
         <div className="input-container">
           <input
             type="text"
-            name="carNumberr"
+            name="carModel"
             required={true}
             autoComplete="off"
+            ref={carModel}
           />
           <label htmlFor="form-input-carNumber">Car Model</label>
         </div>
@@ -75,6 +106,7 @@ const ServiceForm = () => {
             name="address"
             required={true}
             autoComplete="off"
+            ref={address}
           />
           <label htmlFor="form-input-carNumber">Pick Up Location</label>
         </div>
@@ -87,7 +119,7 @@ const ServiceForm = () => {
         >
           Choose Time and Date
         </span>
-        <DateTime ref={dateRef} />
+        <DateTime updateTime={updateTime} updateDate={updateDate} />
         <div className="service-btn-container">
           <button type="submit">Confirm Booking</button>
         </div>
