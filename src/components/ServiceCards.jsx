@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 
 // importing styles
 import "../styles/ServiceCard.scss";
