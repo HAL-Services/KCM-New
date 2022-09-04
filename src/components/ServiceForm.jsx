@@ -49,7 +49,9 @@ const ServiceForm = () => {
     try {
       await axios.post("http://localhost:5000/service/create/", data, config);
       history.push("/shortly");
-    } catch (error) {}
+    } catch (error) {
+      console.log(error.message);
+    }
   };
   const updateDate = (value) => {
     setDate(value);
