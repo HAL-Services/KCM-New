@@ -1,5 +1,4 @@
 import React from "react";
-import carImage from "../Assets/Expertise/carInspection.jpg";
 import image from "../Assets/Images/1.jpg";
 import AboutUsCards from "../components/AboutUsCards";
 import { motion } from "framer-motion";

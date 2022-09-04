@@ -1,12 +1,12 @@
-import CarWash from "../Assets/Expertise/carwash.jpg";
-import EngineRepair from "../Assets/Expertise/engineRepair.jpg";
-// import OilChange from "../Assets/ExpertiseCardImages/OilChange.jpg";
-import WheelAlign from "../Assets/Expertise/wheelAlign.jpg";
-import carInspection from "../Assets/Expertise/carInspection.jpg";
-import CarPaint from "../Assets/Expertise/painting.jpg";
-import carBattery from "../Assets/Expertise/battery.jpg";
-import periodicService from "../Assets/Expertise/preiodicService.jpg";
-import acRepair from "../Assets/Expertise/ac.jpg";
+import CarWash from "../Assets/Expertise/carwash.webp";
+import EngineRepair from "../Assets/Expertise/engineRepair.webp";
+// import OilChange from "../Assets/ExpertiseCardImages/OilChange.webp";
+import WheelAlign from "../Assets/Expertise/wheelAlign.webp";
+import carInspection from "../Assets/Expertise/carInspection.webp";
+import CarPaint from "../Assets/Expertise/painting.webp";
+import carBattery from "../Assets/Expertise/battery.webp";
+import periodicService from "../Assets/Expertise/preiodicService.webp";
+import acRepair from "../Assets/Expertise/ac.webp";
 const ExpertiseImagedata = [
   {
     id: "0",
