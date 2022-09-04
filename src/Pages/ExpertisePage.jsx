@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import ExpertiseImagedata from "../OfflineAPI/ExpertiseImagesData";
 import "../styles/ExpertisePage.styles.scss";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 export default function ExpertisePage() {
   const [exp, setExp] = useState([]);
   useEffect(() => {
@@ -13,7 +14,7 @@ export default function ExpertisePage() {
           return (
             <div key={img.id} className="expertise-img-container">
               <h3>{img.title}</h3>
-              <img src={img.url} alt="garage-images" />
+              <LazyLoadImage src={img.url} alt="garage-images" />
             </div>
           );
         })}
