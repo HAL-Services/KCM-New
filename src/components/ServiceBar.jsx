@@ -11,7 +11,6 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import axios from "axios";
 import { Link } from "react-router-dom";
 import { Context } from "../context/Context";
 import { useHistory } from "react-router-dom";
@@ -22,7 +21,7 @@ const pages = [
 export default function ServiceBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-  const { user, dispatch } = React.useContext(Context);
+  const {  dispatch } = React.useContext(Context);
   const history = useHistory();
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -41,7 +40,7 @@ export default function ServiceBar() {
 
   const handleClick = () => {
     dispatch({ type: "LOGOUT" });
-    localStorage.removeItem("authToken");
+    localStorage.removeItem("User");
     history.push("/");
   };
   return (
