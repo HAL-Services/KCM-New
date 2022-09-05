@@ -1,21 +1,36 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
 import "../styles/Testimonial.styles.css";
-
-import TestimonialData from "../OfflineAPI/TestimonialData.js";
 // import required modules
 import speakGif from "../Assets/Images/speakGif.gif";
 
 import { FaQuoteLeft, FaQuoteRight, FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
+import axios from "axios";
+
 export default function Testimonial() {
+  const [reviewsData, setReviewsdata] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const { data } = await axios.get(
+          "http://localhost:5000/reviews/filtered"
+        );
+        setReviewsdata(data);
+      } catch (error) {
+        console.log(error.message);
+      }
+    }
+    fetchData();
+  }, []);
   return (
     <div className="testimonialContainer" id="testimonial">
       <div className="testimonialHeading">
@@ -43,9 +58,9 @@ export default function Testimonial() {
         modules={[Autoplay, Pagination]}
         className="testimonialSwiper"
       >
-        {TestimonialData.map((data) => {
+        {reviewsData.map((data) => {
           return (
-            <SwiperSlide key={data.id} className="testimonialSlider">
+            <SwiperSlide key={data.username} className="testimonialSlider">
               <div className="clientWrapper">
                 <div className="clientContainer">
                   <div className="profile">
@@ -58,7 +73,7 @@ export default function Testimonial() {
                     <span className="clientLeft">
                       <FaQuoteLeft />
                     </span>
-                    {data.review}
+                    {data.data}
                     <span className="clientRight">
                       <FaQuoteRight />
                     </span>
