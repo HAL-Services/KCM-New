@@ -28,8 +28,7 @@ const SignUp = () => {
       history.push("/login");
       setFetching(false);
     } catch (err) {
-      console.log(err.response.data);
-      alert("User already exists");
+      alert(err.message);
       setFetching(false);
     }
   };

@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import img from "../Assets/Images/Testimonial.png";
 
 // importing styles
 import "../styles/AboutUs.scss";
@@ -11,7 +10,6 @@ const AboutUsCards = ({ title, subtitle }) => {
       <div
         className="aboutUsCards_header"
         style={{
-          backgroundImage: `url(${img})`,
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
           backgroundPositionX: "105%",

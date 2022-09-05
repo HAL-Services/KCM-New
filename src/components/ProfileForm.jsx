@@ -15,7 +15,7 @@ const ProfileForm = () => {
     e.preventDefault();
     const config = {
       headers: {
-        Authorization: `Bearer ${user}`,
+        Authorization: `Bearer ${user.token}`,
       },
     };
     const data = {
@@ -24,9 +24,9 @@ const ProfileForm = () => {
       password: password.current.value,
     };
     try {
-      await axios.post("http://localhost:5000/update", data, config);
+      await axios.post("http://localhost:5000/users/update", data, config);
       dispatch({ type: "LOGOUT" });
-      localStorage.removeItem("authToken");
+      localStorage.removeItem("User");
       history.push("/login");
     } catch (err) {
       console.log(err.message);

@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState, useRef } from "react";
+import { useContext, useState, useRef } from "react";
 import DateTime from "./DateTime";
 import "../styles/ServiceForm.styles.scss";
 import "react-datepicker/dist/react-datepicker.css";
@@ -6,7 +6,6 @@ import { Context } from "../context/Context";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 const ServiceForm = () => {
-  const [currentUser, setCurrentUser] = useState(null);
   const [date, setDate] = useState(null);
   const [time, setTime] = useState(null);
   const carNumber = useRef();
@@ -14,40 +13,25 @@ const ServiceForm = () => {
   const address = useRef();
   const history = useHistory();
   const { user } = useContext(Context);
-  useEffect(() => {
-    const config = {
-      headers: {
-        Authorization: `Bearer ${user}`,
-      },
-    };
-    const fetchUserDetails = async () => {
-      const { data } = await axios.get(
-        "http://localhost:5000/details/",
-        config
-      );
-      setCurrentUser(data);
-    };
-    fetchUserDetails();
-  }, [user]);
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
       date,
       time,
-      username: currentUser.username,
+      username: user.username,
       carNumber: carNumber.current.value,
       carModel: carModel.current.value,
-      mobile: currentUser.mobile,
+      mobile: user.mobile,
       address: address.current.value,
-      email: currentUser.email,
+      email: user.email,
     };
     const config = {
       headers: {
-        Authorization: `Bearer ${user}`,
+        Authorization: `Bearer ${user.token}`,
       },
     };
     try {
-      await axios.post("http://localhost:5000/service/create/", data, config);
+      await axios.post("http://localhost:5000/services/create/", data, config);
       history.push("/shortly");
     } catch (error) {
       console.log(error.message);
@@ -68,7 +52,7 @@ const ServiceForm = () => {
             name="fullName"
             required={true}
             autoComplete="off"
-            defaultValue={currentUser ? currentUser.username : ""}
+            defaultValue={user ? user.username : ""}
           />
           <label htmlFor="form-input-fullName">Full Name</label>
         </div>
@@ -78,7 +62,7 @@ const ServiceForm = () => {
             name="mobile"
             required={true}
             autoComplete="off"
-            defaultValue={currentUser ? currentUser.mobile : ""}
+            defaultValue={user ? user.mobile : ""}
           />
           <label htmlFor="form-input-fullName">Mobile Number</label>
         </div>

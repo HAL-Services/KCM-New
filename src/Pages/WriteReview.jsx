@@ -36,7 +36,7 @@ function WriteReview() {
       data: dataRef.current.value,
     };
     try {
-      await axios.post("http://localhost:5000/review/create", data);
+      await axios.post("http://localhost:5000/reviews/create", data);
       history.push("/shortly1");
     } catch (error) {
       history.push("/");

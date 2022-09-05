@@ -24,8 +24,10 @@ const Login = () => {
         email: emailRef.current.value,
         password: passwordRef.current.value,
       });
-      localStorage.setItem("authToken", JSON.stringify(res.data.token));
-      dispatch({ type: "LOGIN_SUCCESS", payload: res.data.token });
+      const user = res.data;
+      console.log(user);
+      localStorage.setItem("User", JSON.stringify(user));
+      dispatch({ type: "LOGIN_SUCCESS", payload: user });
       navigate("/");
     } catch (err) {
       setErr(true);

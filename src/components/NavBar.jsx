@@ -11,26 +11,14 @@ import {
 
 import { Link } from "react-router-dom";
 import { Context } from "../context/Context";
-import axios from "axios";
 const NavBar = () => {
   const [isOpen, setOpen] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
-  const { user, dispatch } = useContext(Context);
+  const { user } = useContext(Context);
   useEffect(() => {
-    const config = {
-      headers: {
-        Authorization: `Bearer ${user}`,
-      },
-    };
-    const fetchUserDetails = async () => {
-      const { data } = await axios.get(
-        "http://localhost:5000/details/",
-        config
-      );
-      setCurrentUser(data);
-    };
-    fetchUserDetails();
+    if (user) setCurrentUser(user.username);
   }, [user]);
+
   return (
     <header className="navbar" id="navbar">
       <motion.div className="burger-menu">
@@ -230,7 +218,7 @@ const NavBar = () => {
       <div className="login-btn">
         {currentUser ? (
           <span style={{ color: "black", fontSize: "1rem" }}>
-            Welcome, {currentUser.username.toUpperCase()}
+            Welcome, {currentUser.toUpperCase()}
           </span>
         ) : (
           <Link to="/login">
