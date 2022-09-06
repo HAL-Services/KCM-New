@@ -62,15 +62,15 @@ export const userColumns = [
   },
 ];
 
-export const userRows = [
-  {
-    id: 1,
-    email: "lovjeets98@gmail.com",
-    carNumber: "up14",
-    carModel: "i20",
-    username: "Luvjeet",
-    date: "asega",
-    time: "danejfa",
-    booking: "pending",
-  },
-];
+// export const userRows = [
+//   {
+//     id: 1,
+//     email: "lovjeets98@gmail.com",
+//     carNumber: "up14",
+//     carModel: "i20",
+//     username: "Luvjeet",
+//     date: "asega",
+//     time: "danejfa",
+//     booking: "pending",
+//   },
+// ];

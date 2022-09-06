@@ -218,7 +218,7 @@ const NavBar = () => {
       <div className="login-btn">
         {currentUser ? (
           <span style={{ color: "black", fontSize: "1rem" }}>
-            Welcome, {currentUser.toUpperCase()}
+            <Link to="/settings">Welcome, {currentUser.toUpperCase()}</Link>
           </span>
         ) : (
           <Link to="/login">

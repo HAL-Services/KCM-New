@@ -4,7 +4,6 @@ import DataTable from "../components/DataTable.jsx";
 import ServiceBar from "../components/ServiceBar";
 
 import ServiceRegistration from "./ServiceRegistrationPage";
-import ProfilePage from "./ProfilePage";
 
 export default function ServicePage() {
   return (
