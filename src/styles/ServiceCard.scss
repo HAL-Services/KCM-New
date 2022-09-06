@@ -72,3 +72,13 @@
   line-height: 30px;
   font-family: Poppins;
 }
+
+.servicecard-down{
+  &-icon{
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  position: absolute; 
+  left: 45%; 
+  margin-top: .2rem;
+}
