@@ -11,7 +11,7 @@ const userColumns = [
   {
     field: "_id",
     headerName: "ID",
-    width: 70,
+    width: 100,
   },
   {
     field: "user",
@@ -70,7 +70,20 @@ const userColumns = [
     },
   },
 ];
-
+const actionColumn = [
+  {
+    field: "action",
+    headerName: "View Profile",
+    width: 97,
+    renderCell: (params) => {
+      return (
+        <div className="cellAction">
+          <button className="viewButton">View</button>
+        </div>
+      );
+    },
+  },
+];
 export default function DataTable() {
   const [userServices, setUserServices] = useState([]);
   const { user } = useContext(Context);
@@ -95,11 +108,9 @@ export default function DataTable() {
     <div
       style={{
         height: "auto",
-        width: "80%",
+        width: "90%",
         marginTop: "4rem",
-        boxShadow:
-          "rgba(79, 71, 235, 0.3) 0px 1px 2px,rgba(79, 71, 235, 0.3) 0px 4px 15px, rgba(79, 71, 235, 0.3) 0px 8px 20px,rgba(80, 71, 235, 0.3) 0px 8px 16px, rgba(80, 71, 235, 0.3) 0px 16px 32px,rgba(79, 71, 235, 0.3) 0px 32px 64px",
-        borderRadius: "2rem",
+        boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
       }}
     >
       <DataGrid
@@ -107,7 +118,7 @@ export default function DataTable() {
         // getRowId={() => userServices.length}
         getRowId={(row) => row._id}
         rows={userServices}
-        columns={userColumns}
+        columns={userColumns.concat(actionColumn)}
         pageSize={5}
         rowsPerPageOptions={[5]}
         autoHeight={true}

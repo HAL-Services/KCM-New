@@ -9,12 +9,14 @@ import Footer from "../components/Footer";
 import AboutUs from "./AboutUs";
 import Section4 from "./Section4";
 import ServiceSection from "./Section2.1";
+import ExpertiseSection from "./ExpertiseSection";
 export default function FullPage() {
   return (
     <div>
       <NavBar />
       <LandingPage />
       <MarqueeElement />
+      <ExpertiseSection />
       <Section2 />
       <ServiceSection />
       <Section3 />

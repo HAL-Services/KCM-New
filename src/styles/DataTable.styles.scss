@@ -1,22 +1,22 @@
 .data-grid {
   // text-align: center;
-  .data_carNumber{
+  .data_carNumber {
     text-align: center;
   }
-  .cellWithStatus{
+  .cellWithStatus {
     padding: 5px;
     border-radius: 5px;
-    &.Active{
-     background-color: rgba(0,128,0,0.05); 
-     color: green;
+    &.Completed {
+      background-color: rgba(0, 128, 0, 0.05);
+      color: green;
     }
-    &.Pending{
-      background-color: rgba(255,217,0,0.05); 
+    &.Active {
+      background-color: rgba(255, 217, 0, 0.05);
       color: goldenrod;
-     }
-     &.Passive {
-      background-color: rgba(255,0,0,0.05); 
+    }
+    &.Pending {
+      background-color: rgba(255, 0, 0, 0.05);
       color: crimson;
-     }
+    }
   }
 }

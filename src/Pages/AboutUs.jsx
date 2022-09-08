@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../Assets/Images/1.jpg";
+import image from "../Assets/Images/1.jpeg";
 import AboutUsCards from "../components/AboutUsCards";
 import { motion } from "framer-motion";
 

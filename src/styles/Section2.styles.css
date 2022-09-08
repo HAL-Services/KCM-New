@@ -21,7 +21,7 @@
   margin-left: 20px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1100px) {
   .Section2PageText {
     margin-left: 0px;
     margin-right: 0px;
@@ -29,10 +29,12 @@
     font-size: 2.3rem;
   }
   .Section2PageText1 {
-    margin-left: 0px;
-    margin-right: 0px;
-    text-align: center;
+    padding: 15px;
     font-size: 1.8rem;
+    margin-left: 0px;
+  }
+  .waveImage {
+    margin-top: 0px !important;
   }
 }
 
