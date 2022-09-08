@@ -73,12 +73,25 @@ const userColumns = [
 const actionColumn = [
   {
     field: "action",
-    headerName: "View Profile",
+    headerName: "View Bill",
     width: 97,
     renderCell: (params) => {
+      function handleClick(e) {
+        const id = e.target.value;
+        const billPath = `http://localhost:5000/services/view/${id}/bill`;
+        window.open(billPath, "_blank");
+      }
+
       return (
         <div className="cellAction">
-          <button className="viewButton">View</button>
+          <button
+            onClick={handleClick}
+            value={params.row._id}
+            disabled={params.row.booking !== "Completed"}
+            className="viewButton"
+          >
+            View
+          </button>
         </div>
       );
     },

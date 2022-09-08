@@ -7,6 +7,9 @@ a {
   text-decoration: none;
   color: black;
 }
+button {
+  cursor: pointer;
+}
 :root {
   --hue-color: 243;
   --first-color: hsl(var(--hue-color), 80%, 68%);
