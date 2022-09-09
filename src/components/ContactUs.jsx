@@ -3,10 +3,9 @@ import emailjs from "emailjs-com";
 
 // Import animation
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 // Importing Styles
 import "../styles/ContactUs.scss";
-import { FiPhone, FiMail, FiMapPin, FiSend } from "react-icons/fi";
+import { FiPhone, FiMail, FiMapPin} from "react-icons/fi";
 import { useHistory } from "react-router-dom";
 const ContactUs = () => {
   const history = useHistory();

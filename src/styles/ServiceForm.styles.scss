@@ -40,7 +40,7 @@
     outline: none;
     border: none;
     height: 50px;
-    padding: 0 5px;
+    padding: 1 5px;
     font-size: var(--normal-font-size);
     color: var(--secondary-color);
   }
@@ -55,6 +55,10 @@
     transform: translateY(-50%);
     transition: 0.5s;
     transform: scale(1.2);
+  }
+  .dis-label {
+    top: -12px !important;
+    color: var(--first-color) !important;
   }
   .input-container input:focus ~ label,
   .input-container input:valid ~ label {
