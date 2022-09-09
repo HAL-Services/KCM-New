@@ -4,18 +4,26 @@ import "../styles/Login.scss";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import SignUpSvg from "../Assets/Images/login.jpg";
-import Alert from "@mui/material/Alert";
-
+import { ToastContainer, toast } from "react-toastify";
 import { Context } from "../context/Context";
 import axios from "axios";
-
+import "react-toastify/dist/ReactToastify.css";
 const Login = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
-  const [err, setErr] = useState(false);
   const [showPass, setShowPass] = useState(false);
   const { isFetching, dispatch } = useContext(Context);
   const navigate = useHistory();
+  function handleError() {
+    toast.error("Email or Password incorrect", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
   const handleClick = async (e) => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
@@ -30,12 +38,25 @@ const Login = () => {
       dispatch({ type: "LOGIN_SUCCESS", payload: user });
       navigate("/");
     } catch (err) {
-      setErr(true);
+      handleError();
       dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
     }
   };
   return (
     <div className="login-page">
+      <div>
+        <ToastContainer
+          position="top-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
+      </div>
       <Link to="/">
         <h1 className="login-header">KCM.</h1>
       </Link>
@@ -100,11 +121,6 @@ const Login = () => {
             {isFetching && <Loader />}
           </div>
         </form>
-        {err && (
-          <Alert severity="error" style={{ width: "100%" }}>
-            Password or Email does not match
-          </Alert>
-        )}
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ const Section4 = () => {
         <Card
           title="Opening Hours"
           body={
-            "Mon:	9:30 am – 6:30 pm \n\n Tue:	 9:30 am – 6:30 pm \n\n Wed:	9:30 am – 6:30 pm \n\n Thu: 9:30 am – 6:30 pm \n\n Fri:	9:30 am – 6:30 pm \n\n Sat: 	9:30 am – 6:30 pm \n\n Sun:	Closed"
+            "Mon:	9:30 am – 6:30 pm \n\n Tue:	 9:30 am – 6:30 pm \n\n Wed:	9:30 am – 6:30 pm \n\n Thu: 9:30 am – 6:30 pm \n\n Fri:	9:30 am – 6:30 pm \n\n Sat: 	9:30 am – 6:30 pm \n\n Sun:	9:30am - 6:30pm"
           }
         />
       </div>

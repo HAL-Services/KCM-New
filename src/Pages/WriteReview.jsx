@@ -2,9 +2,10 @@ import { useRef, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { motion } from "framer-motion";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useHistory } from "react-router-dom";
 import "../styles/WriteReview.styles.scss";
-
 const colors = {
   orange: "#FFBA5A",
   grey: "#a9a9a9",
@@ -29,6 +30,26 @@ function WriteReview() {
   const handleMouseLeave = () => {
     setHoverValue(undefined);
   };
+  function handleSuccess() {
+    toast.success("Your review was submitted successfully", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
+  function handleError() {
+    toast.error("There was some error. Please try later.", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
@@ -37,14 +58,32 @@ function WriteReview() {
     };
     try {
       await axios.post("http://localhost:5000/reviews/create", data);
-      history.push("/shortly1");
+      handleSuccess();
+      setTimeout(() => {
+        history.push("/");
+      }, 4000);
     } catch (error) {
-      history.push("/");
-      console.log(error.message);
+      handleError();
+      setTimeout(() => {
+        history.push("/");
+      }, 4000);
     }
   };
   return (
     <div className="review-container">
+      <div>
+        <ToastContainer
+          position="top-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
+      </div>
       <div className="review-box">
         <h1 className="review-header"> Leave us a feedback </h1>
         <div className="review-stars">

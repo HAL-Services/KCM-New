@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import { useHistory } from "react-router";
 import SignUpGif from "../Assets/Images/signUpGif.gif";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
 import Loader from "../components/Loader";
 import "../styles/Login.scss";
-
+import "react-toastify/dist/ReactToastify.css";
 const SignUp = () => {
   const emailRef = useRef();
   const usernameRef = useRef();
@@ -14,6 +15,16 @@ const SignUp = () => {
   const [showPass, setShowPass] = useState(false);
   const [fetching, setFetching] = useState(false);
   const history = useHistory();
+  function handleError() {
+    toast.warn("Email or Mobile is already registerd", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
   const handleClick = async (e) => {
     e.preventDefault();
     const user = {
@@ -28,12 +39,25 @@ const SignUp = () => {
       history.push("/login");
       setFetching(false);
     } catch (err) {
-      alert(err.message);
+      handleError();
       setFetching(false);
     }
   };
   return (
     <div className="login-page">
+      <div>
+        <ToastContainer
+          position="top-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
+      </div>
       <Link to="/">
         <h1 className="login-header">KCM.</h1>
       </Link>

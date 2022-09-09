@@ -6,17 +6,18 @@ import axios from "axios";
 import { Context } from "../context/Context";
 import { useState } from "react";
 import { useEffect } from "react";
-
+import { useHistory } from "react-router-dom";
+import Loader from "../components/Loader";
 const userColumns = [
   {
     field: "_id",
     headerName: "ID",
-    width: 100,
+    width: 160,
   },
   {
     field: "user",
     headerName: "Name",
-    width: 150,
+    width: 160,
     sortable: false,
     renderCell: (params) => {
       return <div className="data_user">{params.row.username}</div>;
@@ -25,7 +26,7 @@ const userColumns = [
   {
     field: "carNumber",
     headerName: "Car Number",
-    width: 130,
+    width: 160,
     sortable: false,
     renderCell: (params) => {
       return <div className="data_carNumber">{params.row.carNumber}</div>;
@@ -34,7 +35,7 @@ const userColumns = [
   {
     field: "carModel",
     headerName: "Car Model",
-    width: 130,
+    width: 160,
     sortable: false,
     renderCell: (params) => {
       return <div>{params.row.carModel}</div>;
@@ -43,18 +44,9 @@ const userColumns = [
   {
     field: "date",
     headerName: "Date",
-    width: 150,
+    width: 160,
     renderCell: (params) => {
       return <div>{params.row.date}</div>;
-    },
-  },
-  {
-    field: "time",
-    headerName: "Time",
-    width: 150,
-    sortable: false,
-    renderCell: (params) => {
-      return <div>{params.row.time}</div>;
     },
   },
   {
@@ -99,23 +91,31 @@ const actionColumn = [
 ];
 export default function DataTable() {
   const [userServices, setUserServices] = useState([]);
+  const [fetching, setFetching] = useState(false);
   const { user } = useContext(Context);
+  const history = useHistory();
   useEffect(() => {
+    setFetching(true);
     async function fetchDetails() {
-      axios
-        .get("http://localhost:5000/services/details", {
+      try {
+        const data = await axios.get("http://localhost:5000/services/details", {
           headers: {
             Authorization: `Bearer ${user.token}`,
           },
           body: {
             email: user.email,
           },
-        })
-        .then((data) => setUserServices(data.data.allServices))
-        .catch((err) => console.log(err.message));
+        });
+        setUserServices(data.data.allServices);
+        setFetching(false);
+      } catch (error) {
+        setFetching(false);
+        alert("Try again later");
+        history.push("/");
+      }
     }
     fetchDetails();
-  }, [user]);
+  },[]);
 
   return (
     <div
@@ -126,17 +126,20 @@ export default function DataTable() {
         boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
       }}
     >
-      <DataGrid
-        className="data-grid"
-        // getRowId={() => userServices.length}
-        getRowId={(row) => row._id}
-        rows={userServices}
-        columns={userColumns.concat(actionColumn)}
-        pageSize={5}
-        rowsPerPageOptions={[5]}
-        autoHeight={true}
-        style={{ border: "none", padding: "1rem" }}
-      />
+      {fetching ? (
+        <Loader />
+      ) : (
+        <DataGrid
+          className="data-grid"
+          getRowId={(row) => row._id}
+          rows={userServices}
+          columns={userColumns.concat(actionColumn)}
+          pageSize={5}
+          rowsPerPageOptions={[5]}
+          autoHeight={true}
+          style={{ border: "none", padding: "1rem" }}
+        />
+      )}
     </div>
   );
 }

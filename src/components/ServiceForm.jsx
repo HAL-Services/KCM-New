@@ -5,24 +5,44 @@ import "react-datepicker/dist/react-datepicker.css";
 import { Context } from "../context/Context";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const ServiceForm = () => {
   const [date, setDate] = useState(null);
-  const [time, setTime] = useState(null);
   const carNumber = useRef();
   const carModel = useRef();
   const address = useRef();
   const history = useHistory();
   const { user } = useContext(Context);
+  function handleSuccess() {
+    toast.success("Request Success", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
+  function handleError() {
+    toast.error("Please try later.", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
       date,
-      time,
       username: user.username,
       carNumber: carNumber.current.value,
       carModel: carModel.current.value,
       mobile: user.mobile,
-      address: address.current.value,
+      location: address.current.value,
       email: user.email,
     };
     const config = {
@@ -32,19 +52,33 @@ const ServiceForm = () => {
     };
     try {
       await axios.post("http://localhost:5000/services/create/", data, config);
-      history.push("/shortly");
+      handleSuccess();
+      setTimeout(() => {
+        history.push("/");
+      }, 4000);
     } catch (error) {
-      console.log(error.message);
+      handleError();
+      setTimeout(() => {
+        history.push("/");
+      }, 4000);
     }
   };
   const updateDate = (value) => {
     setDate(value);
   };
-  const updateTime = (value) => {
-    setTime(value);
-  };
   return (
     <div className="Service-container">
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <form onSubmit={handleSubmit}>
         <div className="input-container">
           <input
@@ -63,8 +97,11 @@ const ServiceForm = () => {
             required={true}
             autoComplete="off"
             defaultValue={user ? user.mobile : ""}
+            disabled
           />
-          <label htmlFor="form-input-fullName">Mobile Number</label>
+          <label className="dis-label" htmlFor="form-input-fullName">
+            Mobile Number
+          </label>
         </div>
         <div className="input-container">
           <input
@@ -103,9 +140,9 @@ const ServiceForm = () => {
             fontSize: "1.2rem",
           }}
         >
-          Choose Time and Date
+          Pick a Date
         </span>
-        <DateTime updateTime={updateTime} updateDate={updateDate} />
+        <DateTime updateDate={updateDate} />
         <div className="service-btn-container">
           <button type="submit">Confirm Booking</button>
         </div>
