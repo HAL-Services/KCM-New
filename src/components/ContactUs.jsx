@@ -5,10 +5,23 @@ import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 // Importing Styles
 import "../styles/ContactUs.scss";
-import { FiPhone, FiMail, FiMapPin} from "react-icons/fi";
-import { useHistory } from "react-router-dom";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
+
 const ContactUs = () => {
-  const history = useHistory();
+  function handleSuccess() {
+    toast.success("Message Delievered", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
   function sendEmail(e) {
     e.preventDefault();
     console.log(e.target);
@@ -26,10 +39,21 @@ const ContactUs = () => {
         }
       );
     e.target.reset();
-    history.push("/shortly1");
+    handleSuccess();
   }
   return (
     <div className="contact_section" id="contact_section">
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <h2 className="contact_main_title">Contact Us</h2>
       <span className="contact_main_subtitle">Get in Touch</span>
       <div className="contact_container grid">

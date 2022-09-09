@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 // importing styles
 import "../styles/AboutUs.scss";
 
-const AboutUsCards = ({ title, subtitle }) => {
+const AboutUsCards = ({ title, subtitle, data }) => {
   return (
     <motion.div className="aboutUsCards_container">
       <div
@@ -19,12 +19,7 @@ const AboutUsCards = ({ title, subtitle }) => {
         <p className="aboutUsCards_subtitle">{subtitle}</p>
       </div>
       <div className="aboutUsCards_body">
-        <p className="aboutUsCards_para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta facere
-          nihil eaque eveniet quaerat veritatis aliquid illum eum aut tenetur
-          fugiat ipsam veniam eius nam molestias architecto iste ullam, dolorem
-          magnam quod sed aspernatur. Est reiciendis quo dolorum ad unde.
-        </p>
+        <p className="aboutUsCards_para">{data}</p>
       </div>
     </motion.div>
   );

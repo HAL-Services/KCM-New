@@ -2,10 +2,9 @@ import React from "react";
 import "../styles/Footer.scss";
 import {
   AiOutlineInstagram,
-  AiOutlineTwitter,
-  AiOutlineGithub,
+  AiOutlineFacebook,
 } from "react-icons/ai";
-
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="footer_container">
@@ -14,13 +13,14 @@ const Footer = () => {
           <h3>Follow Us on Social Media</h3>
           <span className="footer_ul">
             <span className="footer_icon insta">
-              <AiOutlineInstagram />
+              <a href="https://www.instagram.com/kcmautomobiles/">
+                <AiOutlineInstagram />
+              </a>
             </span>
-            <span className="footer_icon twit">
-              <AiOutlineTwitter />
-            </span>
-            <span className="footer_icon git">
-              <AiOutlineGithub />
+            <span className="footer_icon fab">
+              <a href="https://www.facebook.com/kcmautomobiles">
+                <AiOutlineFacebook />
+              </a>
             </span>
           </span>
         </div>
@@ -32,19 +32,52 @@ const Footer = () => {
       <div className="footer_links">
         <div className="footer_gap">
           <div className="footer_list_continer">
-            <div className="footer_list_head">Learn</div>
+            <div className="footer_list_head">Goto</div>
             <ul className="footer_list">
               <p>
-                <span>About </span>
+                <span>
+                  <a
+                    style={{ color: "white" }}
+                    href="/"
+                    onClick={(e) => {
+                      let contact = document.getElementById("about");
+                      e.preventDefault();
+                      contact &&
+                        contact.scrollIntoView({
+                          behavior: "smooth",
+                          block: "end",
+                        });
+                    }}
+                  >
+                    About
+                  </a>
+                </span>
               </p>
               <p>
-                <span>Culture</span>
+                <span>
+                  <Link style={{ color: "white" }} to="/service">
+                    Services
+                  </Link>
+                </span>
               </p>
               <p>
-                <span>Testimonial</span>
-              </p>
-              <p>
-                <span>Blog</span>
+                <span>
+                  <a
+                    style={{ color: "white" }}
+                    href="/"
+                    onClick={(e) => {
+                      let testimonial = document.getElementById("testimonial");
+                      e.preventDefault();
+                      testimonial &&
+                        testimonial.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                        });
+                    }}
+                  >
+                    Testimonial
+                  </a>
+                </span>
               </p>
             </ul>
           </div>
@@ -55,13 +88,30 @@ const Footer = () => {
                 <span>Home</span>
               </p>
               <p>
-                <span>Work</span>
+                <span>
+                  <a
+                    style={{ color: "white" }}
+                    href="/"
+                    onClick={(e) => {
+                      let contact = document.getElementById("contact_section");
+                      e.preventDefault();
+                      contact &&
+                        contact.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                        });
+                    }}
+                  >
+                    Contact Us
+                  </a>
+                </span>
               </p>
               <p>
-                <span>Service</span>
-              </p>
-              <p>
-                <span>Contact</span>
+                <span>
+                  <Link style={{ color: "white" }} to="/write">
+                    Write Review
+                  </Link>
+                </span>
               </p>
             </ul>
           </div>
@@ -79,7 +129,7 @@ const Footer = () => {
             <div className="footer_list_head">Email</div>
             <ul className="footer_list">
               <p>
-                <span>halsrvcs@gmail.com</span>
+                <span>kcmautomobiles@gmail.com</span>
               </p>
             </ul>
           </div>

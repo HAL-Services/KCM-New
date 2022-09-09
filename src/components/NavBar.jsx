@@ -16,7 +16,7 @@ const NavBar = () => {
   const [currentUser, setCurrentUser] = useState(null);
   const { user } = useContext(Context);
   useEffect(() => {
-    if (user) setCurrentUser(user.username);
+    if (user) setCurrentUser(user.username.split(" ")[0]);
   }, [user]);
 
   return (
@@ -152,7 +152,7 @@ const NavBar = () => {
         )}
       </AnimatePresence>
 
-      <div className="logo">KCM.</div>
+      <div className="logo">KCM</div>
       <div className="titles">
         <nav>
           <ul>

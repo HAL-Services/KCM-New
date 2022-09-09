@@ -2,8 +2,8 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 // importing componenets
 import FullPage from "./Pages/FullPage";
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
+import Login from "./Pages/Login";
+import SignUp from "./Pages/SignUp";
 import ServicePage from "./Pages/ServicePage";
 import ProfilePage from "./Pages/ProfilePage";
 import WriteReview from "./Pages/WriteReview";

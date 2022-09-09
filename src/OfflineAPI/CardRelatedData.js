@@ -3,7 +3,7 @@ const CardData = [
     id: 1,
     title: "Login and Book",
     content:
-      "From the top left corner you can login or create your account. Once you have logged in with just one simple click you can book your service by entering the necessary details.",
+      "From the top left corner you can login or create your account. Once you have logged in with just one simple click you can book your service.",
   },
   {
     id: 2,
