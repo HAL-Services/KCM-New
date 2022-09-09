@@ -1,20 +1,17 @@
 import LandingImage from "../Assets/Images/mobileDesign.gif";
 import "../styles/LandingPage.styles.css";
 // Importing animation
-import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { landingAnim, titleAnim } from "../animation";
 import MobileBackground from "../Assets/Images/mobileDesign.gif";
 import { FaArrowCircleUp } from "react-icons/fa";
 import QuickBookModal from "../components/QuickBookModal";
 export default function LandingPage() {
-  const { scrollY } = useViewportScroll();
-  const yValue = useTransform(scrollY, [0, 200], [0, 50]);
-
   return (
     <>
       <div className="contactUs">Email- kcmautomobiles@gmail.com</div>
       <div className="mobileViewImage" style={{ display: "none" }}>
-        <img src={MobileBackground} />
+        <img alt="background" src={MobileBackground} />
       </div>
       <motion.span
         animate={{ y: -10 }}
@@ -61,7 +58,7 @@ export default function LandingPage() {
       >
         <div className="LandingPageWrapper">
           <span className="landing_hide">
-            <motion.h1 variants={titleAnim}>The German Car Expert</motion.h1>
+            <motion.h1 variants={titleAnim}>The German Car Experts</motion.h1>
           </span>
           <span className="landing_hide">
             <motion.h4 variants={titleAnim}>

@@ -5,12 +5,24 @@ import { useContext } from "react";
 import { Context } from "../context/Context";
 import { useRef } from "react";
 import { useHistory } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const ProfileForm = () => {
   const { user, dispatch } = useContext(Context);
   const username = useRef();
   const mobile = useRef();
   const password = useRef();
   const history = useHistory();
+  function handleError() {
+    toast.error("Please try later.", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
   const handleSubmit = async (e) => {
     e.preventDefault();
     const config = {
@@ -29,20 +41,31 @@ const ProfileForm = () => {
       localStorage.removeItem("User");
       history.push("/login");
     } catch (err) {
-      console.log(err.message);
+      handleError();
     }
   };
   const [passwordShown, setPasswordShown] = useState(false);
   return (
     <div className="profile-container">
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <form onSubmit={handleSubmit}>
         <div className="input-container">
           <input
             type="text"
             name="fullName"
-            required={true}
             autoComplete="off"
             ref={username}
+            placeholder={user.username}
           />
           <label htmlFor=" form-input-fullName">New Username</label>
         </div>
@@ -50,9 +73,9 @@ const ProfileForm = () => {
           <input
             type="text"
             name="mobile"
-            required={true}
             autoComplete="off"
             ref={mobile}
+            placeholder={user.mobile}
           />
           <label htmlFor=" form-input-phoneNumber">New Mobile Number</label>
         </div>
@@ -60,7 +83,6 @@ const ProfileForm = () => {
           <input
             type={passwordShown ? "text" : "password"}
             name="password"
-            required={true}
             autoComplete="off"
             ref={password}
           />

@@ -2,7 +2,6 @@ import { useState, useContext, useRef } from "react";
 import Loader from "../components/Loader.jsx";
 import "../styles/Login.scss";
 import { Link } from "react-router-dom";
-import { useHistory } from "react-router-dom";
 import SignUpSvg from "../Assets/Images/login.jpg";
 import { ToastContainer, toast } from "react-toastify";
 import { Context } from "../context/Context";
@@ -13,7 +12,6 @@ const Login = () => {
   const passwordRef = useRef();
   const [showPass, setShowPass] = useState(false);
   const { isFetching, dispatch } = useContext(Context);
-  const navigate = useHistory();
   function handleError() {
     toast.error("Email or Password incorrect", {
       position: "top-center",
@@ -33,10 +31,8 @@ const Login = () => {
         password: passwordRef.current.value,
       });
       const user = res.data;
-      console.log(user);
       localStorage.setItem("User", JSON.stringify(user));
       dispatch({ type: "LOGIN_SUCCESS", payload: user });
-      navigate("/");
     } catch (err) {
       handleError();
       dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });

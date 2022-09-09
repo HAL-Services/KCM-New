@@ -1,6 +1,5 @@
 import CarWash from "../Assets/Expertise/carwash.webp";
 import EngineRepair from "../Assets/Expertise/engineRepair.webp";
-// import OilChange from "../Assets/ExpertiseCardImages/OilChange.webp";
 import WheelAlign from "../Assets/Expertise/wheelAlign.webp";
 import carInspection from "../Assets/Expertise/carInspection.webp";
 import CarPaint from "../Assets/Expertise/painting.webp";
@@ -39,11 +38,6 @@ const ExpertiseImagedata = [
     title: "Wheel Alignment",
     url: WheelAlign,
   },
-  // {
-  //   id: "6",
-  //   title: "Oil Change",
-  //   url: OilChange,
-  // },
   {
     id: "6",
     title: "Peroidic Service",

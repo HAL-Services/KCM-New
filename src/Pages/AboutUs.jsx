@@ -12,11 +12,13 @@ const AboutUs = () => {
       id: 1,
       title: "Kishore Chandra",
       subtitle: "Founder",
+      data: `Kishore is an automobile enthusiast and has been in the field for about two decades. He started KCM with only dream of serving customers with geniune and best in class facilities. Under his guidance KCM has servced many happy customers.`,
     },
     {
       id: 2,
       title: "Harish Chandra",
       subtitle: "Team Lead",
+      data: `Harish is Kishore's younger brother and is working as the Team Lead at KCM. His expertise and knowledge gathered over the last two decades is unmatched and and there is no car that he cannot fix. His excellent skills has lead him serve many happy customers `,
     },
   ];
 
@@ -85,7 +87,11 @@ const AboutUs = () => {
                 viewport={{ once: false, amount: 0.1 }}
                 key={e.id}
               >
-                <AboutUsCards title={e.title} subtitle={e.subtitle} />
+                <AboutUsCards
+                  title={e.title}
+                  subtitle={e.subtitle}
+                  data={e.data}
+                />
               </motion.div>
             );
           })}

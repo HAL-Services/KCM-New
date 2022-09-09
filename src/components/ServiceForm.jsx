@@ -86,7 +86,7 @@ const ServiceForm = () => {
             name="fullName"
             required={true}
             autoComplete="off"
-            defaultValue={user ? user.username : ""}
+            defaultValue={user ? user.username.toUpperCase() : ""}
           />
           <label htmlFor="form-input-fullName">Full Name</label>
         </div>
