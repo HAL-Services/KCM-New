@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
   padding: 1rem 2rem;
   width: 100%;
   z-index: 100 !important;
@@ -44,6 +43,11 @@
 .logo {
   font-size: var(--h1-font-size);
   font-weight: var(--font-semi-bold);
+  transition: 200ms;
+  &:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px  var(--first-color-lighter));
+  }
 }
 
 .titles {

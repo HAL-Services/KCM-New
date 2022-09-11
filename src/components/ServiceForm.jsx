@@ -53,9 +53,6 @@ const ServiceForm = () => {
     try {
       await axios.post("http://localhost:5000/services/create/", data, config);
       handleSuccess();
-      setTimeout(() => {
-        history.push("/");
-      }, 4000);
     } catch (error) {
       handleError();
       setTimeout(() => {

@@ -1,6 +1,7 @@
 import "../styles/NavBar.scss";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useContext, useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import {
   hamburgerTopAnim,
   hamburgerMidAnim,
@@ -11,13 +12,21 @@ import {
 
 import { Link } from "react-router-dom";
 import { Context } from "../context/Context";
-const NavBar = () => {
+const NavBar = (props) => {
+  const history = useHistory();
   const [isOpen, setOpen] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
   const { user } = useContext(Context);
+  const { dispatch } = React.useContext(Context);
   useEffect(() => {
     if (user) setCurrentUser(user.username.split(" ")[0]);
   }, [user]);
+
+  const handleClick = () => {
+    dispatch({ type: "LOGOUT" });
+    localStorage.removeItem("User");
+    history.push("/");
+  };
 
   return (
     <header className="navbar" id="navbar">
@@ -152,74 +161,100 @@ const NavBar = () => {
         )}
       </AnimatePresence>
 
-      <div className="logo">KCM</div>
+      <div className="logo">
+        <Link to="/">KCM.</Link>
+      </div>
       <div className="titles">
-        <nav>
-          <ul>
-            <li>
-              <Link to="/service">
-                Services<span></span>
-              </Link>
-            </li>
-            <li>
-              <a
-                href="/"
-                onClick={(e) => {
-                  let contact = document.getElementById("about");
-                  e.preventDefault();
-                  contact &&
-                    contact.scrollIntoView({
-                      behavior: "smooth",
-                      block: "end",
-                    });
-                }}
-              >
-                About
-              </a>
-              <span></span>
-            </li>
-            <li>
-              <a
-                href="/"
-                onClick={(e) => {
-                  let testimonial = document.getElementById("testimonial");
-                  e.preventDefault();
-                  testimonial &&
-                    testimonial.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    });
-                }}
-              >
-                Testimonial
-              </a>
-              <span></span>
-            </li>
-            <li>
-              <a
-                href="/"
-                onClick={(e) => {
-                  let contact = document.getElementById("contact_section");
-                  e.preventDefault();
-                  contact &&
-                    contact.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    });
-                }}
-              >
-                Contact Us
-              </a>
-              <span></span>
-            </li>
-          </ul>
-        </nav>
+        {props.titles.length === 4 ? (
+          <nav>
+            <ul>
+              <li>
+                <Link to="/service">
+                  {props.titles[0]}
+                  <span></span>
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="/"
+                  onClick={(e) => {
+                    let contact = document.getElementById("about");
+                    e.preventDefault();
+                    contact &&
+                      contact.scrollIntoView({
+                        behavior: "smooth",
+                        block: "end",
+                      });
+                  }}
+                >
+                  {props.titles[1]}
+                </a>
+                <span></span>
+              </li>
+              <li>
+                <a
+                  href="/"
+                  onClick={(e) => {
+                    let testimonial = document.getElementById("testimonial");
+                    e.preventDefault();
+                    testimonial &&
+                      testimonial.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                  }}
+                >
+                  {props.titles[2]}
+                </a>
+                <span></span>
+              </li>
+              <li>
+                <a
+                  href="/"
+                  onClick={(e) => {
+                    let contact = document.getElementById("contact_section");
+                    e.preventDefault();
+                    contact &&
+                      contact.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                  }}
+                >
+                  {props.titles[3]}
+                </a>
+                <span></span>
+              </li>
+            </ul>
+          </nav>
+        ) : (
+          <div className="titles">
+            <nav>
+              <ul className="titlestwo">
+                <li>
+                  <Link to="/service">{props.titles[0]}</Link>
+                  <span></span>
+                </li>
+                <li>
+                  <Link to="/record">{props.titles[1]}</Link>
+                  <span></span>
+                </li>
+                <li>
+                  <Link to="/settings">{props.titles[2]}</Link>
+                  <span></span>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        )}
       </div>
       <div className="login-btn">
-        {currentUser ? (
+        {currentUser && props.titles.length === 4 ? (
           <span style={{ color: "black", fontSize: "1rem" }}>
             <Link to="/settings">Welcome, {currentUser.toUpperCase()}</Link>
           </span>
+        ) : props.titles.length === 3 ? (
+          <button>LOGOUT</button>
         ) : (
           <Link to="/login">
             <button>LOGIN</button>

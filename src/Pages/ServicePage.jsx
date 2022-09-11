@@ -1,14 +1,14 @@
 import { Switch, Route } from "react-router-dom";
 import "../styles/ServicePage.styles.scss";
 import DataTable from "../components/DataTable.jsx";
-import ServiceBar from "../components/ServiceBar";
+import NavBar from "../components/NavBar";
 
 import ServiceRegistration from "./ServiceRegistrationPage";
 
 export default function ServicePage() {
   return (
     <>
-      <ServiceBar />
+      <NavBar titles={["Book Service", "Service Record", "Profile"]} />
       <div className="service-container">
         <Switch>
           <Route exact path="/service">
