@@ -13,6 +13,9 @@ const userColumns = [
     field: "_id",
     headerName: "ID",
     width: 160,
+    renderCell: (params) => {
+      return <div>{params.row._id.substring(0, 7)}</div>;
+    },
   },
   {
     field: "user",
@@ -115,7 +118,7 @@ export default function DataTable() {
       }
     }
     fetchDetails();
-  },[]);
+  }, [user.token, history, user.email]);
 
   return (
     <div

@@ -13,7 +13,7 @@ import ExpertiseSection from "./ExpertiseSection";
 export default function FullPage() {
   return (
     <div>
-      <NavBar />
+      <NavBar titles={["Services", "About", "Testimonial", "Contact Us"]} />
       <LandingPage />
       <MarqueeElement />
       <ExpertiseSection />
