@@ -1,5 +1,5 @@
 import "../styles/QuickBookForm.styles.scss";
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
 export default function QuickBookForm() {
   const number = useRef();
@@ -14,6 +14,10 @@ export default function QuickBookForm() {
     setNumber(number.current.value);
     setUser(username.current.value);
     setCar(carModel.current.value);
+    // if (User !== null && Car !== null && Number !== null)
+    //   axios.get(
+    //     `https://wa.me/919990868464/?text=My%20name%20is%20${User}%0AI%20would%20like%20to%20have%20my%20car%20${Car}%20serviced%0AMy%20contact%20number%20is%20${Number}`
+    //   );
   };
 
   return (
@@ -54,7 +58,11 @@ export default function QuickBookForm() {
         <div className="quickBook-btn-container">
           <button type="submit">
             <a
-              href={`https://wa.me/919990868464/?text=My%20name%20is%20${User}%0AI%20would%20like%20to%20have%20my%20car%20${Car}%20serviced%0AMy%20contact%20number%20is%20${Number}`}
+              href={
+                User !== null && Car !== null && Number !== null
+                  ? `https://wa.me/919990868464/?text=My%20name%20is%20${User}%0AI%20would%20like%20to%20have%20my%20car%20${Car}%20serviced%0AMy%20contact%20number%20is%20${Number}`
+                  : null
+              }
             >
               Confirm Booking
             </a>
