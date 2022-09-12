@@ -13,17 +13,14 @@ import speakGif from "../Assets/Images/speakGif.gif";
 
 import { FaQuoteLeft, FaQuoteRight, FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
-import axios from "axios";
+import { fetchTestimonialData } from "../apiCalls";
 
 export default function Testimonial() {
   const [reviewsData, setReviewsdata] = useState([]);
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data } = await axios.get(
-          "http://localhost:5000/reviews/filtered"
-        );
+        const data = await fetchTestimonialData();
         setReviewsdata(data);
       } catch (error) {
         console.log(error.message);
@@ -35,7 +32,7 @@ export default function Testimonial() {
     <div className="testimonialContainer" id="testimonial">
       <div className="testimonialHeading">
         <span style={{ marginRight: "5px" }}>
-          <img style={{ height: "80px" }} src={speakGif} />
+          <img style={{ height: "80px" }} src={speakGif} alt="gif" />
         </span>
         <b>Happy</b>-Clients
       </div>
@@ -65,7 +62,7 @@ export default function Testimonial() {
                 <div className="clientContainer">
                   <div className="profile">
                     <div className="clientImgBox">
-                      <img src={data.image} />
+                      <img src={data.image} alt="gif" />
                     </div>
                     <h2>{data.username}</h2>
                   </div>
