@@ -4,7 +4,7 @@ import updateProfile from "../Assets/Images/updateProfile.jpg";
 import NavBar from "../components/NavBar";
 export default function ProfilePage() {
   return (
-    <>
+    <div>
       <NavBar titles={["Book Service", "Service Record", "Profile"]} />
       <div className="profile-page">
         <div className="profile-left-info-continer">
@@ -28,6 +28,6 @@ export default function ProfilePage() {
           <ProfileForm />
         </div>
       </div>
-    </>
+    </div>
   );
 }

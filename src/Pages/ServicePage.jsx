@@ -7,8 +7,8 @@ import ServiceRegistration from "./ServiceRegistrationPage";
 
 export default function ServicePage() {
   return (
-    <>
-      <NavBar titles={["Book Service", "Service Record", "Profile"]} />
+    <div>
+      <NavBar titles={["Book Service", "Service Record", "Profile"]}/>
       <div className="service-container">
         <Switch>
           <Route exact path="/service">
@@ -19,6 +19,6 @@ export default function ServicePage() {
           </Route>
         </Switch>
       </div>
-    </>
+    </div>
   );
 }
