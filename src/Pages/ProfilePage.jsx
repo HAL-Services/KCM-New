@@ -1,11 +1,11 @@
 import ProfileForm from "../components/ProfileForm";
 import "../styles/Profile.scss";
 import updateProfile from "../Assets/Images/updateProfile.jpg";
-import ServiceBar from "../components/ServiceBar";
+import NavBar from "../components/NavBar";
 export default function ProfilePage() {
   return (
-    <>
-      <ServiceBar />
+    <div>
+      <NavBar titles={["Book Service", "Service Record", "Profile"]} />
       <div className="profile-page">
         <div className="profile-left-info-continer">
           <div className="profile-information">
@@ -28,6 +28,6 @@ export default function ProfilePage() {
           <ProfileForm />
         </div>
       </div>
-    </>
+    </div>
   );
 }

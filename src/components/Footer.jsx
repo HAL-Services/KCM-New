@@ -1,9 +1,6 @@
 import React from "react";
 import "../styles/Footer.scss";
-import {
-  AiOutlineInstagram,
-  AiOutlineFacebook,
-} from "react-icons/ai";
+import { AiOutlineInstagram, AiOutlineFacebook } from "react-icons/ai";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
@@ -12,13 +9,19 @@ const Footer = () => {
         <div className="footer_box">
           <h3>Follow Us on Social Media</h3>
           <span className="footer_ul">
-            <span className="footer_icon insta">
-              <a href="https://www.instagram.com/kcmautomobiles/">
+            <span className="footer_icon">
+              <a
+                href="https://www.instagram.com/kcmautomobiles/"
+                className="footer_icon insta"
+              >
                 <AiOutlineInstagram />
               </a>
             </span>
-            <span className="footer_icon fab">
-              <a href="https://www.facebook.com/kcmautomobiles">
+            <span className="footer_icon ">
+              <a
+                href="https://www.facebook.com/kcmautomobiles"
+                className="footer_icon fab"
+              >
                 <AiOutlineFacebook />
               </a>
             </span>

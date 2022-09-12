@@ -1,12 +1,12 @@
 import ServiceForm from "../components/ServiceForm";
-import "../styles/Profile.scss";
+import "../styles/ServiceRegistration.styles.scss";
 import bookingImage from "../Assets/Images/booking.jpg";
 export default function ServiceRegistration() {
   return (
     <>
-      <div className="profile-page">
-        <div className="profile-left-info-continer">
-          <div className="profile-information">
+      <div className="service-registration-page">
+        <div className="service-left-info-continer">
+          <div className="service-information">
             <h1>Book Your Service</h1>
             <img
               style={{
@@ -20,7 +20,7 @@ export default function ServiceRegistration() {
           </div>
         </div>
         <div
-          className="profile-right-login-container"
+          className="service-right-login-container"
           style={{ display: "flex", flexDirection: "column" }}
         >
           <ServiceForm />
