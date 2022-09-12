@@ -8,7 +8,7 @@ import { FaArrowCircleUp } from "react-icons/fa";
 import QuickBookModal from "../components/QuickBookModal";
 export default function LandingPage() {
   return (
-    <>
+    <div>
       <div className="contactUs">Email- kcmautomobiles@gmail.com</div>
       <div className="mobileViewImage" style={{ display: "none" }}>
         <img alt="background" src={MobileBackground} />
@@ -80,6 +80,6 @@ export default function LandingPage() {
           </span>
         </div>
       </motion.div>
-    </>
+    </div>
   );
 }
