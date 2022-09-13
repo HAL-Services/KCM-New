@@ -79,6 +79,9 @@
 .footer_links {
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 1100px) {
+    font-size: 10px;
+  }
 }
 .footer_gap {
   margin: 0 2rem;
@@ -92,7 +95,6 @@
 .footer_list {
   list-style: none;
   color: var(--default-color);
-  font-size: var(--h2-font-size);
   display: flex;
   flex-direction: column;
   p {
