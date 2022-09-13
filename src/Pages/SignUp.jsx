@@ -2,11 +2,12 @@ import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router";
 import SignUpGif from "../Assets/Images/signUpGif.gif";
-import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import Loader from "../components/Loader";
 import "../styles/Login.scss";
 import "react-toastify/dist/ReactToastify.css";
+import { signUpUser } from "../apiCalls";
+
 const SignUp = () => {
   const emailRef = useRef();
   const usernameRef = useRef();
@@ -27,15 +28,14 @@ const SignUp = () => {
   }
   const handleClick = async (e) => {
     e.preventDefault();
-    const user = {
-      username: usernameRef.current.value,
-      email: emailRef.current.value,
-      password: passwordRef.current.value,
-      mobile: mobileRef.current.value,
-    };
     try {
       setFetching(true);
-      await axios.post("http://localhost:5000/signup/", user);
+      await signUpUser(
+        usernameRef.current.value,
+        emailRef.current.value,
+        passwordRef.current.value,
+        mobileRef.current.value
+      );
       history.push("/login");
       setFetching(false);
     } catch (err) {
