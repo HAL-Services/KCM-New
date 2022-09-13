@@ -3,6 +3,10 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import QuickBookForm from "./QuickBookForm";
+import { motion } from "framer-motion";
+import { titleAnim } from "../animation";
+import { FaWhatsapp } from "react-icons/fa";
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -21,8 +25,28 @@ export default function QuickBookModal() {
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
-      <Button onClick={handleOpen}>Quick Book</Button>
+    <>
+      <Button
+        variants={titleAnim}
+        component={motion.div}
+        onClick={handleOpen}
+        style={{
+          fontSize: "var(--h2-font-size)",
+          outline: "none",
+          margin: "2rem 1rem",
+          backgroundColor: "#25D366",
+          color: "var(--default-color)",
+          borderRadius: "2rem",
+          padding: "0.5rem 1rem",
+          boxShadow: "0px 8px 20px -4px #25D366",
+        }}
+        whileHover={{ rotate: -1, scale: 1.05 }}
+      >
+        Quick Book
+        <FaWhatsapp
+          style={{ marginLeft: ".5rem", fontWeight: "var(--font-bold)" }}
+        />
+      </Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -33,6 +57,6 @@ export default function QuickBookModal() {
           <QuickBookForm />
         </Box>
       </Modal>
-    </div>
+    </>
   );
 }
