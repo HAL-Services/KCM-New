@@ -254,7 +254,7 @@ const NavBar = (props) => {
             <Link to="/settings">Welcome, {currentUser.toUpperCase()}</Link>
           </span>
         ) : props.titles.length === 3 ? (
-          <button>LOGOUT</button>
+          <button onClick={handleClick}>LOGOUT</button>
         ) : (
           <Link to="/login">
             <button>LOGIN</button>
