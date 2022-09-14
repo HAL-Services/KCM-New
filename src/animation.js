@@ -82,25 +82,30 @@ export const contactAnim2 = {
 
 export const navbarSideAnim = {
   hidden: {
-    opacity: 0,
-    x: "-50%",
-    display: "none",
+    clipPath: `circle(0px at 40px 40px)`,
+    transition: {
+      duration: 0.8,
+      delay: 0.4,
+    },
   },
   show: {
-    opacity: 1,
-    x: 0,
-    display: "grid",
+    clipPath: `circle(1000px at 40px 40px)`,
     transition: {
-      duration: 0.5,
+      duration: 0.4,
       ease: "easeInOut",
       staggerChildren: 0.1,
       delayChildren: 0.3,
     },
   },
   exit: {
-    opacity: 0,
-    x: "-50%",
-    transition: { duration: 0.5, ease: "easeInOut" },
+    clipPath: `circle(0px at 40px 40px)`,
+    transition: {
+      duration: 0.8,
+      delay: 0.4,
+      staggerChildren: 0.1,
+      delayChildren: 0.3,
+      staggerDirection: -1,
+    },
   },
 };
 
@@ -115,7 +120,7 @@ export const navbarSideTitleAnim = {
     transition: { type: "spring" },
   },
   exit: {
-    x: -100,
+    x: 100,
     opacity: 0,
     transition: { ease: "easeOut", type: "spring" },
   },
