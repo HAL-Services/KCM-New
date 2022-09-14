@@ -55,7 +55,7 @@ export default function Testimonial() {
         modules={[Autoplay, Pagination]}
         className="testimonialSwiper"
       >
-        {reviewsData.map((data) => {
+        {reviewsData&&  reviewsData.map((data) => {
           return (
             <SwiperSlide key={data.username} className="testimonialSlider">
               <div className="clientWrapper">

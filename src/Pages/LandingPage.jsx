@@ -1,5 +1,4 @@
-import LandingImage from "../Assets/Images/mobileDesign.gif";
-import "../styles/LandingPage.styles.css";
+import "../styles/LandingPage.scss";
 // Importing animation
 import { motion } from "framer-motion";
 import { landingAnim, titleAnim } from "../animation";
@@ -9,10 +8,7 @@ import QuickBookModal from "../components/QuickBookModal";
 export default function LandingPage() {
   return (
     <div>
-      <div className="contactUs">Email- kcmautomobiles@gmail.com</div>
-      <div className="mobileViewImage" style={{ display: "none" }}>
-        <img alt="background" src={MobileBackground} />
-      </div>
+      <div className="email-fixed">Email- kcmautomobiles@gmail.com</div>
       <motion.span
         animate={{ y: -10 }}
         transition={{
@@ -50,13 +46,10 @@ export default function LandingPage() {
         variants={landingAnim}
         initial="hidden"
         animate="show"
-        className="LandingPageContainer"
+        className="landing-page-container"
         id="LandingPageContainer"
-        style={{
-          backgroundImage: `url(${LandingImage})`,
-        }}
       >
-        <div className="LandingPageWrapper">
+        <div className="left">
           <span className="landing_hide">
             <motion.h1 variants={titleAnim}>The German Car Experts</motion.h1>
           </span>
@@ -65,21 +58,23 @@ export default function LandingPage() {
               Working with brands from all over the world
             </motion.h4>
           </span>
-          <span className="landing_hide">
+          <span className="landing_hide quickbook">
             <QuickBookModal />
           </span>
-          <span className="landing_hide">
-            <motion.div className="LandingText" variants={titleAnim}>
-              A Car Service Station in Gurugram
-            </motion.div>
-          </span>
-          <span className="landing_hide">
-            <motion.div className="LandingText1" variants={titleAnim}>
-              One Stop Shop for all that your Car needs
-            </motion.div>
-          </span>
+        </div>
+        <div className="right">
+          <img src={MobileBackground} />
         </div>
       </motion.div>
+
+      <div className="outer-text">
+        <motion.div className="LandingText" variants={titleAnim}>
+          A Car Service Station in Gurugram
+        </motion.div>
+        <motion.div className="LandingText" variants={titleAnim}>
+          One Stop Shop for all that your Car needs
+        </motion.div>
+      </div>
     </div>
   );
 }

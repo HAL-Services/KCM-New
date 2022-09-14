@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import ExpertiseImagedata from "../OfflineAPI/ExpertiseImagesData";
 import "../styles/ExpertisePage.styles.scss";
 export default function ExpertisePage() {

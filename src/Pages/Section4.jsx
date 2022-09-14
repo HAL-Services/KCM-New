@@ -1,4 +1,4 @@
-import Card from "../components/Card";
+import Card from "../components/HowWeWorkCard";
 
 // import styles
 import "../styles/Section4.scss";
