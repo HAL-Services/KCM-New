@@ -33,7 +33,7 @@ export default function QuickBookModal() {
         style={{
           fontSize: "var(--h2-font-size)",
           outline: "none",
-          margin: "2rem 1rem",
+          margin: "2rem 0rem",
           backgroundColor: "#25D366",
           color: "var(--default-color)",
           borderRadius: "2rem",

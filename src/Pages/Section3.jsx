@@ -1,4 +1,4 @@
-import Card from "../components/Card";
+import Card from "../components/HowWeWorkCard";
 import CardData from "../OfflineAPI/CardRelatedData";
 import { motion } from "framer-motion";
 import "../styles/Section3.styles.scss";

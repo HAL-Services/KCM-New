@@ -2,9 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
+  height: 90px;
   width: 100%;
-  position: absolute;
   z-index: 100;
   ::selection {
     background-color: var(--first-color-lighter);

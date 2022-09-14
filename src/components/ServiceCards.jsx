@@ -12,11 +12,11 @@ const ServiceCard = (props) => {
             <h3>{props.title.toUpperCase()}</h3>
             <motion.span
               initial={{ y: 0 }}
-              animate={{ y: 8 }}
+              animate={{ y: 10 }}
               transition={{
                 repeat: Infinity,
-                duration: 1,
-                delay: 0.5,
+                duration: 0.5,
+                delay: 0.1,
                 ease: "linear",
                 repeatType: "reverse",
               }}
