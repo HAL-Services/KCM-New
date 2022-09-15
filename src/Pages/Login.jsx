@@ -34,8 +34,8 @@ const Login = () => {
       localStorage.setItem("User", JSON.stringify(user));
       dispatch({ type: "LOGIN_SUCCESS", payload: user });
     } catch (err) {
+      dispatch({ type: "LOGIN_FAILURE", payload: err.data });
       handleError();
-      dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
     }
   };
   return (
