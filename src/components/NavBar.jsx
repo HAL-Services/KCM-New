@@ -93,9 +93,10 @@ const NavBar = (props) => {
             <motion.span
               variants={navbarSideTitleAnim}
               onClick={() => setOpen(!isOpen)}
-              className="navbar_titles"
             >
-              <Link to="/service">Services</Link>
+              <Link to="/service" className="navbar_titles">
+                Services
+              </Link>
             </motion.span>
             <motion.span
               variants={navbarSideTitleAnim}
