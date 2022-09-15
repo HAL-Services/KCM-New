@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 // importing styles
 import "../styles/AboutUs.scss";
 
-const AboutUsCards = ({ title, subtitle, data }) => {
+const AboutUsCards = ({ title, subtitle, data, img }) => {
   return (
     <motion.div className="aboutUsCards_container">
       <div
