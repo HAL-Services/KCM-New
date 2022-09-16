@@ -1,12 +1,13 @@
 import { useState } from "react";
 import "../styles/ProfileForm.styles.scss";
-import axios from "axios";
 import { useContext } from "react";
 import { Context } from "../context/Context";
 import { useRef } from "react";
 import { useHistory } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { profileUpdate } from "../apiCalls";
+
 const ProfileForm = () => {
   const { user, dispatch } = useContext(Context);
   const username = useRef();
@@ -25,18 +26,13 @@ const ProfileForm = () => {
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const config = {
-      headers: {
-        Authorization: `Bearer ${user.token}`,
-      },
-    };
-    const data = {
-      username: username.current.value,
-      mobile: mobile.current.value,
-      password: password.current.value,
-    };
     try {
-      await axios.post("http://localhost:5000/users/update", data, config);
+      await profileUpdate(
+        username.current.value ? username.current.value : user.username,
+        mobile.current.value ? mobile.current.value : user.mobile,
+        password.current.value ? password.current.value : user.password,
+        user.token
+      );
       dispatch({ type: "LOGOUT" });
       localStorage.removeItem("User");
       history.push("/login");

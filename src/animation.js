@@ -89,7 +89,7 @@ export const navbarSideAnim = {
     },
   },
   show: {
-    clipPath: `circle(1000px at 40px 40px)`,
+    clipPath: `circle(1370px at 40px 40px)`,
     transition: {
       duration: 0.4,
       ease: "easeInOut",

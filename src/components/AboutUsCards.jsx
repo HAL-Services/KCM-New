@@ -10,9 +10,11 @@ const AboutUsCards = ({ title, subtitle, data, img }) => {
       <div
         className="aboutUsCards_header"
         style={{
+          backgroundImage: title === "Kishore Chandra" ? `url(${img})` : ``,
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
-          backgroundPositionX: "105%",
+          backgroundPositionX: "150%",
+          height: "150px",
         }}
       >
         <h1 className="aboutUsCards_title">{title}</h1>
