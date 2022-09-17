@@ -48,16 +48,17 @@ export const signUpUser = async (username, email, password, mobile) => {
 
 export const profileUpdate = async (username, mobile, password, token) => {
   try {
-    const response = await axios.post(getApiUrl("/users/update"), {
-      body: {
-        username: username,
-        mobile: mobile,
-        password: password,
-      },
+    const data = {
+      username: username,
+      mobile: mobile,
+      password: password,
+    };
+    const config = {
       headers: {
         Authorization: `Bearer ${token}`,
       },
-    });
+    };
+    const response = await axios.post(getApiUrl("/users/update"), data, config);
     return Promise.resolve(response.data);
   } catch (err) {
     return Promise.reject(err.response);
