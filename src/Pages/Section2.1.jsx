@@ -23,17 +23,21 @@ const ServiceSection = () => {
         <ServiceCard
           title="Silver"
           sty="#c0c0c0"
-          body={["Car wash", "Engine Check", "Batteries"]}
+          body={[
+            "Engine Oil Replacement",
+            "A/C Filter Replacement",
+            "Car Scanning",
+            "Battery Inspection",
+          ]}
           id="1"
         />
         <ServiceCard
           title="Platinum"
           body={[
-            "1 Free car wash*",
-            "Engine Check",
-            "AC Service & Repair",
-            "Suspension & Fitments",
-            "Tyres & Wheel Care",
+            "Complete General Checkup",
+            "Wheel Alignment & Balancing Inspection",
+            "Car Washing & Cleaning",
+            "Fuel & Air Filter Checkup",
           ]}
           id="2"
           sty="#e5e4e2"
@@ -41,10 +45,12 @@ const ServiceSection = () => {
         <ServiceCard
           title="Gold"
           body={[
-            "Car wash",
-            "Engine Check",
-            "Suspension & Fitments",
-            "Winshields & Lights",
+            "Complete Car Body Wax Polish",
+            "Complete Car Interior DryClean",
+            "Battery Inspection & Wheel Alignment",
+            "Car Scanning",
+            // "Brake Fluid Top-Up",
+            // "Wiper Washer Fluid Replacement",
           ]}
           sty="#FFD700"
           id="3"

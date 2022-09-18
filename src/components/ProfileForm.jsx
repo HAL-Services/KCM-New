@@ -24,9 +24,22 @@ const ProfileForm = () => {
       progress: undefined,
     });
   }
+  function passwordError() {
+    toast.error("Please enter password to update!", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      if (password.current.value === "") {
+        throw new Error("password!");
+      }
       await profileUpdate(
         username.current.value ? username.current.value : user.username,
         mobile.current.value ? mobile.current.value : user.mobile,
@@ -37,6 +50,7 @@ const ProfileForm = () => {
       localStorage.removeItem("User");
       history.push("/login");
     } catch (err) {
+      if (err.message === "password!") return passwordError();
       handleError();
     }
   };
