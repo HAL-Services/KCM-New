@@ -134,6 +134,14 @@
   }
 }
 
+.forgot-password{
+  margin-bottom: var(--mb-1-5);
+  a{
+    text-decoration: none;
+    color:var(--first-color);
+  }
+}
+
 @media screen and (max-width: 730px) {
   .login-page {
     flex-direction: column;
