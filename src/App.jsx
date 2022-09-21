@@ -7,6 +7,8 @@ import SignUp from "./Pages/SignUp";
 import ServicePage from "./Pages/ServicePage";
 import ProfilePage from "./Pages/ProfilePage";
 import WriteReview from "./Pages/WriteReview";
+import Forgot from "./Pages/Forgot";
+import OtpChange from "./Pages/OtpChange";
 // important styles
 import "./styles/App.scss";
 import { useContext } from "react";
@@ -32,8 +34,9 @@ export default function App() {
         <Route exact path="/settings">
           {user ? <ProfilePage /> : <Redirect to="/login" />}
         </Route>
+        <Route exact path="/forgot" component={Forgot} />
         <Route exact path="/write" component={WriteReview} />
-       
+        <Route exact path="/:id/:string" component={OtpChange} />
       </Switch>
     </div>
   );

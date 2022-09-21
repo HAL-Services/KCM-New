@@ -6,12 +6,11 @@ import SignUpSvg from "../Assets/Images/login.jpg";
 import { ToastContainer, toast } from "react-toastify";
 import { Context } from "../context/Context";
 import "react-toastify/dist/ReactToastify.css";
-import { loginUser } from "../apiCalls.js";
+import emailjs from "emailjs-com";
+import { forgotPassword } from "../apiCalls.js";
 
-const Login = () => {
+const Forgot = () => {
   const emailRef = useRef();
-  const passwordRef = useRef();
-  const [showPass, setShowPass] = useState(false);
   const { isFetching, dispatch } = useContext(Context);
   function handleError(err) {
     toast.error(err, {
@@ -23,18 +22,34 @@ const Login = () => {
       progress: undefined,
     });
   }
+  function handleSuccess(err) {
+    toast.success(err, {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
   const handleClick = async (e) => {
     e.preventDefault();
-    dispatch({ type: "LOGIN_START" });
     try {
-      const user = await loginUser(
-        emailRef.current.value,
-        passwordRef.current.value
+      const email = emailRef.current.value;
+      const link = await forgotPassword(email);
+      await emailjs.send(
+        "service_5xhuphl",
+        "template_85h8enu",
+        {
+          to_name: "Forgot Password Link!",
+          from_name: "KCM-SERVICES",
+          message: `${link}`,
+          to_email: `${email}`,
+        },
+        "v8rfW3JruoYuZK6VC"
       );
-      localStorage.setItem("User", JSON.stringify(user));
-      dispatch({ type: "LOGIN_SUCCESS", payload: user });
+      handleSuccess("Please check email for a unique link.");
     } catch (err) {
-      dispatch({ type: "LOGIN_FAILURE", payload: err.data });
       handleError(err.data.error);
     }
   };
@@ -74,47 +89,21 @@ const Login = () => {
         style={{ display: "flex", flexDirection: "column" }}
       >
         <form style={{ marginBottom: "30px" }} onSubmit={handleClick}>
+          <div className="setps-container"></div>
+
           <div className="input-container">
             <input
               type="email"
               name="email"
-              required={true}
+              required
               autoComplete="off"
               ref={emailRef}
             />
             <label htmlFor="form-input-phoneNumber">Email</label>
           </div>
-          <div className="input-container">
-            <input
-              type={showPass ? "text" : "password"}
-              name="password"
-              required={true}
-              autoComplete="off"
-              ref={passwordRef}
-            />
-            <label htmlFor="form-input-fullName">Password</label>
-          </div>
-          <div className="checkbox-container">
-            <input type="checkbox" onClick={() => setShowPass(!showPass)} />
-            <label htmlFor="showPassword" className="login-checkbox">
-              Show Password
-            </label>
-          </div>
-          <span className="forgot-password">
-            <Link to="/forgot">Forgot Password?</Link>
-          </span>
-          <Link to="/signUp">
-            <span
-              className="loginWrapper"
-              style={{ marginTop: "40px", color: "white" }}
-            >
-              Don't have an account?
-              <span>Sign-Up</span>
-            </span>
-          </Link>
 
           <div className="btn-container">
-            <button type="submit">LOGIN</button>
+            <button type="submit">SUBMIT</button>
             {isFetching && <Loader />}
           </div>
         </form>
@@ -123,4 +112,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Forgot;

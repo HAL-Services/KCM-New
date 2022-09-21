@@ -46,12 +46,21 @@ export const signUpUser = async (username, email, password, mobile) => {
   }
 };
 
-export const profileUpdate = async (username, mobile, password, token) => {
+export const profileUpdate = async (
+  username,
+  mobile,
+  password,
+  newPassword,
+  email,
+  token
+) => {
   try {
     const data = {
       username: username,
       mobile: mobile,
       password: password,
+      newPassword: newPassword,
+      email: email,
     };
     const config = {
       headers: {
@@ -59,6 +68,30 @@ export const profileUpdate = async (username, mobile, password, token) => {
       },
     };
     const response = await axios.post(getApiUrl("/users/update"), data, config);
+    return Promise.resolve(response.data);
+  } catch (err) {
+    return Promise.reject(err.response);
+  }
+};
+
+export const forgotPassword = async (email) => {
+  try {
+    const response = await axios.get(getApiUrl("/users/forgot"), {
+      email: email,
+    });
+    const link = `http://localhost:3000/${response.data}`;
+    return Promise.resolve(link);
+  } catch (err) {
+    return Promise.reject(err.response);
+  }
+};
+
+export const checkPassword = async (id, newPass, confirmPass) => {
+  try {
+    const response = await axios.post(getApiUrl("/users/check"), {
+      id: id,
+      newPass: newPass,
+    });
     return Promise.resolve(response.data);
   } catch (err) {
     return Promise.reject(err.response);
