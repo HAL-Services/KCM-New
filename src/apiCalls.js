@@ -76,7 +76,7 @@ export const profileUpdate = async (
 
 export const forgotPassword = async (email) => {
   try {
-    const response = await axios.get(getApiUrl("/users/forgot"), {
+    const response = await axios.post(getApiUrl("/users/forgot"), {
       email: email,
     });
     const link = `http://localhost:3000/${response.data}`;
