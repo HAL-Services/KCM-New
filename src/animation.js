@@ -42,24 +42,22 @@ export const hamburgerBotAnim = {
 export const landingAnim = {
   hidden: {
     opacity: 0,
+    y: 300,
   },
   show: {
+    y: 0,
     opacity: 1,
     transition: {
-      delay: 0.2,
-      duration: 0.25,
+      duration: 0.5,
       when: "beforeChildren",
-      staggerChildren: 0.05,
+      staggerChildren: 0.25,
     },
   },
 };
 
 export const titleAnim = {
-  hidden: { y: 100 },
-  show: {
-    y: 0,
-    transition: { type: "spring" },
-  },
+  hidden: { y: 200 },
+  show: { y: 0, transition: { duration: 0.75, ease: "easeOut" } },
 };
 
 export const contactAnim1 = {
@@ -123,5 +121,34 @@ export const navbarSideTitleAnim = {
     x: 100,
     opacity: 0,
     transition: { ease: "easeOut", type: "spring" },
+  },
+};
+
+export const rightAnim = {
+  hidden: { scale: 0.8, opacity: 0, transition: { duration: 0.75 } },
+  show: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 1.1,
+      ease: "easeOut",
+      type: "spring",
+    },
+  },
+};
+
+export const navAnim = {
+  hidden: {
+    y: -100,
+    opacity: 0,
+  },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: "easeOut",
+      type: "spring",
+    },
   },
 };

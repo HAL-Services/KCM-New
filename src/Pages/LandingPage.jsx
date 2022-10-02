@@ -1,7 +1,7 @@
 import "../styles/LandingPage.scss";
 // Importing animation
 import { motion } from "framer-motion";
-import { landingAnim, titleAnim } from "../animation";
+import { landingAnim, titleAnim, rightAnim } from "../animation";
 import MobileBackground from "../Assets/Images/mobileDesign.gif";
 import { FaArrowCircleUp } from "react-icons/fa";
 import QuickBookModal from "../components/QuickBookModal";
@@ -62,19 +62,33 @@ export default function LandingPage() {
             <QuickBookModal />
           </span>
         </div>
-        <div className="right">
-          <img src={MobileBackground} />
-        </div>
+        <motion.div className="right" variants={rightAnim}>
+          <img src={MobileBackground} alt="background-img" />
+        </motion.div>
       </motion.div>
 
-      <div className="outer-text">
-        <motion.div className="LandingText" variants={titleAnim}>
-          A Car Service Station in Gurugram
-        </motion.div>
-        <motion.div className="LandingText" variants={titleAnim}>
-          One Stop Shop for all that your Car needs
-        </motion.div>
-      </div>
+      <motion.div className="outer-text">
+        <span className="landing_hide">
+          <motion.div
+            className="LandingText"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: "easeOut", duration: 1, delay: 0.1 }}
+          >
+            A Car Service Station in Gurugram
+          </motion.div>
+        </span>
+        <span className="landing_hide">
+          <motion.div
+            className="LandingText"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: "easeOut", duration: 1, delay: 0.1 }}
+          >
+            One Stop Shop for all that your Car needs
+          </motion.div>
+        </span>
+      </motion.div>
     </div>
   );
 }
