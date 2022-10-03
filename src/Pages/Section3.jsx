@@ -2,13 +2,14 @@ import Card from "../components/HowWeWorkCard";
 import CardData from "../OfflineAPI/CardRelatedData";
 import { motion } from "framer-motion";
 import {
-  RiTaxiFill,
   RiTaxiWifiFill,
   RiCarFill,
-  RiCarWashingFill,
 } from "react-icons/ri";
+import { GiMechanicGarage} from "react-icons/gi";
+import { FcBusinessman } from "react-icons/fc";
 import { useRef, useState, useEffect } from "react";
 import "../styles/Section3.styles.scss";
+import { FaHandHoldingUsd } from "react-icons/fa";
 export default function Section3() {
   const imageData = [
     {
@@ -56,9 +57,9 @@ export default function Section3() {
   const [width, setWidth] = useState(0);
   const carousel = useRef();
 
-  useEffect(() => {
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, []);
+  // useEffect(() => {
+  //   setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+  // }, []);
 
   return (
     <>
@@ -98,48 +99,50 @@ export default function Section3() {
           })}
         </div>
       </div>
-      <div className="benefits">
-        <h1>Kcm Benefits</h1>
-        <div className="benefits_container">
-          <span className="benefits_box">
-            <span className="benefits_box_icon">
-              <RiCarFill className="benefits_icon" />
+      <div className="benefits-box">
+        <div className="benefits">
+          <h1>Kcm Benefits</h1>
+          <div className="benefits_container">
+            <span className="benefits_box">
+              <span className="benefits_box_icon">
+                <RiCarFill className="benefits_icon" />
+              </span>
+              <span>
+                <h2>Free DoorStep Pick-up and Drop</h2>
+                <p>No more hussel!</p>
+              </span>
             </span>
-            <span>
-              <h2>Free Doorstep Pick-up and Drop</h2>
-              <p>No more unnecessary workshop vitals!</p>
+            <span className="benefits_box">
+              <span className="benefits_box_icon">
+                <FaHandHoldingUsd className="benefits_icon" />
+              </span>
+              <span>
+                <h2>Cheapest Service in the City</h2>
+                <p>Save upto 50% on labour charges </p>
+              </span>
             </span>
-          </span>
-          <span className="benefits_box">
-            <span className="benefits_box_icon">
-              <RiTaxiFill className="benefits_icon" />
+            <span className="benefits_box">
+              <span className="benefits_box_icon">
+                <FcBusinessman className="benefits_icon" />
+              </span>
+              <span>
+                <h2>Personalized Expert Advice </h2>
+                <p>Get guided by our industry best mechanics</p>
+              </span>
             </span>
-            <span>
-              <h2>Free Doorstep Pick-up and Drop</h2>
-              <p>No more unnecessary workshop vitals!</p>
+            <span className="benefits_box">
+              <span className="benefits_box_icon">
+                <GiMechanicGarage className="benefits_icon" />
+              </span>
+              <span>
+                <h2>Original Spare Parts</h2>
+                <p>Only Tried and Test quality parts used</p>
+              </span>
             </span>
-          </span>
-          <span className="benefits_box">
-            <span className="benefits_box_icon">
-              <RiTaxiWifiFill className="benefits_icon" />
-            </span>
-            <span>
-              <h2>Free Doorstep Pick-up and Drop</h2>
-              <p>No more unnecessary workshop vitals!</p>
-            </span>
-          </span>
-          <span className="benefits_box">
-            <span className="benefits_box_icon">
-              <RiCarWashingFill className="benefits_icon" />
-            </span>
-            <span>
-              <h2>Free Doorstep Pick-up and Drop</h2>
-              <p>No more unnecessary workshop vitals!</p>
-            </span>
-          </span>
+          </div>
         </div>
       </div>
-      <motion.div className="curated" ref={carousel}>
+      {/* <motion.div className="curated" ref={carousel}>
         <h1>Curated Custom Services</h1>
         <motion.div
           className="curated_inner"
@@ -157,7 +160,7 @@ export default function Section3() {
             );
           })}
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </>
   );
 }

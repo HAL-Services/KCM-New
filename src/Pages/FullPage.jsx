@@ -20,8 +20,8 @@ export default function FullPage() {
       <ServiceSection />
       <Section3 />
       <Section2 />
-      <Testimonial />
       <AboutUs />
+      <Testimonial />
       <Section4 />
       <ContactUs />
       <Footer />
