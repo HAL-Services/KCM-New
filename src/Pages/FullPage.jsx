@@ -17,9 +17,9 @@ export default function FullPage() {
       <LandingPage />
       <MarqueeElement />
       <ExpertiseSection />
-      <Section2 />
       <ServiceSection />
       <Section3 />
+      <Section2 />
       <Testimonial />
       <AboutUs />
       <Section4 />

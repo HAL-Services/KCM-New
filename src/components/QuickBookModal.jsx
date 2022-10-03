@@ -40,7 +40,7 @@ export default function QuickBookModal() {
           padding: "0.5rem 1rem",
           boxShadow: "0px 8px 20px -4px #25D366",
         }}
-        whileHover={{ rotate: -1, scale: 1.05 }}
+        whileHover={{ scale: 1.05 }}
       >
         Quick Book
         <FaWhatsapp
