@@ -8,7 +8,10 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const ServiceForm = () => {
-  const [date, setDate] = useState(null);
+  const dd = new Date();
+  const year = dd.getFullYear();
+  const today = `${dd.getDate()}-${dd.getMonth()}-${year}`;
+  const [date, setDate] = useState(today);
   const carNumber = useRef();
   const carModel = useRef();
   const address = useRef();
