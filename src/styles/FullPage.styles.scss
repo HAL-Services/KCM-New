@@ -1,0 +1,7 @@
+.parent {
+  max-width: 1600px;
+  margin: auto;
+  @media screen and (max-width: 1200px) {
+    width: 100vw;
+  }
+}
