@@ -1,13 +1,9 @@
 import Card from "../components/HowWeWorkCard";
 import CardData from "../OfflineAPI/CardRelatedData";
 import { motion } from "framer-motion";
-import {
-  RiTaxiWifiFill,
-  RiCarFill,
-} from "react-icons/ri";
-import { GiMechanicGarage} from "react-icons/gi";
+import { RiTaxiWifiFill, RiCarFill } from "react-icons/ri";
+import { GiMechanicGarage } from "react-icons/gi";
 import { FcBusinessman } from "react-icons/fc";
-import { useRef, useState, useEffect } from "react";
 import "../styles/Section3.styles.scss";
 import { FaHandHoldingUsd } from "react-icons/fa";
 export default function Section3() {
@@ -54,13 +50,6 @@ export default function Section3() {
     },
   ];
 
-  const [width, setWidth] = useState(0);
-  const carousel = useRef();
-
-  // useEffect(() => {
-  //   setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  // }, []);
-
   return (
     <>
       <div className="Section3how_we_work">
@@ -70,6 +59,7 @@ export default function Section3() {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5, ease: "linear" }}
+          style={{ color: "black", fontSize: "var(--big-font-size)" }}
         >
           How we Work
         </motion.h1>
@@ -101,7 +91,9 @@ export default function Section3() {
       </div>
       <div className="benefits-box">
         <div className="benefits">
-          <h1>Kcm Benefits</h1>
+          <h1 style={{ fontSize: "var(--big-font-size)", color: "black" }}>
+            Kcm Benefits
+          </h1>
           <div className="benefits_container">
             <span className="benefits_box">
               <span className="benefits_box_icon">

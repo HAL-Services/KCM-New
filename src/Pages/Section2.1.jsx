@@ -16,6 +16,7 @@ const ServiceSection = () => {
           duration: 1.3,
         }}
         viewport={{ once: true, amount: 0.8 }}
+        style={{ color: "black", fontSize: "var(--big-font-size)" }}
       >
         Our Service Package
       </motion.h1>
@@ -49,8 +50,6 @@ const ServiceSection = () => {
             "Complete Car Interior DryClean",
             "Battery Inspection & Wheel Alignment",
             "Car Scanning",
-            // "Brake Fluid Top-Up",
-            // "Wiper Washer Fluid Replacement",
           ]}
           sty="#FFD700"
           id="3"

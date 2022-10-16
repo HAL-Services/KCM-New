@@ -31,6 +31,7 @@ const AboutUs = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, ease: "linear" }}
           viewport={{ amount: 0.1, once: false }}
+          style={{ color: "black", fontSize: "var(--big-font-size)" }}
         >
           About Us
         </motion.h1>
@@ -70,6 +71,7 @@ const AboutUs = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: false, amount: 0.1 }}
           transition={{ duration: 0.5, ease: "linear" }}
+          style={{ fontSize: "var(--big-font-size)", color: "black" }}
         >
           Meet Our Founders
         </motion.h1>
