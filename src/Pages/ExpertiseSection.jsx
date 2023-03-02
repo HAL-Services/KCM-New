@@ -5,7 +5,11 @@ export default function ExpertiseSection() {
   return (
     <div className="ExpertiseSection-container">
       <section>
-        <h1 className="about_title">Our Expertise</h1>
+        <h2 className="about_title">Based on
+          <h3 className="experience">Experience
+            <span>EXPERIENCE</span>
+          </h3>
+        </h2>
         <ExpertisePage />
       </section>
     </div>

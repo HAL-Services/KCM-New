@@ -3,7 +3,7 @@ import "../styles/ExpertisePage.styles.scss";
 export default function ExpertisePage() {
   return (
     <div className="expertise-container">
-      <div className="expertise-wrapper">
+      {/* <div className="expertise-wrapper">
         {ExpertiseImagedata.map((img) => {
           return (
             <div key={img.id} className="expertise-img-container">
@@ -12,7 +12,8 @@ export default function ExpertisePage() {
             </div>
           );
         })}
-      </div>
+      </div> */}
+      <h2>Images</h2>
     </div>
   );
 }
