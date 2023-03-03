@@ -2,7 +2,7 @@ import "../styles/LandingPage.scss";
 // Importing animation
 import { motion } from "framer-motion";
 import { landingAnim, titleAnim, rightAnim } from "../animation";
-import MobileBackground from "../Assets/Images/mobileDesign.gif";
+import MobileBackground from "../Assets/Images/backdrop.png";
 import { FaArrowCircleUp } from "react-icons/fa";
 import QuickBookModal from "../components/QuickBookModal";
 export default function LandingPage() {
