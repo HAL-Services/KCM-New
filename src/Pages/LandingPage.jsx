@@ -2,13 +2,12 @@ import "../styles/LandingPage.scss";
 // Importing animation
 import { motion } from "framer-motion";
 import { landingAnim, titleAnim, rightAnim } from "../animation";
-import MobileBackground from "../Assets/Images/backdrop.png";
+import MobileBackground from "../Assets/Images/loadvideo.mp4";
 import { FaArrowCircleUp } from "react-icons/fa";
 import QuickBookModal from "../components/QuickBookModal";
 export default function LandingPage() {
   return (
     <div>
-      <div className="email-fixed">Email- kcmautomobiles@gmail.com</div>
       <motion.span
         animate={{ y: -10 }}
         transition={{
@@ -42,62 +41,17 @@ export default function LandingPage() {
           <FaArrowCircleUp className="fingerUp" />
         </motion.a>
       </motion.span>
-      <div
-        
-        className="landing-page-container"
-        id="LandingPageContainer"
-      >
-        <div className="left">
-          <span className="landing_hide">
-            <h1 variants={titleAnim}>The German Car Experts</h1>
-          </span>
-          <span className="landing_hide">
-            <h1
-              style={{
-                fontStyle: "italic",
-                color: "hsl(var(--hue-color), 80%, 68%)",
-                fontWeight: "700",
-              }}
-              variants={titleAnim}
-            >
-              Lightning Fast Service
-            </h1>
-          </span>
-          <span className="landing_hide">
-            <h2 style={{ fontSize: "23px" }} variants={titleAnim}>
-              Working with brands from all over the world
-            </h2>
-          </span>
-          <span className="landing_hide quickbook">
-            <QuickBookModal />
-          </span>
+      <div className="hero-container">
+        <div className="overlay"></div>
+        <video className="video" src={MobileBackground} autoPlay muted />
+        <div className="content">
+          <h2 className="about_title">The German Car
+            <h3 className="experience">Experts
+              <span>EXPERTS</span>
+            </h3>
+          </h2>
+
         </div>
-       
-       
-      </div>
-
-      <div
-
-        className="outer-text"
-      >
-        <span className="landing_hide">
-          <div
-            className="LandingText">
-            <h2 style={{ fontStyle: "italic" }}>
-              A Car Service Station in Gurugram
-            </h2>
-          </div>
-        </span>
-        <span className="landing_hide">
-          <div
-            className="LandingText"
-            
-          >
-            <h2 style={{ fontStyle: "italic" }}>
-              One Stop Shop for all that your Car Needs
-            </h2>
-          </div>
-        </span>
       </div>
     </div>
   );
