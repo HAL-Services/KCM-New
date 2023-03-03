@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import first from "../Assets/img.png";
 // importing Styles
 import "../styles/AboutUs.scss";
+import HeadingText from "../components/HeadingText";
 
 const AboutUs = () => {
   const dataName = [
@@ -25,16 +26,7 @@ const AboutUs = () => {
   return (
     <>
       <div className="about_section" id="about">
-        <motion.h1
-          className="about_title"
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, ease: "linear" }}
-          viewport={{ amount: 0.1, once: false }}
-          style={{ color: "black", fontSize: "var(--big-font-size)" }}
-        >
-          About Us
-        </motion.h1>
+        <HeadingText text1="About" text2="Us" style="light" />
         <div className="about_container">
           <motion.div
             className="about_left_section"
@@ -65,28 +57,11 @@ const AboutUs = () => {
         </div>
       </div>
       <div className="about_cards">
-        <motion.h1
-          className="about_title"
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: false, amount: 0.1 }}
-          transition={{ duration: 0.5, ease: "linear" }}
-          style={{ fontSize: "var(--big-font-size)", color: "black" }}
-        >
-          Meet Our Founders
-        </motion.h1>
-        <motion.div className="about_cardwrapper">
+        <HeadingText text1="Our" text2="Founders" style="dark" />
+        <div className="about_cardwrapper">
           {dataName.map((e) => {
             return (
-              <motion.div
-                initial={{ y: 150, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{
-                  delay: 0.1 * e.id,
-                  ease: "linear",
-                  type: "spring",
-                }}
-                viewport={{ once: false, amount: 0.1 }}
+              <div
                 key={e.id}
               >
                 <AboutUsCards
@@ -95,10 +70,10 @@ const AboutUs = () => {
                   data={e.data}
                   img={first}
                 />
-              </motion.div>
+              </div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </>
   );

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import HeadingText from "../components/HeadingText";
 import ServiceCard from "../components/ServiceCards";
 
 // importing Styles
@@ -7,19 +8,7 @@ import "../styles/ServiceSection.scss";
 const ServiceSection = () => {
   return (
     <div className="service__section">
-      <motion.h1
-        className="service__title"
-        initial={{ x: -40, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
-        transition={{
-          type: "spring",
-          duration: 1.3,
-        }}
-        viewport={{ once: true, amount: 0.8 }}
-        style={{ color: "black", fontSize: "var(--big-font-size)" }}
-      >
-        Our Service Package
-      </motion.h1>
+      <HeadingText text1="Our" text2="Packages" style="light"/>
       <div className="service__cardWrapper">
         <ServiceCard
           title="Silver"
