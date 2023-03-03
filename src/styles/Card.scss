@@ -2,6 +2,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  background-color: #0b1523;
   justify-content: space-between;
   border: 1px solid var(--first-color-second);
   padding: 1rem;
@@ -9,15 +10,18 @@
   height:450px;
   &_title {
     padding: 2rem 1rem;
-    color: var(--first-color);
+    color: rgb(130, 129, 129);
+
     font-size: var(--h2-font-size);
   }
   &_desc {
     padding: 0 1rem;
+    color:whitesmoke;
   }
   &_index {
     padding: 1rem;
     font-size: var(--big-font-size);
+    color:gray;
   }
   transition: 200ms all ease-out;
   &:hover {

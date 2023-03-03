@@ -5,7 +5,11 @@ export default function Section2() {
   return (
     <div className="Section2PageContainer">
       <section className="Section2PageSection">
-        <div className="Section2PageText1">Latest From Our Garage</div>
+      <h2 className="about_title">The German Car
+            <h3 className="experience">Experts
+              <span>EXPERTS</span>
+            </h3>
+          </h2>
         <GarageCarousel />
       </section>
       <img
