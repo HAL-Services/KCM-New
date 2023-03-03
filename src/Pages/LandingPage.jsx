@@ -42,19 +42,17 @@ export default function LandingPage() {
           <FaArrowCircleUp className="fingerUp" />
         </motion.a>
       </motion.span>
-      <motion.div
-        variants={landingAnim}
-        initial="hidden"
-        animate="show"
+      <div
+        
         className="landing-page-container"
         id="LandingPageContainer"
       >
         <div className="left">
           <span className="landing_hide">
-            <motion.h1 variants={titleAnim}>The German Car Experts</motion.h1>
+            <h1 variants={titleAnim}>The German Car Experts</h1>
           </span>
           <span className="landing_hide">
-            <motion.h1
+            <h1
               style={{
                 fontStyle: "italic",
                 color: "hsl(var(--hue-color), 80%, 68%)",
@@ -63,54 +61,44 @@ export default function LandingPage() {
               variants={titleAnim}
             >
               Lightning Fast Service
-            </motion.h1>
+            </h1>
           </span>
           <span className="landing_hide">
-            <motion.h2 style={{ fontSize: "23px" }} variants={titleAnim}>
+            <h2 style={{ fontSize: "23px" }} variants={titleAnim}>
               Working with brands from all over the world
-            </motion.h2>
+            </h2>
           </span>
           <span className="landing_hide quickbook">
             <QuickBookModal />
           </span>
         </div>
-        <motion.div className="right" variants={rightAnim}>
-          <img src={MobileBackground} alt="background-img" />
-        </motion.div>
-      </motion.div>
+       
+       
+      </div>
 
-      <motion.div
-        initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: false, amount: 0.1 }}
-        transition={{ duration: 0.5, ease: "linear" }}
+      <div
+
         className="outer-text"
       >
         <span className="landing_hide">
-          <motion.div
-            className="LandingText"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ ease: "easeOut", duration: 1, delay: 0.1 }}
-          >
-            <motion.h2 style={{ fontStyle: "italic" }}>
+          <div
+            className="LandingText">
+            <h2 style={{ fontStyle: "italic" }}>
               A Car Service Station in Gurugram
-            </motion.h2>
-          </motion.div>
+            </h2>
+          </div>
         </span>
         <span className="landing_hide">
-          <motion.div
+          <div
             className="LandingText"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ ease: "easeOut", duration: 0.5, delay: 0.1 }}
+            
           >
-            <motion.h2 style={{ fontStyle: "italic" }}>
+            <h2 style={{ fontStyle: "italic" }}>
               One Stop Shop for all that your Car Needs
-            </motion.h2>
-          </motion.div>
+            </h2>
+          </div>
         </span>
-      </motion.div>
+      </div>
     </div>
   );
 }

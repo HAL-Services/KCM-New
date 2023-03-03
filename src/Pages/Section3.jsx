@@ -54,14 +54,19 @@ export default function Section3() {
     <>
       <div className="Section3how_we_work">
         <motion.h1
-          className="about_title"
+          
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.5, ease: "linear" }}
           style={{ color: "black", fontSize: "var(--big-font-size)" }}
         >
-          How we Work
+          <h2 className="about_title">How We
+          <h3 className="experience">Work
+            <span>WORK</span>
+          </h3>
+        </h2>
+          
         </motion.h1>
         <div className="Section3wrapper">
           {CardData.map((ele) => {
