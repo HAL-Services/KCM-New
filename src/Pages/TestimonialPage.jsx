@@ -14,6 +14,7 @@ import speakGif from "../Assets/Images/speakGif.gif";
 import { FaQuoteLeft, FaQuoteRight, FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { fetchTestimonialData } from "../apiCalls";
+import HeadingText from "../components/HeadingText";
 
 export default function Testimonial() {
   const [reviewsData, setReviewsdata] = useState([]);
@@ -31,10 +32,7 @@ export default function Testimonial() {
   return (
     <div className="testimonialContainer" id="testimonial">
       <div className="testimonialHeading">
-        <span style={{ marginRight: "5px" }}>
-          <img style={{ height: "80px" }} src={speakGif} alt="gif" />
-        </span>
-        <b>Happy</b>-Clients
+        <HeadingText text1="Happy" text2="Clients" style="light" />
       </div>
       <Swiper
         slidesPerView={1}
@@ -55,7 +53,7 @@ export default function Testimonial() {
         modules={[Autoplay, Pagination]}
         className="testimonialSwiper"
       >
-        {reviewsData&&  reviewsData.map((data) => {
+        {reviewsData && reviewsData.map((data) => {
           return (
             <SwiperSlide key={data.username} className="testimonialSlider">
               <div className="clientWrapper">

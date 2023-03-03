@@ -1,9 +1,11 @@
 .about {
+
   &_section {
+    background-color: whitesmoke;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 5rem 2rem;
+    padding:2rem;
     @media screen and (max-width: 1000px) {
       margin: 0px;
     }
@@ -69,12 +71,19 @@
     }
   }
 }
+.about_cards{
+  background-color:#060f1c;
+  padding:2rem;
+
+}
 .aboutUsCards {
   &_container {
     overflow: hidden;
     display: flex;
     flex-direction: column;
     letter-spacing: 1px;
+    background-color: #0b1523;
+
   }
   &_header {
     border: 1px solid var(--first-color-lighter);
@@ -84,15 +93,19 @@
     margin-bottom: var(--mb-0-5);
   }
   &_title {
+    color: rgb(130, 129, 129);
+
     font-size: var(--h2-font-size);
   }
   &_subtitle {
     font-size: var(--small-font-size);
+    color:whitesmoke;
   }
   &_body {
     border: 1px solid var(--first-color-lighter);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     padding: 2rem 1rem;
+    color: whitesmoke;
   }
 }
