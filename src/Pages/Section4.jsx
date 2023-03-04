@@ -7,9 +7,8 @@ import "../styles/Section4.scss";
 const Section4 = () => {
   return (
     <div className="section4_container">
-      <div className="text">
-        <HeadingText text1="Work" text2="Hours" styleProp={"dark"} />
-      </div>
+        <HeadingText text1="Work" text2="Hours" style={"dark"} />
+ 
       <div className="timings">
         <div className="section4_timings">
           <Card
