@@ -16,7 +16,6 @@ export default function FullPage() {
     <div className="parent">
       <NavBar titles={["Services", "About", "Testimonial", "Contact Us"]} />
       <LandingPage />
-      <MarqueeElement />
       <ExpertiseSection />
       <ServiceSection />
       <Section3 />

@@ -54,7 +54,7 @@ export default function Section3() {
   return (
     <>
       <div className="Section3how_we_work">
-        <HeadingText text1="How We" text2="Work" style="dark"/>
+        <HeadingText text1="How We" text2="Work" style="dark" />
         <div className="Section3wrapper">
           {CardData.map((ele) => {
             return (
@@ -83,7 +83,7 @@ export default function Section3() {
       </div>
       <div className="benefits-box">
         <div className="benefits">
-         <HeadingText text1="KCM" text2="Benefits" style="light"/>
+          <HeadingText text1="KCM" text2="Benefits" style="light" />
           <div className="benefits_container">
             <span className="benefits_box">
               <span className="benefits_box_icon">
@@ -124,25 +124,7 @@ export default function Section3() {
           </div>
         </div>
       </div>
-      {/* <motion.div className="curated" ref={carousel}>
-        <h1>Curated Custom Services</h1>
-        <motion.div
-          className="curated_inner"
-          drag="x"
-          dragConstraints={{ right: 0, left: -width }}
-        >
-          {imageData.map((e, index) => {
-            return (
-              <div className="curated_box" key={index}>
-                <div className="curated_box_image">
-                  <img src={e.link} alt="" />
-                </div>
-                <span className="curated_box_content">{e.body}</span>
-              </div>
-            );
-          })}
-        </motion.div>
-      </motion.div> */}
+
     </>
   );
 }
