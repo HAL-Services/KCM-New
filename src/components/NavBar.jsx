@@ -8,7 +8,6 @@ import {
   hamburgerBotAnim,
   navbarSideAnim,
   navbarSideTitleAnim,
-  navAnim,
 } from "../animation";
 
 import { Link } from "react-router-dom";
@@ -33,9 +32,6 @@ const NavBar = (props) => {
     <motion.nav
       className="navbar"
       id="navbar"
-      variants={navAnim}
-      initial="hidden"
-      animate="show"
     >
       <motion.div className="burger-menu">
         <motion.svg

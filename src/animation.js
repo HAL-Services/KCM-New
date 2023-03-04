@@ -136,19 +136,15 @@ export const rightAnim = {
     },
   },
 };
-
-export const navAnim = {
+export const listMotion = {
   hidden: {
-    y: -100,
     opacity: 0,
+    scale: 0.9,
+    transition: { duration: 0.5 }
   },
   show: {
-    y: 0,
     opacity: 1,
-    transition: {
-      duration: 1,
-      ease: "easeOut",
-      type: "spring",
-    },
+    scale: 1,
+    transition: { duration: 0.5, ease: "easeOut" }
   },
-};
+}
