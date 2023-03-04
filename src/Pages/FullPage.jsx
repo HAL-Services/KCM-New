@@ -1,6 +1,5 @@
 import NavBar from "../components/NavBar";
 import LandingPage from "../Pages/LandingPage";
-import MarqueeElement from "../components/Marquee";
 import Section2 from "../Pages/Section2";
 import Section3 from "../Pages/Section3";
 import Testimonial from "../Pages/TestimonialPage";
