@@ -29,10 +29,7 @@ const NavBar = (props) => {
   };
 
   return (
-    <nav
-      className="navbar"
-      id="navbar"
-    >
+    <nav className="navbar"id="navbar">
       <motion.div className="burger-menu">
         <motion.svg
           viewBox="0 0 3.5 3.5"
@@ -173,12 +170,6 @@ const NavBar = (props) => {
           <nav>
             <ul>
               <li>
-                <Link to="/service">
-                  {props.titles[0]}
-                  <span></span>
-                </Link>
-              </li>
-              <li>
                 <a
                   href="/"
                   onClick={(e) => {
@@ -236,10 +227,6 @@ const NavBar = (props) => {
             <nav>
               <ul className="titlestwo">
                 <li>
-                  <Link to="/service">{props.titles[0]}</Link>
-                  <span></span>
-                </li>
-                <li>
                   <Link to="/record">{props.titles[1]}</Link>
                   <span></span>
                 </li>
@@ -251,20 +238,11 @@ const NavBar = (props) => {
             </nav>
           </div>
         )}
+       <button className="button-6">Quick Book</button>
+       <button className="button-6">Request A Quote</button>
       </div>
-      <div className="login-btn">
-        {currentUser && props.titles.length === 4 ? (
-          <span style={{ color: "black", fontSize: "1rem" }}>
-            <Link to="/settings">Welcome, {currentUser.toUpperCase()}</Link>
-          </span>
-        ) : props.titles.length === 3 ? (
-          <button onClick={handleClick}>LOGOUT</button>
-        ) : (
-          <Link to="/login">
-            <button>LOGIN</button>
-          </Link>
-        )}
-      </div>
+      
+
     </nav>
   );
 };

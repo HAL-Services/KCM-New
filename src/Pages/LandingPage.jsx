@@ -50,8 +50,8 @@ export default function LandingPage() {
               <span>EXPERTS</span>
             </h3>
           </h2>
-
         </div>
+
       </div>
     </div>
   );
