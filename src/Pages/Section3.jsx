@@ -6,6 +6,7 @@ import { GiMechanicGarage } from "react-icons/gi";
 import { FcBusinessman } from "react-icons/fc";
 import "../styles/Section3.styles.scss";
 import { FaHandHoldingUsd } from "react-icons/fa";
+import HeadingText from "../components/HeadingText";
 export default function Section3() {
   const imageData = [
     {
@@ -53,21 +54,7 @@ export default function Section3() {
   return (
     <>
       <div className="Section3how_we_work">
-        <motion.h1
-          
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.5, ease: "linear" }}
-          style={{ color: "black", fontSize: "var(--big-font-size)" }}
-        >
-          <h2 className="about_title">How We
-          <h3 className="experience">Work
-            <span>WORK</span>
-          </h3>
-        </h2>
-          
-        </motion.h1>
+        <HeadingText text1="How We" text2="Work" style="dark" />
         <div className="Section3wrapper">
           {CardData.map((ele) => {
             return (
@@ -96,9 +83,7 @@ export default function Section3() {
       </div>
       <div className="benefits-box">
         <div className="benefits">
-          <h1 style={{ fontSize: "var(--big-font-size)", color: "black" }}>
-            Kcm Benefits
-          </h1>
+          <HeadingText text1="KCM" text2="Benefits" style="light" />
           <div className="benefits_container">
             <span className="benefits_box">
               <span className="benefits_box_icon">
@@ -139,25 +124,7 @@ export default function Section3() {
           </div>
         </div>
       </div>
-      {/* <motion.div className="curated" ref={carousel}>
-        <h1>Curated Custom Services</h1>
-        <motion.div
-          className="curated_inner"
-          drag="x"
-          dragConstraints={{ right: 0, left: -width }}
-        >
-          {imageData.map((e, index) => {
-            return (
-              <div className="curated_box" key={index}>
-                <div className="curated_box_image">
-                  <img src={e.link} alt="" />
-                </div>
-                <span className="curated_box_content">{e.body}</span>
-              </div>
-            );
-          })}
-        </motion.div>
-      </motion.div> */}
+
     </>
   );
 }

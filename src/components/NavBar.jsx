@@ -29,7 +29,7 @@ const NavBar = (props) => {
   };
 
   return (
-    <motion.nav
+    <nav
       className="navbar"
       id="navbar"
     >
@@ -265,7 +265,7 @@ const NavBar = (props) => {
           </Link>
         )}
       </div>
-    </motion.nav>
+    </nav>
   );
 };
 

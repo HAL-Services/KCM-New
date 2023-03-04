@@ -1,0 +1,112 @@
+// .Section2PageContainer {
+//   margin-top: 100px;
+// }
+
+// .Section2PageSection {
+//   margin-top: 150px;
+//   background-color: rgb(0, 0, 0);
+//   max-height: 600px;
+//   color: white;
+// }
+
+// .Section2PageText {
+//   margin-left: 1em;
+//   font-family: Poppins;
+//   font-size: 2em;
+//   padding: 5px;
+//   font-weight: bold;
+// }
+
+// .Section2PageText1 {
+//   font-family: Poppins;
+//   font-size: 2em;
+//   padding: 20px;
+//   margin-left: 20px;
+// }
+
+// .about_title1 {
+//   overflow: hidden;
+//   max-width: 1600px;
+//   user-select: none;
+//   margin: 0;
+//   min-height: 200px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-size: var(--big-font-size);
+//   color: white;
+// }
+
+// .experience1 {
+//   margin-left: 0.2em;
+//   position: relative;
+//   display: inline-block;
+//   z-index: 100;
+//   color: #236DFF;
+//   font-weight: 600;
+// }
+// .experience1 span {
+//   position: absolute;
+//   left: -3px;
+//   color: #0F1923;
+//   font-size: 1.8em;
+//   z-index: -20;
+//   font-weight: 800;
+//   top: -40px;
+//   max-width: 600px;
+// }
+
+
+// @media only screen and (max-width: 1100px) {
+//   .Section2PageText {
+//     margin-left: 0px;
+//     margin-right: 0px;
+//     text-align: center;
+//     font-size: 2.3rem;
+//   }
+
+//   .Section2PageText1 {
+//     padding: 15px;
+//     font-size: 1.8rem;
+//     margin-left: 0px;
+//   }
+
+//   .waveImage {
+//     margin-top: 0px !important;
+//   }
+// }
+.section2-container {
+  background-color: #060f1c;
+  .about_title {
+    overflow: hidden;
+    max-width: 1600px;
+    user-select: none;
+    margin: 0;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--big-font-size);
+    color: white;
+
+    .experience {
+      margin-left: 0.2em;
+      position: relative;
+      display: inline-block;
+      z-index: 100;
+      color: #236DFF;
+      font-weight: 600;
+    }
+
+    span {
+      position: absolute;
+      left: -3px;
+      color: #0F1923;
+      font-size: 1.8em;
+      z-index: -20;
+      font-weight: 800;
+      top: -40px;
+      max-width: 600px;
+    }
+  }
+}

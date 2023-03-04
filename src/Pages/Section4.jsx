@@ -1,3 +1,4 @@
+import HeadingText from "../components/HeadingText";
 import Card from "../components/HowWeWorkCard";
 
 // import styles
@@ -6,27 +7,21 @@ import "../styles/Section4.scss";
 const Section4 = () => {
   return (
     <div className="section4_container">
-      <div className="section4_timings">
-        <h1
-          className="section4_title"
-          style={{ color: "black", fontSize: "var(--big-font-size)" }}
-        >
-          Timings
-        </h1>
-        <Card
-          title="Opening Hours"
-          body={
-            "Mon:	9:30 am – 6:30 pm \n\n Tue:	 9:30 am – 6:30 pm \n\n Wed:	9:30 am – 6:30 pm \n\n Thu: 9:30 am – 6:30 pm \n\n Fri:	9:30 am – 6:30 pm \n\n Sat: 	9:30 am – 6:30 pm \n\n Sun:	9:30am - 6:30pm"
-          }
-        />
+      <div className="text">
+        <HeadingText text1="Work" text2="Hours" styleProp={"dark"} />
+      </div>
+      <div className="timings">
+        <div className="section4_timings">
+          <Card
+            title="Opening Hours"
+            body={
+              "Mon:	9:30 am – 6:30 pm \n\n Tue:	 9:30 am – 6:30 pm \n\n Wed:	9:30 am – 6:30 pm \n\n Thu: 9:30 am – 6:30 pm \n\n Fri:	9:30 am – 6:30 pm \n\n Sat: 	9:30 am – 6:30 pm \n\n Sun:	9:30am - 6:30pm"
+            }
+          />
+        </div>
       </div>
       <div className="section4_googlemap">
-        <h1
-          className="section4_title"
-          style={{ color: "black", fontSize: "var(--big-font-size)" }}
-        >
-          LOCATE US
-        </h1>
+        <HeadingText text1="Locate" text2="Us" style="light" />
         <a
           href="https://www.google.com/maps/dir//KCM+AUTOMOBILES/@28.4887933,76.9875978,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390d183000000021:0x8d473674bdf87c83!2m2!1d77.0576381!2d28.4888112"
           target="_blank"
