@@ -8,7 +8,8 @@ export default function ReadMore({children}) {
     return (
         <div className="read-more-component">
             {isRead?children:""}
-            <button className="button-41"  onClick={toggle}>{isRead?"Close":"View More"}</button>
+            <button className="button-41"  style={{color:`${isRead?"coral":"green"}`}}
+            onClick={toggle}>{isRead?"Close":"View More"}</button>
         </div>
     )
 }
