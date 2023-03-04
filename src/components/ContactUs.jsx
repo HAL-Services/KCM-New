@@ -10,6 +10,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
+import HeadingText from "./HeadingText";
 
 const ContactUs = () => {
   function handleSuccess() {
@@ -33,7 +34,7 @@ const ContactUs = () => {
         "v8rfW3JruoYuZK6VC"
       )
       .then(
-        (result) => {},
+        (result) => { },
         (error) => {
           console.log(error.text);
         }
@@ -54,7 +55,7 @@ const ContactUs = () => {
         draggable
         pauseOnHover
       />
-      <h2 className="contact_main_title">Contact Us</h2>
+      <HeadingText text1="Contact" text2="Us" style="light" />
       <span className="contact_main_subtitle">Get in Touch</span>
       <div className="contact_container grid">
         <motion.div className="contact_leftside">

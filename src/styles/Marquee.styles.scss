@@ -1,20 +1,28 @@
-.MarqueeImage {
-  height: 90px;
-  z-index: -100;
-}
-.MarqueeDiv {
-  padding: 20px;
-  margin-right: 100px;
-  cursor: pointer;
-}
-@media screen and (max-width: 900px) {
-  .MarqueeImage {
-    height: 100px;
-    width: 60px;
-  }
-  .MarqueeDiv {
-    padding: 12px;
-    margin-right: 30px;
-  }
-}
+.MarqueeContainer {
+  background-color:#cccccc;
 
+  .MarqueeImage {
+    height: 150px;
+    background-color: #cccccc;
+  }
+
+  .MarqueeDiv {
+    padding: 20px;
+    margin-right: 100px;
+    background-color: #cccccc;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 900px) {
+    .MarqueeImage {
+      height: 100px;
+      width: 60px;
+    }
+
+    .MarqueeDiv {
+      padding: 12px;
+      margin-right: 30px;
+    }
+  }
+
+}
