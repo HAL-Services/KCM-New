@@ -17,10 +17,15 @@ function ProductImage({ value, onExpand, removeClick }) {
 }
 
 export default function ExpertisePage() {
-  const [serviceImage, setServiceImage] = useState(ExpertiseImagedata[0]);
+  const [serviceImage, setServiceImage] = useState(ExpertiseImagedata[2]);
   const [serviceImageId, setServiceImageId] = useState([
-    ExpertiseImagedata[2],
+    ExpertiseImagedata[1],
+    ExpertiseImagedata[0],
     ExpertiseImagedata[3],
+    ExpertiseImagedata[4],
+    ExpertiseImagedata[5],
+    ExpertiseImagedata[6],
+    ExpertiseImagedata[7],
   ]);
   const [removeClick, setRemoveClick] = useState(true);
   const [getWidth, setGetWidth] = useState(0);

@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 
 import "../styles/Testimonial.styles.css";
 // import required modules
-import speakGif from "../Assets/Images/speakGif.gif";
+
 
 import { FaQuoteLeft, FaQuoteRight, FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
