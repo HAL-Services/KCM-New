@@ -1,9 +1,5 @@
 .section4 {
   &_container {
-    .text{
-      width:100%;
-      
-    }
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -14,7 +10,9 @@
       height: auto;
     }
   }
-
+  &_main_title{
+    width: 100%;
+  }
   &_googlemap {
     height: auto;
     width: 100%;

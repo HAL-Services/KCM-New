@@ -34,7 +34,7 @@ const ContactUs = () => {
         "v8rfW3JruoYuZK6VC"
       )
       .then(
-        (result) => { },
+        (result) => {},
         (error) => {
           console.log(error.text);
         }
@@ -55,7 +55,7 @@ const ContactUs = () => {
         draggable
         pauseOnHover
       />
-      <HeadingText text1="Contact" text2="Us" style="light" />
+      <HeadingText text1="Contact" text2="Us" style="dark" />
       <span className="contact_main_subtitle">Get in Touch</span>
       <div className="contact_container grid">
         <motion.div className="contact_leftside">

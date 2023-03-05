@@ -2,12 +2,8 @@
   &_section {
 
     width: 100%;
-    padding: 5rem;
-    background-color: whitesmoke;
-
-    @media screen and (max-width:1200px) {
-      padding: 0px;
-    }
+    padding:5rem;
+    background-color: var(--new-color-dark);
   }
 
   &_container {
@@ -42,6 +38,7 @@
     display: block;
     text-align: center;
     margin-bottom: var(--mb-2);
+    color: var(--new-color-blue);
   }
 
   &_icon {
@@ -65,29 +62,26 @@
 
     a {
       text-decoration: none;
-      color: var(--first-color-lighter);
+      color: var(--new-color-dark);
+      font-weight: 600;
       transition: 200ms ease-out;
 
       &:hover {
-        color: var(--first-color-alt);
+        color: var(--new-color-gray);
       }
     }
   }
 
   &_leftside {
-    background-color: var(--first-color);
+    background-color: var(--new-color-blue);
     padding: 2rem;
     border-radius: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.267) 0px 10px 20px,
-      rgba(0, 0, 0, 0.366) 0px 6px 6px;
   }
 
   &_rightside {
+    background-color: var(--default-color);
     padding: 2rem;
     border-radius: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-      rgba(0, 0, 0, 0.23) 0px 6px 6px;
-
     @media screen and (min-width: 1024px) {
       width: 460px;
     }
@@ -116,25 +110,27 @@
 
   &__content {
     border-radius: 0.5rem;
-    box-shadow: var(--first-color-alt) 0px 1px 2px 0px,
-      var(--first-color-lighter) 0px 1px 3px 1px;
+    box-shadow: var(--new-color-blue) 0px 1px 2px 0px,
+      var(--new-color-blue) 0px 1px 3px 1px;
     padding: 0.75rem 1rem 0.25rem;
   }
 
   &_btn_flex {
     display: inline-flex;
     align-items: center;
-    border: 1px solid var(--first-color);
-    color: var(--first-color);
+    border: 1px solid var(--new-color-blue);
+    background-color: white;
+    color: var(--new-color-dark-gray);
     text-decoration: none;
     padding: 1rem;
-    border-radius: 0.5rem;
+    // border-radius: 0.5rem;
     font-size: var(--h2-font-size);
     transition: 0.4s;
 
     &:hover {
+      cursor: pointer;
       color: var(--default-color);
-      background-color: var(--first-color);
+      background-color: var(--new-color-blue);
     }
   }
 
