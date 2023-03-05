@@ -128,39 +128,15 @@
 }
 .writeReview {
   width: 100%;
-  margin-top: 20px;
   padding: 1rem;
   font-size: 1.5rem;
   text-align: center;
   font-weight: bold;
-  background-color: white;
-}
-.review-link {
-  font-size: var(--h2-font-size);
-  background-color: var(--default-color);
-  border: 0px;
-  color: var(--first-color);
-  transition: 0.4s;
-  margin-left: 10px;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-family: "Josefin Sans", sans-serif;
-  background: linear-gradient(to right, #095fab 10%, #25abe8 50%, #57d75b 60%);
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
-  color: #fff;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 1.5s linear infinite;
-  display: inline-block;
-}
-.review-link :hover {
-  cursor: pointer;
-  background-color: var(--first-color);
-  color: var(--default-color);
+  background-color: whitesmoke;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
 }
 @media only screen and (max-width: 1100px) {
   .testimonialHeading img {
@@ -180,4 +156,48 @@
     width: 100%;
     font-size: 1.2rem;
   }
+}
+.writeReview .button-6 {
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  font-weight: bold;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  margin-left: 10px;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-6:hover,
+.button-6:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button-6:hover {
+  transform: translateY(-1px);
+}
+
+.button-6:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
 }
