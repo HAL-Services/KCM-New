@@ -1,9 +1,13 @@
 .contact {
   &_section {
-    // height: 100vh;
     width: 100%;
     padding:5rem;
     background-color: whitesmoke;
+    @media screen and (max-width:1200px) {
+      padding:0px;
+      margin-bottom: 40px;
+      
+    }
   }
   &_container {
     display: grid;
@@ -12,7 +16,8 @@
     margin-left: auto;
     row-gap: 3rem;
     @media screen and (min-width: 568px) {
-      grid-template-columns: repeat(2, 1fr);
+      display: flex;
+
     }
     @media screen and (max-width: 800px) {
       margin-left: var(--mb-1-5);
