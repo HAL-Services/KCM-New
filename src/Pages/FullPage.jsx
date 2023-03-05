@@ -22,7 +22,7 @@ export default function FullPage() {
       <AboutUs />
       <Testimonial />
       <Section4 />
-      {/* <ContactUs /> */}
+      <ContactUs />
       <Footer />
     </div>
   );
