@@ -102,9 +102,9 @@ export default function Testimonial() {
         })}
       </Swiper>
       <div className="writeReview">
-        Liked our work. Leave us a feedback.
+        Liked our work. Leave us a feedback
         <Link className="review-link" to="/write">
-          Write Review
+         <button className="button-6">Write Review</button>
         </Link>
       </div>
     </div>

@@ -42,8 +42,6 @@ export default function LandingPage() {
         </motion.a>
       </motion.span>
       <div className="hero-container">
-        <div className="overlay"></div>
-        <video className="video" src={MobileBackground} autoPlay muted />
         <div className="content">
           <h2 className="about_title">The German Car
             <h3 className="experience">Experts
@@ -51,7 +49,11 @@ export default function LandingPage() {
             </h3>
           </h2>
         </div>
-
+        <video className="video" src={MobileBackground} autoPlay muted />
+      </div>
+      <div className="btn-container">
+        <button className="button-6">Quick Book</button>
+        <button className="button-6">Request A Quote</button>
       </div>
     </div>
   );

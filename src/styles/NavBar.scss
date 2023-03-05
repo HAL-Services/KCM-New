@@ -11,6 +11,7 @@
 
   @media screen and (max-width: 1200px) {
     width: 100vw;
+    height:70px;
   }
 
   z-index: 100;
@@ -84,7 +85,7 @@
   align-items: center;
   width:80%;
   justify-content: center;
-
+z-index: 2000;
   nav {
     ul {
       list-style-type: none;

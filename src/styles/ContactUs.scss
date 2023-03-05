@@ -1,39 +1,46 @@
 .contact {
   &_section {
-    // height: 100vh;
+
     width: 100%;
     padding:5rem;
     background-color: var(--new-color-dark);
   }
+
   &_container {
     display: grid;
     max-width: 800px;
     margin-right: auto;
     margin-left: auto;
     row-gap: 3rem;
+
     @media screen and (min-width: 568px) {
       grid-template-columns: repeat(2, 1fr);
     }
+
     @media screen and (max-width: 800px) {
       margin-left: var(--mb-1-5);
       margin-right: var(--mb-1-5);
     }
   }
+
   &_info {
     display: flex;
     margin-bottom: var(--mb-3);
     color: var(--default-color);
   }
+
   &_main_title {
     font-size: var(--big-font-size);
     text-align: center;
   }
+
   &_main_subtitle {
     display: block;
     text-align: center;
     margin-bottom: var(--mb-2);
     color: var(--new-color-blue);
   }
+
   &_icon {
     font-size: var(--h2-font-size);
     background-color: rgba(255, 255, 255, 0.159);
@@ -44,27 +51,33 @@
     border-radius: 50%;
     margin-right: var(--mb-1);
   }
+
   &_title {
     font-size: var(--h2-font-size);
     font-weight: var(--font-bold);
   }
+
   &_subtitle {
     color: var(--first-color-lighter);
+
     a {
       text-decoration: none;
       color: var(--new-color-dark);
       font-weight: 600;
       transition: 200ms ease-out;
+
       &:hover {
         color: var(--new-color-gray);
       }
     }
   }
+
   &_leftside {
     background-color: var(--new-color-blue);
     padding: 2rem;
     border-radius: 2rem;
   }
+
   &_rightside {
     background-color: var(--default-color);
     padding: 2rem;
@@ -73,6 +86,7 @@
       width: 460px;
     }
   }
+
   &__input {
     width: 100%;
     background-color: var(--input-color);
@@ -83,20 +97,24 @@
     outline: none;
     padding: 0.25rem 0.5rem 0.5rem 0;
   }
+
   &__inputs {
     @media screen and (min-width: 1024px) {
       grid-template-columns: repeat(2, 1fr);
     }
   }
+
   &__label {
     font-size: var(--smaller-font-size);
   }
+
   &__content {
     border-radius: 0.5rem;
     box-shadow: var(--new-color-blue) 0px 1px 2px 0px,
       var(--new-color-blue) 0px 1px 3px 1px;
     padding: 0.75rem 1rem 0.25rem;
   }
+
   &_btn_flex {
     display: inline-flex;
     align-items: center;
@@ -108,12 +126,14 @@
     // border-radius: 0.5rem;
     font-size: var(--h2-font-size);
     transition: 0.4s;
+
     &:hover {
       cursor: pointer;
       color: var(--default-color);
       background-color: var(--new-color-blue);
     }
   }
+
   &_btn_icon {
     display: flex;
     align-items: center;
@@ -122,6 +142,7 @@
     margin: 0 0.5rem;
   }
 }
+
 .grid {
   display: grid;
   gap: 1.5rem;
