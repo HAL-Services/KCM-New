@@ -2,14 +2,19 @@
   padding: 0;
   box-sizing: border-box;
   margin: 0;
+
 }
+
+
 a {
   text-decoration: none;
   color: black;
 }
+
 button {
   cursor: pointer;
 }
+
 :root {
   --hue-color: 243;
   --first-color: hsl(var(--hue-color), 80%, 68%);
@@ -48,6 +53,12 @@ button {
 body {
   font-family: 'Manrope', sans-serif;
 }
+
 body::-webkit-scrollbar {
-  width: 0px; /* width of the entire scrollbar */
+  width: 0px;
+  /* width of the entire scrollbar */
+  display: none !important;
+  width: 0px;
+  background: transparent;
+  /* make scrollbar transparent */
 }

@@ -5,24 +5,31 @@
 
   .video {
     width: 100%;
-    // height:100%;
     margin-top: -20vh;
     object-fit: cover;
-    // position: absolute;
     pointer-events: none;
     z-index: -100;
+    @media screen and (max-width:1200px) {
+      margin-top: -10vh;
+      height:100%;
+    }
+    @media screen and (max-width:800px) {
+      margin-top: -2.3vh;
+      height:320px;
+
+    }
   }
 
- 
+  @media screen and (max-width:1200px) {
+    height:300px;
+  }
+
   .content {
     width: 100%;
-    
-    // align-items: center;
     position: absolute;
-    top:0;
-    margin-top:6rem;
+    top: 0;
+    margin-top: 6rem;
     .about_title {
-      // overflow: hidden;
       max-width: 1600px;
       user-select: none;
       margin: 0;
@@ -32,8 +39,11 @@
       align-items: center;
       font-size: var(--big-font-size);
       color: #236DFF;
-      
-      
+      @media screen and (max-width:1200px) {
+        margin-top: -5vh;
+        min-height:100px;
+      }
+
       .experience {
         margin-left: 0.2em;
         position: relative;
@@ -41,8 +51,11 @@
         color: #0F1923;
         z-index: 100;
         font-weight: 800;
+        @media screen and (max-width:1200px) {
+          z-index:1;
+        }
       }
-      
+
       span {
         position: absolute;
         left: -8px;
@@ -51,7 +64,6 @@
         z-index: -20;
         font-weight: 400;
         top: -40px;
-        
       }
     }
   }
