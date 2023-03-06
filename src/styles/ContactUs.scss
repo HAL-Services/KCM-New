@@ -2,7 +2,7 @@
   &_section {
 
     width: 100%;
-    padding-bottom: 10px;
+    padding-bottom: 3rem;
     background-color: var(--new-color-dark);
   }
 
@@ -37,6 +37,7 @@
   &_main_subtitle {
     display: block;
     text-align: center;
+    font-size: 2rem;
     margin-bottom: var(--mb-2);
     color: white;
   }
@@ -79,7 +80,7 @@
   }
 
   &_rightside {
-    background-color: whitesmoke;
+    background-color: #0b1523;
     padding: 2rem;
     border-radius: 2rem;
     @media screen and (max-width: 1200px) {
@@ -113,14 +114,15 @@
     box-shadow: var(--new-color-blue) 0px 1px 2px 0px,
       var(--new-color-blue) 0px 1px 3px 1px;
     padding: 0.75rem 1rem 0.25rem;
+    color:whitesmoke;
   }
 
   &_btn_flex {
     display: inline-flex;
     align-items: center;
     border: 1px solid var(--new-color-blue);
-    background-color: white;
-    color: var(--new-color-dark-gray);
+    background-color: transparent;
+    color: whitesmoke;
     text-decoration: none;
     padding: 1rem;
     // border-radius: 0.5rem;
