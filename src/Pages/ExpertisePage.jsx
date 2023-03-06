@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import ExpertiseImagedata from "../OfflineAPI/ExpertiseImagesData";
 import "../styles/ExpertisePage.styles.scss";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
@@ -8,19 +8,16 @@ import {
   BsFillArrowRightCircleFill,
 } from "react-icons/bs";
 
-function ProductImage({ value, onExpand, setValue }) {
-  useEffect(() => {
-    setValue(value);
-  }, []);
+function ProductImage({ value, onExpand, removeClick }) {
+  // useEffect(() => {
+  //   setValue(value);
+  // }, []);
 
   return (
     <motion.img
       src={value.url}
       alt=""
-      onClick={() => {
-        onExpand(value);
-        console.log(value);
-      }}
+      onClick={() => (removeClick ? null : onExpand(value))}
       onChange={() => console.log(value)}
       className="related-product-image"
       layoutId={`product-${value.id}`}
@@ -39,20 +36,20 @@ export default function ExpertisePage() {
     ExpertiseImagedata[6],
     ExpertiseImagedata[7],
   ]);
-  const [currValue, setValue] = useState(0);
-  // const [getWidth, setGetWidth] = useState(0);
-  // const setDimension = () => {
-  //   setGetWidth(window.innerWidth);
-  //   if (getWidth <= 765) setRemoveClick(false);
-  //   else setRemoveClick(true);
-  // };
-  // useEffect(() => {
-  //   window.addEventListener("resize", setDimension);
+  const [removeClick, setRemoveClick] = useState(0);
+  const [getWidth, setGetWidth] = useState(0);
+  const setDimension = useCallback(() => {
+    setGetWidth(window.innerWidth);
+    if (getWidth <= 765) setRemoveClick(false);
+    else setRemoveClick(true);
+  }, []);
+  useEffect(() => {
+    window.addEventListener("resize", setDimension);
 
-  //   return () => {
-  //     window.removeEventListener("resize", setDimension);
-  //   };
-  // }, [getWidth]);
+    return () => {
+      window.removeEventListener("resize", setDimension);
+    };
+  }, [getWidth, setDimension]);
 
   function setAsPrimary(id) {
     const currentProductId = serviceImage;
@@ -116,7 +113,7 @@ export default function ExpertisePage() {
                     key={element.id}
                     onExpand={setAsPrimary}
                     title={element.title}
-                    setValue={setValue}
+                    removeClick={removeClick}
                   />
                 );
               })}
