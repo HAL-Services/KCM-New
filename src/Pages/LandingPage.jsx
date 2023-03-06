@@ -49,7 +49,17 @@ export default function LandingPage() {
             </h3>
           </h2>
         </div>
-        <video className="video" src={MobileBackground} autoPlay muted />
+        <div dangerouslySetInnerHTML={{
+          __html: `
+        <video
+          muted="true"
+          autoplay
+          playsinline
+          src="${MobileBackground}"
+          class="video"
+        />,
+      ` }}></div>
+        {/* <video className="video" src={MobileBackground} autoPlay muted /> */}
       </div>
       <div className="btn-container">
         <button className="button-6">Quick Book</button>
