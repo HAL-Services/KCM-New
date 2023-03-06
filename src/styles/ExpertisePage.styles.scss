@@ -113,7 +113,7 @@
 }
 
 @media (width<=765px){
-  .primary-container{
+  .primary-box-arrows{
     display: none;
   }
   .expertise-container{
@@ -129,5 +129,8 @@
     &::-webkit-scrollbar {
       display: none;
     }
+  }
+  .primary-box-icons{
+    display: none;
   }
 }

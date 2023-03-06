@@ -9,11 +9,19 @@ import {
 } from "react-icons/bs";
 
 function ProductImage({ value, onExpand, setValue }) {
+  useEffect(() => {
+    setValue(value);
+  }, []);
+
   return (
     <motion.img
       src={value.url}
       alt=""
-      onClick={() => onExpand(value)}
+      onClick={() => {
+        onExpand(value);
+        console.log(value);
+      }}
+      onChange={() => console.log(value)}
       className="related-product-image"
       layoutId={`product-${value.id}`}
     />
@@ -62,12 +70,12 @@ export default function ExpertisePage() {
       <div className="skills">
         <AnimateSharedLayout>
           <div className="primary-box-arrows">
-            <span className="primary-box-icons">
+            {/*<span className="primary-box-icons">
               <BsFillArrowLeftCircleFill
                 className="primary-box-icons-hover"
                 onClick={() => setAsPrimary(currValue)}
               />
-            </span>
+            </span>*/}
             <div className="primary-container">
               <AnimatePresence>
                 <div className="primary-container-image">
@@ -92,11 +100,14 @@ export default function ExpertisePage() {
                 </motion.div>
               </AnimatePresence>
             </div>
-            <span className="primary-box-icons">
-              <BsFillArrowRightCircleFill className="primary-box-icons-hover" />
-            </span>
           </div>
           <aside className="product-gallery">
+            {/* <span className="primary-box-icons">
+              <BsFillArrowRightCircleFill
+                className="primary-box-icons-hover"
+                onClick={() => setAsPrimary()}
+              />
+            </span> */}
             <AnimatePresence>
               {serviceImageId.map((element) => {
                 return (
