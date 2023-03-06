@@ -119,16 +119,20 @@
     display: none;
   }
   .expertise-container{
-    padding: 2rem;
+    padding: 0px;
+    padding-bottom: 40px;
   }
   .skills{
-    height: 300px;
+    height: 400px;
+    padding:0px;
   }
   
   .product-gallery{
     // flex-direction: row;
+    padding: 0px;
     width: 100%;
-    // height: 70%;
+    min-height: 70%;
+
     overflow: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
