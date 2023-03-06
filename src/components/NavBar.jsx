@@ -20,7 +20,12 @@ const NavBar = (props) => {
   const { dispatch } = React.useContext(Context);
   useEffect(() => {
     if (user) setCurrentUser(user.username.split(" ")[0]);
-  }, [user]);
+    // if(isOpen)
+    // else if(!isOpen)document.body.style.overflow = 'unset';
+    isOpen
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "unset");
+  }, [user, isOpen]);
 
   const handleClick = () => {
     dispatch({ type: "LOGOUT" });
@@ -29,7 +34,7 @@ const NavBar = (props) => {
   };
 
   return (
-    <nav className="navbar"id="navbar">
+    <nav className="navbar" id="navbar">
       <motion.div className="burger-menu">
         <motion.svg
           viewBox="0 0 3.5 3.5"
@@ -90,14 +95,14 @@ const NavBar = (props) => {
             exit="exit"
             onClick={() => setOpen(!isOpen)}
           >
-            <motion.span
+            {/* <motion.span
               variants={navbarSideTitleAnim}
               onClick={() => setOpen(!isOpen)}
             >
               <Link to="/service" className="navbar_titles">
                 Services
               </Link>
-            </motion.span>
+            </motion.span> */}
             <motion.span
               variants={navbarSideTitleAnim}
               onClick={() => setOpen(!isOpen)}
@@ -238,11 +243,9 @@ const NavBar = (props) => {
             </nav>
           </div>
         )}
-       <button className="button-6">Quick Book</button>
-       <button className="button-6">Request A Quote</button>
+        <button className="button-6">Quick Book</button>
+        <button className="button-6">Request A Quote</button>
       </div>
-      
-
     </nav>
   );
 };
