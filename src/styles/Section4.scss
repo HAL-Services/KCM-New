@@ -1,4 +1,5 @@
 .section4 {
+
   &_container {
     width: 100%;
     display: flex;
@@ -48,6 +49,7 @@
 }
 
 .section4_imageContainer {
+  padding-bottom: 100px;
   width: 100%;
   display: flex;
   justify-content: center;
