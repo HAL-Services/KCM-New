@@ -43,8 +43,10 @@ export default function LandingPage() {
       </motion.span>
       <div className="hero-container">
         <div className="content">
-          <h2 className="about_title">The German Car
-            <h3 className="experience">Experts
+          <h2 className="about_title">
+            The German Car
+            <h3 className="experience">
+              Experts
               <span>EXPERTS</span>
             </h3>
           </h2>

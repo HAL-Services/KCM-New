@@ -6,6 +6,7 @@
   height: 90px;
   width: 100%;
   z-index: 200;
+  overflow: hidden;
   background-color: #a8a7ac;
   background: linear-gradient(to right, #cacdd3, #d0ced5,#cfcdd3,#d4d2d8,#d4d2d8,#ded6d4, #d5d2d6,#d0ced5);
 
@@ -23,19 +24,19 @@
 
   &_sidemenu {
     width: 100%;
-    overflow: hidden;
+    overflow: hidden !important;
     background: linear-gradient(to bottom,
-        var(--first-color),
-        var(--first-color-alt));
-    position: absolute;
+        var(--new-color-blue),
+        var(--new-color-dark));
+    position: fixed !important;
     left: 0;
     top: 0;
-    bottom: 0;
+    height: 100vh;
     text-align: center;
     display: grid;
     grid-template-rows: repeat(4, minmax(6rem, 4rem));
     align-items: center;
-    z-index: 5;
+    z-index: 200;
     padding: 6rem 0rem;
 
     span {
@@ -64,7 +65,7 @@
 
 .burger-menu {
   display: none;
-  z-index: 6;
+  z-index: 200;
 }
 
 .logo {
