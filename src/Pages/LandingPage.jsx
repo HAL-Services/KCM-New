@@ -1,7 +1,12 @@
 import "../styles/LandingPage.scss";
 // Importing animation
 import { motion } from "framer-motion";
-import { landingAnim, titleAnim, rightAnim } from "../animation";
+import {
+  landingAnim,
+  titleAnim,
+  rightAnim,
+  landingTitleAnim,
+} from "../animation";
 import MobileBackground from "../Assets/Images/loadvideo.mp4";
 import { FaArrowCircleUp } from "react-icons/fa";
 import QuickBookModal from "../components/QuickBookModal";
@@ -42,7 +47,12 @@ export default function LandingPage() {
         </motion.a>
       </motion.span>
       <div className="hero-container">
-        <div className="content">
+        <motion.div
+          className="content"
+          variants={landingTitleAnim}
+          initial="hidden"
+          animate="show"
+        >
           <h2 className="about_title">
             The German Car
             <h3 className="experience">
@@ -50,9 +60,10 @@ export default function LandingPage() {
               <span>EXPERTS</span>
             </h3>
           </h2>
-        </div>
-        <div dangerouslySetInnerHTML={{
-          __html: `
+        </motion.div>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
         <video
           muted="true"
           autoplay
@@ -60,7 +71,9 @@ export default function LandingPage() {
           src="${MobileBackground}"
           class="video"
         />,
-      ` }}></div>
+      `,
+          }}
+        ></div>
         {/* <video className="video" src={MobileBackground} autoPlay muted /> */}
       </div>
       <div className="btn-container">
