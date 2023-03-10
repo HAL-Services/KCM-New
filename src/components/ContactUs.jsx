@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useReducer, useRef } from "react";
 import emailjs from "emailjs-com";
 
 // Import animation
@@ -25,7 +25,12 @@ const ContactUs = () => {
   }
   function sendEmail(e) {
     e.preventDefault();
-    console.log(e.target);
+    // const data = {
+    //   email: e.target.email.length > 0 ? e.target.email.value : undefined,
+    //   name: e.target.name.length > 0 ? e.target.name.value : undefined,
+    //   query: e.target.query.length > 0 ? e.target.query.value : undefined,
+    //   message: e.target.query.length > 0 ? e.target.message.value : undefined,
+    // }
     emailjs
       .sendForm(
         "service_5xhuphl",
@@ -34,7 +39,7 @@ const ContactUs = () => {
         "v8rfW3JruoYuZK6VC"
       )
       .then(
-        (result) => {},
+        (result) => { console.log(result) },
         (error) => {
           console.log(error.text);
         }
@@ -138,7 +143,7 @@ const ContactUs = () => {
             className="contact__content"
           >
             <label className="contact__label">Query</label>
-            <input type="text" className="contact__input" name="subject" />
+            <input type="text" className="contact__input" name="query" />
           </motion.div>
           <motion.div
             whileTap={{ scale: 1.1 }}

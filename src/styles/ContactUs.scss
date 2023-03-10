@@ -97,6 +97,12 @@
     border: none;
     outline: none;
     padding: 0.25rem 0.5rem 0.5rem 0;
+    // &::-webkit-autofill,
+    // &::-webkit-autofill:active,
+    // &::-webkit-autofill:focus,
+    // &::-webkit-autofill:hover{
+    //   background-color: transparent !important;
+    // }
   }
 
   &__inputs {
@@ -148,4 +154,11 @@
 .grid {
   display: grid;
   gap: 1.5rem;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #0B1523 inset !important;
+    -webkit-text-fill-color: white !important;
 }
