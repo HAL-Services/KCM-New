@@ -20,11 +20,18 @@ const NavBar = (props) => {
   const { dispatch } = React.useContext(Context);
   useEffect(() => {
     if (user) setCurrentUser(user.username.split(" ")[0]);
-    // if(isOpen)
-    // else if(!isOpen)document.body.style.overflow = 'unset';
-    isOpen
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "unset");
+    // isOpen
+    //   ? (document.body.style.overflow = "hidden")
+    //   : (document.body.style.overflow = "unset");
+    if (isOpen) {
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${window.scrollY}px`;
+    } else {
+      const scrollY = document.body.style.top;
+      document.body.style.position = '';
+      document.body.style.top = '';
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    }
   }, [user, isOpen]);
 
   const handleClick = () => {
