@@ -5,9 +5,13 @@ import { motion } from "framer-motion";
 import { landingTitleAnim } from "../animation";
 import { FaArrowCircleUp } from "react-icons/fa";
 import LandingPageVideo from "../components/landpageVideo/LandingPageVideo";
+import { useState } from "react";
+import QuickBookModal from "../components/QuickBookModal";
+import GetAQuote from "../components/GetAQuote";
 import QuickBookModal from "../components/QuickBookModal";
 import GetAQuote from "../components/GetAQuote";
 export default function LandingPage() {
+  const [isLoading,setIsLoading]=useState(false)
   const [showModal, setShowModal] = useState(false);
 
   return (
