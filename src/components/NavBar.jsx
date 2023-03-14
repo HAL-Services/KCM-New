@@ -192,7 +192,7 @@ const NavBar = (props) => {
       </AnimatePresence>
 
       <div className="logo">
-        <Link to="/">KCM</Link>
+        <Link to="/">EU AutoWorks</Link>
       </div>
       <div className="titles">
         {props.titles.length === 4 ? (
