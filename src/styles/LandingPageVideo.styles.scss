@@ -1,0 +1,18 @@
+.video{
+    width:100%;
+    margin-top: -20vh;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: -10;
+    // position: fixed;
+     @media screen and (max-width:1200px) {
+      margin-top: -4vh;
+      height: 400px;
+
+    }
+
+    @media screen and (max-width:500px) {
+      height: 340px;
+      margin-top: -3vh;
+    }
+}
