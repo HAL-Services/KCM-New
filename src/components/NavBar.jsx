@@ -1,7 +1,7 @@
 import "../styles/NavBar.scss";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import {
   hamburgerTopAnim,
   hamburgerMidAnim,
@@ -10,17 +10,14 @@ import {
   navbarSideTitleAnim,
 } from "../animation";
 import { FaWhatsapp } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import { Context } from "../context/Context";
+
 import GetAQuote from "./GetAQuote";
 import QuickBookModal from "./QuickBookModal";
 
 const NavBar = (props) => {
 
   const [isOpen, setOpen] = useState(false);
-  const [currentUser, setCurrentUser] = useState(null);
-  const { user } = useContext(Context);
-  const { dispatch } = React.useContext(Context);
+  const [showModal, setShowModal] = useState(false)
   useEffect(() => {
 
     if (isOpen) {
@@ -32,13 +29,9 @@ const NavBar = (props) => {
       document.body.style.top = "";
       window.scrollTo(0, parseInt(scrollY || "0") * -1);
     }
-  }, [user, isOpen]);
+  }, [isOpen]);
 
-  const handleClick = () => {
-    dispatch({ type: "LOGOUT" });
-    localStorage.removeItem("User");
-    history.push("/");
-  };
+
 
   return (
     <nav className="navbar" id="navbar">
