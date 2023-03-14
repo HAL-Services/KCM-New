@@ -10,24 +10,16 @@ import "swiper/css/pagination";
 import "../styles/Testimonial.styles.css";
 // import required modules
 
-
 import { FaQuoteLeft, FaQuoteRight, FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { fetchTestimonialData } from "../apiCalls";
 import HeadingText from "../components/HeadingText";
+import { testimonialData } from "../OfflineAPI/testimonialData";
 
 export default function Testimonial() {
   const [reviewsData, setReviewsdata] = useState([]);
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const data = await fetchTestimonialData();
-        setReviewsdata(data);
-      } catch (error) {
-        console.log(error.message);
-      }
-    }
-    fetchData();
+    setReviewsdata(testimonialData);
   }, []);
   return (
     <div className="testimonialContainer" id="testimonial">
@@ -53,60 +45,61 @@ export default function Testimonial() {
         modules={[Autoplay, Pagination]}
         className="testimonialSwiper"
       >
-        {reviewsData && reviewsData.map((data) => {
-          return (
-            <SwiperSlide key={data.username} className="testimonialSlider">
-              <div className="clientWrapper">
-                <div className="clientContainer">
-                  <div className="profile">
-                    <div className="clientImgBox">
-                      <img src={data.image} alt="gif" />
+        {reviewsData &&
+          reviewsData.map((data) => {
+            return (
+              <SwiperSlide key={data.username} className="testimonialSlider">
+                <div className="clientWrapper">
+                  <div className="clientContainer">
+                    <div className="profile">
+                      <div className="clientImgBox">
+                        <img src={data.image} alt="gif" />
+                      </div>
+                      <h2>{data.username}</h2>
                     </div>
-                    <h2>{data.username}</h2>
+                    <p>
+                      <span className="clientLeft">
+                        <FaQuoteLeft />
+                      </span>
+                      {data.data}
+                      <span className="clientRight">
+                        <FaQuoteRight />
+                      </span>
+                    </p>
                   </div>
-                  <p>
-                    <span className="clientLeft">
-                      <FaQuoteLeft />
-                    </span>
-                    {data.data}
-                    <span className="clientRight">
-                      <FaQuoteRight />
-                    </span>
-                  </p>
+                  <div
+                    style={{
+                      marginBottom: "20px",
+                      display: "flex",
+                      width: "100%",
+                      justifyContent: "center",
+                      padding: "10px",
+                    }}
+                  >
+                    {[...Array(data.stars)].map((e, index) => (
+                      <FaStar
+                        style={{ color: "gold", marginRight: "2px" }}
+                        key={index}
+                      />
+                    ))}
+                    {[...Array(5 - data.stars)].map((e, index) => (
+                      <FaStar
+                        style={{ color: "grey", marginRight: "2px" }}
+                        key={index}
+                      />
+                    ))}
+                  </div>
                 </div>
-                <div
-                  style={{
-                    marginBottom: "20px",
-                    display: "flex",
-                    width: "100%",
-                    justifyContent: "center",
-                    padding: "10px",
-                  }}
-                >
-                  {[...Array(data.stars)].map((e, index) => (
-                    <FaStar
-                      style={{ color: "gold", marginRight: "2px" }}
-                      key={index}
-                    />
-                  ))}
-                  {[...Array(5 - data.stars)].map((e, index) => (
-                    <FaStar
-                      style={{ color: "grey", marginRight: "2px" }}
-                      key={index}
-                    />
-                  ))}
-                </div>
-              </div>
-            </SwiperSlide>
-          );
-        })}
+              </SwiperSlide>
+            );
+          })}
       </Swiper>
-      <div className="writeReview">
+      {/* <div className="writeReview">
         Liked our work. Leave us a feedback
         <Link className="review-link" to="/write">
-         <button className="button-6">Write Review</button>
+          <button className="button-6">Write Review</button>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }
