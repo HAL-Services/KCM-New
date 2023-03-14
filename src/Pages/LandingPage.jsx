@@ -1,4 +1,5 @@
 import "../styles/LandingPage.scss";
+import { useState } from "react";
 // Importing animation
 import { motion } from "framer-motion";
 import {
@@ -10,7 +11,10 @@ import {
 import MobileBackground from "../Assets/Images/loadvideo.mp4";
 import { FaArrowCircleUp } from "react-icons/fa";
 import QuickBookModal from "../components/QuickBookModal";
+import GetAQuote from "../components/GetAQuote";
 export default function LandingPage() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div>
       <motion.span
@@ -77,8 +81,13 @@ export default function LandingPage() {
         {/* <video className="video" src={MobileBackground} autoPlay muted /> */}
       </div>
       <div className="btn-container">
-        <button className="button-6">Quick Book</button>
-        <button className="button-6">Request A Quote</button>
+        {/* <button className="button-7"> */}
+        <QuickBookModal />
+        {/* </button> */}
+        <button className="button-6" onClick={() => setShowModal(true)}>
+          Request A Quote
+        </button>
+        {showModal ? <GetAQuote close={setShowModal} /> : null}
       </div>
     </div>
   );
