@@ -1,6 +1,5 @@
-import { motion } from "framer-motion";
+
 import HeadingText from "../components/HeadingText";
-import ServiceCard from "../components/ServiceCards";
 // importing Styles
 import "../styles/ServiceSection.scss";
 

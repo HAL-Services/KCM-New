@@ -1,5 +1,4 @@
 import GarageCarousel from "../components/GarageCarousel";
-import WaveImage from "../Assets/Images/wave.svg";
 import "../styles/Section2.styles.scss";
 import HeadingText from "../components/HeadingText";
 export default function Section2() {
