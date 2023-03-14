@@ -6,9 +6,8 @@ const GetAQuote = ({ close }) => {
   useEffect(() => {
     if (close) {
       document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
     }
+    return () => (document.body.style.overflow = "unset");
   }, []);
 
   return (
