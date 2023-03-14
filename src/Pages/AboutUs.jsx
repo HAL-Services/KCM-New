@@ -2,7 +2,7 @@ import React from "react";
 import image from "../Assets/Images/1.jpeg";
 import AboutUsCards from "../components/AboutUsCards";
 import { motion } from "framer-motion";
-import first from "../Assets/img.png";
+
 // importing Styles
 import "../styles/AboutUs.scss";
 import HeadingText from "../components/HeadingText";
@@ -68,7 +68,7 @@ const AboutUs = () => {
                   title={e.title}
                   subtitle={e.subtitle}
                   data={e.data}
-                  img={first}
+          
                 />
               </div>
             );

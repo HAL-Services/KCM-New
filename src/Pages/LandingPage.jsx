@@ -4,8 +4,10 @@ import { motion } from "framer-motion";
 import {landingTitleAnim,} from "../animation";
 import { FaArrowCircleUp } from "react-icons/fa";
 import LandingPageVideo from "../components/landpageVideo/LandingPageVideo";
+import { useState } from "react";
 // import QuickBookModal from "../components/QuickBookModal";
 export default function LandingPage() {
+  const [isLoading,setIsLoading]=useState(false)
   return (
     <div>
       <motion.span

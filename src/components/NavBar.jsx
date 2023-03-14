@@ -1,7 +1,7 @@
 import "../styles/NavBar.scss";
 import { motion, AnimatePresence } from "framer-motion";
-import React, { useContext, useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useEffect,useState } from "react";
 import {
   hamburgerTopAnim,
   hamburgerMidAnim,
@@ -10,19 +10,12 @@ import {
   navbarSideTitleAnim,
 } from "../animation";
 
-import { Link } from "react-router-dom";
-import { Context } from "../context/Context";
+
 const NavBar = (props) => {
-  const history = useHistory();
+
   const [isOpen, setOpen] = useState(false);
-  const [currentUser, setCurrentUser] = useState(null);
-  const { user } = useContext(Context);
-  const { dispatch } = React.useContext(Context);
   useEffect(() => {
-    if (user) setCurrentUser(user.username.split(" ")[0]);
-    // isOpen
-    //   ? (document.body.style.overflow = "hidden")
-    //   : (document.body.style.overflow = "unset");
+
     if (isOpen) {
       document.body.style.position = 'fixed';
       document.body.style.top = `-${window.scrollY}px`;
@@ -32,13 +25,7 @@ const NavBar = (props) => {
       document.body.style.top = '';
       window.scrollTo(0, parseInt(scrollY || '0') * -1);
     }
-  }, [user, isOpen]);
-
-  const handleClick = () => {
-    dispatch({ type: "LOGOUT" });
-    localStorage.removeItem("User");
-    history.push("/");
-  };
+  }, [ isOpen]);
 
   return (
     <nav className="navbar" id="navbar">
