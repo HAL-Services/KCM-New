@@ -1,15 +1,10 @@
 import "../styles/LandingPage.scss";
 // Importing animation
 import { motion } from "framer-motion";
-import {
-  landingAnim,
-  titleAnim,
-  rightAnim,
-  landingTitleAnim,
-} from "../animation";
-import MobileBackground from "../Assets/Images/loadvideo.mp4";
+import {landingTitleAnim,} from "../animation";
 import { FaArrowCircleUp } from "react-icons/fa";
-import QuickBookModal from "../components/QuickBookModal";
+import LandingPageVideo from "../components/landpageVideo/LandingPageVideo";
+// import QuickBookModal from "../components/QuickBookModal";
 export default function LandingPage() {
   return (
     <div>
@@ -61,20 +56,7 @@ export default function LandingPage() {
             </h3>
           </h2>
         </motion.div>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `
-        <video
-          muted="true"
-          autoplay
-          playsinline
-          src="${MobileBackground}"
-          class="video"
-        />,
-      `,
-          }}
-        ></div>
-        {/* <video className="video" src={MobileBackground} autoPlay muted /> */}
+        <LandingPageVideo/>
       </div>
       <div className="btn-container">
         <button className="button-6">Quick Book</button>
