@@ -83,7 +83,7 @@ export default function Section3() {
       </div>
       <div className="benefits-box">
         <div className="benefits">
-          <HeadingText text1="KCM" text2="Benefits" style="light" />
+          <HeadingText text1="EU AutoWorks" text2="Benefits" style="light" />
           <div className="benefits_container">
             <span className="benefits_box">
               <span className="benefits_box_icon">
@@ -124,7 +124,6 @@ export default function Section3() {
           </div>
         </div>
       </div>
-
     </>
   );
 }
