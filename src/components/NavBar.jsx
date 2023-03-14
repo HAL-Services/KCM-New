@@ -9,30 +9,35 @@ import {
   navbarSideAnim,
   navbarSideTitleAnim,
 } from "../animation";
-
+import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Context } from "../context/Context";
+import GetAQuote from "./GetAQuote";
+import QuickBookModal from "./QuickBookModal";
+
 const NavBar = (props) => {
   const history = useHistory();
   const [isOpen, setOpen] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
   const { user } = useContext(Context);
   const { dispatch } = React.useContext(Context);
+  const [showModal, setShowModal] = useState(false);
   useEffect(() => {
     if (user) setCurrentUser(user.username.split(" ")[0]);
     // isOpen
     //   ? (document.body.style.overflow = "hidden")
     //   : (document.body.style.overflow = "unset");
     if (isOpen) {
-      document.body.style.position = 'fixed';
+      document.body.style.position = "fixed";
       document.body.style.top = `-${window.scrollY}px`;
     } else {
       const scrollY = document.body.style.top;
-      document.body.style.position = '';
-      document.body.style.top = '';
-      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+      document.body.style.position = "";
+      document.body.style.top = "";
+      window.scrollTo(0, parseInt(scrollY || "0") * -1);
     }
-  }, [user, isOpen]);
+    console.log(showModal);
+  }, [user, isOpen, showModal]);
 
   const handleClick = () => {
     dispatch({ type: "LOGOUT" });
@@ -262,8 +267,16 @@ const NavBar = (props) => {
             </nav>
           </div>
         )}
-        <button className="button-6">Quick Book</button>
-        <button className="button-6">Request A Quote</button>
+        {/* <button className="button-7">Quick Book</button> */}
+        <QuickBookModal />
+        <button
+          className="button-6"
+          type="button"
+          onClick={() => setShowModal(true)}
+        >
+          Request A Quote
+        </button>
+        {showModal ? <GetAQuote close={setShowModal} /> : null}
       </div>
     </nav>
   );
