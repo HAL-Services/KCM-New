@@ -5,14 +5,9 @@ import { IoCloseSharp } from "react-icons/io5";
 const GetAQuote = ({ close }) => {
   useEffect(() => {
     if (close) {
-      document.body.style.position = "fixed";
-      document.body.style.top = `-${window.scrollY}px`;
-    } else {
-      const scrollY = document.body.style.top;
-      document.body.style.position = "";
-      document.body.style.top = "";
-      window.scrollTo(0, parseInt(scrollY || "0") * -1);
+      document.body.style.overflow = "hidden";
     }
+    return () => (document.body.style.overflow = "unset");
   }, []);
 
   return (
