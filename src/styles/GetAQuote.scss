@@ -1,0 +1,137 @@
+.quote{
+  position: fixed;
+  background-color: rgba(0,0,0,0.5);
+  top:0;
+  left:0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  &_box{
+    background-color: #0b1523;
+    position: relative;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 50%;
+    color: var(--new-color-blue);
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    flex-direction: column;
+  }
+
+  &_close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1rem;
+    font-size: larger;
+    &_icon{
+      cursor: pointer;
+    }
+  }
+
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    .input-container {
+      position: relative;
+      border-bottom: 1px solid var(--default-color);
+      text-align: center;
+      color: var(--default-color);
+      margin-bottom: var(--mb-2-5);
+    }
+    
+  }
+
+  .input-container input {
+    width: 100%;
+    background-color: var(--primary-color);
+    outline: none;
+    border: none;
+    height: 50px;
+    padding: 0 5px;
+    font-size: var(--h2-font-size);
+    color: var(--default-color);
+  }
+  .input-container label {
+    position: absolute;
+    top: 40%;
+    left: 14px;
+    font-size: var(--normal-font-size);
+    pointer-events: none;
+    color: var(--default-color);
+    transform: translateY(-50%);
+    transition: 0.5s;
+    transform: scale(1.2);
+  }
+  .input-container input:focus ~ label,
+  .input-container input:valid ~ label {
+    top: -10px;
+    transform: scale(1);
+    left: 0;
+    color: var(--new-color-blue);
+  }
+
+  .button_container{
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    background-color: var(--new-color-blue);
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px -4px var(--new-color-blue);
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 1.3rem;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    padding: .5rem 2rem ; 
+    a{
+      text-decoration: none;
+      color:var(--default-color);
+      font-size: var(--h2-font-size);
+    }
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+      padding: 0.8em 3.5em;
+    }
+    &:hover {
+    transform: scale(1.05) ;
+      cursor: pointer;
+    }
+  }
+  @media (width<=1025px) {
+    &_box{
+      width: 95%;
+      font-size: 1rem;
+    }
+
+    .input-container input {
+      font-size: .9rem;
+    }
+
+    .input-container label{
+      font-size: 1rem;
+    }
+
+    button{
+      font-size: 1rem;
+    }
+  }
+}

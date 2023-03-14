@@ -1,13 +1,19 @@
 import "../styles/LandingPage.scss";
+import { useState } from "react";
 // Importing animation
 import { motion } from "framer-motion";
-import {landingTitleAnim,} from "../animation";
+import { landingTitleAnim } from "../animation";
 import { FaArrowCircleUp } from "react-icons/fa";
 import LandingPageVideo from "../components/landpageVideo/LandingPageVideo";
 import { useState } from "react";
-// import QuickBookModal from "../components/QuickBookModal";
+import QuickBookModal from "../components/QuickBookModal";
+import GetAQuote from "../components/GetAQuote";
+import QuickBookModal from "../components/QuickBookModal";
+import GetAQuote from "../components/GetAQuote";
 export default function LandingPage() {
   const [isLoading,setIsLoading]=useState(false)
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div>
       <motion.span
@@ -58,11 +64,16 @@ export default function LandingPage() {
             </h3>
           </h2>
         </motion.div>
-        <LandingPageVideo/>
+        <LandingPageVideo />
       </div>
       <div className="btn-container">
-        <button className="button-6">Quick Book</button>
-        <button className="button-6">Request A Quote</button>
+        {/* <button className="button-7"> */}
+        <QuickBookModal />
+        {/* </button> */}
+        <button className="button-6" onClick={() => setShowModal(true)}>
+          Request A Quote
+        </button>
+        {showModal ? <GetAQuote close={setShowModal} /> : null}
       </div>
     </div>
   );
