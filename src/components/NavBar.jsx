@@ -102,14 +102,26 @@ const NavBar = (props) => {
             exit="exit"
             onClick={() => setOpen(!isOpen)}
           >
-            {/* <motion.span
+            <motion.span
               variants={navbarSideTitleAnim}
               onClick={() => setOpen(!isOpen)}
             >
-              <Link to="/service" className="navbar_titles">
-                Services
-              </Link>
-            </motion.span> */}
+              <a
+                href="/"
+                className="navbar_titles"
+                onClick={(e) => {
+                  let contact = document.getElementById("home");
+                  e.preventDefault();
+                  contact &&
+                    contact.scrollIntoView({
+                      behavior: "smooth",
+                      block: "end",
+                    });
+                }}
+              >
+                Home
+              </a>
+            </motion.span>
             <motion.span
               variants={navbarSideTitleAnim}
               onClick={() => setOpen(!isOpen)}

@@ -1,16 +1,25 @@
+import { lazy } from "react";
 import NavBar from "../components/NavBar";
-import LandingPage from "../Pages/LandingPage";
-import Section2 from "../Pages/Section2";
-import Section3 from "../Pages/Section3";
+// import LandingPage from "../Pages/LandingPage";
+
 import Testimonial from "../Pages/TestimonialPage";
-import ContactUs from "../components/ContactUs";
-import Footer from "../components/Footer";
-import AboutUs from "./AboutUs";
-import Section4 from "./Section4";
-import ServiceSection from "./Section2.1";
-import ExpertiseSection from "./ExpertiseSection";
+
+
+
+
+
 import "../styles/FullPage.styles.scss";
+import LandingPage from "../Pages/LandingPage";
+const ExpertiseSection = lazy(() => import("./ExpertiseSection"))
+const ServiceSection = lazy(() => import('./Section2.1'))
+const Section3 = lazy(() => import("../Pages/Section3"))
+const Section2 = lazy(() => import("../Pages/Section2"))
+const Section4 = lazy(() => import("./Section4"))
+const AboutUs = lazy(() => import("./AboutUs"))
+const Footer = lazy(() => import("../components/Footer"))
+const ContactUs = lazy(() => import("../components/ContactUs"))
 export default function FullPage() {
+
   return (
     <div className="parent">
       <NavBar titles={["Services", "About", "Testimonial", "Contact Us"]} />
