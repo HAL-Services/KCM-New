@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
-import MobileBackground from '../Assets/Images/loadvideo.mp4'
+
 import '../styles/LandingPageVideo.styles.scss'
 import Loader from './common/Loader';
 export default function LandingPageVideo() {
@@ -38,7 +38,7 @@ export default function LandingPageVideo() {
                 onLoadedData={handleVideoLoad}
                 onEnded={handleVideoEnded}
                 style={{ display: videoLoaded ? 'block' : 'none' }}
-                src="https://res.cloudinary.com/dfbsvaliu/video/upload/v1678934335/Images/loadvideo_kftr2i.mp4"
+                src="https://res.cloudinary.com/dfbsvaliu/video/upload/v1678962317/loadvideo_kftr2i_compressed_aezliy.mp4"
                 ref={videoRef}
                 className="video"
             />
