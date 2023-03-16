@@ -1,40 +1,52 @@
-import img0 from "../Assets/LatestImages/img0.jpeg";
-import img1 from "../Assets/LatestImages/img1.jpeg";
-import img2 from "../Assets/LatestImages/img2.jpeg";
-import img3 from "../Assets/LatestImages/img3.jpeg";
-import img4 from "../Assets/LatestImages/img4.jpeg";
-import img5 from "../Assets/LatestImages/img5.jpeg";
-import img6 from "../Assets/LatestImages/img6.jpeg";
+
 const LatestImagesdata = [
   {
     id: "0",
-    url: img0,
+    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934326/LatestImages/img0_js5cnk.webp",
   },
   {
     id: "1",
-    url: img1,
+    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934328/LatestImages/img2_vjlimk.webp",
   },
   {
     id: "2",
-    url: img2,
+    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934328/LatestImages/img3_lmp0y3.webp",
   },
   {
     id: "3",
-    url: img3,
+    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934328/LatestImages/img1_hxdulb.webp",
   },
   {
     id: "4",
-    url: img4,
+    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934328/LatestImages/img4_norhuo.webp",
   },
 
   {
     id: "5",
-    url: img5,
+    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934328/LatestImages/img5_nfiz2o.webp",
   },
 
   {
     id: "6",
-    url: img6,
+    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934328/LatestImages/img10_kmldrq.webp",
   },
+  {
+    id: "7",
+    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934331/LatestImages/img7_j0cefs.webp"
+  },
+  {
+    id: "8",
+    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934330/LatestImages/img8_uek1te.webp"
+  },
+  {
+    id: "9",
+    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934330/LatestImages/img9_mvkyhc.webp"
+  }, {
+    id: "10",
+    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934328/LatestImages/img10_kmldrq.webp"
+  }, {
+    id:"11",
+    url:"https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934328/LatestImages/img11_dgvtsz.webp"
+  }
 ];
 export default LatestImagesdata;

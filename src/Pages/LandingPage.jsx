@@ -4,12 +4,11 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { landingTitleAnim } from "../animation";
 import { FaArrowCircleUp } from "react-icons/fa";
-import LandingPageVideo from "../components/landpageVideo/LandingPageVideo";
+import LandingPageVideo from "../components/LandingPageVideo";
 import QuickBookModal from "../components/QuickBookModal";
 import GetAQuote from "../components/GetAQuote";
 
 export default function LandingPage() {
-  const [isLoading,setIsLoading]=useState(false)
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -65,9 +64,9 @@ export default function LandingPage() {
         <LandingPageVideo />
       </div>
       <div className="btn-container">
-        {/* <button className="button-7"> */}
+   
         <QuickBookModal />
-        {/* </button> */}
+   
         <button className="button-6" onClick={() => setShowModal(true)}>
           Request A Quote
         </button>
