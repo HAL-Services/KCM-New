@@ -50,7 +50,6 @@ export default function ExpertisePage() {
       window.removeEventListener("resize", setDimension);
     };
   }, [getWidth, setDimension]);
-
   function setAsPrimary(id) {
     const currentProductId = serviceImage;
     const newServiceImageId = [
@@ -67,12 +66,6 @@ export default function ExpertisePage() {
       <div className="skills">
         <AnimateSharedLayout>
           <div className="primary-box-arrows">
-            {/*<span className="primary-box-icons">
-              <BsFillArrowLeftCircleFill
-                className="primary-box-icons-hover"
-                onClick={() => setAsPrimary(currValue)}
-              />
-            </span>*/}
             <div className="primary-container">
               <AnimatePresence>
                 <div className="primary-container-image">
@@ -99,12 +92,6 @@ export default function ExpertisePage() {
             </div>
           </div>
           <aside className="product-gallery">
-            {/* <span className="primary-box-icons">
-              <BsFillArrowRightCircleFill
-                className="primary-box-icons-hover"
-                onClick={() => setAsPrimary()}
-              />
-            </span> */}
             <AnimatePresence>
               {serviceImageId.map((element) => {
                 return (

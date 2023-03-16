@@ -1,9 +1,6 @@
 import '../styles/PackageCard.styles.scss'
 import { BsFillCheckCircleFill } from "react-icons/bs";
-import CarImage from '../Assets/Images/silverPackage.jpg'
-import goldCarImage from '../Assets/Images/goldPackage.jpg'
-import platinumCarImage from '../Assets/Images/platinumPackage.jpg'
-import platinum from '../Assets/Images/platinum.jpg'
+
 import ReadMore from './ReadeMore';
 export default function PackageCards() {
     return (
@@ -35,7 +32,7 @@ export default function PackageCards() {
                     </ReadMore>
                 </div>
                 <div className="image-container">
-                    <img src={CarImage} />
+                    <img src="https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934326/Images/silverPackage_kz4rpp.webp" />
                 </div>
 
             </div>
@@ -72,7 +69,7 @@ export default function PackageCards() {
                     </ReadMore>
                 </div>
                 <div className="image-container">
-                    <img src={platinumCarImage} />
+                    <img src="https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934327/Images/platinumPackage_allhs7.webp" />
                 </div>
 
             </div>
@@ -116,7 +113,7 @@ export default function PackageCards() {
                     </ReadMore>
                 </div>
                 <div className="image-container">
-                    <img src={platinum} />
+                    <img src="https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934326/Images/platinum_v09ivr.webp" />
                 </div>
 
             </div>

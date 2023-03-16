@@ -1,52 +1,52 @@
-import CarWash from "../Assets/Expertise/carWash.jpg";
-import EngineRepair from "../Assets/Expertise/engineRepair.jpg";
-import WheelAlign from "../Assets/Expertise/wheelAlign.webp";
-import carInspection from "../Assets/Expertise/carInspection.jpg";
-import CarPaint from "../Assets/Expertise/carPaint.jpg";
-import carBattery from "../Assets/Expertise/batteryRepair.webp";
-import periodicService from "../Assets/Expertise/periodicService.jpeg";
-import BrakePaddle from "../Assets/Expertise/brakePaddle.jpg";
+// import CarWash from "../Assets/Expertise/carWash.jpg";
+// import EngineRepair from "../Assets/Expertise/engineRepair.jpg";
+// import WheelAlign from "../Assets/Expertise/wheelAlign.webp";
+// import carInspection from "../Assets/Expertise/carInspection.jpg";
+// import CarPaint from "../Assets/Expertise/carPaint.jpg";
+// import carBattery from "../Assets/Expertise/batteryRepair.webp";
+// import periodicService from "../Assets/Expertise/periodicService.jpeg";
+// import BrakePaddle from "../Assets/Expertise/brakePaddle.jpg";
 const ExpertiseImagedata = [
   {
     id: "0",
     title: "Engine Repair",
-    url: EngineRepair,
+    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934331/Expertise/engineRepair_e8qyjx.webp",
   },
   {
     id: "1",
     title: "Car Wash",
-    url: CarWash,
+    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934324/Expertise/carWash_lmbsz3.webp",
   },
   {
     id: "2",
     title: "Car Inspection",
-    url: carInspection,
+    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934325/Expertise/carInspection_hauujm.webp",
   },
   {
     id: "3",
     title: "Battery Change",
-    url: carBattery,
+    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934324/Expertise/batteryRepair_kqedlr.webp",
   },
   {
     id: "4",
     title: "Car Paint",
-    url: CarPaint,
+    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934324/Expertise/carPaint_pegwxj.webp",
   },
 
   {
     id: "5",
     title: "Wheel Alignment",
-    url: WheelAlign,
+    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934325/Expertise/wheelAlign_gmqtq3.webp",
   },
   {
     id: "6",
     title: "Peroidic Service",
-    url: periodicService,
+    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934324/Expertise/periodicService_gepbsv.webp",
   },
   {
     id: "7",
     title: "Brake Change",
-    url: BrakePaddle,
+    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934324/Expertise/brakePaddle_tlerfv.webp",
   },
 ];
 export default ExpertiseImagedata;
