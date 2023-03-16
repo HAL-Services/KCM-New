@@ -38,7 +38,7 @@ export default function LandingPageVideo() {
                 onLoadedData={handleVideoLoad}
                 onEnded={handleVideoEnded}
                 style={{ display: videoLoaded ? 'block' : 'none' }}
-                src={MobileBackground}
+                src="https://res.cloudinary.com/dfbsvaliu/video/upload/v1678934335/Images/loadvideo_kftr2i.mp4"
                 ref={videoRef}
                 className="video"
             />
