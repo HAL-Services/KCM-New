@@ -10,7 +10,7 @@ const ExpertiseImagedata = [
   {
     id: "0",
     title: "Engine Repair",
-    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934331/Expertise/engineRepair_e8qyjx.webp",
+    url: "https://res.cloudinary.com/dfbsvaliu/image/upload/v1679033437/kate-ibragimova-bEGTsOCnHro-unsplash_1_ihut2g.jpg",
   },
   {
     id: "1",

@@ -1,55 +1,13 @@
 import Card from "../components/HowWeWorkCard";
 import CardData from "../OfflineAPI/CardRelatedData";
 import { motion } from "framer-motion";
-import { RiTaxiWifiFill, RiCarFill } from "react-icons/ri";
+import {  RiCarFill } from "react-icons/ri";
 import { GiMechanicGarage } from "react-icons/gi";
 import { FcBusinessman } from "react-icons/fc";
 import "../styles/Section3.styles.scss";
 import { FaHandHoldingUsd } from "react-icons/fa";
 import HeadingText from "../components/HeadingText";
 export default function Section3() {
-  const imageData = [
-    {
-      link: "https://storage.googleapis.com/gomechanic_assets/car_parts_icons/brakes_2/xxhdpi.png",
-      body: "Brakes",
-    },
-    {
-      link: "https://storage.googleapis.com/gomechanic_assets/car_parts_icons/brakes_2/xxhdpi.png",
-      body: "Brakes",
-    },
-    {
-      link: "https://storage.googleapis.com/gomechanic_assets/car_parts_icons/brakes_2/xxhdpi.png",
-      body: "Brakes",
-    },
-    {
-      link: "https://storage.googleapis.com/gomechanic_assets/car_parts_icons/brakes_2/xxhdpi.png",
-      body: "Brakes",
-    },
-    {
-      link: "https://storage.googleapis.com/gomechanic_assets/car_parts_icons/brakes_2/xxhdpi.png",
-      body: "Brakes",
-    },
-    {
-      link: "https://storage.googleapis.com/gomechanic_assets/car_parts_icons/brakes_2/xxhdpi.png",
-      body: "Brakes",
-    },
-    {
-      link: "https://storage.googleapis.com/gomechanic_assets/car_parts_icons/brakes_2/xxhdpi.png",
-      body: "Brakes",
-    },
-    {
-      link: "https://storage.googleapis.com/gomechanic_assets/car_parts_icons/brakes_2/xxhdpi.png",
-      body: "Brakes",
-    },
-    {
-      link: "https://storage.googleapis.com/gomechanic_assets/car_parts_icons/brakes_2/xxhdpi.png",
-      body: "Brakes",
-    },
-    {
-      link: "https://storage.googleapis.com/gomechanic_assets/car_parts_icons/brakes_2/xxhdpi.png",
-      body: "Brakes",
-    },
-  ];
 
   return (
     <>
@@ -90,7 +48,7 @@ export default function Section3() {
                 <RiCarFill className="benefits_icon" />
               </span>
               <span>
-                <h2>Free DoorStep Pick-up and Drop</h2>
+                <h2>Free Door Step Pick-up and Drop</h2>
                 <p>No more hussel!</p>
               </span>
             </span>

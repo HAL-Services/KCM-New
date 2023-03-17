@@ -69,7 +69,7 @@ export default function PackageCards() {
                     </ReadMore>
                 </div>
                 <div className="image-container">
-                    <img src="https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934327/Images/platinumPackage_allhs7.webp" />
+                    <img src="https://res.cloudinary.com/dfbsvaliu/image/upload/v1679021635/kate-ibragimova-iFQpqbLMOFU-unsplash_1_rpnubc.jpg" />
                 </div>
 
             </div>

@@ -3,10 +3,6 @@ import ExpertiseImagedata from "../OfflineAPI/ExpertiseImagesData";
 import "../styles/ExpertisePage.styles.scss";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import { listMotion } from "../animation";
-import {
-  BsFillArrowLeftCircleFill,
-  BsFillArrowRightCircleFill,
-} from "react-icons/bs";
 
 function ProductImage({ value, onExpand, removeClick }) {
   // useEffect(() => {

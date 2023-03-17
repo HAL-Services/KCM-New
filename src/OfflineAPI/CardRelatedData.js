@@ -1,9 +1,9 @@
 const CardData = [
   {
     id: 1,
-    title: "LOGIN AND BOOK",
+    title: "Quick Book",
     content:
-      " You can login or create your account. Once you have logged in with just one simple click you can book your service.",
+      " You can book your service with just one simple click. Go to the quick book button and enter your details and you booking is done.",
   },
   {
     id: 2,
