@@ -9,27 +9,15 @@ import {
   navbarSideAnim,
   navbarSideTitleAnim,
 } from "../animation";
-import { FaWhatsapp } from "react-icons/fa";
 
 import GetAQuote from "./GetAQuote";
 import QuickBookModal from "./QuickBookModal";
-import { DeckOutlined } from "@mui/icons-material";
 
 const NavBar = (props) => {
 
   const [isOpen, setOpen] = useState(false);
   const [showModal, setShowModal] = useState(false)
   useEffect(() => {
-
-    // if (isOpen) {
-    //   document.body.style.position = "fixed";
-    //   document.body.style.top = `-${window.scrollY}px`;
-    // } else {
-    //   const scrollY = document.body.style.top;
-    //   document.body.style.position = "";
-    //   document.body.style.top = "";
-    //   window.scrollTo(0, parseInt(scrollY || "0") * -1);
-    // }
     if (isOpen) {
       document.body.style.overflow = "hidden";
     }else{
