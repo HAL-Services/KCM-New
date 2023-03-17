@@ -13,14 +13,14 @@
     z-index: -100;
 
     @media screen and (max-width:1200px) {
-      margin-top: -4vh;
+      margin-top: -3vh;
       height: 400px;
 
     }
 
     @media screen and (max-width:500px) {
       height: 340px;
-      margin-top: -3vh;
+      margin-top: 6vh;
     }
   }
 
@@ -43,11 +43,16 @@
       color: #236DFF;
 
       @media screen and (max-width:1200px) {
-        margin-top: -2.5vh;
+        margin-top: -7.5vh;
         min-height: 100px;
         
       }
 
+      @media screen and (max-width:500px) {
+        margin-top: -4.5vh;
+        min-height: 100px;
+        
+      }
       .experience {
         margin-left: 0.2em;
         position: relative;

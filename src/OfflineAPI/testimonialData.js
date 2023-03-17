@@ -32,7 +32,7 @@ export const testimonialData = [
     data: "Good shop and great people.I am really satisfied with their work and their prices which are very good when compared to the market rates. Good experience.",
     stars: 5,
     image:
-      "https://cdn.dribbble.com/users/1040983/screenshots/5630845/media/e95768b82810699dfd54512ff570954a.png?compress=1&resize=1200x900&vertical=top",
+    "https://cdn.dribbble.com/users/1040983/screenshots/5630845/media/e95768b82810699dfd54512ff570954a.png?compress=1&resize=1200x900&vertical=top",
     type: "onsite",
   },
 ];

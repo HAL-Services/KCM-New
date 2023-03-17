@@ -97,6 +97,7 @@ export default function ExpertisePage() {
                     onExpand={setAsPrimary}
                     title={element.title}
                     removeClick={removeClick}
+            
                   />
                 );
               })}
