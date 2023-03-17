@@ -13,9 +13,9 @@ export default function QuickBookForm() {
   const sendMessage = async (e) => {
     e.preventDefault();
     console.log(Number, User, Car);
-    setNumber(number.current.value);
-    setUser(username.current.value);
-    setCar(carModel.current.value);
+    // setNumber(number.current.value);
+    // setUser(username.current.value);
+    // setCar(carModel.current.value);
   };
 
   return (
@@ -28,6 +28,7 @@ export default function QuickBookForm() {
             required={true}
             ref={username}
             autoComplete="off"
+            onChange={(e) => setUser(e.target.value)}
           />
           <label htmlFor="form-input-fullName">Full Name</label>
         </div>
@@ -40,6 +41,7 @@ export default function QuickBookForm() {
             ref={number}
             minLength={10}
             maxLength={10}
+            onChange={(e) => setNumber(e.target.value)}
           />
           <label htmlFor="form-input-fullName">Mobile Number</label>
         </div>
@@ -50,6 +52,7 @@ export default function QuickBookForm() {
             required={true}
             ref={carModel}
             autoComplete="off"
+            onChange={(e) => setCar(e.target.value)}
           />
           <label htmlFor="form-input-carNumber">Car Model</label>
         </div>
