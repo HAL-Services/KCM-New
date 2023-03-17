@@ -6,8 +6,13 @@ import { motion } from "framer-motion";
 // importing Styles
 import "../styles/AboutUs.scss";
 import HeadingText from "../components/HeadingText";
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 const AboutUs = () => {
+  useEffect(() => {
+    Aos.init({ duration: 700 })
+  }, [])
   const dataName = [
     {
       id: 1,
@@ -28,12 +33,9 @@ const AboutUs = () => {
       <div className="about_section" id="about">
         <HeadingText text1="About" text2="Us" style="light" />
         <div className="about_container">
-          <motion.div
+          <div
             className="about_left_section"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1, ease: "linear" }}
-            viewport={{ once: false, amount: 0.1 }}
+            data-aos="zoom-in-up"
           >
             KCM is a luxury automobile workshop which is committed to serving
             the needs of customer. KCM was started in 2016 with a vision to
@@ -44,16 +46,14 @@ const AboutUs = () => {
             in the industry for more than 10 years and have previously worked
             with many leading brands.We have a family of more than 1000 happy
             customers who appreciate our work and believe in our vision.
-          </motion.div>
-          <motion.div
+          </div>
+          <div
             className="about_right_section"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1, ease: "linear" }}
-            viewport={{ once: false, amount: 0.1 }}
+            data-aos="zoom-in-up"
+
           >
             <img src={image} alt="alternate" className="about_image" />
-          </motion.div>
+          </div>
         </div>
       </div>
       <div className="about_cards">
@@ -63,12 +63,13 @@ const AboutUs = () => {
             return (
               <div
                 key={e.id}
+                data-aos="zoom-in-up"
               >
                 <AboutUsCards
                   title={e.title}
                   subtitle={e.subtitle}
                   data={e.data}
-          
+
                 />
               </div>
             );

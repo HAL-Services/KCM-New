@@ -3,6 +3,11 @@ import HeadingText from "../components/HeadingText";
 // importing Styles
 import "../styles/ServiceSection.scss";
 
+// animation
+import Aos from "aos";
+import 'aos/dist/aos.css'
+
+
 import PackageCards from "../components/PackageCards";
 const ServiceSection = () => {
   return (
