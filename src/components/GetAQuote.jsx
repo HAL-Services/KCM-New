@@ -23,7 +23,7 @@ const GetAQuote = ({ close }) => {
               type="text"
               name="fullName"
               required={true}
-              autoComplete="off"
+              autoComplete="on"
             />
             <label htmlFor="form-input-fullName">Full Name</label>
           </div>
@@ -32,7 +32,7 @@ const GetAQuote = ({ close }) => {
               type="email"
               name="email"
               required={true}
-              autoComplete="off"
+              autoComplete="on"
             />
             <label htmlFor="form-input-Email">Email</label>
           </div>
@@ -42,7 +42,7 @@ const GetAQuote = ({ close }) => {
               name="phoneNumber"
               required={true}
               pattern="[789][0-9]{9}"
-              autoComplete="off"
+              autoComplete="on"
               maxLength={10}
               minLength={10}
             />
@@ -53,7 +53,7 @@ const GetAQuote = ({ close }) => {
             <input
               type="text"
               name="query"
-              autoComplete="off"
+              autoComplete="on"
               required={true}
             />
             <label htmlFor="form-input-query">How can we help you?</label>
