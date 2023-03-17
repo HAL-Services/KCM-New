@@ -15,37 +15,37 @@ import "../styles/GarageCarousel.scss";
 
 export default function GarageCarousel() {
   return (
-    <>
-      <Swiper
-        slidesPerView={1}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        centeredSlides={false}
-        slidesPerGroupSkip={1}
-        spaceBetween={70}
-        grabCursor={true}
-        keyboard={{
-          enabled: true,
-        }}
-        breakpoints={{
-          769: {
-            slidesPerView: 3,
-          },
-        }}
-        navigation={true}
-        modules={[Keyboard, Scrollbar, Navigation, Pagination, Autoplay]}
-        className="mySwiperGarage"
-      >
-        {LatestImagesdata.map((imageData) => {
-          return (
-            <SwiperSlide key={imageData.id} className="GaragecarouselContainer">
-              <img alt={"name"} className="GarageImage" src={imageData.url} />
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
-    </>
+
+    <Swiper
+      slidesPerView={1}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      centeredSlides={false}
+      slidesPerGroupSkip={1}
+      spaceBetween={70}
+      grabCursor={true}
+      keyboard={{
+        enabled: true,
+      }}
+      breakpoints={{
+        769: {
+          slidesPerView: 3,
+        },
+      }}
+      navigation={true}
+      modules={[Keyboard, Scrollbar, Navigation, Pagination, Autoplay]}
+      className="mySwiperGarage"
+    >
+      {LatestImagesdata.map((imageData) => {
+        return (
+          <SwiperSlide key={imageData.id} className="GaragecarouselContainer">
+            <img alt={"name"} className="GarageImage" src={imageData.url} />
+          </SwiperSlide>
+        );
+      })}
+    </Swiper>
+
   );
 }
