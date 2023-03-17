@@ -1,14 +1,20 @@
 import Card from "../components/HowWeWorkCard";
 import CardData from "../OfflineAPI/CardRelatedData";
-import { motion } from "framer-motion";
-import {  RiCarFill } from "react-icons/ri";
+
+import { RiCarFill } from "react-icons/ri";
 import { GiMechanicGarage } from "react-icons/gi";
 import { FcBusinessman } from "react-icons/fc";
 import "../styles/Section3.styles.scss";
 import { FaHandHoldingUsd } from "react-icons/fa";
 import HeadingText from "../components/HeadingText";
-export default function Section3() {
 
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
+export default function Section3() {
+  useEffect(() => {
+    Aos.init({ duration: 700 })
+  }, [])
   return (
     <>
       <div className="Section3how_we_work">
@@ -16,17 +22,7 @@ export default function Section3() {
         <div className="Section3wrapper">
           {CardData.map((ele) => {
             return (
-              <motion.div
-                initial={{ y: 150, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{
-                  delay: 0.12 * ele.id,
-                  ease: "linear",
-                  type: "spring",
-                }}
-                viewport={{ once: true, amount: 0.1 }}
-                key={ele.id}
-              >
+              <div key={ele.id} data-aos="zoom-in-up">
                 <Card
                   style={{ height: "100%" }}
                   title={ele.title}
@@ -34,7 +30,7 @@ export default function Section3() {
                   key={ele.id}
                   number={ele.id}
                 />
-              </motion.div>
+              </div>
             );
           })}
         </div>
@@ -42,8 +38,8 @@ export default function Section3() {
       <div className="benefits-box">
         <div className="benefits">
           <HeadingText text1="EU AutoWorks" text2="Benefits" style="light" />
-          <div className="benefits_container">
-            <span className="benefits_box">
+          <div className="benefits_container" >
+            <span className="benefits_box" data-aos="zoom-in-up">
               <span className="benefits_box_icon">
                 <RiCarFill className="benefits_icon" />
               </span>
@@ -52,7 +48,7 @@ export default function Section3() {
                 <p>No more hussel!</p>
               </span>
             </span>
-            <span className="benefits_box">
+            <span className="benefits_box" data-aos="zoom-in-up">
               <span className="benefits_box_icon">
                 <FaHandHoldingUsd className="benefits_icon" />
               </span>
@@ -61,7 +57,7 @@ export default function Section3() {
                 <p>Save upto 50% on labour charges </p>
               </span>
             </span>
-            <span className="benefits_box">
+            <span className="benefits_box" data-aos="zoom-in-up">
               <span className="benefits_box_icon">
                 <FcBusinessman className="benefits_icon" />
               </span>
@@ -70,7 +66,7 @@ export default function Section3() {
                 <p>Get guided by our industry best mechanics</p>
               </span>
             </span>
-            <span className="benefits_box">
+            <span className="benefits_box" data-aos="zoom-in-up">
               <span className="benefits_box_icon">
                 <GiMechanicGarage className="benefits_icon" />
               </span>
