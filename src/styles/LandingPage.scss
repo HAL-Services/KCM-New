@@ -24,7 +24,6 @@
     }
   }
 
-  @media screen and (max-width:1200px) {}
 
   .content {
     width: 100%;
@@ -44,8 +43,9 @@
       color: #236DFF;
 
       @media screen and (max-width:1200px) {
-        margin-top: -5vh;
+        margin-top: -2.5vh;
         min-height: 100px;
+        
       }
 
       .experience {
@@ -69,6 +69,11 @@
         z-index: -20;
         font-weight: 400;
         top: -40px;
+        @media screen and (max-width:1200px) {
+          top:-20px;
+          text-align: center;
+          left:-12px;
+        }
       }
     }
   }
