@@ -2,7 +2,7 @@ import "../styles/HeadingText.scss";
 import Aos from "aos";
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
-export default function HeadingText({ text1, text2, style }) {
+export default function HeadingText({ text1, text2, style}) {
   useEffect(()=>{
       Aos.init({duration:500})
   },[])
