@@ -1,10 +1,11 @@
 .expertise-container {
   height: 100vh;
   padding: 5rem;
-  padding-top:0;
- @media (width <= 765px){
-  height: auto;
- } 
+  padding-top: 0;
+
+  @media (width <=765px) {
+    height: auto;
+  }
 }
 
 .skills {
@@ -12,39 +13,40 @@
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  height:100%;
+  height: 100%;
   width: 100%;
 }
 
 .skill_header {
   font-size: 2em;
   text-align: center;
+
   .bg-text {
     font-weight: normal;
   }
 }
 
-.product-service-content{
-  color:white;
+.product-service-content {
+  color: white;
 }
 
-.primary-box-arrows{
+.primary-box-arrows {
   display: flex;
   height: 100%;
   width: 70%;
   position: relative;
   overflow: hidden;
-  color:white;
+  color: white;
 }
 
-.primary-box-icons{
+.primary-box-icons {
   font-size: 2em;
   display: flex;
   align-items: center;
   color: white;
 }
 
-.primary-box-icons-hover{
+.primary-box-icons-hover {
   cursor: pointer;
 }
 
@@ -71,6 +73,9 @@
   opacity: 1;
   transition: 100ms ease;
   backface-visibility: hidden;
+  @media screen and (max-width:750px) {
+    
+  }
 }
 
 .text {
@@ -93,6 +98,7 @@
   height: 100%;
   width: 30%;
   overflow: hidden;
+
   &:hover {
     cursor: pointer;
   }
@@ -114,33 +120,37 @@
   object-fit: cover;
 }
 
-@media (width<=765px){
-  .primary-box-arrows{
+@media (width<=765px) {
+  .primary-box-arrows {
     display: none;
   }
-  .expertise-container{
+
+  .expertise-container {
     padding: 0px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
   }
-  .skills{
+
+  .skills {
     height: 400px;
-    padding:0px;
+    padding: 0px;
   }
-  
-  .product-gallery{
-    // flex-direction: row;
-    padding: 0 2rem 2rem 2rem;
+
+  .product-gallery {
     width: 100%;
-    min-height: 70%;
+    min-height: 95%;
 
     overflow: scroll;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+
+    /* Firefox */
     &::-webkit-scrollbar {
       display: none;
     }
   }
-  .primary-box-icons{
+
+  .primary-box-icons {
     display: none;
   }
 }

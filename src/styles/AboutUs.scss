@@ -5,14 +5,18 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding:2rem;
+    padding: 2rem;
     padding-bottom: 5rem;
+
     @media screen and (max-width: 1000px) {
       margin: 0px;
       // padding:5px;
     }
-    @media (width <= 765px){
-      padding: 0 2rem 2rem 2rem;
+
+    @media (width <=765px) {
+      // padding: 0 2rem 2rem 2rem;
+      padding: 4px;
+
     }
   }
 
@@ -26,62 +30,75 @@
       margin-top: 30px;
     }
   }
+
   &_container {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
     @media screen and (max-width: 1000px) {
       flex-direction: column-reverse;
       justify-content: center;
       width: 100%;
     }
   }
+
   &_right_section {
     width: 40%;
+
     @media screen and (max-width: 1000px) {
       width: 100%;
       height: 100%;
-      
+
     }
   }
+
   &_left_section {
     width: 50%;
     line-height: 2rem;
+
     @media screen and (max-width: 1000px) {
       width: 100%;
       padding: 20px;
     }
   }
+
   &_image {
     width: 100%;
     height: 300px;
     margin: auto;
     object-fit: cover;
+
     @media screen and (max-width: 1000px) {
       object-fit: cover;
-      height:100%;
+      height: 100%;
     }
   }
+
   &_wrapper {
     display: flex;
     flex-direction: row;
   }
+
   &_cardwrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 18rem));
     gap: 10rem;
     justify-content: center;
     margin-bottom: var(--mb-3);
+
     @media screen and (max-width: 1000px) {
       gap: 2rem;
     }
   }
 }
-.about_cards{
-  background-color:#060f1c;
-  padding:2rem;
+
+.about_cards {
+  background-color: #060f1c;
+  padding: 2rem;
 
 }
+
 .aboutUsCards {
   &_container {
     overflow: hidden;
@@ -91,6 +108,7 @@
     background-color: #0b1523;
 
   }
+
   &_header {
     border: 1px solid var(--first-color-lighter);
     padding: 2rem;
@@ -98,15 +116,18 @@
     border-top-right-radius: 1rem;
     margin-bottom: var(--mb-0-5);
   }
+
   &_title {
     color: rgb(130, 129, 129);
 
     font-size: var(--h2-font-size);
   }
+
   &_subtitle {
     font-size: var(--small-font-size);
-    color:whitesmoke;
+    color: whitesmoke;
   }
+
   &_body {
     border: 1px solid var(--first-color-lighter);
     border-bottom-left-radius: 1rem;

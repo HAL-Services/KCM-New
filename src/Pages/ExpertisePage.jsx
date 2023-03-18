@@ -19,9 +19,7 @@ function ProductImage({ value, onExpand, removeClick, title }) {
         className="related-product-image"
         layoutId={`product-${value.id}`}
       />
-      {!removeClick ? (
-        <p className="product-gallery-title">{title}</p>
-      ) : null}
+      {!removeClick ? <p className="product-gallery-title">{title}</p> : null}
     </>
   );
 }

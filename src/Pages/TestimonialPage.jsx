@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
@@ -11,16 +11,12 @@ import "../styles/Testimonial.styles.css";
 // import required modules
 
 import { FaQuoteLeft, FaQuoteRight, FaStar } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import { fetchTestimonialData } from "../apiCalls";
+
 import HeadingText from "../components/HeadingText";
 import { testimonialData } from "../OfflineAPI/testimonialData";
 
 export default function Testimonial() {
-  const [reviewsData, setReviewsdata] = useState([]);
-  useEffect(() => {
-    setReviewsdata(testimonialData);
-  }, []);
+ const reviewsData=testimonialData
   return (
     <div className="testimonialContainer" id="testimonial">
       <div className="testimonialHeading">
@@ -94,12 +90,7 @@ export default function Testimonial() {
             );
           })}
       </Swiper>
-      {/* <div className="writeReview">
-        Liked our work. Leave us a feedback
-        <Link className="review-link" to="/write">
-          <button className="button-6">Write Review</button>
-        </Link>
-      </div> */}
+ 
     </div>
   );
 }

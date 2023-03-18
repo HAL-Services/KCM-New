@@ -1,12 +1,18 @@
 import '../styles/PackageCard.styles.scss'
 import { BsFillCheckCircleFill } from "react-icons/bs";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 import ReadMore from './ReadeMore';
 export default function PackageCards() {
+    useEffect(() => {
+        Aos.init({ duration: 700 })
+    }, [])
     return (
         <div className="pcontainer">
 
-            <div className="package-card-container">
+            <div className="package-card-container" data-aos="zoom-in-up">
                 <div className="text-container">
                     <h2 className="title" style={{ color: "#c4c4c4" }}>SILVER <span style={{ color: "black" }}>
                         PACKAGE
@@ -37,7 +43,7 @@ export default function PackageCards() {
 
             </div>
             {/* gold services  */}
-            <div className="package-card-container">
+            <div className="package-card-container" data-aos="zoom-in-up">
                 <div className="text-container">
                     <h2 className="title" style={{ color: "#FFD700" }}>GOLD <span style={{ color: "black" }}>
                         PACKAGE
@@ -74,7 +80,7 @@ export default function PackageCards() {
 
             </div>
             {/* platinum  services  */}
-            <div className="package-card-container">
+            <div className="package-card-container" data-aos="zoom-in-up">
                 <div className="text-container">
                     <h2 className="title" style={{ color: "#636363" }}>PLATINUM <span style={{ color: "black" }}>
                         PACKAGE

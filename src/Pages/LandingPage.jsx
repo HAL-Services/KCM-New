@@ -7,12 +7,12 @@ import { FaArrowCircleUp } from "react-icons/fa";
 import LandingPageVideo from "../components/LandingPageVideo";
 import QuickBookModal from "../components/QuickBookModal";
 import GetAQuote from "../components/GetAQuote";
+import { useEffect } from "react";
 
 export default function LandingPage() {
   const [showModal, setShowModal] = useState(false);
-
   return (
-    <div>
+    <div id="homepage">
       <motion.span
         animate={{ y: -10 }}
         transition={{
@@ -64,9 +64,9 @@ export default function LandingPage() {
         <LandingPageVideo />
       </div>
       <div className="btn-container">
-   
+
         <QuickBookModal />
-   
+
         <button className="button-6" onClick={() => setShowModal(true)}>
           Request A Quote
         </button>
