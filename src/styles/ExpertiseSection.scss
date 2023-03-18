@@ -1,5 +1,6 @@
 .ExpertiseSection-container {
   background-color: #060F1C;
+  padding-bottom: 50px;
   .about_title {
     overflow: hidden;
     max-width: 1600px;
@@ -11,6 +12,7 @@
     align-items:center;
     font-size: var(--big-font-size);
     color: white;
+    
     .experience{
       margin-left: 0.2em;
       position: relative;
@@ -53,6 +55,7 @@
 @media (width <= 650px){
   .about_title{
     flex-direction: column;
+
   }
   .experience {
     font-size: 2.8rem;

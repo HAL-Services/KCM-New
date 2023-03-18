@@ -18,7 +18,7 @@ export default function PackageCards() {
                         PACKAGE
                     </span>
                     </h2>
-                    <p className="killometers">Every 5000 Kms or 3 Months (Recommended)</p>
+                    <p className="killometers">Every 10,000 Kms or 6 Months (Recommended)</p>
                     <div className="list-container">
                         <span><BsFillCheckCircleFill style={{ color: "lightgreen", marginRight: "5px" }} />Engine Oil Replacement</span>
                         <span><BsFillCheckCircleFill style={{ color: "lightgreen", marginRight: "5px" }} />A/C Filter Replacement</span>
@@ -49,7 +49,7 @@ export default function PackageCards() {
                         PACKAGE
                     </span>
                     </h2>
-                    <p className="killometers">Every 10,000 Kms or 6 Months (Recommended)</p>
+                    <p className="killometers">Every 15,000 Kms or 12 Months</p>
                     <div className="list-container">
                         <span><BsFillCheckCircleFill style={{ color: "lightgreen", marginRight: "5px" }} />Complete General Checkup</span>
                         <span><BsFillCheckCircleFill style={{ color: "lightgreen", marginRight: "5px" }} />A/C Filter Replacement</span>
@@ -86,7 +86,7 @@ export default function PackageCards() {
                         PACKAGE
                     </span>
                     </h2>
-                    <p className="killometers">Every 20,000 Kms or 12 Months (Recommended)</p>
+                    <p className="killometers">For Overall car service</p>
                     <div className="list-container">
                         <span><BsFillCheckCircleFill style={{ color: "lightgreen", marginRight: "5px" }} />Complete Car Body Wax Polish</span>
                         <span><BsFillCheckCircleFill style={{ color: "lightgreen", marginRight: "5px" }} />Complete Car Interior DryClean</span>

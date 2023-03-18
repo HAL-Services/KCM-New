@@ -1,7 +1,7 @@
 import React from "react";
-import image from "../Assets/Images/1.jpeg";
+
 import AboutUsCards from "../components/AboutUsCards";
-import { motion } from "framer-motion";
+
 
 // importing Styles
 import "../styles/AboutUs.scss";
@@ -24,7 +24,7 @@ const AboutUs = () => {
       id: 2,
       title: "Harish Chandra",
       subtitle: "Team Lead",
-      data: `Harish is Kishore's younger brother and is working as the Team Lead at KCM. His expertise and knowledge gathered over the last two decades is unmatched and and there is no car that he cannot fix. His excellent skills has lead him serve many happy customers `,
+      data: `Harish is working as the Team Lead at KCM. His expertise and knowledge gathered over the last two decades is unmatched and and there is no car that he cannot fix. His excellent skills has lead him serve many happy customers `,
     },
   ];
 
@@ -37,7 +37,7 @@ const AboutUs = () => {
             className="about_left_section"
             data-aos="zoom-in-up"
           >
-            KCM is a luxury automobile workshop which is committed to serving
+            EU AutoWorks is a unit of KCM, a luxury automobile workshop which is committed to serving
             the needs of customer. KCM was started in 2016 with a vision to
             provide the best in class service. Our aim is to make the customer
             happy by providing them with unpralled service and assistant. We
@@ -52,7 +52,7 @@ const AboutUs = () => {
             data-aos="zoom-in-up"
 
           >
-            <img src={image} alt="alternate" className="about_image" />
+            <img src="https://res.cloudinary.com/dfbsvaliu/image/upload/v1679131653/WhatsApp_Image_2023-03-18_at_14.55.03_g6vm5v.jpg" alt="alternate" className="about_image" />
           </div>
         </div>
       </div>
