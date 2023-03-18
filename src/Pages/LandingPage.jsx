@@ -7,10 +7,16 @@ import { FaArrowCircleUp } from "react-icons/fa";
 import LandingPageVideo from "../components/LandingPageVideo";
 import QuickBookModal from "../components/QuickBookModal";
 import GetAQuote from "../components/GetAQuote";
+import { useEffect } from "react";
 
 export default function LandingPage() {
   const [showModal, setShowModal] = useState(false);
-
+  const [offsetY, setOffsetY] = useState(0)
+  const handleScroll = () => { setOffsetY(window.pageYOffset) }
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => { window.removeEventListener('scroll', handleScroll) }
+  }, [])
   return (
     <div id="homepage">
       <motion.span
@@ -53,9 +59,9 @@ export default function LandingPage() {
           initial="hidden"
           animate="show"
         >
-          <h2 className="about_title">
+          <h2 className="about_title" style={{transform:`translateY(${offsetY * 0.4}px)`}}>
             The German Car
-            <h3 className="experience">
+            <h3 className="experience"  style={{transform:`translateY(${offsetY * 0.1}px)`}}>
               Experts
               <span>EXPERTS</span>
             </h3>
@@ -64,9 +70,9 @@ export default function LandingPage() {
         <LandingPageVideo />
       </div>
       <div className="btn-container">
-   
+
         <QuickBookModal />
-   
+
         <button className="button-6" onClick={() => setShowModal(true)}>
           Request A Quote
         </button>
