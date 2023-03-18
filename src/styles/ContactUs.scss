@@ -97,6 +97,8 @@
     border: none;
     outline: none;
     padding: 0.25rem 0.5rem 0.5rem 0;
+    resize: none;
+    overflow:hidden;
     // &::-webkit-autofill,
     // &::-webkit-autofill:active,
     // &::-webkit-autofill:focus,

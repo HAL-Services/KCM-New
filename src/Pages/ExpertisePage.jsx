@@ -4,18 +4,23 @@ import "../styles/ExpertisePage.styles.scss";
 import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import { listMotion } from "../animation";
 
-function ProductImage({ value, onExpand, removeClick }) {
-
+function ProductImage({ value, onExpand, removeClick, title }) {
+  // useEffect(() => {
+  //   setValue(value);
+  // }, []);
 
   return (
-    <motion.img
-      src={value.url}
-      alt=""
-      onClick={() => (removeClick ? null : onExpand(value))}
-      onChange={() => console.log(value)}
-      className="related-product-image"
-      layoutId={`product-${value.id}`}
-    />
+    <>
+      <motion.img
+        src={value.url}
+        alt=""
+        onClick={() => (removeClick ? null : onExpand(value))}
+        onChange={() => console.log(value)}
+        className="related-product-image"
+        layoutId={`product-${value.id}`}
+      />
+      {!removeClick ? <p className="product-gallery-title">{title}</p> : null}
+    </>
   );
 }
 
@@ -95,7 +100,6 @@ export default function ExpertisePage() {
                     onExpand={setAsPrimary}
                     title={element.title}
                     removeClick={removeClick}
-            
                   />
                 );
               })}
