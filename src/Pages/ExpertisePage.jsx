@@ -5,9 +5,7 @@ import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import { listMotion } from "../animation";
 
 function ProductImage({ value, onExpand, removeClick }) {
-  // useEffect(() => {
-  //   setValue(value);
-  // }, []);
+
 
   return (
     <motion.img

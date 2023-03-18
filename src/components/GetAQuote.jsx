@@ -8,7 +8,7 @@ const GetAQuote = ({ close }) => {
       document.body.style.overflow = "hidden";
     }
     return () => (document.body.style.overflow = "unset");
-  }, []);
+  }, [close]);
 
   return (
     <div className="quote">

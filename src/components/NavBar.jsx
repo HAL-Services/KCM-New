@@ -20,7 +20,7 @@ const NavBar = (props) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
-    }else{
+    } else {
       document.body.style.overflow = "unset";
     }
   }, [isOpen]);
@@ -97,7 +97,7 @@ const NavBar = (props) => {
                 href="/"
                 className="navbar_titles"
                 onClick={(e) => {
-                  let contact = document.getElementById("home");
+                  let contact = document.getElementById("homepage");
                   e.preventDefault();
                   contact &&
                     contact.scrollIntoView({
@@ -174,7 +174,7 @@ const NavBar = (props) => {
       </AnimatePresence>
 
       <div className="logo">
-        <Link to="/">EU AutoWorks</Link>
+        <Link to="/"><img  className="logoImage"src="https://res.cloudinary.com/dfbsvaliu/image/upload/a_-1/v1679118683/20230314_164155-removebg-preview_1_qyyo2o.png" /></Link>
       </div>
       <div className="titles">
         {props.titles.length === 4 ? (
