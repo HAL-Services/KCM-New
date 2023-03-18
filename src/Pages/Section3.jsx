@@ -13,7 +13,7 @@ import 'aos/dist/aos.css'
 import { useEffect } from "react";
 export default function Section3() {
   useEffect(() => {
-    Aos.init({ duration: 700 })
+    Aos.init({ duration: 999 })
   }, [])
   return (
     <>

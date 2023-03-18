@@ -5,7 +5,7 @@ export default function MarqueeElement() {
   return (
     <div className="MarqueeContainer">
       <h2 className="about_title_light" >
-        Deal With All Major
+        Dealing With All Major
         <h3 className="experience">
           Brands
           <span>Brands</span>

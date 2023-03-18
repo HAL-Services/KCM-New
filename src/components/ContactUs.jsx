@@ -25,12 +25,6 @@ const ContactUs = () => {
   }
   function sendEmail(e) {
     e.preventDefault();
-    // const data = {
-    //   email: e.target.email.length > 0 ? e.target.email.value : undefined,
-    //   name: e.target.name.length > 0 ? e.target.name.value : undefined,
-    //   query: e.target.query.length > 0 ? e.target.query.value : undefined,
-    //   message: e.target.query.length > 0 ? e.target.message.value : undefined,
-    // }
     emailjs
       .sendForm(
         "service_5xhuphl",

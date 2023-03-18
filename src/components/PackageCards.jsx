@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import ReadMore from './ReadeMore';
 export default function PackageCards() {
     useEffect(() => {
-        Aos.init({ duration: 700 })
+        Aos.init({ duration: 999 })
     }, [])
     return (
         <div className="pcontainer">
