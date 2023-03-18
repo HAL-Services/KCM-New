@@ -10,13 +10,14 @@ import Section4 from '../Pages/Section4'
 import ContactUs from '../components/ContactUs'
 import Footer from '../components/Footer'
 import ServiceSection from '../Pages/Section2.1'
+import MarqueeElement from "../components/Marquee";
 export default function FullPage() {
 
   return (
     <div className="parent">
       <NavBar titles={["Services", "About", "Testimonial", "Contact Us"]} />
       <LandingPage />
-
+      <MarqueeElement />
       <ExpertiseSection />
       <ServiceSection />
       <Section3 />

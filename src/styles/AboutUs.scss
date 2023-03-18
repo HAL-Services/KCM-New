@@ -96,17 +96,27 @@
 .about_cards {
   background-color: #060f1c;
   padding: 2rem;
-
+  @media screen and (max-width:1000px) {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+    //  background-color: hotpink;
+  }
 }
 
 .aboutUsCards {
+
   &_container {
     overflow: hidden;
     display: flex;
     flex-direction: column;
     letter-spacing: 1px;
     background-color: #0b1523;
-
+    @media screen and (max-width:1000px) {
+      padding:20px;
+      
+    }
   }
 
   &_header {

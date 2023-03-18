@@ -15,7 +15,7 @@ const CardData = [
     id: 3,
     title: "DETAILED REPORT",
     content:
-      "You will be provided with a detailed service report which you can access hassel free online from you account.",
+      "You will be provided with a detailed service report which you can access hassel free on your whatsapp.",
   },
   {
     id: 4,
