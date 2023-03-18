@@ -8,7 +8,7 @@ import 'aos/dist/aos.css'
 import { useEffect } from "react";
 const Section4 = () => {
   useEffect(()=>{
-    Aos.init({duration:700})
+    Aos.init({duration:999})
   },[])
   return (
     <div className="section4_container">

@@ -11,7 +11,7 @@ import 'aos/dist/aos.css'
 import { useEffect } from "react";
 const AboutUs = () => {
   useEffect(() => {
-    Aos.init({ duration: 700 })
+    Aos.init({ duration: 999 })
   }, [])
   const dataName = [
     {
