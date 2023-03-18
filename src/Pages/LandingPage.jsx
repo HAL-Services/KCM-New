@@ -11,12 +11,6 @@ import { useEffect } from "react";
 
 export default function LandingPage() {
   const [showModal, setShowModal] = useState(false);
-  const [offsetY, setOffsetY] = useState(0)
-  const handleScroll = () => { setOffsetY(window.pageYOffset) }
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-    return () => { window.removeEventListener('scroll', handleScroll) }
-  }, [])
   return (
     <div id="homepage">
       <motion.span
@@ -59,9 +53,9 @@ export default function LandingPage() {
           initial="hidden"
           animate="show"
         >
-          <h2 className="about_title" style={{transform:`translateY(${offsetY * 0.4}px)`}}>
+          <h2 className="about_title">
             The German Car
-            <h3 className="experience"  style={{transform:`translateY(${offsetY * 0.1}px)`}}>
+            <h3 className="experience">
               Experts
               <span>EXPERTS</span>
             </h3>
