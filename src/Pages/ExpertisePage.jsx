@@ -17,7 +17,7 @@ function ProductImage({ value, onExpand, removeClick, title }) {
         className="related-product-image"
         layoutId={`product-${value.id}`}
       />
-      {!removeClick ? <p className="product-gallery-title">{title}</p> : null}
+      {removeClick ? <p className="product-gallery-title">{title}</p> : null}
     </>
   );
 }
@@ -33,16 +33,15 @@ export default function ExpertisePage() {
     ExpertiseImagedata[6],
     ExpertiseImagedata[7],
   ]);
-  const [removeClick, setRemoveClick] = useState(0);
+  const [removeClick, setRemoveClick] = useState(false);
   const [getWidth, setGetWidth] = useState(0);
   const setDimension = useCallback(() => {
     setGetWidth(window.innerWidth);
     if (getWidth <= 765) setRemoveClick(false);
     else setRemoveClick(true);
-  }, []);
+  }, [getWidth]);
   useEffect(() => {
     window.addEventListener("resize", setDimension);
-
     return () => {
       window.removeEventListener("resize", setDimension);
     };
