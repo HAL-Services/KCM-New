@@ -12,7 +12,7 @@ export default function LandingPage() {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <div>
+    <div id="homepage">
       <motion.span
         animate={{ y: -10 }}
         transition={{
