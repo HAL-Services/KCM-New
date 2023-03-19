@@ -5,8 +5,6 @@ import { motion, AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import { listMotion } from "../animation";
 
 function ProductImage({ value, onExpand, removeClick, title }) {
-
-
   return (
     <>
       <motion.img
@@ -17,7 +15,7 @@ function ProductImage({ value, onExpand, removeClick, title }) {
         className="related-product-image"
         layoutId={`product-${value.id}`}
       />
-      {removeClick ? <p className="product-gallery-title">{title}</p> : null}
+      {removeClick ? null : <p className="product-gallery-title">{title}</p>}
     </>
   );
 }
@@ -39,6 +37,7 @@ export default function ExpertisePage() {
     setGetWidth(window.innerWidth);
     if (getWidth <= 765) setRemoveClick(false);
     else setRemoveClick(true);
+    console.log(removeClick);
   }, [getWidth]);
   useEffect(() => {
     window.addEventListener("resize", setDimension);
