@@ -57,7 +57,7 @@ export default function QuickBookForm() {
             <a
               href={
                 User !== null && Car !== null && Number !== null
-                  ? `https://wa.me/919990868464/?text=My%20name%20is%20${User}%0AI%20would%20like%20to%20have%20my%20car%20${Car}%20serviced%0AMy%20contact%20number%20is%20${Number}`
+                  ? `https://wa.me/9999125262/?text=My%20name%20is%20${User}%0AI%20would%20like%20to%20have%20my%20car%20${Car}%20serviced%0AMy%20contact%20number%20is%20${Number}`
                   : null
               }
             >

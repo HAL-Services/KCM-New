@@ -47,9 +47,11 @@
       border-bottom: 1px solid var(--default-color);
       text-align: center;
       color: var(--default-color);
-      margin-bottom: var(--mb-2-5);
+      margin-bottom: var(--mb-1-5);
     }
-    
+    @media (width<=765px) {
+      padding:0;
+    }
   }
 
   .input-container input {
@@ -62,7 +64,24 @@
     font-size: var(--h2-font-size);
     color: var(--default-color);
   }
-  .input-container label {
+  .input-container select {
+    width: 100%;
+    background-color: var(--primary-color);
+    outline: none;
+    border: none;
+    height: 50px;
+    padding: 0 5px;
+    font-size: var(--h2-font-size);
+    color: var(--new-color-blue);
+    &  option {
+      background-color: #0b1523;
+      box-shadow: none;
+      border: none !important;
+      border-radius: 0px !important;
+      margin: 1rem !important;
+    }
+  }
+  .input-container label{
     position: absolute;
     top: 40%;
     left: 14px;
@@ -83,7 +102,21 @@
 
   .button_container{
     display: flex;
+    margin-top:1.2rem;
     justify-content: center;
+    @media (width<=765px){
+      margin:0;
+    }
+  }
+
+  .resize_mobile{
+    display: flex;
+    flex-direction:column;
+    @media (width<=765px){
+      flex-direction:row;
+      margin-top: .5rem;
+      gap:2em;
+    }
   }
 
   button {
@@ -110,6 +143,11 @@
     @media screen and (max-width: 1000px) {
       width: 100%;
       padding: 0.8em 3.5em;
+    }
+    @media (width<=765px){
+      padding: .5em;
+      width: 50%;
+      margin:auto;
     }
     &:hover {
     transform: scale(1.05) ;

@@ -10,7 +10,7 @@ function ProductImage({ value, onExpand, removeClick, title }) {
       <motion.img
         src={value.url}
         alt=""
-        onClick={() => (removeClick ? null : onExpand(value))}
+        onClick={() => (removeClick ? onExpand(value) : null)}
         onChange={() => console.log(value)}
         className="related-product-image"
         layoutId={`product-${value.id}`}
@@ -31,7 +31,7 @@ export default function ExpertisePage() {
     ExpertiseImagedata[6],
     ExpertiseImagedata[7],
   ]);
-  const [removeClick, setRemoveClick] = useState(false);
+  const [removeClick, setRemoveClick] = useState(true);
   const [getWidth, setGetWidth] = useState(0);
   const setDimension = useCallback(() => {
     setGetWidth(window.innerWidth);
