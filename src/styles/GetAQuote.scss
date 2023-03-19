@@ -72,7 +72,7 @@
     height: 50px;
     padding: 0 5px;
     font-size: var(--h2-font-size);
-    color: var(--new-color-blue);
+    color: var(--primary-color);
     &  option {
       background-color: #0b1523;
       box-shadow: none;
@@ -94,6 +94,14 @@
   }
   .input-container input:focus ~ label,
   .input-container input:valid ~ label {
+    top: -10px;
+    transform: scale(1);
+    left: 0;
+    color: var(--new-color-blue);
+  }
+  
+  .input-container select:focus ~ label,
+  .input-container select:valid ~ label{
     top: -10px;
     transform: scale(1);
     left: 0;
