@@ -1,8 +1,52 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/GetAQuote.scss";
 import { IoCloseSharp } from "react-icons/io5";
-
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const GetAQuote = ({ close }) => {
+  const [name, setName] = useState(null)
+  const [email, setEmail] = useState(null)
+  const [mobile, setMobile] = useState(null)
+  const [carModel, setModel] = useState(null)
+  const [year, setYear] = useState(null)
+  const [type, setType] = useState(null)
+  function handleSuccess() {
+    toast.success("We will contact you shortly.", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
+  function handleError(msg) {
+    toast.error(msg, {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    if (name === null || email === null || mobile === null || carModel === null || year === null || type === null) {
+      handleError("Please complete the form")
+      return;
+    }
+    try {
+      const data = { name, email, mobile, carModel, year, type }
+      await axios.post("https://kcm-email-service.onrender.com/api/quote/", data)
+      e.target.reset()
+      handleSuccess()
+    } catch (error) {
+      handleError("Please Try Again Later")
+    }
+
+  }
   useEffect(() => {
     if (close) {
       document.body.style.overflow = "hidden";
@@ -12,12 +56,23 @@ const GetAQuote = ({ close }) => {
 
   return (
     <div className="quote">
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <div className="quote_box">
         <span className="quote_close" onClick={() => close(false)}>
           <IoCloseSharp className="quote_close_icon" />
         </span>
         <h2>Get A Quote</h2>
-        <form action="" method="post">
+        <form action="" method="post" onSubmit={handleSubmit}>
           <div className="resize_mobile">
             <div className="input-container">
               <input
@@ -25,6 +80,7 @@ const GetAQuote = ({ close }) => {
                 name="fullName"
                 required={true}
                 autoComplete="on"
+                onChange={(e) => setName(e.target.value)}
               />
               <label htmlFor="form-input-fullName">Full Name</label>
             </div>
@@ -34,6 +90,7 @@ const GetAQuote = ({ close }) => {
                 name="email"
                 required={true}
                 autoComplete="on"
+                onChange={(e) => setEmail(e.target.value)}
               />
               <label htmlFor="form-input-Email">Email</label>
             </div>
@@ -43,37 +100,22 @@ const GetAQuote = ({ close }) => {
               type="tel"
               name="phoneNumber"
               required={true}
-              pattern="[789][0-9]{9}"
+              pattern="[6789][0-9]{9}"
               autoComplete="on"
               maxLength={10}
               minLength={10}
+              onChange={(e) => setMobile(e.target.value)}
             />
             <label htmlFor="form-input-phoneNumber">Phone Number</label>
           </div>
 
-          {/*<div className="input-container">
-            <input
-              type="text"
-              name="query"
-              autoComplete="on"
-              required={true}
-            />
-            <label htmlFor="form-input-query">How can we help you?</label>
-             <label className="contact__label">How can we help you?</label>
-            <textarea
-              cols="0"
-              rows="7"
-              htmlFor="form-input-query"
-              // className="contact__input"
-              name="query"
-            ></textarea> 
-          </div>*/}
 
           <div className="input-container">
             <input
               type="text"
               name="model"
               required={true}
+              onChange={(e) => setModel(e.target.value)}
             />
             <label htmlFor="form-input-model">Model</label>
           </div>
@@ -82,11 +124,12 @@ const GetAQuote = ({ close }) => {
               type="text"
               name="manufacturing"
               required={true}
+              onChange={(e) => setYear(e.target.value)}
             />
             <label htmlFor="form-input-manufacturing">Manufacturing Year</label>
           </div>
           <div className="input-container">
-            <select>
+            <select onChange={(e) => setType(e.target.value)}>
               <option value="disel">Disel</option>
               <option value="petrol">Petrol</option>
               <option value="hybrid">Hybrid</option>

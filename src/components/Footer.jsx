@@ -109,13 +109,7 @@ const Footer = () => {
                   </a>
                 </span>
               </p>
-              <p>
-                <span>
-                  <Link style={{ color: "white" }} to="/write">
-                    Write Review
-                  </Link>
-                </span>
-              </p>
+             
             </ul>
           </div>
         </div>
@@ -124,7 +118,7 @@ const Footer = () => {
             <div className="footer_list_head">Telephone</div>
             <ul className="footer_list">
               <p>
-                <span>+91 099106 64597</span>
+                <span>+91 9999125 262</span>
               </p>
             </ul>
           </div>
@@ -132,7 +126,7 @@ const Footer = () => {
             <div className="footer_list_head">Email</div>
             <ul className="footer_list">
               <p>
-                <span>kcmautomobiles@gmail.com</span>
+                <span>contact@euautoworks.com</span>
               </p>
             </ul>
           </div>
