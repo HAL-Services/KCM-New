@@ -20,7 +20,7 @@ export default function Testimonial() {
   return (
     <div className="testimonialContainer" id="testimonial">
       <div className="testimonialHeading">
-        <HeadingText text1="Happy" text2="Clients" style="light" />
+        <HeadingText text1="Happy" text2="Clients" ss="light" />
       </div>
       <Swiper
         slidesPerView={1}

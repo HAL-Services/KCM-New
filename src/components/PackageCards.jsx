@@ -38,7 +38,7 @@ export default function PackageCards() {
                     </ReadMore>
                 </div>
                 <div className="image-container">
-                    <img src="https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934326/Images/silverPackage_kz4rpp.webp" />
+                    <img src="https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934326/Images/silverPackage_kz4rpp.webp" alt="imagePlati" />
                 </div>
 
             </div>
@@ -75,7 +75,7 @@ export default function PackageCards() {
                     </ReadMore>
                 </div>
                 <div className="image-container">
-                    <img src="https://res.cloudinary.com/dfbsvaliu/image/upload/v1679021635/kate-ibragimova-iFQpqbLMOFU-unsplash_1_rpnubc.jpg" />
+                    <img src="https://res.cloudinary.com/dfbsvaliu/image/upload/v1679021635/kate-ibragimova-iFQpqbLMOFU-unsplash_1_rpnubc.jpg"  alt="imageGold"/>
                 </div>
 
             </div>
@@ -119,7 +119,7 @@ export default function PackageCards() {
                     </ReadMore>
                 </div>
                 <div className="image-container">
-                    <img src="https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934326/Images/platinum_v09ivr.webp" />
+                    <img src="https://res.cloudinary.com/dfbsvaliu/image/upload/v1678934326/Images/platinum_v09ivr.webp" alt="imageSilver" />
                 </div>
 
             </div>

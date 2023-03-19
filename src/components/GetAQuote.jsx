@@ -39,7 +39,7 @@ const GetAQuote = ({ close }) => {
     }
     try {
       const data = { name, email, mobile, carModel, year, type }
-      await axios.post("https://kcm-email-service.onrender.com/api/quote/", data)
+      await axios.post(`${process.env.REACT_APP_GETQUOTE_ROUTE}`, data)
       e.target.reset()
       handleSuccess()
     } catch (error) {

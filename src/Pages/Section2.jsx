@@ -5,7 +5,7 @@ export default function Section2() {
   return (
     <div className="section2-container">
 
-     <HeadingText text1="Latest From" text2="Garage" style="dark"/>
+     <HeadingText text1="Latest From" text2="Garage" ss="dark"/>
       <GarageCarousel />
     </div>
   );

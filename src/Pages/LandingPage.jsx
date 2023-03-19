@@ -7,7 +7,7 @@ import { FaArrowCircleUp } from "react-icons/fa";
 import LandingPageVideo from "../components/LandingPageVideo";
 import QuickBookModal from "../components/QuickBookModal";
 import GetAQuote from "../components/GetAQuote";
-import { useEffect } from "react";
+
 
 export default function LandingPage() {
   const [showModal, setShowModal] = useState(false);

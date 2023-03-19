@@ -5,7 +5,7 @@ export default function ExpertiseSection() {
   return (
     <div className="ExpertiseSection-container">
       <section>
-        <HeadingText text1="Our" text2="Expertise" style="dark" />
+        <HeadingText text1="Our" text2="Expertise" ss="dark" />
         <ExpertisePage />
       </section>
     </div>

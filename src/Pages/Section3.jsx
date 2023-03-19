@@ -18,7 +18,7 @@ export default function Section3() {
   return (
     <>
       <div className="Section3how_we_work">
-        <HeadingText text1="How We" text2="Work" style="dark" />
+        <HeadingText text1="How We" text2="Work" ss="dark" />
         <div className="Section3wrapper">
           {CardData.map((ele) => {
             return (
@@ -37,7 +37,7 @@ export default function Section3() {
       </div>
       <div className="benefits-box">
         <div className="benefits">
-          <HeadingText text1="EU AutoWorks" text2="Benefits" style="light" />
+          <HeadingText text1="EU AutoWorks" text2="Benefits" ss="light" />
           <div className="benefits_container" >
             <span className="benefits_box" data-aos="zoom-in-up">
               <span className="benefits_box_icon">

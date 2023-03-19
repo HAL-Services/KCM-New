@@ -18,7 +18,7 @@ const ContactUs = () => {
   const [email, setEmail] = useState(null)
   const [query, setQuery] = useState(null)
   const [message, setMessage] = useState(null)
-  let msg = ""
+  
   function handleSuccess() {
     toast.success("Message Delievered", {
       position: "top-center",
@@ -41,14 +41,14 @@ const ContactUs = () => {
   }
   async function sendEmail(e) {
     e.preventDefault();
-    console.log("name", name, "email", email, "query", query, "message", message)
     if (name === null || email === null || query === null || message === null) {
       handleError("Please Complete all the details")
       return ;
     }
     const data = { name, email, query, message }
+    
     try {
-      await axios.post("https://kcm-email-service.onrender.com/api/contact/", data)
+      await axios.post(`${process.env.REACT_APP_CONTACTUS_ROUTE}`, data)
       e.target.reset();
       setName(null)
       setEmail(null)
@@ -72,7 +72,7 @@ const ContactUs = () => {
         draggable
         pauseOnHover
       />
-      <HeadingText text1="Contact" text2="Us" style="dark" />
+      <HeadingText text1="Contact" text2="Us" ss="dark" />
       <span className="contact_main_subtitle">Get in Touch</span>
       <div className="contact_container grid">
         <motion.div className="contact_leftside">

@@ -31,7 +31,7 @@ const AboutUs = () => {
   return (
     <>
       <div className="about_section" id="about">
-        <HeadingText text1="About" text2="Us" style="light" />
+        <HeadingText text1="About" text2="Us" ss="light" />
         <div className="about_container">
           <div
             className="about_left_section"
@@ -57,7 +57,7 @@ const AboutUs = () => {
         </div>
       </div>
       <div className="about_cards">
-        <HeadingText text1="Our" text2="Founders" style="dark" />
+        <HeadingText text1="Our" text2="Founders" ss="dark" />
         <div className="about_cardwrapper">
           {dataName.map((e) => {
             return (

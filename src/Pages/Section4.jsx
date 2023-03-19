@@ -13,7 +13,7 @@ const Section4 = () => {
   return (
     <div className="section4_container">
       <div className="section4_main_title">
-        <HeadingText text1="Work" text2="Hours" style={"dark"} />
+        <HeadingText text1="Work" text2="Hours" ss={"dark"} />
       </div>
       <div className="timings" data-aos="zoom-in-up">
         <div className="section4_timings">
@@ -26,7 +26,7 @@ const Section4 = () => {
         </div>
       </div>
       <div className="section4_googlemap" >
-        <HeadingText text1="Locate" text2="Us" style="light" />
+        <HeadingText text1="Locate" text2="Us" ss="light" />
         <a
           href="https://www.google.com/maps/dir//KCM+AUTOMOBILES/@28.4887933,76.9875978,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x390d183000000021:0x8d473674bdf87c83!2m2!1d77.0576381!2d28.4888112"
           target="_blank"

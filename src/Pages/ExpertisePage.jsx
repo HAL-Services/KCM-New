@@ -11,7 +11,6 @@ function ProductImage({ value, onExpand, removeClick, title }) {
         src={value.url}
         alt=""
         onClick={() => (removeClick ? onExpand(value) : null)}
-        onChange={() => console.log(value)}
         className="related-product-image"
         layoutId={`product-${value.id}`}
       />
@@ -37,7 +36,7 @@ export default function ExpertisePage() {
     setGetWidth(window.innerWidth);
     if (getWidth <= 765) setRemoveClick(false);
     else setRemoveClick(true);
-    console.log(removeClick);
+
   }, [getWidth]);
   useEffect(() => {
     window.addEventListener("resize", setDimension);
