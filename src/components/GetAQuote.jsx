@@ -86,11 +86,13 @@ const GetAQuote = ({ close }) => {
             <label htmlFor="form-input-manufacturing">Manufacturing Year</label>
           </div>
           <div className="input-container">
-            <select>
-              <option value="disel">Disel</option>
+            <select required={true}>
+              <option hidden></option>
+              <option value="diesel">Diesel</option>
               <option value="petrol">Petrol</option>
               <option value="hybrid">Hybrid</option>
             </select>
+            <label htmlFor="form-input-manufacturing">Engine Type</label>
           </div>
           <div className="button_container">
             <button>Sumbit</button>
