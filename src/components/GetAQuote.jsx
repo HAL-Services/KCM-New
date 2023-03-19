@@ -18,23 +18,25 @@ const GetAQuote = ({ close }) => {
         </span>
         <h2>Get A Quote</h2>
         <form action="" method="post">
-          <div className="input-container">
-            <input
-              type="text"
-              name="fullName"
-              required={true}
-              autoComplete="on"
-            />
-            <label htmlFor="form-input-fullName">Full Name</label>
-          </div>
-          <div className="input-container">
-            <input
-              type="email"
-              name="email"
-              required={true}
-              autoComplete="on"
-            />
-            <label htmlFor="form-input-Email">Email</label>
+          <div className="resize_mobile">
+            <div className="input-container">
+              <input
+                type="text"
+                name="fullName"
+                required={true}
+                autoComplete="on"
+              />
+              <label htmlFor="form-input-fullName">Full Name</label>
+            </div>
+            <div className="input-container">
+              <input
+                type="email"
+                name="email"
+                required={true}
+                autoComplete="on"
+              />
+              <label htmlFor="form-input-Email">Email</label>
+            </div>
           </div>
           <div className="input-container">
             <input
@@ -49,7 +51,7 @@ const GetAQuote = ({ close }) => {
             <label htmlFor="form-input-phoneNumber">Phone Number</label>
           </div>
 
-          <div className="input-container">
+          {/*<div className="input-container">
             <input
               type="text"
               name="query"
@@ -57,14 +59,38 @@ const GetAQuote = ({ close }) => {
               required={true}
             />
             <label htmlFor="form-input-query">How can we help you?</label>
-            {/* <label className="contact__label">How can we help you?</label>
+             <label className="contact__label">How can we help you?</label>
             <textarea
               cols="0"
               rows="7"
               htmlFor="form-input-query"
               // className="contact__input"
               name="query"
-            ></textarea> */}
+            ></textarea> 
+          </div>*/}
+
+          <div className="input-container">
+            <input
+              type="text"
+              name="model"
+              required={true}
+            />
+            <label htmlFor="form-input-model">Model</label>
+          </div>
+          <div className="input-container">
+            <input
+              type="text"
+              name="manufacturing"
+              required={true}
+            />
+            <label htmlFor="form-input-manufacturing">Manufacturing Year</label>
+          </div>
+          <div className="input-container">
+            <select>
+              <option value="disel">Disel</option>
+              <option value="petrol">Petrol</option>
+              <option value="hybrid">Hybrid</option>
+            </select>
           </div>
           <div className="button_container">
             <button>Sumbit</button>
