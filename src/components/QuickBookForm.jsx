@@ -12,10 +12,6 @@ export default function QuickBookForm() {
 
   const sendMessage = async (e) => {
     e.preventDefault();
-    console.log(Number, User, Car);
-    // setNumber(number.current.value);
-    // setUser(username.current.value);
-    // setCar(carModel.current.value);
   };
 
   return (

@@ -1,5 +1,5 @@
-import React, { useReducer, useRef } from "react";
-import emailjs from "emailjs-com";
+import React, { useState } from "react";
+
 
 // Import animation
 import { motion } from "framer-motion";
@@ -11,8 +11,14 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 import HeadingText from "./HeadingText";
+import axios from "axios";
 
 const ContactUs = () => {
+  const [name, setName] = useState(null)
+  const [email, setEmail] = useState(null)
+  const [query, setQuery] = useState(null)
+  const [message, setMessage] = useState(null)
+  let msg = ""
   function handleSuccess() {
     toast.success("Message Delievered", {
       position: "top-center",
@@ -23,23 +29,35 @@ const ContactUs = () => {
       progress: undefined,
     });
   }
-  function sendEmail(e) {
+  function handleError(msg) {
+    toast.error(msg, {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
+  async function sendEmail(e) {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_5xhuphl",
-        "template_i9eml54",
-        e.target,
-        "v8rfW3JruoYuZK6VC"
-      )
-      .then(
-        (result) => { console.log(result) },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    e.target.reset();
-    handleSuccess();
+    console.log("name", name, "email", email, "query", query, "message", message)
+    if (name === null || email === null || query === null || message === null) {
+      handleError("Please Complete all the details")
+      return ;
+    }
+    const data = { name, email, query, message }
+    try {
+      await axios.post("https://kcm-email-service.onrender.com/api/contact/", data)
+      e.target.reset();
+      setName(null)
+      setEmail(null)
+      setQuery(null)
+      setMessage(null)
+      handleSuccess();
+    } catch (error) {
+      handleError("Please Try Again Later")
+    }
   }
   return (
     <div className="contact_section" id="contact_section">
@@ -119,8 +137,8 @@ const ContactUs = () => {
               transition={{ type: "spring" }}
               className="contact__content"
             >
-              <label className="contact__label">Name</label>
-              <input type="text" className="contact__input" name="name" />
+              <label className="contact__label" >Name</label>
+              <input type="text" className="contact__input" name="name" onChange={((e) => setName(e.target.value))} />
             </motion.div>
             <motion.div
               whileTap={{ scale: 1.1 }}
@@ -128,7 +146,7 @@ const ContactUs = () => {
               className="contact__content"
             >
               <label className="contact__label">Email</label>
-              <input type="email" className="contact__input" name="email" />
+              <input type="email" className="contact__input" name="email" onChange={(e) => setEmail(e.target.value)} />
             </motion.div>
           </div>
           <motion.div
@@ -137,7 +155,7 @@ const ContactUs = () => {
             className="contact__content"
           >
             <label className="contact__label">Query</label>
-            <input type="text" className="contact__input" name="query" />
+            <input type="text" className="contact__input" name="query" onChange={(e) => setQuery(e.target.value)} />
           </motion.div>
           <motion.div
             whileTap={{ scale: 1.1 }}
@@ -150,6 +168,7 @@ const ContactUs = () => {
               rows="7"
               className="contact__input"
               name="message"
+              onChange={(e) => setMessage(e.target.value)}
             ></textarea>
           </motion.div>
           <div>

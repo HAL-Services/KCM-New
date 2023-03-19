@@ -16,7 +16,7 @@ const AboutUs = () => {
   const dataName = [
     {
       id: 1,
-      title: "Kishore Chandra",
+      title: "Kishor Chandra",
       subtitle: "Founder",
       data: `Kishore is an automobile enthusiast and has been in the field for about two decades. He started KCM with only dream of serving customers with geniune and best in class facilities. Under his guidance KCM has servced many happy customers.`,
     },
