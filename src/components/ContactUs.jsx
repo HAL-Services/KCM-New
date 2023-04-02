@@ -86,7 +86,7 @@ const ContactUs = () => {
             </motion.span>
             <div>
               <h3 className="contact_title">Call Us</h3>
-              <span className="contact_subtitle">+91 099106 64597</span>
+              <span className="contact_subtitle">+91 9999125262</span>
             </div>
           </div>
 
@@ -100,7 +100,7 @@ const ContactUs = () => {
             </motion.span>
             <div>
               <h3 className="contact_title">Email</h3>
-              <span className="contact_subtitle">halsrvcs@gmail.com</span>
+              <span className="contact_subtitle">contact@euautoworks.com</span>
             </div>
           </div>
 

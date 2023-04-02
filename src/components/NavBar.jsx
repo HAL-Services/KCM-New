@@ -17,6 +17,9 @@ const NavBar = (props) => {
 
   const [isOpen, setOpen] = useState(false);
   const [showModal, setShowModal] = useState(false)
+  const handleOpen = () => {
+    setShowModal(false)
+  }
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -174,7 +177,7 @@ const NavBar = (props) => {
       </AnimatePresence>
 
       <div className="logo">
-        <Link to="/"><img  className="logoImage"src="https://res.cloudinary.com/dfbsvaliu/image/upload/a_-1/v1679118683/20230314_164155-removebg-preview_1_qyyo2o.png" alt="LOGO"/></Link>
+        <Link to="/"><img className="logoImage" src="https://res.cloudinary.com/dfbsvaliu/image/upload/a_-1/v1679118683/20230314_164155-removebg-preview_1_qyyo2o.png" alt="LOGO" /></Link>
       </div>
       <div className="titles">
         {props.titles.length === 4 ? (
@@ -258,7 +261,7 @@ const NavBar = (props) => {
         >
           Request A Quote
         </button>
-        {showModal ? <GetAQuote close={setShowModal} /> : null}
+        {showModal ? <GetAQuote close={setShowModal} click={handleOpen} /> : null}
       </div>
     </nav>
   );
